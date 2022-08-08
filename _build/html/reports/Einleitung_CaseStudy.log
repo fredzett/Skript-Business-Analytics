@@ -17,14 +17,22 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-df.filter(items=["Date", "Adj Close"])
+from utility import plot, load_stockdata
+from datetime import datetime
+import time
+import pandas as pd
+pd.options.plotting.backend = 'matplotlib'
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mAttributeError[0m                            Traceback (most recent call last)
-[0;32m<ipython-input-6-b2675600e558>[0m in [0;36m<module>[0;34m[0m
-[0;32m----> 1[0;31m [0mdf[0m[0;34m.[0m[0mfilter[0m[0;34m([0m[0mitems[0m[0;34m=[0m[0;34m[[0m[0;34m"Date"[0m[0;34m,[0m [0;34m"Adj Close"[0m[0;34m][0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m
-[0;31mAttributeError[0m: 'AxesSubplot' object has no attribute 'filter'
-AttributeError: 'AxesSubplot' object has no attribute 'filter'
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+[0;32m<ipython-input-2-020d36e7ed8d>[0m in [0;36m<module>[0;34m[0m
+[0;32m----> 1[0;31m [0;32mfrom[0m [0mutility[0m [0;32mimport[0m [0mplot[0m[0;34m,[0m [0mload_stockdata[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      2[0m [0;32mfrom[0m [0mdatetime[0m [0;32mimport[0m [0mdatetime[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      3[0m [0;32mimport[0m [0mtime[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      4[0m [0;32mimport[0m [0mpandas[0m [0;32mas[0m [0mpd[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      5[0m [0mpd[0m[0;34m.[0m[0moptions[0m[0;34m.[0m[0mplotting[0m[0;34m.[0m[0mbackend[0m [0;34m=[0m [0;34m'matplotlib'[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mModuleNotFoundError[0m: No module named 'utility'
+ModuleNotFoundError: No module named 'utility'
 

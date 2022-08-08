@@ -34,9 +34,9 @@ html:
 launch_buttons: 
   colab_url: "https://colab.research.google.com"
 
-sphinx:
-  config:
-    html_extra_path: ['utilities']
+# sphinx:
+#   config:
+#     html_extra_path: ['utilities']
 
 html_extra_path: ['utilities']
 

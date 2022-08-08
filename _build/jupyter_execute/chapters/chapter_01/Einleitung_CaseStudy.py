@@ -21,13 +21,6 @@ get_ipython().run_line_magic('autoreload', '2')
 # In[2]:
 
 
-import sys 
-sys.path.insert(0, "S/")
-
-
-# In[3]:
-
-
 from utility import plot, load_stockdata
 from datetime import datetime
 import time
@@ -35,7 +28,7 @@ import pandas as pd
 pd.options.plotting.backend = 'matplotlib'
 
 
-# In[4]:
+# In[16]:
 
 
 df = (load_stockdata(ticker="^GDAXI", frequency="1d", start="1-1-1990", end="7-18-2022")
@@ -50,13 +43,13 @@ df = (load_stockdata(ticker="^GDAXI", frequency="1d", start="1-1-1990", end="7-1
 df
 
 
-# In[5]:
+# In[7]:
 
 
 df
 
 
-# In[6]:
+# In[158]:
 
 
 df.filter(items=["Date", "Adj Close"])
