@@ -1,6 +1,6 @@
 # Einleitung
 
-Test: Erster "echter" Commit! 
+NEU: Hier sind Veränderungen vorgenommen worden.
 
 ## Was ist Business Analytics
 
