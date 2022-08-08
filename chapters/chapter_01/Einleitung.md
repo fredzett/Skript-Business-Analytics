@@ -1,5 +1,7 @@
 # Einleitung
 
+ÄNDERUNG
+
 ## Was ist Business Analytics
 
 - wir fokussieren auf die praktische Anwendung
