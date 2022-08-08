@@ -34,6 +34,10 @@ html:
 launch_buttons: 
   colab_url: "https://colab.research.google.com"
 
+sphinx:
+  config:
+    html_exra_path: ["utilities"]
+
 html:
     footer: |
         <div>
