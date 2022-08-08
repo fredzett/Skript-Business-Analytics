@@ -1,0 +1,1286 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fallstudie: Investieren via Aktiensparplan</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Technische Voraussetzungen" href="../chapter_02/Voraussetzungen.html" />
+    <link rel="prev" title="Fallstudie" href="Fallstudie.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/datascience.png" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Dieses Buch durchsuchen ..." aria-label="Dieses Buch durchsuchen ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Vorwort.html">
+   Vorwort
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  01 Einleitung
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Einleitung.html">
+   Einleitung
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="Fallstudie.html">
+   Fallstudie
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Fallstudie: Investieren via Aktiensparplan
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  02 Python Part 1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_02/Voraussetzungen.html">
+   Technische Voraussetzungen
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Navigation umschalten" aria-controls="site-navigation"
+                title="Navigation umschalten" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Laden Sie diese Seite herunter"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/chapters/chapter_01/Einleitung_CaseStudy.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Quelldatei herunterladen" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="In PDF drucken"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Vollbildmodus"
+        title="Vollbildmodus"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/chapters/chapter_01/Einleitung_CaseStudy.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Starten Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/docs/chapters/chapter_01/Einleitung_CaseStudy.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Starten Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Fallstudie: Investieren via Aktiensparplan</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> autoreload
+<span class="o">%</span><span class="k">autoreload</span> 2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="fallstudie-investieren-via-aktiensparplan">
+<h1>Fallstudie: Investieren via Aktiensparplan<a class="headerlink" href="#fallstudie-investieren-via-aktiensparplan" title="Permalink to this headline">¶</a></h1>
+<p>Enden wollen wir das einleitende Kapitel mit einer Fallstudie. In dieser Fallstudie werden Dinge vorgegriffen, die Sie an dieser Stelle noch nicht zu 100% nachvollziehen können. Ziel der Fallstudie ist nicht, dass Sie jede Code-Zeile nachvollziehen können. Vielmehr sollen Sie einen Eindruck davon vermittelt bekommen, was Sie</p>
+<ul class="simple">
+<li><p>Daten</p></li>
+<li><p>Aufbereitung</p></li>
+<li><p>Berechnungen</p></li>
+<li><p>Analyse</p></li>
+<li><p>Visualisierung / Kommunikation</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span> 
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;S/&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">utility</span> <span class="kn">import</span> <span class="n">plot</span><span class="p">,</span> <span class="n">load_stockdata</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">plotting</span><span class="o">.</span><span class="n">backend</span> <span class="o">=</span> <span class="s1">&#39;matplotlib&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="p">(</span><span class="n">load_stockdata</span><span class="p">(</span><span class="n">ticker</span><span class="o">=</span><span class="s2">&quot;^GDAXI&quot;</span><span class="p">,</span> <span class="n">frequency</span><span class="o">=</span><span class="s2">&quot;1d&quot;</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="s2">&quot;1-1-1990&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;7-18-2022&quot;</span><span class="p">)</span>
+      <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">items</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">,</span><span class="s2">&quot;Adj Close&quot;</span><span class="p">])</span>
+      <span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;Date&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Adj Close&quot;</span><span class="p">)</span>
+      <span class="c1">#.pipe(plot, </span>
+      <span class="c1">#      x=&quot;Date&quot;, </span>
+      <span class="c1">#      y=&quot;Adj Close&quot;, </span>
+      <span class="c1">#      title=&quot;DAX-Kurs\n(1990 bis heute)&quot;,</span>
+      <span class="c1">#      xlabel=&quot;Datum&quot;)</span>
+     <span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;Date&#39;&gt;
+</pre></div>
+</div>
+<img alt="../../_images/Einleitung_CaseStudy_6_1.png" src="../../_images/Einleitung_CaseStudy_6_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;Date&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">items</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">,</span> <span class="s2">&quot;Adj Close&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">6</span><span class="o">-</span><span class="n">b2675600e558</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">df</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">items</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">,</span> <span class="s2">&quot;Adj Close&quot;</span><span class="p">])</span>
+
+<span class="ne">AttributeError</span>: &#39;AxesSubplot&#39; object has no attribute &#39;filter&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;https://query1.finance.yahoo.com/v7/finance/download/GOOG?period1=1657670400&amp;period2=1658102400&amp;interval=1d&amp;events=history&amp;includeAdjustedClose=true&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>https://query1.finance.yahoo.com/v7/finance/download/GOOG?period1=1626615019&amp;period2=1658151019&amp;interval=1d&amp;events=history&amp;includeAdjustedClose=true
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="s2">&quot;2021-7-18 15:24:00&quot;</span><span class="p">,</span> <span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2"> %H:%M:%S&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">timestamp</span><span class="p">())</span>
+<span class="sa">f</span><span class="s2">&quot;abc</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2">&amp;bcd&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;abc1626614640&amp;bcd&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>https://query1.finance.yahoo.com/v7/finance/download/GOOG?period1=1657670400&amp;period2=1658102400&amp;interval=1d&amp;events=history&amp;includeAdjustedClose=true
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;1286056800&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datetime</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">74</span><span class="o">-</span><span class="n">a9afd05c4900</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="mi">1626615019</span><span class="p">)</span>
+
+<span class="ne">TypeError</span>: descriptor &#39;strftime&#39; for &#39;datetime.date&#39; objects doesn&#39;t apply to a &#39;int&#39; object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">HTTPError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">67</span><span class="o">-</span><span class="mf">7e3</span><span class="n">ce7e6e77c</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/pandas/io/parsers.py</span> in <span class="ni">parser_f</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, dialect, error_bad_lines, warn_bad_lines, delim_whitespace, low_memory, memory_map, float_precision)</span>
+<span class="g g-Whitespace">    </span><span class="mi">674</span>         <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">675</span> 
+<span class="ne">--&gt; </span><span class="mi">676</span>         <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">677</span> 
+<span class="g g-Whitespace">    </span><span class="mi">678</span>     <span class="n">parser_f</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">=</span> <span class="n">name</span>
+
+<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/pandas/io/parsers.py</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">428</span>     <span class="c1"># though mypy handling of conditional imports is difficult.</span>
+<span class="g g-Whitespace">    </span><span class="mi">429</span>     <span class="c1"># See https://github.com/python/mypy/issues/1297</span>
+<span class="ne">--&gt; </span><span class="mi">430</span>     <span class="n">fp_or_buf</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">compression</span><span class="p">,</span> <span class="n">should_close</span> <span class="o">=</span> <span class="n">get_filepath_or_buffer</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">431</span>         <span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">encoding</span><span class="p">,</span> <span class="n">compression</span>
+<span class="g g-Whitespace">    </span><span class="mi">432</span>     <span class="p">)</span>
+
+<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/pandas/io/common.py</span> in <span class="ni">get_filepath_or_buffer</span><span class="nt">(filepath_or_buffer, encoding, compression, mode)</span>
+<span class="g g-Whitespace">    </span><span class="mi">170</span> 
+<span class="g g-Whitespace">    </span><span class="mi">171</span>     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="ow">and</span> <span class="n">is_url</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">172</span>         <span class="n">req</span> <span class="o">=</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">173</span>         <span class="n">content_encoding</span> <span class="o">=</span> <span class="n">req</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;Content-Encoding&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">174</span>         <span class="k">if</span> <span class="n">content_encoding</span> <span class="o">==</span> <span class="s2">&quot;gzip&quot;</span><span class="p">:</span>
+
+<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/pandas/io/common.py</span> in <span class="ni">urlopen</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">139</span>     <span class="kn">import</span> <span class="nn">urllib.request</span>
+<span class="g g-Whitespace">    </span><span class="mi">140</span> 
+<span class="ne">--&gt; </span><span class="mi">141</span>     <span class="k">return</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">142</span> 
+<span class="g g-Whitespace">    </span><span class="mi">143</span> 
+
+<span class="nn">~/opt/anaconda3/lib/python3.8/urllib/request.py</span> in <span class="ni">urlopen</span><span class="nt">(url, data, timeout, cafile, capath, cadefault, context)</span>
+<span class="g g-Whitespace">    </span><span class="mi">220</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">221</span>         <span class="n">opener</span> <span class="o">=</span> <span class="n">_opener</span>
+<span class="ne">--&gt; </span><span class="mi">222</span>     <span class="k">return</span> <span class="n">opener</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">timeout</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">223</span> 
+<span class="g g-Whitespace">    </span><span class="mi">224</span> <span class="k">def</span> <span class="nf">install_opener</span><span class="p">(</span><span class="n">opener</span><span class="p">):</span>
+
+<span class="nn">~/opt/anaconda3/lib/python3.8/urllib/request.py</span> in <span class="ni">open</span><span class="nt">(self, fullurl, data, timeout)</span>
+<span class="g g-Whitespace">    </span><span class="mi">529</span>         <span class="k">for</span> <span class="n">processor</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">process_response</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">protocol</span><span class="p">,</span> <span class="p">[]):</span>
+<span class="g g-Whitespace">    </span><span class="mi">530</span>             <span class="n">meth</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">processor</span><span class="p">,</span> <span class="n">meth_name</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">531</span>             <span class="n">response</span> <span class="o">=</span> <span class="n">meth</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">532</span> 
+<span class="g g-Whitespace">    </span><span class="mi">533</span>         <span class="k">return</span> <span class="n">response</span>
+
+<span class="nn">~/opt/anaconda3/lib/python3.8/urllib/request.py</span> in <span class="ni">http_response</span><span class="nt">(self, request, response)</span>
+<span class="g g-Whitespace">    </span><span class="mi">638</span>         <span class="c1"># request was successfully received, understood, and accepted.</span>
+<span class="g g-Whitespace">    </span><span class="mi">639</span>         <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="mi">200</span> <span class="o">&lt;=</span> <span class="n">code</span> <span class="o">&lt;</span> <span class="mi">300</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">640</span>             <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">error</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">641</span>                 <span class="s1">&#39;http&#39;</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">hdrs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">642</span> 
+
+<span class="nn">~/opt/anaconda3/lib/python3.8/urllib/request.py</span> in <span class="ni">error</span><span class="nt">(self, proto, *args)</span>
+<span class="g g-Whitespace">    </span><span class="mi">567</span>         <span class="k">if</span> <span class="n">http_err</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">568</span>             <span class="n">args</span> <span class="o">=</span> <span class="p">(</span><span class="nb">dict</span><span class="p">,</span> <span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="s1">&#39;http_error_default&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">orig_args</span>
+<span class="ne">--&gt; </span><span class="mi">569</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_call_chain</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">570</span> 
+<span class="g g-Whitespace">    </span><span class="mi">571</span> <span class="c1"># XXX probably also want an abstract factory that knows when it makes</span>
+
+<span class="nn">~/opt/anaconda3/lib/python3.8/urllib/request.py</span> in <span class="ni">_call_chain</span><span class="nt">(self, chain, kind, meth_name, *args)</span>
+<span class="g g-Whitespace">    </span><span class="mi">500</span>         <span class="k">for</span> <span class="n">handler</span> <span class="ow">in</span> <span class="n">handlers</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">501</span>             <span class="n">func</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">handler</span><span class="p">,</span> <span class="n">meth_name</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">502</span>             <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">503</span>             <span class="k">if</span> <span class="n">result</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">504</span>                 <span class="k">return</span> <span class="n">result</span>
+
+<span class="nn">~/opt/anaconda3/lib/python3.8/urllib/request.py</span> in <span class="ni">http_error_default</span><span class="nt">(self, req, fp, code, msg, hdrs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">647</span> <span class="k">class</span> <span class="nc">HTTPDefaultErrorHandler</span><span class="p">(</span><span class="n">BaseHandler</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">648</span>     <span class="k">def</span> <span class="nf">http_error_default</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">req</span><span class="p">,</span> <span class="n">fp</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">hdrs</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">649</span>         <span class="k">raise</span> <span class="n">HTTPError</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">full_url</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">hdrs</span><span class="p">,</span> <span class="n">fp</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">650</span> 
+<span class="g g-Whitespace">    </span><span class="mi">651</span> <span class="k">class</span> <span class="nc">HTTPRedirectHandler</span><span class="p">(</span><span class="n">BaseHandler</span><span class="p">):</span>
+
+<span class="ne">HTTPError</span>: HTTP Error 400: Bad Request
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://query1.finance.yahoo.com/v7/finance/download/EXS1.DE?period1=1199232000&amp;period2=1657497600&amp;interval=1d&amp;events=history&amp;includeAdjustedClose=true&quot;</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>plot(x=&quot;Date&quot;, y=&quot;Adj Close&quot;, data=data, title=&quot;Dies ist ein Test&quot;, kind=∫)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/Einleitung_CaseStudy_17_0.png" src="../../_images/Einleitung_CaseStudy_17_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>str
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;Adj Close&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f93a2b40ca0&gt;]
+</pre></div>
+</div>
+<img alt="../../_images/Einleitung_CaseStudy_19_1.png" src="../../_images/Einleitung_CaseStudy_19_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data1</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;A&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span>
+        <span class="s2">&quot;B&quot;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="s2">&quot;abc&quot;</span><span class="p">)}</span>
+
+<span class="n">data2</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;A&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
+        <span class="s2">&quot;B&quot;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="s2">&quot;cba&quot;</span><span class="p">)}</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">data1</span><span class="p">,</span> <span class="n">data2</span><span class="p">]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">((</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">data</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> 
+     <span class="n">plot_type</span><span class="o">=</span><span class="s2">&quot;scatter&quot;</span><span class="p">,</span> 
+     <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+     <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Dies ist ein Test&quot;</span><span class="p">,</span>
+     <span class="n">ylabel</span><span class="o">=</span><span class="s2">&quot;Important label&quot;</span><span class="p">,</span>
+     <span class="n">xlabel</span><span class="o">=</span><span class="s2">&quot;X-Achse&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/Einleitung_CaseStudy_21_0.png" src="../../_images/Einleitung_CaseStudy_21_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;Adj Close&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7ff773058640&gt;
+</pre></div>
+</div>
+<img alt="../../_images/Einleitung_CaseStudy_22_1.png" src="../../_images/Einleitung_CaseStudy_22_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">glob</span> <span class="kn">import</span> <span class="n">glob</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;../Data&quot;</span><span class="p">)</span>
+<span class="nb">list</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[PosixPath(&#39;Data/untitled.txt&#39;)]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+
+<span class="n">BASE_DIR</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span>
+<span class="n">BASE_DIR</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">88</span><span class="o">-</span><span class="mi">99</span><span class="n">a39500946b</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">BASE_DIR</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">BASE_DIR</span>
+
+<span class="ne">NameError</span>: name &#39;__file__&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">class</span> <span class="nc">TestMe</span><span class="p">():</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">context</span> <span class="o">=</span> <span class="nb">locals</span><span class="p">()</span>
+        
+    <span class="k">def</span> <span class="fm">__enter__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Enter&quot;</span><span class="p">)</span> 
+        <span class="c1">#self.context = globals()</span>
+        <span class="k">return</span> <span class="bp">self</span>
+    
+    <span class="k">def</span> <span class="fm">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">context</span> <span class="o">=</span> <span class="nb">locals</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">test</span> <span class="o">=</span> <span class="n">args</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pprint</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">TestMe</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="k">with</span> <span class="n">t</span> <span class="k">as</span> <span class="n">model2</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+    <span class="n">strategy</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span>
+    
+<span class="n">t</span><span class="o">.</span><span class="n">context</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Enter
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;self&#39;: &lt;__main__.TestMe at 0x7f9649630640&gt;, &#39;args&#39;: (None, None, None)}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1, 2, 3, 4, 5])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">threading</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">locals</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;__name__&#39;: &#39;__main__&#39;,
+ &#39;__doc__&#39;: &#39;Automatically created module for IPython interactive environment&#39;,
+ &#39;__package__&#39;: None,
+ &#39;__loader__&#39;: None,
+ &#39;__spec__&#39;: None,
+ &#39;__builtin__&#39;: &lt;module &#39;builtins&#39; (built-in)&gt;,
+ &#39;__builtins__&#39;: &lt;module &#39;builtins&#39; (built-in)&gt;,
+ &#39;_ih&#39;: [&#39;&#39;,
+  &quot;get_ipython().run_line_magic(&#39;load_ext&#39;, &#39;autoreload&#39;)\nget_ipython().run_line_magic(&#39;autoreload&#39;, &#39;2&#39;)&quot;,
+  &#39;from UtilityCode.utility import plot, load_stockdata\nfrom datetime import datetime\nimport time&#39;,
+  &#39;df = (load_stockdata(ticker=&quot;^GDAXI&quot;, frequency=&quot;1d&quot;, start=&quot;1-1-1990&quot;, end=&quot;7-18-2022&quot;)\n      .filter(items=[&quot;Date&quot;,&quot;Adj Close&quot;])\n      .plot(x=&quot;Date&quot;, y=&quot;Adj Close&quot;)\n      #.pipe(plot, \n      #      x=&quot;Date&quot;, \n      #      y=&quot;Adj Close&quot;, \n      #      title=&quot;DAX-Kurs\\n(1990 bis heute)&quot;,\n      #      xlabel=&quot;Datum&quot;)\n     )&#39;,
+  &#39;from UtilityCode.utility import plot, load_stockdata\nfrom datetime import datetime\nimport time\nimport hvplot.pandas&#39;,
+  &#39;df = (load_stockdata(ticker=&quot;^GDAXI&quot;, frequency=&quot;1d&quot;, start=&quot;1-1-1990&quot;, end=&quot;7-18-2022&quot;)\n      .filter(items=[&quot;Date&quot;,&quot;Adj Close&quot;])\n      .plot(x=&quot;Date&quot;, y=&quot;Adj Close&quot;)\n      #.pipe(plot, \n      #      x=&quot;Date&quot;, \n      #      y=&quot;Adj Close&quot;, \n      #      title=&quot;DAX-Kurs\\n(1990 bis heute)&quot;,\n      #      xlabel=&quot;Datum&quot;)\n     )&#39;,
+  &#39;df = (load_stockdata(ticker=&quot;^GDAXI&quot;, frequency=&quot;1d&quot;, start=&quot;1-1-1990&quot;, end=&quot;7-18-2022&quot;)\n      .filter(items=[&quot;Date&quot;,&quot;Adj Close&quot;])\n      .hvplot(x=&quot;Date&quot;, y=&quot;Adj Close&quot;)\n      #.pipe(plot, \n      #      x=&quot;Date&quot;, \n      #      y=&quot;Adj Close&quot;, \n      #      title=&quot;DAX-Kurs\\n(1990 bis heute)&quot;,\n      #      xlabel=&quot;Datum&quot;)\n     )&#39;,
+  &#39;df&#39;,
+  &#39;df = (load_stockdata(ticker=&quot;^GDAXI&quot;, frequency=&quot;1d&quot;, start=&quot;1-1-1990&quot;, end=&quot;7-18-2022&quot;)\n      .filter(items=[&quot;Date&quot;,&quot;Adj Close&quot;])\n      #.hvplot(x=&quot;Date&quot;, y=&quot;Adj Close&quot;)\n      #.pipe(plot, \n      #      x=&quot;Date&quot;, \n      #      y=&quot;Adj Close&quot;, \n      #      title=&quot;DAX-Kurs\\n(1990 bis heute)&quot;,\n      #      xlabel=&quot;Datum&quot;)\n     )&#39;,
+  &quot;from UtilityCode.utility import plot, load_stockdata\nfrom datetime import datetime\nimport time\npd.options.plotting.backend = &#39;holoviews&#39;&quot;,
+  &quot;from UtilityCode.utility import plot, load_stockdata\nfrom datetime import datetime\nimport time\nimport pandas as pd\npd.options.plotting.backend = &#39;holoviews&#39;&quot;,
+  &#39;df = (load_stockdata(ticker=&quot;^GDAXI&quot;, frequency=&quot;1d&quot;, start=&quot;1-1-1990&quot;, end=&quot;7-18-2022&quot;)\n      .filter(items=[&quot;Date&quot;,&quot;Adj Close&quot;])\n      plot(x=&quot;Date&quot;, y=&quot;Adj Close&quot;)\n      #.pipe(plot, \n      #      x=&quot;Date&quot;, \n      #      y=&quot;Adj Close&quot;, \n      #      title=&quot;DAX-Kurs\\n(1990 bis heute)&quot;,\n      #      xlabel=&quot;Datum&quot;)\n     )&#39;,
+  &#39;df = (load_stockdata(ticker=&quot;^GDAXI&quot;, frequency=&quot;1d&quot;, start=&quot;1-1-1990&quot;, end=&quot;7-18-2022&quot;)\n      .filter(items=[&quot;Date&quot;,&quot;Adj Close&quot;])\n      .plot(x=&quot;Date&quot;, y=&quot;Adj Close&quot;)\n      #.pipe(plot, \n      #      x=&quot;Date&quot;, \n      #      y=&quot;Adj Close&quot;, \n      #      title=&quot;DAX-Kurs\\n(1990 bis heute)&quot;,\n      #      xlabel=&quot;Datum&quot;)\n     )&#39;,
+  &#39;df = (load_stockdata(ticker=&quot;^GDAXI&quot;, frequency=&quot;1d&quot;, start=&quot;1-1-1990&quot;, end=&quot;7-18-2022&quot;)\n      .filter(items=[&quot;Date&quot;,&quot;Adj Close&quot;])\n      .plot(x=&quot;Date&quot;, y=&quot;Adj Close&quot;)\n      #.pipe(plot, \n      #      x=&quot;Date&quot;, \n      #      y=&quot;Adj Close&quot;, \n      #      title=&quot;DAX-Kurs\\n(1990 bis heute)&quot;,\n      #      xlabel=&quot;Datum&quot;)\n     )\ndf&#39;,
+  &quot;from UtilityCode.utility import plot, load_stockdata\nfrom datetime import datetime\nimport time\nimport pandas as pd\npd.options.plotting.backend = &#39;seaborn&#39;&quot;,
+  &quot;from UtilityCode.utility import plot, load_stockdata\nfrom datetime import datetime\nimport time\nimport pandas as pd\npd.options.plotting.backend = &#39;matplotlib&#39;&quot;,
+  &#39;df = (load_stockdata(ticker=&quot;^GDAXI&quot;, frequency=&quot;1d&quot;, start=&quot;1-1-1990&quot;, end=&quot;7-18-2022&quot;)\n      .filter(items=[&quot;Date&quot;,&quot;Adj Close&quot;])\n      .plot(x=&quot;Date&quot;, y=&quot;Adj Close&quot;)\n      #.pipe(plot, \n      #      x=&quot;Date&quot;, \n      #      y=&quot;Adj Close&quot;, \n      #      title=&quot;DAX-Kurs\\n(1990 bis heute)&quot;,\n      #      xlabel=&quot;Datum&quot;)\n     )\ndf&#39;,
+  &#39;class TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self):\n        print(&quot;Enter&quot;)\n        \n    def __exit__(self):\n        print(&quot;Exit&quot;)&#39;,
+  &#39;with TestMe(&quot;3&quot;) as fin:\n    print(&quot;Hallo&quot;)\n    &#39;,
+  &#39;class TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self):\n        print(&quot;Enter&quot;)\n        \n    def __exit__(self, a, b, c):\n        print(&quot;Exit&quot;)&#39;,
+  &#39;with TestMe(&quot;3&quot;) as fin:\n    print(&quot;Hallo&quot;)\n    &#39;,
+  &#39;class TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self):\n        print(&quot;Enter&quot;)\n        \n    def __exit__(self, *args):\n        print(&quot;Exit&quot;)&#39;,
+  &#39;with TestMe(&quot;3&quot;) as fin:\n    print(&quot;Hallo&quot;)\n    &#39;,
+  &#39;class TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self):\n        print(&quot;Enter&quot;)\n        \n    def __exit__(self, *args):\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+  &#39;with TestMe(&quot;3&quot;) as fin:\n    print(&quot;Hallo&quot;)\n    &#39;,
+  &#39;t = TestMe(3)\nwith t as fin:\n    print(&quot;Hallo&quot;)\n    &#39;,
+  &#39;t&#39;,
+  &#39;t = TestMe(3)\nwith t as fin:\n    print(&quot;Hallo&quot;)\n\nt.test&#39;,
+  &#39;t = TestMe(3)\nwith t as fin:\n    fin = 3\n\nt.test&#39;,
+  &#39;t = TestMe(3)\nwith t as fin:\n    t.x = 5\n\nt.test&#39;,
+  &#39;t&#39;,
+  &#39;t.x&#39;,
+  &#39;t = TestMe(3)\nwith t as fin:\n    a = 4\n    \n\nt.test&#39;,
+  &#39;class TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self):\n        \n        print(&quot;Enter&quot;)\n        \n    def __exit__(self, *args):\n        self.x\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+  &#39;t = TestMe(3)\nwith t as fin:\n    a = 4\n    \n\nt.test&#39;,
+  &#39;class TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self):\n        \n        print(&quot;Enter&quot;)\n        \n    def __exit__(self, *args):\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+  &#39;t = TestMe(3)\nwith t as fin:\n    a = 4\n    \n\nt.test&#39;,
+  &#39;t = TestMe(3)\nwith t:\n    a = 4\n    t\n    \n\nt.test&#39;,
+  &#39;t = TestMe(3)\nwith t as model:\n    model.x = 14\n    t\n    \n\nt.test&#39;,
+  &#39;t = TestMe(3)\nwith t as model:\n    model.x = 14\n    print(model)\n    t\n    \n\nt.test&#39;,
+  &#39;t = TestMe(3)\nwith t as model:\n    type(model)\n    model.x = 14\n    print(model)\n    \n    \n\nt.test&#39;,
+  &#39;class TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self):\n        print(&quot;Enter&quot;)\n        return self\n    \n    def __exit__(self, *args):\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+  &#39;t = TestMe(3)\nwith t as model:\n    type(model)\n    model.x = 14\n    print(model)\n    \n    \n\nt.test&#39;,
+  &#39;model&#39;,
+  &#39;model == t&#39;,
+  &#39;model is t&#39;,
+  &#39;t = TestMe(3)\nwith t as pm:\n    pm.data = 14\n    pm.strategy = lambda x: x * 2\n    \n    \n    \n\nt.test&#39;,
+  &#39;model is t&#39;,
+  &#39;t = TestMe(3)\nwith t as pm:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    pm.x = [data, strategy]\n    \n    \n    \n\nt.test&#39;,
+  &#39;import numpy as np\nclass TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self):\n        print(&quot;Enter&quot;)\n        return self\n    \n    def __exit__(self, *args):\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+  &#39;import numpy as np\n\nclass TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self):\n        print(&quot;Enter&quot;)\n        return self\n    \n    def __exit__(self, *args):\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+  &#39;t = TestMe(3)\nwith t as pm:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    pm.x = [data, strategy]\n    \n    \n    \n\nt.test&#39;,
+  &#39;pm&#39;,
+  &#39;t&#39;,
+  &#39;t.test&#39;,
+  &#39;t.x&#39;,
+  &#39;import numpy as np\n\nclass TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self):\n        print(&quot;Enter&quot;)\n        return self\n    \n    def __exit__(self, *args):\n        self.__enter__\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+  &#39;t = TestMe(3)\nwith t as model:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    \nt.test&#39;,
+  &#39;t.x&#39;,
+  &#39;t&#39;,
+  &#39;t.test&#39;,
+  &#39;import numpy as np\n\nclass TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self):\n        print(&quot;Enter&quot;)\n        return self\n    \n    def __exit__(self, *args):\n        self.__enter__()\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+  &#39;t = TestMe(3)\nwith t as model:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    \nt.test&#39;,
+  &#39;import numpy as np\n\nclass TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self, *args):\n        print(&quot;Enter&quot;)\n        return self\n    \n    def __exit__(self, *args):\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+  &#39;t = TestMe(3)\nwith t as model:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    \nt.test&#39;,
+  &#39;import numpy as np\n\nclass TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self, *args):\n        print(&quot;Enter&quot;)\n        print(args)\n        return self\n    \n    def __exit__(self, *args):\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+  &#39;t = TestMe(3)\nwith t as model:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    \nt.test&#39;,
+  &#39;import numpy as np\n\nclass TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self, *args):\n        print(&quot;Enter&quot;)\n        self.args = args    \n        return self\n    \n    def __exit__(self, *args):\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+  &#39;t = TestMe(3)\nwith t as model:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    \nt.test&#39;,
+  &#39;t.test&#39;,
+  &#39;t = TestMe(3)\nwith t(1,2,3) as model:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    \nt.test&#39;,
+  &#39;import numpy as np\n\nclass TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self, *args):\n        print(&quot;Enter&quot;)\n        self.__class__   \n        return self\n    \n    def __exit__(self, *args):\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+  &#39;t = TestMe(3)\nwith  as model:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    \nt.test&#39;,
+  &#39;t = TestMe(3)\nwith t as model:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    \nt.test&#39;,
+  &#39;import numpy as np\n\nclass TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self, *args):\n        print(&quot;Enter&quot;)\n        self.__class__   \n        return self\n    \n    def __exit__(self, *args):\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+  &#39;t = TestMe(3)\nwith t as model:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    \nt.test&#39;,
+  &#39;import numpy as np\n\nclass TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self, *args):\n        print(&quot;Enter&quot;)\n        self.__class__.get_contexts() \n        return self\n    \n    def __exit__(self, *args):\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+  &#39;t = TestMe(3)\nwith t as model:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    \nt.test&#39;,
+  &#39;import threading&#39;,
+  &#39;threading.local()&#39;,
+  &#39;t = threading.local()&#39;,
+  &#39;t&#39;,
+  &#39;import numpy as np\n\nclass TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self, *args):\n        print(&quot;Enter&quot;)\n        cls.get_attributes()\n        return self\n    \n    def __exit__(self, *args):\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+  &#39;t = TestMe(3)\nwith t as model:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    \nt.test&#39;,
+  &#39;import numpy as np\n\nclass TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(cls, *args):\n        print(&quot;Enter&quot;)\n        cls.get_attributes()\n        return self\n    \n    def __exit__(self, *args):\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+  &#39;t = TestMe(3)\nwith t as model:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    \nt.test&#39;,
+  &#39;import numpy as np\n\nclass TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self, *args):\n        print(&quot;Enter&quot;)   \n        return self\n    \n    def __exit__(self, *args):\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+  &#39;t = TestMe(3)\nwith t as model:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    \nt.test&#39;,
+  &#39;t.test&#39;,
+  &#39;import threading&#39;,
+  &#39;t = threading.local()&#39;,
+  &#39;t&#39;,
+  &quot;get_ipython().run_line_magic(&#39;pinfo&#39;, &#39;t&#39;)&quot;,
+  &quot;get_ipython().run_line_magic(&#39;pinfo&#39;, &#39;threading.local&#39;)&quot;,
+  &#39;locals&#39;,
+  &#39;locals()&#39;],
+ &#39;_oh&#39;: {7: :Curve   [Date]   (Adj Close),
+  13: :Curve   [Date]   (Adj Close),
+  16: &lt;AxesSubplot:xlabel=&#39;Date&#39;&gt;,
+  26: &lt;__main__.TestMe at 0x7fc0699b4820&gt;,
+  27: (None, None, None),
+  28: (None, None, None),
+  29: (None, None, None),
+  30: &lt;__main__.TestMe at 0x7fc0788d1370&gt;,
+  31: 5,
+  32: (None, None, None),
+  34: (None, None, None),
+  36: (None, None, None),
+  37: (None, None, None),
+  42: (None, None, None),
+  43: &lt;__main__.TestMe at 0x7fc0699ca4c0&gt;,
+  44: True,
+  45: True,
+  46: (None, None, None),
+  47: False,
+  51: (None, None, None),
+  52: &lt;__main__.TestMe at 0x7fc0699ca310&gt;,
+  53: &lt;__main__.TestMe at 0x7fc0699ca310&gt;,
+  54: (None, None, None),
+  55: [array([1, 2, 3, 4, 5]), &lt;function __main__.&lt;lambda&gt;(x)&gt;],
+  57: (None, None, None),
+  58: 3,
+  59: &lt;__main__.TestMe at 0x7fc04c6cbfa0&gt;,
+  60: (None, None, None),
+  62: (None, None, None),
+  64: (None, None, None),
+  66: (None, None, None),
+  68: (None, None, None),
+  69: (None, None, None),
+  73: (None, None, None),
+  75: (None, None, None),
+  79: &lt;_thread._local at 0x7fc0584e0c70&gt;,
+  81: &lt;_thread._local at 0x7fc0699d6ef0&gt;,
+  87: (None, None, None),
+  88: (None, None, None),
+  91: &lt;_thread._local at 0x7fc0584e9400&gt;,
+  94: &lt;function locals()&gt;},
+ &#39;_dh&#39;: [&#39;/Users/felix/Dropbox/02_FH/01 Lehre/BA/Skript&#39;],
+ &#39;In&#39;: [&#39;&#39;,
+  &quot;get_ipython().run_line_magic(&#39;load_ext&#39;, &#39;autoreload&#39;)\nget_ipython().run_line_magic(&#39;autoreload&#39;, &#39;2&#39;)&quot;,
+  &#39;from UtilityCode.utility import plot, load_stockdata\nfrom datetime import datetime\nimport time&#39;,
+  &#39;df = (load_stockdata(ticker=&quot;^GDAXI&quot;, frequency=&quot;1d&quot;, start=&quot;1-1-1990&quot;, end=&quot;7-18-2022&quot;)\n      .filter(items=[&quot;Date&quot;,&quot;Adj Close&quot;])\n      .plot(x=&quot;Date&quot;, y=&quot;Adj Close&quot;)\n      #.pipe(plot, \n      #      x=&quot;Date&quot;, \n      #      y=&quot;Adj Close&quot;, \n      #      title=&quot;DAX-Kurs\\n(1990 bis heute)&quot;,\n      #      xlabel=&quot;Datum&quot;)\n     )&#39;,
+  &#39;from UtilityCode.utility import plot, load_stockdata\nfrom datetime import datetime\nimport time\nimport hvplot.pandas&#39;,
+  &#39;df = (load_stockdata(ticker=&quot;^GDAXI&quot;, frequency=&quot;1d&quot;, start=&quot;1-1-1990&quot;, end=&quot;7-18-2022&quot;)\n      .filter(items=[&quot;Date&quot;,&quot;Adj Close&quot;])\n      .plot(x=&quot;Date&quot;, y=&quot;Adj Close&quot;)\n      #.pipe(plot, \n      #      x=&quot;Date&quot;, \n      #      y=&quot;Adj Close&quot;, \n      #      title=&quot;DAX-Kurs\\n(1990 bis heute)&quot;,\n      #      xlabel=&quot;Datum&quot;)\n     )&#39;,
+  &#39;df = (load_stockdata(ticker=&quot;^GDAXI&quot;, frequency=&quot;1d&quot;, start=&quot;1-1-1990&quot;, end=&quot;7-18-2022&quot;)\n      .filter(items=[&quot;Date&quot;,&quot;Adj Close&quot;])\n      .hvplot(x=&quot;Date&quot;, y=&quot;Adj Close&quot;)\n      #.pipe(plot, \n      #      x=&quot;Date&quot;, \n      #      y=&quot;Adj Close&quot;, \n      #      title=&quot;DAX-Kurs\\n(1990 bis heute)&quot;,\n      #      xlabel=&quot;Datum&quot;)\n     )&#39;,
+  &#39;df&#39;,
+  &#39;df = (load_stockdata(ticker=&quot;^GDAXI&quot;, frequency=&quot;1d&quot;, start=&quot;1-1-1990&quot;, end=&quot;7-18-2022&quot;)\n      .filter(items=[&quot;Date&quot;,&quot;Adj Close&quot;])\n      #.hvplot(x=&quot;Date&quot;, y=&quot;Adj Close&quot;)\n      #.pipe(plot, \n      #      x=&quot;Date&quot;, \n      #      y=&quot;Adj Close&quot;, \n      #      title=&quot;DAX-Kurs\\n(1990 bis heute)&quot;,\n      #      xlabel=&quot;Datum&quot;)\n     )&#39;,
+  &quot;from UtilityCode.utility import plot, load_stockdata\nfrom datetime import datetime\nimport time\npd.options.plotting.backend = &#39;holoviews&#39;&quot;,
+  &quot;from UtilityCode.utility import plot, load_stockdata\nfrom datetime import datetime\nimport time\nimport pandas as pd\npd.options.plotting.backend = &#39;holoviews&#39;&quot;,
+  &#39;df = (load_stockdata(ticker=&quot;^GDAXI&quot;, frequency=&quot;1d&quot;, start=&quot;1-1-1990&quot;, end=&quot;7-18-2022&quot;)\n      .filter(items=[&quot;Date&quot;,&quot;Adj Close&quot;])\n      plot(x=&quot;Date&quot;, y=&quot;Adj Close&quot;)\n      #.pipe(plot, \n      #      x=&quot;Date&quot;, \n      #      y=&quot;Adj Close&quot;, \n      #      title=&quot;DAX-Kurs\\n(1990 bis heute)&quot;,\n      #      xlabel=&quot;Datum&quot;)\n     )&#39;,
+  &#39;df = (load_stockdata(ticker=&quot;^GDAXI&quot;, frequency=&quot;1d&quot;, start=&quot;1-1-1990&quot;, end=&quot;7-18-2022&quot;)\n      .filter(items=[&quot;Date&quot;,&quot;Adj Close&quot;])\n      .plot(x=&quot;Date&quot;, y=&quot;Adj Close&quot;)\n      #.pipe(plot, \n      #      x=&quot;Date&quot;, \n      #      y=&quot;Adj Close&quot;, \n      #      title=&quot;DAX-Kurs\\n(1990 bis heute)&quot;,\n      #      xlabel=&quot;Datum&quot;)\n     )&#39;,
+  &#39;df = (load_stockdata(ticker=&quot;^GDAXI&quot;, frequency=&quot;1d&quot;, start=&quot;1-1-1990&quot;, end=&quot;7-18-2022&quot;)\n      .filter(items=[&quot;Date&quot;,&quot;Adj Close&quot;])\n      .plot(x=&quot;Date&quot;, y=&quot;Adj Close&quot;)\n      #.pipe(plot, \n      #      x=&quot;Date&quot;, \n      #      y=&quot;Adj Close&quot;, \n      #      title=&quot;DAX-Kurs\\n(1990 bis heute)&quot;,\n      #      xlabel=&quot;Datum&quot;)\n     )\ndf&#39;,
+  &quot;from UtilityCode.utility import plot, load_stockdata\nfrom datetime import datetime\nimport time\nimport pandas as pd\npd.options.plotting.backend = &#39;seaborn&#39;&quot;,
+  &quot;from UtilityCode.utility import plot, load_stockdata\nfrom datetime import datetime\nimport time\nimport pandas as pd\npd.options.plotting.backend = &#39;matplotlib&#39;&quot;,
+  &#39;df = (load_stockdata(ticker=&quot;^GDAXI&quot;, frequency=&quot;1d&quot;, start=&quot;1-1-1990&quot;, end=&quot;7-18-2022&quot;)\n      .filter(items=[&quot;Date&quot;,&quot;Adj Close&quot;])\n      .plot(x=&quot;Date&quot;, y=&quot;Adj Close&quot;)\n      #.pipe(plot, \n      #      x=&quot;Date&quot;, \n      #      y=&quot;Adj Close&quot;, \n      #      title=&quot;DAX-Kurs\\n(1990 bis heute)&quot;,\n      #      xlabel=&quot;Datum&quot;)\n     )\ndf&#39;,
+  &#39;class TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self):\n        print(&quot;Enter&quot;)\n        \n    def __exit__(self):\n        print(&quot;Exit&quot;)&#39;,
+  &#39;with TestMe(&quot;3&quot;) as fin:\n    print(&quot;Hallo&quot;)\n    &#39;,
+  &#39;class TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self):\n        print(&quot;Enter&quot;)\n        \n    def __exit__(self, a, b, c):\n        print(&quot;Exit&quot;)&#39;,
+  &#39;with TestMe(&quot;3&quot;) as fin:\n    print(&quot;Hallo&quot;)\n    &#39;,
+  &#39;class TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self):\n        print(&quot;Enter&quot;)\n        \n    def __exit__(self, *args):\n        print(&quot;Exit&quot;)&#39;,
+  &#39;with TestMe(&quot;3&quot;) as fin:\n    print(&quot;Hallo&quot;)\n    &#39;,
+  &#39;class TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self):\n        print(&quot;Enter&quot;)\n        \n    def __exit__(self, *args):\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+  &#39;with TestMe(&quot;3&quot;) as fin:\n    print(&quot;Hallo&quot;)\n    &#39;,
+  &#39;t = TestMe(3)\nwith t as fin:\n    print(&quot;Hallo&quot;)\n    &#39;,
+  &#39;t&#39;,
+  &#39;t = TestMe(3)\nwith t as fin:\n    print(&quot;Hallo&quot;)\n\nt.test&#39;,
+  &#39;t = TestMe(3)\nwith t as fin:\n    fin = 3\n\nt.test&#39;,
+  &#39;t = TestMe(3)\nwith t as fin:\n    t.x = 5\n\nt.test&#39;,
+  &#39;t&#39;,
+  &#39;t.x&#39;,
+  &#39;t = TestMe(3)\nwith t as fin:\n    a = 4\n    \n\nt.test&#39;,
+  &#39;class TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self):\n        \n        print(&quot;Enter&quot;)\n        \n    def __exit__(self, *args):\n        self.x\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+  &#39;t = TestMe(3)\nwith t as fin:\n    a = 4\n    \n\nt.test&#39;,
+  &#39;class TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self):\n        \n        print(&quot;Enter&quot;)\n        \n    def __exit__(self, *args):\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+  &#39;t = TestMe(3)\nwith t as fin:\n    a = 4\n    \n\nt.test&#39;,
+  &#39;t = TestMe(3)\nwith t:\n    a = 4\n    t\n    \n\nt.test&#39;,
+  &#39;t = TestMe(3)\nwith t as model:\n    model.x = 14\n    t\n    \n\nt.test&#39;,
+  &#39;t = TestMe(3)\nwith t as model:\n    model.x = 14\n    print(model)\n    t\n    \n\nt.test&#39;,
+  &#39;t = TestMe(3)\nwith t as model:\n    type(model)\n    model.x = 14\n    print(model)\n    \n    \n\nt.test&#39;,
+  &#39;class TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self):\n        print(&quot;Enter&quot;)\n        return self\n    \n    def __exit__(self, *args):\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+  &#39;t = TestMe(3)\nwith t as model:\n    type(model)\n    model.x = 14\n    print(model)\n    \n    \n\nt.test&#39;,
+  &#39;model&#39;,
+  &#39;model == t&#39;,
+  &#39;model is t&#39;,
+  &#39;t = TestMe(3)\nwith t as pm:\n    pm.data = 14\n    pm.strategy = lambda x: x * 2\n    \n    \n    \n\nt.test&#39;,
+  &#39;model is t&#39;,
+  &#39;t = TestMe(3)\nwith t as pm:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    pm.x = [data, strategy]\n    \n    \n    \n\nt.test&#39;,
+  &#39;import numpy as np\nclass TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self):\n        print(&quot;Enter&quot;)\n        return self\n    \n    def __exit__(self, *args):\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+  &#39;import numpy as np\n\nclass TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self):\n        print(&quot;Enter&quot;)\n        return self\n    \n    def __exit__(self, *args):\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+  &#39;t = TestMe(3)\nwith t as pm:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    pm.x = [data, strategy]\n    \n    \n    \n\nt.test&#39;,
+  &#39;pm&#39;,
+  &#39;t&#39;,
+  &#39;t.test&#39;,
+  &#39;t.x&#39;,
+  &#39;import numpy as np\n\nclass TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self):\n        print(&quot;Enter&quot;)\n        return self\n    \n    def __exit__(self, *args):\n        self.__enter__\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+  &#39;t = TestMe(3)\nwith t as model:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    \nt.test&#39;,
+  &#39;t.x&#39;,
+  &#39;t&#39;,
+  &#39;t.test&#39;,
+  &#39;import numpy as np\n\nclass TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self):\n        print(&quot;Enter&quot;)\n        return self\n    \n    def __exit__(self, *args):\n        self.__enter__()\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+  &#39;t = TestMe(3)\nwith t as model:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    \nt.test&#39;,
+  &#39;import numpy as np\n\nclass TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self, *args):\n        print(&quot;Enter&quot;)\n        return self\n    \n    def __exit__(self, *args):\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+  &#39;t = TestMe(3)\nwith t as model:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    \nt.test&#39;,
+  &#39;import numpy as np\n\nclass TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self, *args):\n        print(&quot;Enter&quot;)\n        print(args)\n        return self\n    \n    def __exit__(self, *args):\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+  &#39;t = TestMe(3)\nwith t as model:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    \nt.test&#39;,
+  &#39;import numpy as np\n\nclass TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self, *args):\n        print(&quot;Enter&quot;)\n        self.args = args    \n        return self\n    \n    def __exit__(self, *args):\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+  &#39;t = TestMe(3)\nwith t as model:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    \nt.test&#39;,
+  &#39;t.test&#39;,
+  &#39;t = TestMe(3)\nwith t(1,2,3) as model:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    \nt.test&#39;,
+  &#39;import numpy as np\n\nclass TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self, *args):\n        print(&quot;Enter&quot;)\n        self.__class__   \n        return self\n    \n    def __exit__(self, *args):\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+  &#39;t = TestMe(3)\nwith  as model:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    \nt.test&#39;,
+  &#39;t = TestMe(3)\nwith t as model:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    \nt.test&#39;,
+  &#39;import numpy as np\n\nclass TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self, *args):\n        print(&quot;Enter&quot;)\n        self.__class__   \n        return self\n    \n    def __exit__(self, *args):\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+  &#39;t = TestMe(3)\nwith t as model:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    \nt.test&#39;,
+  &#39;import numpy as np\n\nclass TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self, *args):\n        print(&quot;Enter&quot;)\n        self.__class__.get_contexts() \n        return self\n    \n    def __exit__(self, *args):\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+  &#39;t = TestMe(3)\nwith t as model:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    \nt.test&#39;,
+  &#39;import threading&#39;,
+  &#39;threading.local()&#39;,
+  &#39;t = threading.local()&#39;,
+  &#39;t&#39;,
+  &#39;import numpy as np\n\nclass TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self, *args):\n        print(&quot;Enter&quot;)\n        cls.get_attributes()\n        return self\n    \n    def __exit__(self, *args):\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+  &#39;t = TestMe(3)\nwith t as model:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    \nt.test&#39;,
+  &#39;import numpy as np\n\nclass TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(cls, *args):\n        print(&quot;Enter&quot;)\n        cls.get_attributes()\n        return self\n    \n    def __exit__(self, *args):\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+  &#39;t = TestMe(3)\nwith t as model:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    \nt.test&#39;,
+  &#39;import numpy as np\n\nclass TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self, *args):\n        print(&quot;Enter&quot;)   \n        return self\n    \n    def __exit__(self, *args):\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+  &#39;t = TestMe(3)\nwith t as model:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    \nt.test&#39;,
+  &#39;t.test&#39;,
+  &#39;import threading&#39;,
+  &#39;t = threading.local()&#39;,
+  &#39;t&#39;,
+  &quot;get_ipython().run_line_magic(&#39;pinfo&#39;, &#39;t&#39;)&quot;,
+  &quot;get_ipython().run_line_magic(&#39;pinfo&#39;, &#39;threading.local&#39;)&quot;,
+  &#39;locals&#39;,
+  &#39;locals()&#39;],
+ &#39;Out&#39;: {7: :Curve   [Date]   (Adj Close),
+  13: :Curve   [Date]   (Adj Close),
+  16: &lt;AxesSubplot:xlabel=&#39;Date&#39;&gt;,
+  26: &lt;__main__.TestMe at 0x7fc0699b4820&gt;,
+  27: (None, None, None),
+  28: (None, None, None),
+  29: (None, None, None),
+  30: &lt;__main__.TestMe at 0x7fc0788d1370&gt;,
+  31: 5,
+  32: (None, None, None),
+  34: (None, None, None),
+  36: (None, None, None),
+  37: (None, None, None),
+  42: (None, None, None),
+  43: &lt;__main__.TestMe at 0x7fc0699ca4c0&gt;,
+  44: True,
+  45: True,
+  46: (None, None, None),
+  47: False,
+  51: (None, None, None),
+  52: &lt;__main__.TestMe at 0x7fc0699ca310&gt;,
+  53: &lt;__main__.TestMe at 0x7fc0699ca310&gt;,
+  54: (None, None, None),
+  55: [array([1, 2, 3, 4, 5]), &lt;function __main__.&lt;lambda&gt;(x)&gt;],
+  57: (None, None, None),
+  58: 3,
+  59: &lt;__main__.TestMe at 0x7fc04c6cbfa0&gt;,
+  60: (None, None, None),
+  62: (None, None, None),
+  64: (None, None, None),
+  66: (None, None, None),
+  68: (None, None, None),
+  69: (None, None, None),
+  73: (None, None, None),
+  75: (None, None, None),
+  79: &lt;_thread._local at 0x7fc0584e0c70&gt;,
+  81: &lt;_thread._local at 0x7fc0699d6ef0&gt;,
+  87: (None, None, None),
+  88: (None, None, None),
+  91: &lt;_thread._local at 0x7fc0584e9400&gt;,
+  94: &lt;function locals()&gt;},
+ &#39;get_ipython&#39;: &lt;bound method InteractiveShell.get_ipython of &lt;ipykernel.zmqshell.ZMQInteractiveShell object at 0x7fc048bda610&gt;&gt;,
+ &#39;exit&#39;: &lt;IPython.core.autocall.ZMQExitAutocall at 0x7fc0783a42e0&gt;,
+ &#39;quit&#39;: &lt;IPython.core.autocall.ZMQExitAutocall at 0x7fc0783a42e0&gt;,
+ &#39;_&#39;: &lt;function locals()&gt;,
+ &#39;__&#39;: &lt;_thread._local at 0x7fc0584e9400&gt;,
+ &#39;___&#39;: (None, None, None),
+ &#39;_i&#39;: &#39;locals&#39;,
+ &#39;_ii&#39;: &#39;threading.local?&#39;,
+ &#39;_iii&#39;: &#39;t?&#39;,
+ &#39;_i1&#39;: &#39;%load_ext autoreload\n%autoreload 2&#39;,
+ &#39;_i2&#39;: &#39;from UtilityCode.utility import plot, load_stockdata\nfrom datetime import datetime\nimport time&#39;,
+ &#39;plot&#39;: &lt;function UtilityCode.utility.plot(data: pandas.core.frame.DataFrame, x: str, y: str, z: str = None, plot_type: str = &#39;line&#39;, size=(9, 6), title: str = None, xlabel: str = None, ylabel: str = None)&gt;,
+ &#39;load_stockdata&#39;: &lt;function UtilityCode.utility.load_stockdata(ticker: str, frequency: str, start: str, end: str)&gt;,
+ &#39;datetime&#39;: datetime.datetime,
+ &#39;time&#39;: &lt;module &#39;time&#39; (built-in)&gt;,
+ &#39;_i3&#39;: &#39;df = (load_stockdata(ticker=&quot;^GDAXI&quot;, frequency=&quot;1d&quot;, start=&quot;1-1-1990&quot;, end=&quot;7-18-2022&quot;)\n      .filter(items=[&quot;Date&quot;,&quot;Adj Close&quot;])\n      .plot(x=&quot;Date&quot;, y=&quot;Adj Close&quot;)\n      #.pipe(plot, \n      #      x=&quot;Date&quot;, \n      #      y=&quot;Adj Close&quot;, \n      #      title=&quot;DAX-Kurs\\n(1990 bis heute)&quot;,\n      #      xlabel=&quot;Datum&quot;)\n     )&#39;,
+ &#39;df&#39;: &lt;AxesSubplot:xlabel=&#39;Date&#39;&gt;,
+ &#39;_i4&#39;: &#39;from UtilityCode.utility import plot, load_stockdata\nfrom datetime import datetime\nimport time\nimport hvplot.pandas&#39;,
+ &#39;hvplot&#39;: &lt;module &#39;hvplot&#39; from &#39;/Users/felix/opt/anaconda3/envs/bapa/lib/python3.8/site-packages/hvplot/__init__.py&#39;&gt;,
+ &#39;_i5&#39;: &#39;df = (load_stockdata(ticker=&quot;^GDAXI&quot;, frequency=&quot;1d&quot;, start=&quot;1-1-1990&quot;, end=&quot;7-18-2022&quot;)\n      .filter(items=[&quot;Date&quot;,&quot;Adj Close&quot;])\n      .plot(x=&quot;Date&quot;, y=&quot;Adj Close&quot;)\n      #.pipe(plot, \n      #      x=&quot;Date&quot;, \n      #      y=&quot;Adj Close&quot;, \n      #      title=&quot;DAX-Kurs\\n(1990 bis heute)&quot;,\n      #      xlabel=&quot;Datum&quot;)\n     )&#39;,
+ &#39;_i6&#39;: &#39;df = (load_stockdata(ticker=&quot;^GDAXI&quot;, frequency=&quot;1d&quot;, start=&quot;1-1-1990&quot;, end=&quot;7-18-2022&quot;)\n      .filter(items=[&quot;Date&quot;,&quot;Adj Close&quot;])\n      .hvplot(x=&quot;Date&quot;, y=&quot;Adj Close&quot;)\n      #.pipe(plot, \n      #      x=&quot;Date&quot;, \n      #      y=&quot;Adj Close&quot;, \n      #      title=&quot;DAX-Kurs\\n(1990 bis heute)&quot;,\n      #      xlabel=&quot;Datum&quot;)\n     )&#39;,
+ &#39;_i7&#39;: &#39;df&#39;,
+ &#39;_7&#39;: :Curve   [Date]   (Adj Close),
+ &#39;_i8&#39;: &#39;df = (load_stockdata(ticker=&quot;^GDAXI&quot;, frequency=&quot;1d&quot;, start=&quot;1-1-1990&quot;, end=&quot;7-18-2022&quot;)\n      .filter(items=[&quot;Date&quot;,&quot;Adj Close&quot;])\n      #.hvplot(x=&quot;Date&quot;, y=&quot;Adj Close&quot;)\n      #.pipe(plot, \n      #      x=&quot;Date&quot;, \n      #      y=&quot;Adj Close&quot;, \n      #      title=&quot;DAX-Kurs\\n(1990 bis heute)&quot;,\n      #      xlabel=&quot;Datum&quot;)\n     )&#39;,
+ &#39;_i9&#39;: &quot;from UtilityCode.utility import plot, load_stockdata\nfrom datetime import datetime\nimport time\npd.options.plotting.backend = &#39;holoviews&#39;&quot;,
+ &#39;_i10&#39;: &quot;from UtilityCode.utility import plot, load_stockdata\nfrom datetime import datetime\nimport time\nimport pandas as pd\npd.options.plotting.backend = &#39;holoviews&#39;&quot;,
+ &#39;pd&#39;: &lt;module &#39;pandas&#39; from &#39;/Users/felix/opt/anaconda3/envs/bapa/lib/python3.8/site-packages/pandas/__init__.py&#39;&gt;,
+ &#39;_i11&#39;: &#39;df = (load_stockdata(ticker=&quot;^GDAXI&quot;, frequency=&quot;1d&quot;, start=&quot;1-1-1990&quot;, end=&quot;7-18-2022&quot;)\n      .filter(items=[&quot;Date&quot;,&quot;Adj Close&quot;])\n      plot(x=&quot;Date&quot;, y=&quot;Adj Close&quot;)\n      #.pipe(plot, \n      #      x=&quot;Date&quot;, \n      #      y=&quot;Adj Close&quot;, \n      #      title=&quot;DAX-Kurs\\n(1990 bis heute)&quot;,\n      #      xlabel=&quot;Datum&quot;)\n     )&#39;,
+ &#39;_i12&#39;: &#39;df = (load_stockdata(ticker=&quot;^GDAXI&quot;, frequency=&quot;1d&quot;, start=&quot;1-1-1990&quot;, end=&quot;7-18-2022&quot;)\n      .filter(items=[&quot;Date&quot;,&quot;Adj Close&quot;])\n      .plot(x=&quot;Date&quot;, y=&quot;Adj Close&quot;)\n      #.pipe(plot, \n      #      x=&quot;Date&quot;, \n      #      y=&quot;Adj Close&quot;, \n      #      title=&quot;DAX-Kurs\\n(1990 bis heute)&quot;,\n      #      xlabel=&quot;Datum&quot;)\n     )&#39;,
+ &#39;_i13&#39;: &#39;df = (load_stockdata(ticker=&quot;^GDAXI&quot;, frequency=&quot;1d&quot;, start=&quot;1-1-1990&quot;, end=&quot;7-18-2022&quot;)\n      .filter(items=[&quot;Date&quot;,&quot;Adj Close&quot;])\n      .plot(x=&quot;Date&quot;, y=&quot;Adj Close&quot;)\n      #.pipe(plot, \n      #      x=&quot;Date&quot;, \n      #      y=&quot;Adj Close&quot;, \n      #      title=&quot;DAX-Kurs\\n(1990 bis heute)&quot;,\n      #      xlabel=&quot;Datum&quot;)\n     )\ndf&#39;,
+ &#39;_13&#39;: :Curve   [Date]   (Adj Close),
+ &#39;_i14&#39;: &quot;from UtilityCode.utility import plot, load_stockdata\nfrom datetime import datetime\nimport time\nimport pandas as pd\npd.options.plotting.backend = &#39;seaborn&#39;&quot;,
+ &#39;_i15&#39;: &quot;from UtilityCode.utility import plot, load_stockdata\nfrom datetime import datetime\nimport time\nimport pandas as pd\npd.options.plotting.backend = &#39;matplotlib&#39;&quot;,
+ &#39;_i16&#39;: &#39;df = (load_stockdata(ticker=&quot;^GDAXI&quot;, frequency=&quot;1d&quot;, start=&quot;1-1-1990&quot;, end=&quot;7-18-2022&quot;)\n      .filter(items=[&quot;Date&quot;,&quot;Adj Close&quot;])\n      .plot(x=&quot;Date&quot;, y=&quot;Adj Close&quot;)\n      #.pipe(plot, \n      #      x=&quot;Date&quot;, \n      #      y=&quot;Adj Close&quot;, \n      #      title=&quot;DAX-Kurs\\n(1990 bis heute)&quot;,\n      #      xlabel=&quot;Datum&quot;)\n     )\ndf&#39;,
+ &#39;_16&#39;: &lt;AxesSubplot:xlabel=&#39;Date&#39;&gt;,
+ &#39;_i17&#39;: &#39;class TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self):\n        print(&quot;Enter&quot;)\n        \n    def __exit__(self):\n        print(&quot;Exit&quot;)&#39;,
+ &#39;TestMe&#39;: __main__.TestMe,
+ &#39;_i18&#39;: &#39;with TestMe(&quot;3&quot;) as fin:\n    print(&quot;Hallo&quot;)\n    &#39;,
+ &#39;fin&#39;: None,
+ &#39;_i19&#39;: &#39;class TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self):\n        print(&quot;Enter&quot;)\n        \n    def __exit__(self, a, b, c):\n        print(&quot;Exit&quot;)&#39;,
+ &#39;_i20&#39;: &#39;with TestMe(&quot;3&quot;) as fin:\n    print(&quot;Hallo&quot;)\n    &#39;,
+ &#39;_i21&#39;: &#39;class TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self):\n        print(&quot;Enter&quot;)\n        \n    def __exit__(self, *args):\n        print(&quot;Exit&quot;)&#39;,
+ &#39;_i22&#39;: &#39;with TestMe(&quot;3&quot;) as fin:\n    print(&quot;Hallo&quot;)\n    &#39;,
+ &#39;_i23&#39;: &#39;class TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self):\n        print(&quot;Enter&quot;)\n        \n    def __exit__(self, *args):\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+ &#39;_i24&#39;: &#39;with TestMe(&quot;3&quot;) as fin:\n    print(&quot;Hallo&quot;)\n    &#39;,
+ &#39;_i25&#39;: &#39;t = TestMe(3)\nwith t as fin:\n    print(&quot;Hallo&quot;)\n    &#39;,
+ &#39;t&#39;: &lt;_thread._local at 0x7fc0584e9400&gt;,
+ &#39;_i26&#39;: &#39;t&#39;,
+ &#39;_26&#39;: &lt;__main__.TestMe at 0x7fc0699b4820&gt;,
+ &#39;_i27&#39;: &#39;t = TestMe(3)\nwith t as fin:\n    print(&quot;Hallo&quot;)\n\nt.test&#39;,
+ &#39;_27&#39;: (None, None, None),
+ &#39;_i28&#39;: &#39;t = TestMe(3)\nwith t as fin:\n    fin = 3\n\nt.test&#39;,
+ &#39;_28&#39;: (None, None, None),
+ &#39;_i29&#39;: &#39;t = TestMe(3)\nwith t as fin:\n    t.x = 5\n\nt.test&#39;,
+ &#39;_29&#39;: (None, None, None),
+ &#39;_i30&#39;: &#39;t&#39;,
+ &#39;_30&#39;: &lt;__main__.TestMe at 0x7fc0788d1370&gt;,
+ &#39;_i31&#39;: &#39;t.x&#39;,
+ &#39;_31&#39;: 5,
+ &#39;_i32&#39;: &#39;t = TestMe(3)\nwith t as fin:\n    a = 4\n    \n\nt.test&#39;,
+ &#39;a&#39;: 4,
+ &#39;_32&#39;: (None, None, None),
+ &#39;_i33&#39;: &#39;class TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self):\n        \n        print(&quot;Enter&quot;)\n        \n    def __exit__(self, *args):\n        self.x\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+ &#39;_i34&#39;: &#39;t = TestMe(3)\nwith t as fin:\n    a = 4\n    \n\nt.test&#39;,
+ &#39;_34&#39;: (None, None, None),
+ &#39;_i35&#39;: &#39;class TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self):\n        \n        print(&quot;Enter&quot;)\n        \n    def __exit__(self, *args):\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+ &#39;_i36&#39;: &#39;t = TestMe(3)\nwith t as fin:\n    a = 4\n    \n\nt.test&#39;,
+ &#39;_36&#39;: (None, None, None),
+ &#39;_i37&#39;: &#39;t = TestMe(3)\nwith t:\n    a = 4\n    t\n    \n\nt.test&#39;,
+ &#39;_37&#39;: (None, None, None),
+ &#39;_i38&#39;: &#39;t = TestMe(3)\nwith t as model:\n    model.x = 14\n    t\n    \n\nt.test&#39;,
+ &#39;model&#39;: &lt;__main__.TestMe at 0x7fc0699b4430&gt;,
+ &#39;_i39&#39;: &#39;t = TestMe(3)\nwith t as model:\n    model.x = 14\n    print(model)\n    t\n    \n\nt.test&#39;,
+ &#39;_i40&#39;: &#39;t = TestMe(3)\nwith t as model:\n    type(model)\n    model.x = 14\n    print(model)\n    \n    \n\nt.test&#39;,
+ &#39;_i41&#39;: &#39;class TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self):\n        print(&quot;Enter&quot;)\n        return self\n    \n    def __exit__(self, *args):\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+ &#39;_i42&#39;: &#39;t = TestMe(3)\nwith t as model:\n    type(model)\n    model.x = 14\n    print(model)\n    \n    \n\nt.test&#39;,
+ &#39;_42&#39;: (None, None, None),
+ &#39;_i43&#39;: &#39;model&#39;,
+ &#39;_43&#39;: &lt;__main__.TestMe at 0x7fc0699ca4c0&gt;,
+ &#39;_i44&#39;: &#39;model == t&#39;,
+ &#39;_44&#39;: True,
+ &#39;_i45&#39;: &#39;model is t&#39;,
+ &#39;_45&#39;: True,
+ &#39;_i46&#39;: &#39;t = TestMe(3)\nwith t as pm:\n    pm.data = 14\n    pm.strategy = lambda x: x * 2\n    \n    \n    \n\nt.test&#39;,
+ &#39;pm&#39;: &lt;__main__.TestMe at 0x7fc0699ca310&gt;,
+ &#39;_46&#39;: (None, None, None),
+ &#39;_i47&#39;: &#39;model is t&#39;,
+ &#39;_47&#39;: False,
+ &#39;_i48&#39;: &#39;t = TestMe(3)\nwith t as pm:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    pm.x = [data, strategy]\n    \n    \n    \n\nt.test&#39;,
+ &#39;_i49&#39;: &#39;import numpy as np\nclass TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self):\n        print(&quot;Enter&quot;)\n        return self\n    \n    def __exit__(self, *args):\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+ &#39;np&#39;: &lt;module &#39;numpy&#39; from &#39;/Users/felix/opt/anaconda3/envs/bapa/lib/python3.8/site-packages/numpy/__init__.py&#39;&gt;,
+ &#39;_i50&#39;: &#39;import numpy as np\n\nclass TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self):\n        print(&quot;Enter&quot;)\n        return self\n    \n    def __exit__(self, *args):\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+ &#39;_i51&#39;: &#39;t = TestMe(3)\nwith t as pm:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    pm.x = [data, strategy]\n    \n    \n    \n\nt.test&#39;,
+ &#39;data&#39;: array([1, 2, 3, 4, 5]),
+ &#39;strategy&#39;: &lt;function __main__.&lt;lambda&gt;(x)&gt;,
+ &#39;_51&#39;: (None, None, None),
+ &#39;_i52&#39;: &#39;pm&#39;,
+ &#39;_52&#39;: &lt;__main__.TestMe at 0x7fc0699ca310&gt;,
+ &#39;_i53&#39;: &#39;t&#39;,
+ &#39;_53&#39;: &lt;__main__.TestMe at 0x7fc0699ca310&gt;,
+ &#39;_i54&#39;: &#39;t.test&#39;,
+ &#39;_54&#39;: (None, None, None),
+ &#39;_i55&#39;: &#39;t.x&#39;,
+ &#39;_55&#39;: [array([1, 2, 3, 4, 5]), &lt;function __main__.&lt;lambda&gt;(x)&gt;],
+ &#39;_i56&#39;: &#39;import numpy as np\n\nclass TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self):\n        print(&quot;Enter&quot;)\n        return self\n    \n    def __exit__(self, *args):\n        self.__enter__\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+ &#39;_i57&#39;: &#39;t = TestMe(3)\nwith t as model:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    \nt.test&#39;,
+ &#39;_57&#39;: (None, None, None),
+ &#39;_i58&#39;: &#39;t.x&#39;,
+ &#39;_58&#39;: 3,
+ &#39;_i59&#39;: &#39;t&#39;,
+ &#39;_59&#39;: &lt;__main__.TestMe at 0x7fc04c6cbfa0&gt;,
+ &#39;_i60&#39;: &#39;t.test&#39;,
+ &#39;_60&#39;: (None, None, None),
+ &#39;_i61&#39;: &#39;import numpy as np\n\nclass TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self):\n        print(&quot;Enter&quot;)\n        return self\n    \n    def __exit__(self, *args):\n        self.__enter__()\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+ &#39;_i62&#39;: &#39;t = TestMe(3)\nwith t as model:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    \nt.test&#39;,
+ &#39;_62&#39;: (None, None, None),
+ &#39;_i63&#39;: &#39;import numpy as np\n\nclass TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self, *args):\n        print(&quot;Enter&quot;)\n        return self\n    \n    def __exit__(self, *args):\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+ &#39;_i64&#39;: &#39;t = TestMe(3)\nwith t as model:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    \nt.test&#39;,
+ &#39;_64&#39;: (None, None, None),
+ &#39;_i65&#39;: &#39;import numpy as np\n\nclass TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self, *args):\n        print(&quot;Enter&quot;)\n        print(args)\n        return self\n    \n    def __exit__(self, *args):\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+ &#39;_i66&#39;: &#39;t = TestMe(3)\nwith t as model:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    \nt.test&#39;,
+ &#39;_66&#39;: (None, None, None),
+ &#39;_i67&#39;: &#39;import numpy as np\n\nclass TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self, *args):\n        print(&quot;Enter&quot;)\n        self.args = args    \n        return self\n    \n    def __exit__(self, *args):\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+ &#39;_i68&#39;: &#39;t = TestMe(3)\nwith t as model:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    \nt.test&#39;,
+ &#39;_68&#39;: (None, None, None),
+ &#39;_i69&#39;: &#39;t.test&#39;,
+ &#39;_69&#39;: (None, None, None),
+ &#39;_i70&#39;: &#39;t = TestMe(3)\nwith t(1,2,3) as model:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    \nt.test&#39;,
+ &#39;_i71&#39;: &#39;import numpy as np\n\nclass TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self, *args):\n        print(&quot;Enter&quot;)\n        self.__class__   \n        return self\n    \n    def __exit__(self, *args):\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+ &#39;_i72&#39;: &#39;t = TestMe(3)\nwith  as model:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    \nt.test&#39;,
+ &#39;_i73&#39;: &#39;t = TestMe(3)\nwith t as model:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    \nt.test&#39;,
+ &#39;_73&#39;: (None, None, None),
+ &#39;_i74&#39;: &#39;import numpy as np\n\nclass TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self, *args):\n        print(&quot;Enter&quot;)\n        self.__class__   \n        return self\n    \n    def __exit__(self, *args):\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+ &#39;_i75&#39;: &#39;t = TestMe(3)\nwith t as model:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    \nt.test&#39;,
+ &#39;_75&#39;: (None, None, None),
+ &#39;_i76&#39;: &#39;import numpy as np\n\nclass TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self, *args):\n        print(&quot;Enter&quot;)\n        self.__class__.get_contexts() \n        return self\n    \n    def __exit__(self, *args):\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+ &#39;_i77&#39;: &#39;t = TestMe(3)\nwith t as model:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    \nt.test&#39;,
+ &#39;_i78&#39;: &#39;import threading&#39;,
+ &#39;threading&#39;: &lt;module &#39;threading&#39; from &#39;/Users/felix/opt/anaconda3/envs/bapa/lib/python3.8/threading.py&#39;&gt;,
+ &#39;_i79&#39;: &#39;threading.local()&#39;,
+ &#39;_79&#39;: &lt;_thread._local at 0x7fc0584e0c70&gt;,
+ &#39;_i80&#39;: &#39;t = threading.local()&#39;,
+ &#39;_i81&#39;: &#39;t&#39;,
+ &#39;_81&#39;: &lt;_thread._local at 0x7fc0699d6ef0&gt;,
+ &#39;_i82&#39;: &#39;import numpy as np\n\nclass TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self, *args):\n        print(&quot;Enter&quot;)\n        cls.get_attributes()\n        return self\n    \n    def __exit__(self, *args):\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+ &#39;_i83&#39;: &#39;t = TestMe(3)\nwith t as model:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    \nt.test&#39;,
+ &#39;_i84&#39;: &#39;import numpy as np\n\nclass TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(cls, *args):\n        print(&quot;Enter&quot;)\n        cls.get_attributes()\n        return self\n    \n    def __exit__(self, *args):\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+ &#39;_i85&#39;: &#39;t = TestMe(3)\nwith t as model:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    \nt.test&#39;,
+ &#39;_i86&#39;: &#39;import numpy as np\n\nclass TestMe():\n    def __init__(self, x):\n        self.x = x\n        \n    def __enter__(self, *args):\n        print(&quot;Enter&quot;)   \n        return self\n    \n    def __exit__(self, *args):\n        print(self.x)\n        self.test = args\n        print(&quot;Exit&quot;)&#39;,
+ &#39;_i87&#39;: &#39;t = TestMe(3)\nwith t as model:\n    data = np.array([1,2,3,4,5])\n    strategy = lambda x: x * 2\n    \nt.test&#39;,
+ &#39;_87&#39;: (None, None, None),
+ &#39;_i88&#39;: &#39;t.test&#39;,
+ &#39;_88&#39;: (None, None, None),
+ &#39;_i89&#39;: &#39;import threading&#39;,
+ &#39;_i90&#39;: &#39;t = threading.local()&#39;,
+ &#39;_i91&#39;: &#39;t&#39;,
+ &#39;_91&#39;: &lt;_thread._local at 0x7fc0584e9400&gt;,
+ &#39;_i92&#39;: &#39;t?&#39;,
+ &#39;_i93&#39;: &#39;threading.local?&#39;,
+ &#39;_i94&#39;: &#39;locals&#39;,
+ &#39;_94&#39;: &lt;function locals()&gt;,
+ &#39;_i95&#39;: &#39;locals()&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">threading</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">threading</span><span class="o">.</span><span class="n">local</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;_thread._local object at 0x7f96387dd9f0&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;In&#39;,
+ &#39;Out&#39;,
+ &#39;TestMe&#39;,
+ &#39;_&#39;,
+ &#39;_3&#39;,
+ &#39;_4&#39;,
+ &#39;_5&#39;,
+ &#39;_9&#39;,
+ &#39;__&#39;,
+ &#39;___&#39;,
+ &#39;__builtin__&#39;,
+ &#39;__builtins__&#39;,
+ &#39;__doc__&#39;,
+ &#39;__loader__&#39;,
+ &#39;__name__&#39;,
+ &#39;__package__&#39;,
+ &#39;__spec__&#39;,
+ &#39;_dh&#39;,
+ &#39;_i&#39;,
+ &#39;_i1&#39;,
+ &#39;_i10&#39;,
+ &#39;_i11&#39;,
+ &#39;_i2&#39;,
+ &#39;_i3&#39;,
+ &#39;_i4&#39;,
+ &#39;_i5&#39;,
+ &#39;_i6&#39;,
+ &#39;_i7&#39;,
+ &#39;_i8&#39;,
+ &#39;_i9&#39;,
+ &#39;_ih&#39;,
+ &#39;_ii&#39;,
+ &#39;_iii&#39;,
+ &#39;_oh&#39;,
+ &#39;data&#39;,
+ &#39;exit&#39;,
+ &#39;get_ipython&#39;,
+ &#39;model&#39;,
+ &#39;np&#39;,
+ &#39;quit&#39;,
+ &#39;strategy&#39;,
+ &#39;t&#39;,
+ &#39;threading&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "bapa"
+        },
+        kernelOptions: {
+            kernelName: "bapa",
+            path: "./chapters/chapter_01"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'bapa'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Fallstudie.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Fallstudie</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../chapter_02/Voraussetzungen.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Technische Voraussetzungen</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      Durch Felix Zeidler<br/>
+    
+        &copy; Urheberrechte © 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
