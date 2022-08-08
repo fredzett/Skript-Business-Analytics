@@ -1,6 +1,6 @@
 # Einleitung
 
-ÄNDERUNG
+
 
 ## Was ist Business Analytics
 
