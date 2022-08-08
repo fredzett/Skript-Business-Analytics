@@ -1,5 +1,7 @@
 # Einleitung
 
+Test: Erster "echter" Commit!
+
 ## Was ist Business Analytics
 
 - wir fokussieren auf die praktische Anwendung
