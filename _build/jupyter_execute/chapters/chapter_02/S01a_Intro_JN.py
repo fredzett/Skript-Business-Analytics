@@ -1,23 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# #### Execute before running
-
-# In[1]:
-
-
-# Execute before using this notebook if using google colab
-
-kernel = str(get_ipython())
-
-if 'google.colab' in kernel:    
-    get_ipython().system('wget https://raw.githubusercontent.com/fredzett/rmqa/master/utils.py -P local_modules -nc ')
-    get_ipython().system('npx degit fredzett/rmqa/data data')
-    import sys
-    sys.path.append('local_modules')
-
-
-# # Introduction to Jupyter Notebooks
+# # Einführung in Jupyter Notebooks
 
 # What you are currently seeing (or using) is a **Jupyter Notebook**. This specific notebook is connected to a `python kernel` which can run and interpret python programming code.
 

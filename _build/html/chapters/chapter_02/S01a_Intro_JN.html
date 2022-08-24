@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Execute before running</title>
+    <title>Einführung in Jupyter Notebooks</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/UtilityCode/__pycache__/myfile.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -143,7 +144,7 @@
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Execute before running
+   Einführung in Jupyter Notebooks
   </a>
  </li>
 </ul>
@@ -301,47 +302,35 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Execute before running
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-are-jupyter-notebooks-and-do-we-use-them">
+   What are Jupyter Notebooks and do we use them?
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction-to-jupyter-notebooks">
-   Introduction to Jupyter Notebooks
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-do-jupyter-notebooks-work">
+   How do Jupyter Notebooks work?
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#what-are-jupyter-notebooks-and-do-we-use-them">
-     What are Jupyter Notebooks and do we use them?
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#text-cells">
+     Text cells
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#how-do-jupyter-notebooks-work">
-     How do Jupyter Notebooks work?
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#code-cells">
+     Code cells
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#text-cells">
-       Text cells
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#code-cells">
-       Code cells
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#creating-of-and-switching-between-cell-types">
-       Creating of and switching between cell types
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#executing-cells">
-       Executing cells
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creating-of-and-switching-between-cell-types">
+     Creating of and switching between cell types
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#executing-cells">
+     Executing cells
+    </a>
    </li>
   </ul>
  </li>
@@ -355,7 +344,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Execute before running</h1>
+                <h1>Einführung in Jupyter Notebooks</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -365,47 +354,35 @@
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Execute before running
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-are-jupyter-notebooks-and-do-we-use-them">
+   What are Jupyter Notebooks and do we use them?
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction-to-jupyter-notebooks">
-   Introduction to Jupyter Notebooks
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-do-jupyter-notebooks-work">
+   How do Jupyter Notebooks work?
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#what-are-jupyter-notebooks-and-do-we-use-them">
-     What are Jupyter Notebooks and do we use them?
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#text-cells">
+     Text cells
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#how-do-jupyter-notebooks-work">
-     How do Jupyter Notebooks work?
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#code-cells">
+     Code cells
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#text-cells">
-       Text cells
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#code-cells">
-       Code cells
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#creating-of-and-switching-between-cell-types">
-       Creating of and switching between cell types
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#executing-cells">
-       Executing cells
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creating-of-and-switching-between-cell-types">
+     Creating of and switching between cell types
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#executing-cells">
+     Executing cells
+    </a>
    </li>
   </ul>
  </li>
@@ -418,26 +395,8 @@
             
               <div>
                 
-  <div class="section" id="execute-before-running">
-<h1>Execute before running<a class="headerlink" href="#execute-before-running" title="Permalink to this headline">¶</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Execute before using this notebook if using google colab</span>
-
-<span class="n">kernel</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">get_ipython</span><span class="p">())</span>
-
-<span class="k">if</span> <span class="s1">&#39;google.colab&#39;</span> <span class="ow">in</span> <span class="n">kernel</span><span class="p">:</span>    
-    <span class="o">!</span>wget https://raw.githubusercontent.com/fredzett/rmqa/master/utils.py -P local_modules -nc 
-    <span class="o">!</span>npx degit fredzett/rmqa/data data
-    <span class="kn">import</span> <span class="nn">sys</span>
-    <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;local_modules&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="introduction-to-jupyter-notebooks">
-<h1>Introduction to Jupyter Notebooks<a class="headerlink" href="#introduction-to-jupyter-notebooks" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="einfuhrung-in-jupyter-notebooks">
+<h1>Einführung in Jupyter Notebooks<a class="headerlink" href="#einfuhrung-in-jupyter-notebooks" title="Permalink to this headline">¶</a></h1>
 <p>What you are currently seeing (or using) is a <strong>Jupyter Notebook</strong>. This specific notebook is connected to a <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">kernel</span></code> which can run and interpret python programming code.</p>
 <div class="section" id="what-are-jupyter-notebooks-and-do-we-use-them">
 <h2>What are Jupyter Notebooks and do we use them?<a class="headerlink" href="#what-are-jupyter-notebooks-and-do-we-use-them" title="Permalink to this headline">¶</a></h2>
