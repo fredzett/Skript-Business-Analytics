@@ -38,8 +38,6 @@ launch_buttons:
 #   config:
 #     html_extra_path: ['utilities']
 
-html_extra_path: ['utilities']
-
 html:
     footer: |
         <div>
