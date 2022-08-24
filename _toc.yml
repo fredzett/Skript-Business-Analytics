@@ -13,4 +13,19 @@ parts:
 - caption: 02 Python Part 1
   chapters:
   - file: chapters/chapter_02/Voraussetzungen
+  - file: chapters/chapter_02/S01b_Intro_Python.ipynb
+  - file: chapters/chapter_02/S01a_Intro_JN.ipynb
+- caption: 99 Analytics
+  chapters:
+  - file: chapters/chapter_analytics/S02a_Descriptive_Statistics.ipynb
+  - file: chapters/chapter_analytics/S03a_Simulation.ipynb
+  - file: chapters/chapter_analytics/S03c_Probability_Distributions.ipynb
+  - file: chapters/chapter_analytics/S04a_Estimation&HyptothesisTesting.ipynb
+  - file: chapters/chapter_analytics/S05a_Regression.ipynb
+  - file: chapters/chapter_analytics/S06a_TidyData.ipynb
+  - file: chapters/chapter_analytics/S07a_Classification.ipynb
+  - file: chapters/chapter_analytics/S08a_Clustering.ipynb
+  - file: chapters/chapter_analytics/S09a_Cross_validation.ipynb
+  - file: chapters/chapter_analytics/S11_DecisionTrees.ipynb
+  - file: chapters/chapter_analytics/S12_Ensembles.ipynb
 
