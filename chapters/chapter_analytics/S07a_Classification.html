@@ -1,0 +1,1735 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Klassifikation</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Clusteranalyse" href="S08a_Clustering.html" />
+    <link rel="prev" title="Tidy Data" href="S06a_TidyData.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/datascience.png" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Dieses Buch durchsuchen ..." aria-label="Dieses Buch durchsuchen ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Vorwort.html">
+   Vorwort
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  01 Einleitung
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_01/Einleitung.html">
+   Einleitung
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter_01/Fallstudie.html">
+   Fallstudie
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter_01/Einleitung_CaseStudy.html">
+     Fallstudie: Investieren in ETFs
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  02 Python Part 1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_02/Voraussetzungen.html">
+   Technische Voraussetzungen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_02/S01b_Intro_Python.html">
+   Einführung in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_02/S01a_Intro_JN.html">
+   Execute before running
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  99 Analytics
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="S02a_Descriptive_Statistics.html">
+   Deskriptive Statistik
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="S03a_Simulation.html">
+   Simulationen mit Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="S03c_Probability_Distributions.html">
+   Wahrscheinlichkeitsverteilungen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="S04a_Estimation%26HyptothesisTesting.html">
+   Testen von Hypothesen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="S05a_Regression.html">
+   Lineare Regression
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="S06a_TidyData.html">
+   Tidy Data
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Klassifikation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="S08a_Clustering.html">
+   Clusteranalyse
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="S09a_Cross_validation.html">
+   Cross Validation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="S11_DecisionTrees.html">
+   Entscheidungsbäume
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="S12_Ensembles.html">
+   Ensemble-Methoden
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Navigation umschalten" aria-controls="site-navigation"
+                title="Navigation umschalten" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Laden Sie diese Seite herunter"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/chapters/chapter_analytics/S07a_Classification.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Quelldatei herunterladen" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="In PDF drucken"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Vollbildmodus"
+        title="Vollbildmodus"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/fredzett/Skript-Business-Analytics/master?urlpath=tree/chapters/chapter_analytics/S07a_Classification.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Starten Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/fredzett/Skript-Business-Analytics/blob/master/chapters/chapter_analytics/S07a_Classification.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Starten Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Inhalt
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Klassifikation
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#logistic-regression">
+   Logistic regression
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#introduction">
+     Introduction
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dataset">
+       Dataset
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#model-formulation">
+     Model formulation
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#linear-probability-model">
+       Linear (probability) model
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Logistic regression
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#classification">
+         Classification
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#confusion-matrix">
+         Confusion matrix
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#roc-curve">
+         ROC Curve
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#multiple-logistic-regression">
+       Multiple logistic regression
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#estimation-of-logistic-regression-function">
+     Estimation of logistic regression function
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#interpretation-of-regression-coefficiens">
+     Interpretation of regression coefficiens
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#caution-when-interpreting-coefficients">
+       Caution when interpreting coefficients
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#odds-ratio-and-logit-as-help-for-interpretation">
+       Odds-Ratio and Logit as help for interpretation
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#odds">
+         Odds
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#logit">
+         Logit
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#assessment-of-overall-model">
+     Assessment of overall model
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#likelihood-ratio-test-lr-test">
+       Likelihood-Ratio-Test (LR test)
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#pseudo-r-2">
+       Pseudo
+       <span class="math notranslate nohighlight">
+        \(R^2\)
+       </span>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#assessment-of-coefficients">
+     Assessment of coefficients
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Klassifikation</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Inhalt </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Klassifikation
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#logistic-regression">
+   Logistic regression
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#introduction">
+     Introduction
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dataset">
+       Dataset
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#model-formulation">
+     Model formulation
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#linear-probability-model">
+       Linear (probability) model
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Logistic regression
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#classification">
+         Classification
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#confusion-matrix">
+         Confusion matrix
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#roc-curve">
+         ROC Curve
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#multiple-logistic-regression">
+       Multiple logistic regression
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#estimation-of-logistic-regression-function">
+     Estimation of logistic regression function
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#interpretation-of-regression-coefficiens">
+     Interpretation of regression coefficiens
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#caution-when-interpreting-coefficients">
+       Caution when interpreting coefficients
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#odds-ratio-and-logit-as-help-for-interpretation">
+       Odds-Ratio and Logit as help for interpretation
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#odds">
+         Odds
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#logit">
+         Logit
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#assessment-of-overall-model">
+     Assessment of overall model
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#likelihood-ratio-test-lr-test">
+       Likelihood-Ratio-Test (LR test)
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#pseudo-r-2">
+       Pseudo
+       <span class="math notranslate nohighlight">
+        \(R^2\)
+       </span>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#assessment-of-coefficients">
+     Assessment of coefficients
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="klassifikation">
+<h1>Klassifikation<a class="headerlink" href="#klassifikation" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">utils</span> <span class="kn">import</span> <span class="n">plot_line</span><span class="p">,</span> <span class="n">plot_scatter</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">stats</span>
+<span class="kn">from</span> <span class="nn">patsy</span> <span class="kn">import</span> <span class="n">dmatrices</span><span class="c1">#</span>
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="logistic-regression">
+<h1>Logistic regression<a class="headerlink" href="#logistic-regression" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>Many practical and research problems deal with issues where the <em>dependent variable</em> (<span class="math notranslate nohighlight">\(Y\)</span>) is <em>categorical</em>. Consider, for example, the following problems:</p>
+<ol class="simple">
+<li><p>will patient be cured by taking a certain medicine or not</p></li>
+<li><p>what are factors driving a customer’s decision to cancel his/her contract</p></li>
+<li><p>which of the five available parties will people vote for?</p></li>
+</ol>
+<p>All of these questions have in common that the dependent variable is categorical. Problems 1 and 2 deal with questions where two alternatives exist, whereas in problem 3 more than two alternatives exist.</p>
+<p>Note that even if the dependent variable is not binary - e.g. net income - you may be that your research question or decision relevant information is binary (did you make a loss or a profit).</p>
+<p><strong>Logistic regression</strong> is well suited to answer questions such as the above. Here the dependent variable <span class="math notranslate nohighlight">\(Y\)</span> is a categorical variable whose values (<span class="math notranslate nohighlight">\(g = 1, \ldots, G)\)</span> represent the alternatives available. For example, in problem 2, <span class="math notranslate nohighlight">\(Y\)</span> could take the value <span class="math notranslate nohighlight">\(0\)</span> or <span class="math notranslate nohighlight">\(1\)</span> representing a customer cancelling a contract or not. In problem 3, <span class="math notranslate nohighlight">\(Y\)</span> could take values of <span class="math notranslate nohighlight">\(0, \ldots, 4\)</span> to represent the five available parties. Theoretically, other values are possible but commonly we use <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(1\)</span> for the binary case.</p>
+<p>We use different terminology to distinguish between the two cases described above:</p>
+<ol class="simple">
+<li><p>Binary logistic regression for <span class="math notranslate nohighlight">\(G = 2\)</span></p></li>
+<li><p>Multinomial logistic regression for <span class="math notranslate nohighlight">\(G \geq 3\)</span></p></li>
+</ol>
+<p>The <strong>logistic regression model</strong> can be generally expressed as follows:</p>
+<div class="math notranslate nohighlight">
+\[\pi(x) = f(x_1, \ldots, x_J)\]</div>
+<p>Where <span class="math notranslate nohighlight">\(\pi(x)=P(Y = 1 | x)\)</span> is the conditional probability that for event 1 (e.g. customer cancels contract) occurs given the independent / explanatory variables <span class="math notranslate nohighlight">\(x_1, \ldots, x_J\)</span>. Identical to the linear regression model the explanatory variables are expressed using a linear combination</p>
+<div class="math notranslate nohighlight">
+\[z(x) = \beta_0 + \beta_1x_1 + \ldots + \beta_Jx_J\]</div>
+<p>The logistic regression receives its name from the (standard) <strong>logistic function</strong></p>
+<div class="math notranslate nohighlight">
+\[p = \frac{e^z}{1+e^z}= \frac{1}{1+e^{-z}}\]</div>
+<p>(Note: simpliefied by multiplying with <span class="math notranslate nohighlight">\(1/e^z\)</span>)</p>
+<p>Plotting the function (here: bewteen -5 and 5) reveals its s-shaped distribution. The function can hence be interpreted as a cumulative probabilitby distribution function and it is similar to the cumulative (standard) normal distribution as you can see from the below plot:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># logistic function</span>
+<span class="k">def</span> <span class="nf">p</span><span class="p">(</span><span class="n">z</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">1</span> <span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">z</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>  <span class="c1"># 100 x values from -5 to 5</span>
+<span class="n">norm</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plot_line</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="p">[</span><span class="n">p</span><span class="p">(</span><span class="n">z</span><span class="p">),</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">z</span><span class="p">)],</span> <span class="n">xlabel</span><span class="o">=</span><span class="s2">&quot;z&quot;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s2">&quot;p&quot;</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Standard normal cdf vs. logistic function&quot;</span><span class="p">,</span> <span class="n">zero_origin</span><span class="o">=</span><span class="kc">True</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">((</span><span class="s2">&quot;Logistic function&quot;</span><span class="p">,</span><span class="s2">&quot;Normal CDF&quot;</span><span class="p">),</span> <span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;right&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/S07a_Classification_7_0.png" src="../../_images/S07a_Classification_7_0.png" />
+</div>
+</div>
+<p>The logistic function is applied in a broad range of applications as it is mathematically less complex than the normal distribution. By using a lostistic function we can <strong>transform</strong> real numbers into probabilities, i.e. transform numbers in the range of <span class="math notranslate nohighlight">\([-\infty, +\infty]\)</span> to the range <span class="math notranslate nohighlight">\([0, 1]\)</span>. Specifically, transforming the <em>systematic component</em> using the <em>logistic function</em> yields the <strong>logistic regression function</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\pi(x)=\frac{1}{1+e^{-z(x)}}\]</div>
+<p>The larger the systematic component <span class="math notranslate nohighlight">\(z(x)\)</span>, the higher <span class="math notranslate nohighlight">\(\pi(x)\)</span>. Therefore: the higher <span class="math notranslate nohighlight">\(z(x)\)</span>, the higher <span class="math notranslate nohighlight">\(P(Y = 1 | x)\)</span>.</p>
+<p>In line with our discussion in Chapter 5 (linear regresssion) we will now examine how to use logistic regression by explaining</p>
+<ol class="simple">
+<li><p>model formulation</p></li>
+<li><p>estimation of logistic regression function</p></li>
+<li><p>interpretation of regression coefficients</p></li>
+<li><p>assessment of overall model</p></li>
+<li><p>assessment of coefficients</p></li>
+</ol>
+<p>We will largely rely on the explanaitons and the dataset used in  <a class="reference external" href="https://www.springer.com/de/book/9783662460764"><em>Backhaus et al (2017)</em></a>.</p>
+<div class="section" id="dataset">
+<h3>Dataset<a class="headerlink" href="#dataset" title="Permalink to this headline">¶</a></h3>
+<p><strong>Data set</strong>: the data set contains (toy) data on a product test where people where shown a product (premium butter) and asked if they would buy it. The dataset includes the following variables:</p>
+<ul class="simple">
+<li><p>person: id of person</p></li>
+<li><p>income: income of person buying / not buying the product (here: premium butter)</p></li>
+<li><p>gender: gender of person buying / not buying the product (<span class="math notranslate nohighlight">\(0 =\)</span> female, <span class="math notranslate nohighlight">\(1 =\)</span> male)</p></li>
+<li><p>purchase: indicator for purchasing decision (<span class="math notranslate nohighlight">\(0=\)</span> no purchase, <span class="math notranslate nohighlight">\(1=\)</span> purchase)</p></li>
+</ul>
+<p>The data has 30 observations.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;./Data/testpurchase.csv&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;income&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;income&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="mi">1000</span> <span class="c1"># makes interpretation of coefficients easier</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>person</th>
+      <th>income</th>
+      <th>gender</th>
+      <th>purchase</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>2.53</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>2.37</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>2.72</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>2.54</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>3.20</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(30, 4)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="model-formulation">
+<h2>Model formulation<a class="headerlink" href="#model-formulation" title="Permalink to this headline">¶</a></h2>
+<p>Let’s consider a simple example where we analyze the purchase decision and treat only <em>income</em> as a explanatory variable. This yields the following model:</p>
+<div class="math notranslate nohighlight">
+\[Y = f(\text{income})\]</div>
+<p>where <span class="math notranslate nohighlight">\(Y=1\)</span> for purchase and <span class="math notranslate nohighlight">\(0\)</span> for no purchase.</p>
+<p>We are interested in how income is driving the purchase decision. Let’s look at this relationship graphically first:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xmin</span><span class="p">,</span> <span class="n">xmax</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;income&quot;</span><span class="p">]),</span> <span class="nb">max</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;income&quot;</span><span class="p">])</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plot_scatter</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;income&quot;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;purchase&quot;</span><span class="p">],</span> <span class="n">zero_origin</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="s2">&quot;income&quot;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s2">&quot;purchase&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Scatter plot of income vs. purchase&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">((</span><span class="n">xmin</span><span class="o">-</span><span class="mf">0.1</span><span class="p">,</span><span class="n">xmax</span><span class="o">+</span><span class="mf">0.1</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/S07a_Classification_16_0.png" src="../../_images/S07a_Classification_16_0.png" />
+</div>
+</div>
+<p>The upper marks represent people who stated that the would purchase the product. The lower marks represents people who indicated that they would not purchase the product. From the plot it becomes obvious that there is no exact relationship between income and purchase. For example, for the income of <span class="math notranslate nohighlight">\(\sim 2.500\)</span> there is a mark for both purchase and no purchase.</p>
+<p>However, visually it appears that the higher the income the more likely is the purchasing decision. For example, above an income of <span class="math notranslate nohighlight">\(\sim2.600\)</span> there are only purchasing decisions.</p>
+<p>Let us try to formulate a model that captures this realationship.</p>
+<div class="section" id="linear-probability-model">
+<h3>Linear (probability) model<a class="headerlink" href="#linear-probability-model" title="Permalink to this headline">¶</a></h3>
+<p>The simplest model is the linear model which is given by:</p>
+<div class="math notranslate nohighlight">
+\[\pi(x_k) = \beta_0 + \beta_1x_k\]</div>
+<p>Here <span class="math notranslate nohighlight">\(\pi(x_k)\)</span> gives the purchase probabilities of test persons. These probabilities are modelled such that they are linear dependent on the income of the test persons. While the probabilities cannot be observed they are derived from the purchasing data.</p>
+<p>Let’s calculate the model using python:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span><span class="p">,</span> <span class="n">X</span> <span class="o">=</span> <span class="n">dmatrices</span><span class="p">(</span><span class="s2">&quot;purchase ~ income&quot;</span><span class="p">,</span> <span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ols</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">X</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">ols</span><span class="o">.</span><span class="n">params</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-0.28332301,  0.38612593])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">xmin</span><span class="p">,</span><span class="n">xmax</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span><span class="c1">#.reshape(None)</span>
+<span class="n">xs</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">xs</span><span class="p">)</span>
+<span class="n">yhat</span> <span class="o">=</span> <span class="n">ols</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">xs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xs</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">yhat</span><span class="p">)</span>
+<span class="n">fig</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/S07a_Classification_24_0.png" src="../../_images/S07a_Classification_24_0.png" />
+</div>
+</div>
+<p>The model is already known and quite simple. Especially we already know how to interpret the model. For example, given the mean income is <span class="math notranslate nohighlight">\(2.000\)</span> we can say that the purchase probability at the this income level is</p>
+<div class="math notranslate nohighlight">
+\[p(purchase) = -0.2833 + 0.3861 \times 2 \approx 0.5\]</div>
+<p>Therefore the probability is approx. 50% that a person with an income of <span class="math notranslate nohighlight">\(2.000\)</span> would purchase the product. This is easy to interpret and we are alredy familiar with all the model characteristics from chapter 5. However, the model is logically flawed given the probabilities can take values of below 0 and above 1 in theory. For our specific example a person with an income of <span class="math notranslate nohighlight">\(5.000\)</span> would have a (calculated) probability of</p>
+<div class="math notranslate nohighlight">
+\[p(purchase) = -0.2833 + 0.3861 \times 5 \approx 1.65,\]</div>
+<p>i.e. there would be a probability of 165% calculated by the model.</p>
+</div>
+<div class="section" id="id1">
+<h3>Logistic regression<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>The binary logistic regression model is expressed as follows:</p>
+<div class="math notranslate nohighlight">
+\[\pi(x_k) = \frac{1}{1+e^{-(\beta_0 + \beta_1x_k)}}\]</div>
+<p>The model assumes that <span class="math notranslate nohighlight">\(Y_k\)</span> (i.e. the purchase decisions) is a binary, independent random variable with expected value <span class="math notranslate nohighlight">\(E(Y_k | x_k) = \pi(x_k)\)</span>. To this end, the model assumes that <span class="math notranslate nohighlight">\(Y_k\)</span> is <em>bernoulli</em> distributed.</p>
+<p>Let’s calculate the logistic regression model using the <code class="docutils literal notranslate"><span class="pre">statsmodels</span></code> package: this can easily be done using a similar syntax as for the linear regression model:</p>
+<p><code class="docutils literal notranslate"><span class="pre">sm.Logit(y,X)</span></code> instead of <code class="docutils literal notranslate"><span class="pre">sm.OLS(y,X)</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">logit</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">Logit</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">X</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">logit</span><span class="o">.</span><span class="n">params</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Optimization terminated successfully.
+         Current function value: 0.600896
+         Iterations 5
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-3.67071835,  1.82716993])
+</pre></div>
+</div>
+</div>
+</div>
+<p>The parameter of the model are</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\beta_0 = -3.6707\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\beta_1 = 1.8272\)</span></p></li>
+</ul>
+<p>which yields the following logistic function:</p>
+<div class="math notranslate nohighlight">
+\[p(x_k) = \frac{1}{1+e^{-(-3.6707 + 1.8272x_k)}}\]</div>
+<p>Including the logistic function in our plot we see that the slope of the function is quite similar to the linear model. However, the function is s-shaped and can only take values between <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(1\)</span> by definition which makes it better suited for our analysis.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">yhat2</span> <span class="o">=</span> <span class="n">logit</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">xs</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xs</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">yhat2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">1.1</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">((</span><span class="s2">&quot;Linear model&quot;</span><span class="p">,</span><span class="s2">&quot;Logistic model&quot;</span><span class="p">),</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;right&quot;</span><span class="p">)</span>
+<span class="n">fig</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/S07a_Classification_30_0.png" src="../../_images/S07a_Classification_30_0.png" />
+</div>
+</div>
+<div class="section" id="classification">
+<h4>Classification<a class="headerlink" href="#classification" title="Permalink to this headline">¶</a></h4>
+<p>How can we use the estimated probabilities for prediction of purchase behavior?</p>
+<p>In order to do so we need to define a <strong>cut off value</strong> <span class="math notranslate nohighlight">\(p*\)</span> such that</p>
+<p>\begin{equation}
+y_k =\begin{cases}
+1, &amp; \text{if <span class="math notranslate nohighlight">\(p_k &gt; p*\)</span>} \
+0, &amp; \text{if <span class="math notranslate nohighlight">\(p_k \leq p*\)</span>}
+\end{cases}
+\end{equation}</p>
+<p>Commonly, a cut of value of <span class="math notranslate nohighlight">\(0.5\)</span> is used. This means that</p>
+<ul class="simple">
+<li><p>all <span class="math notranslate nohighlight">\(y_k\)</span> with a value (probability) of above 50% are assigned 1 and</p></li>
+<li><p>all <span class="math notranslate nohighlight">\(y_k\)</span> with a value (probability) of equal or below 50% are assigned a 0</p></li>
+</ul>
+<p>Let’s analyse how good our logistic regression model is in classifying purchasing decisions using our data.</p>
+<p>We can use our estimated model and predict <em>purchase probability</em> based on <em>income</em> data. We can then compare with our true values to see how could our model actually is.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_final</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> <span class="c1"># copy our dataframe</span>
+<span class="n">probas</span> <span class="o">=</span> <span class="n">logit</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> <span class="c1"># estimate probabilities using predict. </span>
+<span class="n">df_final</span><span class="p">[</span><span class="s2">&quot;probabilities&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">probas</span>
+<span class="n">df_final</span><span class="p">[</span><span class="s2">&quot;prediction&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">probas</span><span class="o">&gt;</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_final</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>person</th>
+      <th>income</th>
+      <th>gender</th>
+      <th>purchase</th>
+      <th>probabilities</th>
+      <th>prediction</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>2.53</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0.721522</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>2.37</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0.659187</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>2.72</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0.785698</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>2.54</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.725178</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>3.20</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0.898094</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="confusion-matrix">
+<h4>Confusion matrix<a class="headerlink" href="#confusion-matrix" title="Permalink to this headline">¶</a></h4>
+<p>If we want to understand how good our prediction was we can calculate the <strong>confusion matrix</strong>. It calculates true values vs. predicted values for each category. A summary of this overview is helpful as it gives inside to three different measures:</p>
+<ul class="simple">
+<li><p>accuracy: % of correct predictions</p></li>
+<li><p>specificity: % of correctly classified non purchases in relation to all non-purchases (correct false)</p></li>
+<li><p>sensitivity: % of correctly classified purchases in relation to all purchases (correct trues)</p></li>
+</ul>
+<p>Let’s look at the below table summarizing the results:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>Prediction</p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p></p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>Total</p></td>
+<td><p>% correct</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>0</p></td>
+<td><p>7</p></td>
+<td><p>7</p></td>
+<td><p>14</p></td>
+<td><p>50,00%</p></td>
+<td><p>Specificity</p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>7</p></td>
+<td><p>9</p></td>
+<td><p>16</p></td>
+<td><p>56,25%</p></td>
+<td><p>Sensitivity</p></td>
+</tr>
+<tr class="row-odd"><td><p>Total</p></td>
+<td><p>14</p></td>
+<td><p>16</p></td>
+<td><p>30</p></td>
+<td><p>53,33%</p></td>
+<td><p>Accuracy</p></td>
+</tr>
+</tbody>
+</table>
+<p>accuracy:</p>
+<ul class="simple">
+<li><p>we have classified 7 non-purchases and 9 purchases correcty</p></li>
+<li><p>in total there were 30 observations</p></li>
+<li><p>(7+9)/30 = 0.533</p></li>
+</ul>
+<p><strong>sensitivity</strong>, i.e. proportion of correctly predicted purchases in relation to all purchases</p>
+<ul class="simple">
+<li><p>we have classified 9 purchases out of 16 purchases correctly</p></li>
+<li><p>9 / 16 = 0.563</p></li>
+</ul>
+<p><strong>specificity</strong>, i.e. proportion of correctly predicted non-purchases in relation to all non-purchases</p>
+<ul class="simple">
+<li><p>we have classified 7 non-purchases out of 14 non-purchases correctly</p></li>
+<li><p>7 / 14 = 0.500</p></li>
+</ul>
+<p>In more general form we can say:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>Prediction</p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p></p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>0</p></td>
+<td><p>True negative</p></td>
+<td><p>False positive</p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>False negative</p></td>
+<td><p>True positive</p></td>
+</tr>
+</tbody>
+</table>
+<div class="math notranslate nohighlight">
+\[\text{accuracy} = \frac{TN + TP}{\text{total observations}}\]</div>
+<div class="math notranslate nohighlight">
+\[\text{sensitivity} = \frac{TP}{\text{TP + FN}}\]</div>
+<div class="math notranslate nohighlight">
+\[\text{specificity} = \frac{TN}{\text{TN + FP}}\]</div>
+<p>Where:</p>
+<ul class="simple">
+<li><p>false positive is also called the Type I error and</p></li>
+<li><p>false negative is also called the Type II error</p></li>
+</ul>
+<p>It is important to look at all three measures for several reasons, e.g. accuracy may be misleading for unbalanced datasets  (e.g. fraudulent credit card transactions).</p>
+<p>Also, it is important to be aware of the fact that there is a tradeoff between specificity and sensitivity. For example we can easily build a model that has a sensitivity of 100%. We could do so by simply classifying all observations as purchases. This would give a 100% sensitivity. On the other hand the specificity would be at 0% as we have not correctly classified one non-puchase observations.</p>
+<p><strong>Example sensitivity and specificity: diagnosis of a disease</strong></p>
+<ul class="simple">
+<li><p>sensitivity: “patient is sick and test is positive”</p></li>
+<li><p>specificity: “patient is not sick and test is negative”</p></li>
+</ul>
+<p>When is high sensitivity or high specificity good or bad?</p>
+<ul class="simple">
+<li><p>disease can be cured if diagnosed early: than a high sensitivity is good</p></li>
+<li><p>disease cannot be cured: than a high specificity is good as a high sensitivity increases chance for false positive and a wrongful diagnosis would leave a healthy person with the diagnosis that he/she has a uncurable disease.</p></li>
+</ul>
+<p>We can eassily calculate the measures manually.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TN</span> <span class="o">=</span> <span class="n">df_final</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;purchase == 0 &amp; prediction == 0&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">FN</span> <span class="o">=</span> <span class="n">df_final</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;purchase == 0 &amp; prediction == 1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">TP</span> <span class="o">=</span> <span class="n">df_final</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;purchase == 1 &amp; prediction == 1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">FP</span> <span class="o">=</span> <span class="n">df_final</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;purchase == 1 &amp; prediction == 0&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="n">accuracy</span> <span class="o">=</span> <span class="p">(</span><span class="n">TP</span> <span class="o">+</span> <span class="n">TN</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">TN</span> <span class="o">+</span> <span class="n">FN</span> <span class="o">+</span> <span class="n">TP</span> <span class="o">+</span> <span class="n">FP</span><span class="p">)</span>
+<span class="n">sensitivity</span> <span class="o">=</span> <span class="n">TP</span> <span class="o">/</span> <span class="p">(</span><span class="n">TP</span> <span class="o">+</span> <span class="n">FN</span><span class="p">)</span>
+<span class="n">specificity</span> <span class="o">=</span> <span class="n">TN</span> <span class="o">/</span> <span class="p">(</span><span class="n">FP</span> <span class="o">+</span> <span class="n">TN</span> <span class="p">)</span>
+<span class="n">accuracy</span><span class="p">,</span> <span class="n">sensitivity</span><span class="p">,</span> <span class="n">specificity</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.5333333333333333, 0.5625, 0.5)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="roc-curve">
+<h4>ROC Curve<a class="headerlink" href="#roc-curve" title="Permalink to this headline">¶</a></h4>
+<p>One disadvantage of the confusion matrix is that it is a snapshot for one specific cutoff value <span class="math notranslate nohighlight">\(p*\)</span>. The <strong>ROC curve</strong> visualizes correctness of classification over the continuum of possible cutoff points.</p>
+<p>The ROC curve plots sensitivity vs. 1 - specificity for different cutoff points. The diagonal line represents a model that a random prediction. A line along the top left corner represents a good classifier given it is able to</p>
+<ul class="simple">
+<li><p>correctly identify purchases from all purchases while</p></li>
+<li><p>not wrongly identifying many purchases (e.g. if sensitivity is 1  because we simply always predict 1, then all non-purchases are wrongly predicted)</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">roc_curve</span><span class="p">(</span><span class="n">purchases</span><span class="p">,</span> <span class="n">probas</span><span class="p">,</span> <span class="n">pos_label</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">_</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plot_line</span><span class="p">(</span><span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;ROC Curve&quot;</span><span class="p">,</span> <span class="n">xlabel</span> <span class="o">=</span> <span class="s2">&quot;Purchase wrongly classified (1 - specificity)&quot;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s2">&quot;Purchase correctly classified (sensitivity)&quot;</span><span class="p">);</span>
+<span class="n">thresholds</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">thresholds</span><span class="p">,</span> <span class="n">thresholds</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/S07a_Classification_41_0.png" src="../../_images/S07a_Classification_41_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="multiple-logistic-regression">
+<h3>Multiple logistic regression<a class="headerlink" href="#multiple-logistic-regression" title="Permalink to this headline">¶</a></h3>
+<p>Up until now and similar to the linear regression model we have build a very simple model explaining the decision to purchase with exactly one (explanatory) variable: income. Intuitively there may be more than one factor / one variable driving the purchasing decision. Similar to the regression example we can extend the (binary) model to the case where multiple variables are included. This is called the <strong>multiple logistic regression</strong>.</p>
+<p>Let <span class="math notranslate nohighlight">\(x_k = (x_{1k}, x_{2k}, \ldots, x_{Jk})\)</span> be the set of values / observations for <span class="math notranslate nohighlight">\(J\)</span> independent variables. Then the multiple logistic regression model is defined as (neglecting index <span class="math notranslate nohighlight">\(k\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[\pi(x) = \frac{1}{1+e^{-(\beta_0 + \beta_1x_1 + \ldots + \beta_Jx_J}}\]</div>
+<p>This is commonly expressed in matrix form as</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\pi(\mathbf{x}) = \frac{1}{1+e^{-\mathbf{x}\mathbf{\beta'}}}$$. \\For our example data the model could include _gender_ as a second explanatory variable. This would give us the following model:\\$$Y = f(\text{income, gender})\end{aligned}\end{align} \]</div>
+<p>which would lead to the following logistic model:</p>
+<p>$$\pi(x_k) v</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span><span class="p">,</span> <span class="n">X</span> <span class="o">=</span> <span class="n">dmatrices</span><span class="p">(</span><span class="s2">&quot;purchase ~ income + gender&quot;</span><span class="p">,</span> <span class="n">df</span><span class="p">)</span>
+<span class="n">mlogit</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">Logit</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">X</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">mlogit</span><span class="o">.</span><span class="n">params</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Optimization terminated successfully.
+         Current function value: 0.535087
+         Iterations 6
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-5.63484902,  2.35090459,  1.75135282])
+</pre></div>
+</div>
+</div>
+</div>
+<p>The logistic regression function for our model therefore looks as follows:</p>
+<div class="math notranslate nohighlight">
+\[p(\mathbf{X}_k) = \dfrac{1}{1+e^{-(-5.6348 + 2.3509x_{1k} +  1.7514x_{2k})}}\]</div>
+<p>for <span class="math notranslate nohighlight">\((k = 1, \ldots, K)\)</span>.</p>
+<p><strong>Example:</strong> for the <span class="math notranslate nohighlight">\(4th\)</span> person in our dataset, i.e. a woman with income of 2.54 (thousands) the following can be derived:</p>
+<p>\begin{equation}
+\begin{split}
+z &amp;= -5.6348 + 2.3509 \cdot 2.54 +  1.7514 \cdot 0 = 0.3365 \
+\Rightarrow p &amp;= \frac{1}{1+e^{-0.3365}} = 0.5833
+\end{split}
+\end{equation}</p>
+<p>Also, the positive coefficient for gender indicates that male (<span class="math notranslate nohighlight">\(=1\)</span>) tend to have a higher probability of buying the product. This can be confirmed using our model and assuming a male person that has equal income than our female example (i.e. <span class="math notranslate nohighlight">\(2.54\)</span>):</p>
+<p>\begin{equation}
+\begin{split}
+z &amp;= -5.6348 + 2.3509 \cdot 2.54 +  1.7514 \cdot 1 = 2.0879 \
+\Rightarrow p &amp;= \frac{1}{1+e^{-2.0879}} = 0.8897
+\end{split}
+\end{equation}</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_final</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> <span class="c1"># copy our dataframe</span>
+<span class="n">probas</span> <span class="o">=</span> <span class="n">mlogit</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> <span class="c1"># estimate probabilities using predict. </span>
+<span class="n">df_final</span><span class="p">[</span><span class="s2">&quot;probabilities&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">probas</span>
+<span class="n">df_final</span><span class="p">[</span><span class="s2">&quot;prediction&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">probas</span><span class="o">&gt;</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">TN</span> <span class="o">=</span> <span class="n">df_final</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;purchase == 0 &amp; prediction == 0&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">FN</span> <span class="o">=</span> <span class="n">df_final</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;purchase == 0 &amp; prediction == 1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">TP</span> <span class="o">=</span> <span class="n">df_final</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;purchase == 1 &amp; prediction == 1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">FP</span> <span class="o">=</span> <span class="n">df_final</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;purchase == 1 &amp; prediction == 0&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="n">accuracy</span> <span class="o">=</span> <span class="p">(</span><span class="n">TP</span> <span class="o">+</span> <span class="n">TN</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">TN</span> <span class="o">+</span> <span class="n">FN</span> <span class="o">+</span> <span class="n">TP</span> <span class="o">+</span> <span class="n">FP</span><span class="p">)</span>
+<span class="n">sensitivity</span> <span class="o">=</span> <span class="n">TP</span> <span class="o">/</span> <span class="p">(</span><span class="n">TP</span> <span class="o">+</span> <span class="n">FN</span><span class="p">)</span>
+<span class="n">specificity</span> <span class="o">=</span> <span class="n">TN</span> <span class="o">/</span> <span class="p">(</span><span class="n">FP</span> <span class="o">+</span> <span class="n">TN</span> <span class="p">)</span>
+<span class="n">accuracy</span><span class="p">,</span> <span class="n">sensitivity</span><span class="p">,</span> <span class="n">specificity</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.8333333333333334, 0.8235294117647058, 0.8461538461538461)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Looking at the ROC curve we can see that the model looks better.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">probas</span> <span class="o">=</span> <span class="n">mlogit</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">roc_curve</span><span class="p">(</span><span class="n">purchases</span><span class="p">,</span> <span class="n">probas</span><span class="p">,</span> <span class="n">pos_label</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">_</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plot_line</span><span class="p">(</span><span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;ROC Curve&quot;</span><span class="p">,</span> <span class="n">xlabel</span> <span class="o">=</span> <span class="s2">&quot;Purchase wrongly classified (1 - specificity)&quot;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s2">&quot;Purchase correctly classified (sensitivity)&quot;</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">thresholds</span><span class="p">,</span> <span class="n">thresholds</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/S07a_Classification_48_0.png" src="../../_images/S07a_Classification_48_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="estimation-of-logistic-regression-function">
+<h2>Estimation of logistic regression function<a class="headerlink" href="#estimation-of-logistic-regression-function" title="Permalink to this headline">¶</a></h2>
+<p>Unlike for the linear regression model there is no analytical solution to estimating the correct coefficients. This is due to the non-linearity of the function. When calculating the optimal logistic regression function we apply maximum likelihood method (MLE). When applying maximum likelihood we are estimating the coefficients such as the given data is most likely (i.e. plausible).</p>
+<p>This means that for a person k in our model the probability <span class="math notranslate nohighlight">\(p(x_k)\)</span> should be high if <span class="math notranslate nohighlight">\(y_k = 1\)</span> (low for <span class="math notranslate nohighlight">\(y_k = 0\)</span>). Mathematically this can be expressed as:</p>
+<div class="math notranslate nohighlight">
+\[p(x_k)^{y_k}\cdot (1-p(x_k))^{1-y_k}\]</div>
+<p>One assumption of the model is that <span class="math notranslate nohighlight">\(Y_k\)</span> is independently distributed for all observations. This means that we can express the total probability over all observations as the product of individual probabilities. This yields the following <strong>likelihood function</strong> that needs to be maximized:</p>
+<div class="math notranslate nohighlight">
+\[L(\beta) = \prod_{k=1}^K p(x_k)^{y_k}\cdot (1-p(x_k))^{1-y_k} \rightarrow Max!\]</div>
+<p>The <span class="math notranslate nohighlight">\(\beta\)</span> parameter need to be estimated such that the likelihood is maximized. In practice it is more feasible to use the logarithm of the above function given we can replace the product with a sum which is simpler:</p>
+<div class="math notranslate nohighlight">
+\[LL(\beta) = \sum_{k=1}^K ln[p(x_k)]\cdot y_k + ln[1-p(x_k)]\cdot(1-y_k) \rightarrow Max!\]</div>
+<p>The solution to this maximization effort is found using <em>iterative approches</em> such as gradient descent.</p>
+</div>
+<div class="section" id="interpretation-of-regression-coefficiens">
+<h2>Interpretation of regression coefficiens<a class="headerlink" href="#interpretation-of-regression-coefficiens" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="caution-when-interpreting-coefficients">
+<h3>Caution when interpreting coefficients<a class="headerlink" href="#caution-when-interpreting-coefficients" title="Permalink to this headline">¶</a></h3>
+<p>Given the nonlinearity of the logistic regression model it is somewhat more difficult to interpret the individual coefficients from our model optimization. One of the main challenges is that the impact of a coefficient is not constant but varies with the dependent variable.</p>
+<p>To this end, it is only possible to state: <em>how much the change of one parameter, changes the dependent variable</em>. However, it is not possible to state by how much the dependent variable changes as the slope of changes not constant.</p>
+<p>Change of <strong>intercept</strong> (i.e. <span class="math notranslate nohighlight">\(\beta_0\)</span>):</p>
+<ul class="simple">
+<li><p>changes curve horizontally</p></li>
+<li><p>increase of <span class="math notranslate nohighlight">\(\beta_0\)</span> increases probability for a given <span class="math notranslate nohighlight">\(x\)</span> (and vice versa)</p></li>
+</ul>
+<p>Change of <strong>slope</strong> (i.e. <span class="math notranslate nohighlight">\(\beta_1\)</span>):</p>
+<ul class="simple">
+<li><p>increase of coefficient yields steeper curve in the mid range</p></li>
+<li><p><span class="math notranslate nohighlight">\(\beta_1 = 0 \)</span> yields a flat curve</p></li>
+<li><p>change in sign changes slope of curve (if negative slope is downward)</p></li>
+</ul>
+<br>
+<p><strong>Difficulty of interpretation:</strong> the impact of a coefficient is not constant on <span class="math notranslate nohighlight">\(Y\)</span></p>
+<ul class="simple">
+<li><p>for linear regression we could say: a change in <span class="math notranslate nohighlight">\(x\)</span> changes <span class="math notranslate nohighlight">\(y\)</span> by <span class="math notranslate nohighlight">\(\beta\)</span></p></li>
+<li><p>for logistic regression this change also is dependent on <span class="math notranslate nohighlight">\(y\)</span> (i.e. the probability p). The biggest impact is when <span class="math notranslate nohighlight">\(p=0.5\)</span></p></li>
+</ul>
+<p>(Note: show interactive example; examples can be seen in <a class="reference external" href="https://www.springer.com/de/book/9783662460764"><em>Backhaus et al (2017)</em></a>, p. 291ff</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sig</span><span class="p">(</span><span class="n">z</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">z</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">z</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span> <span class="n">xs</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="o">*</span><span class="n">xs</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Change a and b to see changes</span>
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span> 
+<span class="n">xs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">sig</span><span class="p">(</span><span class="n">z</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">xs</span><span class="p">))</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">sig</span><span class="p">(</span><span class="n">z</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">xs</span><span class="p">)),</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$\beta_0=0, \beta_1=1$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">despine</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/S07a_Classification_55_0.png" src="../../_images/S07a_Classification_55_0.png" />
+</div>
+</div>
+<p>We can illustrate the fact that the impact of a coefficient is dependent on p (and is highest for <span class="math notranslate nohighlight">\(p=0.5\)</span>) by looking at our previous simple logistic regression model:</p>
+<p>Here we calculated a probability of <span class="math notranslate nohighlight">\(\approx 50\)</span>% for an income of <span class="math notranslate nohighlight">\(2\)</span> (i.e. 2.000 EUR).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">income</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">sig</span><span class="p">(</span><span class="o">-</span><span class="mf">3.6707</span><span class="o">+</span><span class="mf">1.8272</span><span class="o">*</span><span class="n">income</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.4959250902214988
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can now calculate the values for different incomes and see that the change in probability will decrease, i.e. the impact of the coefficient becomes less the higher the probality gets.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">incomes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">income</span> <span class="ow">in</span> <span class="n">incomes</span><span class="p">:</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">sig</span><span class="p">(</span><span class="o">-</span><span class="mf">3.6707</span><span class="o">+</span><span class="mf">1.8272</span><span class="o">*</span><span class="n">income</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">income</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;For income: </span><span class="si">{</span><span class="n">income</span><span class="si">}</span><span class="s2">, the probablity is </span><span class="si">{</span><span class="n">p</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">income</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;For income: </span><span class="si">{</span><span class="n">income</span><span class="si">}</span><span class="s2">, the probablity is </span><span class="si">{</span><span class="n">p</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">, change is </span><span class="si">{</span><span class="n">p</span><span class="o">/</span><span class="n">p_before</span> <span class="o">-</span> <span class="mi">1</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">p_before</span> <span class="o">=</span> <span class="n">p</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>For income: 2, the probablity is 0.50
+For income: 3, the probablity is 0.859, change is 0.73
+For income: 4, the probablity is 0.974, change is 0.13
+For income: 5, the probablity is 0.996, change is 0.02
+For income: 6, the probablity is 0.999, change is 0.00
+For income: 7, the probablity is 1.000, change is 0.00
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="odds-ratio-and-logit-as-help-for-interpretation">
+<h3>Odds-Ratio and Logit as help for interpretation<a class="headerlink" href="#odds-ratio-and-logit-as-help-for-interpretation" title="Permalink to this headline">¶</a></h3>
+<p>The logistic model can alternatively be expressed in <em>odds</em> and <em>logits</em> both of which simplifies interpretation.</p>
+<p>Odds and logit are defined as follows:</p>
+<p>\begin{equation}
+\begin{split}
+\[1.5ex]
+\text{Odds} &amp;= \frac{p}{1-p} = e^{\beta_0 + \beta_1x} =  e^{-3.6707 + 1.8272x}
+\[3ex]
+\text{Logit} &amp;= ln\big(\frac{p}{1-p}\big) = \beta_0 + \beta_1x =  -3.6707 + 1.8272x
+\end{split}
+\end{equation}</p>
+<div class="section" id="odds">
+<h4>Odds<a class="headerlink" href="#odds" title="Permalink to this headline">¶</a></h4>
+<p><strong>Odds</strong> can be interpreted as chance of winning and are calculated as a relation of probability <span class="math notranslate nohighlight">\(p\)</span> and its counter probability <span class="math notranslate nohighlight">\((1-p)\)</span>. Let’s say the probability of winning is <span class="math notranslate nohighlight">\(75\)</span>% the odds are:</p>
+<div class="math notranslate nohighlight">
+\[odds = \frac{p}{1-p}=\frac{0.75}{1-0.75}=4\]</div>
+<p>meaning that there is a <span class="math notranslate nohighlight">\(4\)</span> in <span class="math notranslate nohighlight">\(1\)</span> chance of winning. Odds cannot become negative (afterall the lowest chance of winning is zero) but are not constraint to <span class="math notranslate nohighlight">\(1\)</span>. We can also derive the probability <span class="math notranslate nohighlight">\(p\)</span> from the odds by</p>
+<div class="math notranslate nohighlight">
+\[p = \frac{odds}{odds + 1} = \frac{4}{4+1} = 0.8\]</div>
+<p><strong>Why is odds helpful for interpreting the coefficients?</strong></p>
+<p>We want to understand how <span class="math notranslate nohighlight">\(y\)</span> changes with a change in <span class="math notranslate nohighlight">\(x\)</span>. In order to understand why <em>odds</em> may help let’s calculate the odds for <span class="math notranslate nohighlight">\(x+1\)</span> (i.e. <span class="math notranslate nohighlight">\(x\)</span> changes by 1).</p>
+<p>\begin{equation}
+\text{odds}(x+1) = e^{\beta_0 + \beta_1(x+1)} = e^{\beta_0 + \beta_1x + \beta_1} =  e^{\beta_0 + \beta_1x} \cdot e^{\beta_1}
+= \text{odds}(x) \cdot e^{\beta_1}
+\end{equation}</p>
+<p>We can now caluclate the ratio of odds from odds(x+1) and odds(x) and get:</p>
+<div class="math notranslate nohighlight">
+\[OR = \frac{\text{odds}(x+1)}{\text{odds}(x)} = e^{\beta_1}\]</div>
+<blockquote>
+<div><p><strong>Conclusion</strong><br />
+In other words, <strong>odds increase by factor</strong>  <span class="math notranslate nohighlight">\(e^{\beta_1}\)</span> when increasing <span class="math notranslate nohighlight">\(x\)</span> by one.</p>
+</div></blockquote>
+<p>In our example this means that odds increase by <span class="math notranslate nohighlight">\(e^{1.8272}=6.216\)</span> when increasing income by <span class="math notranslate nohighlight">\(1\)</span> (i.e. 1.000). This means that the odds increase by a constant factor (not a constant value as with linear regressio). In our case the factor is 6.216 which translates into a probability of <span class="math notranslate nohighlight">\(\frac{6.216}{1+6.216} \approx 86\)</span>%.</p>
+<blockquote>
+<div><p><strong>Interpretation</strong><br />
+To this end, when income is increased by <span class="math notranslate nohighlight">\(1\)</span> unit the probability of a purchase is increases by <span class="math notranslate nohighlight">\(86\)</span>%.</p>
+</div></blockquote>
+<p>Numerical example to show that odds stay constant:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">find_odds</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">b0</span><span class="o">=-</span><span class="mf">3.6707</span><span class="p">,</span><span class="n">b1</span><span class="o">=</span><span class="mf">1.8272</span><span class="p">):</span>
+    <span class="c1"># calculate odds for our logistic regression model</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">b0</span><span class="o">+</span><span class="n">b1</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>
+
+<span class="n">income</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">])</span> <span class="c1"># create dummy income data</span>
+<span class="n">odds</span> <span class="o">=</span> <span class="n">find_odds</span><span class="p">(</span><span class="n">income</span><span class="p">)</span> <span class="c1"># calculate odds for all incomes</span>
+<span class="n">OR</span> <span class="o">=</span> <span class="n">odds</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">/</span> <span class="n">odds</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># calculate odds ratio for all incomes </span>
+<span class="n">OR</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([6.21645619, 6.21645619, 6.21645619, 6.21645619, 6.21645619,
+       6.21645619, 6.21645619, 6.21645619, 6.21645619])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note that for <span class="math notranslate nohighlight">\(\beta_1 = 0\)</span> the <strong>odds ratio (OR)</strong> becomes 1.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">odds</span> <span class="o">=</span> <span class="n">find_odds</span><span class="p">(</span><span class="n">income</span><span class="p">,</span> <span class="n">b1</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># calculate odds for all incomes</span>
+<span class="n">OR</span> <span class="o">=</span> <span class="n">odds</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">/</span> <span class="n">odds</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># calculate odds ratio for all incomes </span>
+<span class="n">OR</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1., 1., 1., 1., 1., 1., 1., 1., 1.])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="logit">
+<h4>Logit<a class="headerlink" href="#logit" title="Permalink to this headline">¶</a></h4>
+<p>Logit is short for <em>logarithm of odds</em> (i.e. logarithmic odds or log-odds) given it is true that:</p>
+<div class="math notranslate nohighlight">
+\[logit(p) = ln(odds(p)) = ln\bigg(\frac{p}{1-p}\bigg) = ln(e^{z}) = z \Rightarrow \beta_0 + \beta*x\]</div>
+<p>In doing so we transform the range of possible values from <span class="math notranslate nohighlight">\([0,1]\)</span> to <span class="math notranslate nohighlight">\([-\infty, \infty]\)</span>. In line with want we have done for <em>odds</em> we will try to understand what happens to <span class="math notranslate nohighlight">\(y\)</span> if we increase <span class="math notranslate nohighlight">\(x\)</span> by <span class="math notranslate nohighlight">\(1\)</span>, i.e. increase to <span class="math notranslate nohighlight">\(x+1\)</span>:</p>
+<p>\begin{equation}
+logit(p(x)) = \beta_0 + \beta_1*(x+1) = \beta_0 + \beta_1x + \beta_1
+\end{equation}</p>
+<p>Given <span class="math notranslate nohighlight">\(\beta_1\)</span> is <span class="math notranslate nohighlight">\(1.8272\)</span>, <span class="math notranslate nohighlight">\(logit(p(x))\)</span> increases by <span class="math notranslate nohighlight">\(1.8272\)</span>. The beta coefficient from a logistic regression model can therefore be interpreted as <strong>the marginal effect on the logit</strong>. Logit increases by <span class="math notranslate nohighlight">\(\beta_1\)</span> if income is increase by <span class="math notranslate nohighlight">\(1\)</span> unit.</p>
+<p>Given we don’t think in logits it is somewhat harder to interpret the logits.</p>
+</div>
+</div>
+</div>
+<div class="section" id="assessment-of-overall-model">
+<h2>Assessment of overall model<a class="headerlink" href="#assessment-of-overall-model" title="Permalink to this headline">¶</a></h2>
+<p>We already know from our linear regression chapter that it is necessary to understand the goodness of fit for the overall model.</p>
+<p>In Section 3 we have learned that - when estimating the model - we are maximizing the log likelihood (LL). One approach could therefore be to take the value of the LL as a indicator for the goodness of fit.</p>
+<p>In our multiple logistic model the log-likelihood is:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">LLc</span> <span class="o">=</span> <span class="n">mlogit</span><span class="o">.</span><span class="n">llf</span>
+<span class="n">LLc</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-16.052621594440748
+</pre></div>
+</div>
+</div>
+</div>
+<p>It is common to use not the LL but use <span class="math notranslate nohighlight">\(-2\cdot LL\)</span> instead. The smaller the value the better the model is (note that -2 stems from the fact that we are assuming a chi-squard distributed test statistic).</p>
+<p>For our model the <span class="math notranslate nohighlight">\(-2LL\)</span> is</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">LLc</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>32.105243188881495
+</pre></div>
+</div>
+</div>
+</div>
+<p>Problematic about this value is that it is dependent on the number of observations (remember a similar issue with RSS in linear regression). This means the higher the number of observations, the higher the <span class="math notranslate nohighlight">\(-2LL\)</span> (ceteris paribus).</p>
+<p>However, the <span class="math notranslate nohighlight">\(-2LL\)</span> can be helpful when comparing different models with each other.</p>
+<p>For example, we can compare the LL between our two models:</p>
+<p>\begin{equation}
+\begin{split}
+z_1 &amp;= \beta_0 + \beta_1 \cdot income \
+z_2 &amp;= \beta_0 + \beta_1 \cdot income + \beta_2 \cdot gender\
+\end{split}
+\end{equation}</p>
+<p>We see that the second model is better as its <span class="math notranslate nohighlight">\(-2LL\)</span> is actually lower.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">logit</span><span class="o">.</span><span class="n">llf</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">LLc</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(36.05377266030584, 32.105243188881495)
+</pre></div>
+</div>
+</div>
+</div>
+<p>As an extreme case we could also create a model where we only include a constant, i.e.</p>
+<p>\begin{equation}
+\begin{split}
+z_3 &amp;= \beta_0
+\end{split}
+\end{equation}</p>
+<p>If we run the model we see that the <span class="math notranslate nohighlight">\(-2LL\)</span> is even higher.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span><span class="p">,</span> <span class="n">X</span> <span class="o">=</span> <span class="n">dmatrices</span><span class="p">(</span><span class="s2">&quot;y~ 1&quot;</span><span class="p">,</span><span class="n">df</span><span class="p">)</span>
+<span class="n">constant_logit</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">Logit</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">X</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">();</span>
+<span class="n">LL0</span> <span class="o">=</span> <span class="n">constant_logit</span><span class="o">.</span><span class="n">llf</span>
+<span class="n">LL0</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">LL0</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Optimization terminated successfully.
+         Current function value: 0.690923
+         Iterations 3
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(-20.72769927941453, 41.45539855882906)
+</pre></div>
+</div>
+</div>
+</div>
+<p>The constant or 0-Modell can be used to construct a test statistic called <em>likelihood-ratio-test</em>.</p>
+<div class="section" id="likelihood-ratio-test-lr-test">
+<h3>Likelihood-Ratio-Test (LR test)<a class="headerlink" href="#likelihood-ratio-test-lr-test" title="Permalink to this headline">¶</a></h3>
+<p>The LR test can be calculated as follows:</p>
+<p>\begin{equation}
+\begin{split}
+LLR &amp;= -2 \cdot ln\bigg(\frac{LL_0}{LL_{complete}}\bigg) \[3ex]
+&amp;= -2 \cdot (LL_0 - LL_{complete})
+\end{split}
+\end{equation}
+where:</p>
+<p><span class="math notranslate nohighlight">\(LL_0 : \)</span> maximum log likelihood for model only including a constant and<br />
+<span class="math notranslate nohighlight">\(LL_{complete} : \)</span> maximum log likelihood for model including all required variables (in our case income and gender)</p>
+<p>For our example the <span class="math notranslate nohighlight">\(LLR\)</span> is therefore calculated as:</p>
+<div class="math notranslate nohighlight">
+\[LLR = -2*(-20.728 + 16.053) = 9.350\]</div>
+<p>Under the null hypothesis <span class="math notranslate nohighlight">\(H_0 : \beta_1 = \beta_2 = \ldots = \beta_J = 0\)</span> the LLR is approximately <span class="math notranslate nohighlight">\(\chi^2\)</span> distributed (with <span class="math notranslate nohighlight">\(J\)</span> degrees of freedom).</p>
+<p>We can therefore say that <span class="math notranslate nohighlight">\(\chi_{emp}^2\)</span> = 9.350. In line with previous significance tests we can now calculate the theoretical <span class="math notranslate nohighlight">\(\chi^2\)</span> given (for example) an <span class="math notranslate nohighlight">\(\alpha\)</span> of 0.05 and 2 degrees of freedom (we have 2 explanatory variables). Doing so yields a <span class="math notranslate nohighlight">\(\chi^2\)</span> of <span class="math notranslate nohighlight">\(5.99\)</span>.</p>
+<p>Given <span class="math notranslate nohighlight">\(9.350 &gt; 5.99\)</span> we can conclude that our model is statistically significant.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chi2_emp</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">constant_logit</span><span class="o">.</span><span class="n">llf</span> <span class="o">-</span> <span class="n">mlogit</span><span class="o">.</span><span class="n">llf</span><span class="p">)</span>
+<span class="n">chi2_emp</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9.350155369947565
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">stats</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.05</span>
+<span class="n">chi</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">chi2</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">chi2</span> <span class="o">=</span> <span class="n">chi</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">alpha</span><span class="p">)</span>
+<span class="n">chi2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.991464547107979
+</pre></div>
+</div>
+</div>
+</div>
+<p>Aternatively, we can directly calculate the p-value by calculating:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="o">-</span> <span class="n">chi</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">chi2_emp</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.009324800712691372
+</pre></div>
+</div>
+</div>
+</div>
+<p>The model is statistically highly significant since the p-value is well below <span class="math notranslate nohighlight">\(1\)</span>%</p>
+</div>
+<div class="section" id="pseudo-r-2">
+<h3>Pseudo <span class="math notranslate nohighlight">\(R^2\)</span><a class="headerlink" href="#pseudo-r-2" title="Permalink to this headline">¶</a></h3>
+<p>We have learned about <span class="math notranslate nohighlight">\(R^2\)</span> score for linear regresssion which helps to understand which part of the deviation in <span class="math notranslate nohighlight">\(y\)</span> is explained by our model.</p>
+<p>Unfortunately such a measure does not exist in the case for logistic regression. There is no measure that separates the expected from the unexpected deviation in the case of logistic regression.</p>
+<p>There are, however, alternative measures which attempt to provide a similar meaning: the pseudo <span class="math notranslate nohighlight">\(R^2\)</span> measures. They attempt to create a similar interpretation as the <span class="math notranslate nohighlight">\(R^2\)</span> measure, i.e.</p>
+<ul class="simple">
+<li><p>can take a range between 0 and 1</p></li>
+<li><p>the higher the measure the better the model</p></li>
+</ul>
+<p>This is achieved by calculating probability ratios instead of deviation ratios (as with <span class="math notranslate nohighlight">\(R^2\)</span>).</p>
+<p><strong>McFadden’s <span class="math notranslate nohighlight">\(R^2\)</span></strong>: is defined as</p>
+<div class="math notranslate nohighlight">
+\[\text{McF-}R^2 = 1-\bigg(\frac{LL_{complete}}{L_0}\bigg) = 1 - \frac{-16.053}{-20.728} = 0.226\]</div>
+<p>We can easly confirm this using our previously calculated log-likelihood values:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">LLc</span> <span class="o">/</span> <span class="n">LL0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.22554735197344267
+</pre></div>
+</div>
+</div>
+</div>
+<p>Given in practice it is very unlikely that the log-likelihood ratios become 0, as a rule of thumb values between <span class="math notranslate nohighlight">\(0.2\)</span> and <span class="math notranslate nohighlight">\(0.4\)</span> already indicate a good model fit.</p>
+</div>
+</div>
+<div class="section" id="assessment-of-coefficients">
+<h2>Assessment of coefficients<a class="headerlink" href="#assessment-of-coefficients" title="Permalink to this headline">¶</a></h2>
+<p>In line with regression analysis we have to test if individual coefficients are statistically significant. We do so by testing the null hypothesis <span class="math notranslate nohighlight">\(H_0 : \beta_j = 0 \)</span>.</p>
+<p>In linear regression we have done so by using a <em>t-test</em>.</p>
+<p>In the case of logistic regression we use</p>
+<ul class="simple">
+<li><p>Wald test and/or</p></li>
+<li><p>likelihood ratio test</p></li>
+</ul>
+<p>Given the fact that most statistical packages readily provide calculations of significance levels of individual coefficients, we refrain from looking into both tests in detail.</p>
+<p>Instead let’s look at the summary output for our final model and start to interpret the output.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mlogit</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="simpletable">
+<caption>Logit Regression Results</caption>
+<tr>
+  <th>Dep. Variable:</th>       <td>purchase</td>     <th>  No. Observations:  </th>  <td>    30</td> 
+</tr>
+<tr>
+  <th>Model:</th>                 <td>Logit</td>      <th>  Df Residuals:      </th>  <td>    27</td> 
+</tr>
+<tr>
+  <th>Method:</th>                 <td>MLE</td>       <th>  Df Model:          </th>  <td>     2</td> 
+</tr>
+<tr>
+  <th>Date:</th>            <td>Thu, 03 Dec 2020</td> <th>  Pseudo R-squ.:     </th>  <td>0.2255</td> 
+</tr>
+<tr>
+  <th>Time:</th>                <td>15:51:05</td>     <th>  Log-Likelihood:    </th> <td> -16.053</td>
+</tr>
+<tr>
+  <th>converged:</th>             <td>True</td>       <th>  LL-Null:           </th> <td> -20.728</td>
+</tr>
+<tr>
+  <th>Covariance Type:</th>     <td>nonrobust</td>    <th>  LLR p-value:       </th> <td>0.009325</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+      <td></td>         <th>coef</th>     <th>std err</th>      <th>z</th>      <th>P>|z|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>Intercept</th> <td>   -5.6348</td> <td>    2.417</td> <td>   -2.332</td> <td> 0.020</td> <td>  -10.372</td> <td>   -0.898</td>
+</tr>
+<tr>
+  <th>income</th>    <td>    2.3509</td> <td>    1.040</td> <td>    2.261</td> <td> 0.024</td> <td>    0.313</td> <td>    4.388</td>
+</tr>
+<tr>
+  <th>gender</th>    <td>    1.7514</td> <td>    0.953</td> <td>    1.839</td> <td> 0.066</td> <td>   -0.116</td> <td>    3.618</td>
+</tr>
+</table></div></div>
+</div>
+<p>We can see that values for the overall model are confirmed by the summary output. In addition we see that the coefficient <em>income</em> is statistical significant at the 95% conficence interval (p value of 2.4%), whereas the coefficient <em>gender</em> is not statistically significant (p value of 6.6%).</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "mlbasic"
+        },
+        kernelOptions: {
+            kernelName: "mlbasic",
+            path: "./chapters/chapter_analytics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'mlbasic'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="S06a_TidyData.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Tidy Data</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="S08a_Clustering.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Clusteranalyse</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      Durch Felix Zeidler<br/>
+    
+        &copy; Urheberrechte © 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
