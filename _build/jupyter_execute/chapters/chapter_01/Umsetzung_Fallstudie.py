@@ -21,11 +21,7 @@ get_ipython().run_line_magic('autoreload', '2')
 
 # 
 
-# Sie haben ihr Studium beendet und gelten in ihrer Familie nun als Expert*in für finanzielle Fragestellungen. Ihr Onkel, der überraschend einen größeren Geldbetrag geerbt hat, kommt auf Sie zu und fragt Sie, wie er das Geld sinnvoll anlegen könne. Sie raten Ihm dazu das Geld in einen breiten Aktienindex (passiv) zu investieren. Ihr Onkel winkt direkt ab, weil ihm Aktien "viel zu riskant" seien. Da könne man ja auch sehr viel Geld bei verlieren. 
 # 
-# Einerseits wollen Sie ihrem Onkel nicht raten das Geld in Immobilien oder in Festgeld zu investieren. Anderseits kommen Sie selber ins Grübeln, ob eine Investition in Aktien nicht vielleicht doch zu riskant ist. Sie beschließen deshalb der Frage empirisch nachzugehen. 
-# 
-# Konkret wollen Sie versuchen zu analysieren, wie riskant eine Investition in Aktien tatsächlich ist. 
 
 # ## Risiko: Investition in DAX 40
 
