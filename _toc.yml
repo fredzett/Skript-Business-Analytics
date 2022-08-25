@@ -9,7 +9,8 @@ parts:
   - file: chapters/chapter_01/Einleitung
   - file: chapters/chapter_01/Fallstudie
     sections:
-    - file: chapters/chapter_01/Einleitung_CaseStudy.ipynb
+    - file: chapters/chapter_01/Überlegungen_Fallstudie.md
+    - file: chapters/chapter_01/Umsetzung_Fallstudie.ipynb
 - caption: 02 Python Part 1
   chapters:
   - file: chapters/chapter_02/Voraussetzungen

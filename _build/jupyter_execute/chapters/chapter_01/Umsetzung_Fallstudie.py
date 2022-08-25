@@ -17,15 +17,9 @@ get_ipython().run_line_magic('autoreload', '2')
 # Dies ist eine Warnung!
 # ```
 
-# In[1]:
+# # Umsetzung in Python
 
-
-```{sidebar} Merke!
-My sidebar content
-```
-
-
-# # Fallstudie: Investieren in ETFs
+# 
 
 # Sie haben ihr Studium beendet und gelten in ihrer Familie nun als Expert*in für finanzielle Fragestellungen. Ihr Onkel, der überraschend einen größeren Geldbetrag geerbt hat, kommt auf Sie zu und fragt Sie, wie er das Geld sinnvoll anlegen könne. Sie raten Ihm dazu das Geld in einen breiten Aktienindex (passiv) zu investieren. Ihr Onkel winkt direkt ab, weil ihm Aktien "viel zu riskant" seien. Da könne man ja auch sehr viel Geld bei verlieren. 
 # 
