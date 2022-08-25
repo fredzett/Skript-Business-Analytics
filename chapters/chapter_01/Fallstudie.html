@@ -54,7 +54,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Fallstudie: Investieren in ETFs" href="Einleitung_CaseStudy.html" />
+    <link rel="next" title="Wie riskant sind Aktien?" href="%C3%9Cberlegungen_Fallstudie.html" />
     <link rel="prev" title="Einleitung" href="Einleitung.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -119,8 +119,13 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="Einleitung_CaseStudy.html">
-     Fallstudie: Investieren in ETFs
+    <a class="reference internal" href="%C3%9Cberlegungen_Fallstudie.html">
+     Wie riskant sind Aktien?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Umsetzung_Fallstudie.html">
+     Umsetzung in Python
     </a>
    </li>
   </ul>
@@ -275,18 +280,6 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Inhalt
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-  </a>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -299,18 +292,6 @@
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Inhalt </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -320,13 +301,15 @@
   <div class="tex2jax_ignore mathjax_ignore section" id="fallstudie">
 <h1>Fallstudie<a class="headerlink" href="#fallstudie" title="Permalink to this headline">¶</a></h1>
 <p>Wir beenden dieses Kapitel mit einer Fallstudie. Ziel dieser Fallstudie ist es, darzustellen, wie Sie mit relativ wenig Programmierung detaillierte und (teilweise) komplexe Analysen durchführen können.</p>
-<div class="note admonition">
+<p>Die Fallstudie ist in zwei Teile aufgeteilt.</p>
+<p>Im <strong>ersten Teil (<a class="reference internal" href="%C3%9Cberlegungen_Fallstudie.html"><span class="doc std std-doc">“Wie riskant sind Aktien”</span></a>)</strong> wird die Fallstudie vorgestellt und wir machen uns konzeptionelle Gedanken dazu, wie wir die Fallstudie lösen können und was wir dafür benötigen (Rohdaten, Aufbereitung von Daten, Analyse von Daten etc.).</p>
+<p>Im <strong>zweiten Teil (<a class="reference internal" href="Umsetzung_Fallstudie.html"><span class="doc std std-doc">“Umsetzung in Python”</span></a>)</strong> machen wir uns dann die “Hände schmutzig” und setzen die konzeptionellen Überlegungen in Python um.</p>
+<div class="warning admonition">
 <p class="admonition-title">Wichtiger Hinweis</p>
-<p>In dieser Fallstudie werden Dinge vorgegriffen, die Sie an dieser Stelle noch nicht gelernt haben. Ziel der Fallstudie ist es ausdrücklich nicht, dass Sie jede Code-Zeile nachvollziehen können. Vielmehr sollen Sie einen Eindruck davon vermittelt bekommen, was Sie in diesem Kurs erwartet bzw. was Sie - vorausgesetzt Sie arbeiten kontinuierlich mit - am Ende in der Lage sind selber umzusetzen.</p>
-<p>Gehen Sie diese Fallstudie also nicht mit dem Anspruch durch, alles bereits verstehen und selber umsetzen zu müssen. Vielmehr sollten Sie die übergeordnete Fragestellung durchdenken, um dann zu sehen, wie diese Fragestellung mittels Python beantwortet wird.</p>
+<p>In dieser Fallstudie werden Dinge vorgegriffen, die Sie noch nicht gelernt haben. Ziel der Fallstudie ist es ausdrücklich nicht, dass Sie jede Code-Zeile nachvollziehen können. Vielmehr sollen Sie einen Eindruck davon vermittelt bekommen, was Sie in diesem Kurs erwartet bzw. was Sie - vorausgesetzt Sie arbeiten kontinuierlich mit - am Ende in der Lage sind selber umzusetzen.</p>
+<p>Als <strong>Analogie</strong> können Sie sich vorstellen, dass wir einem kleinen Kind beibringen wollen, wie man Fußball spielt. Sie würden nie auf die Idee kommen, dem kleinen Kind als erstes die korrekte Fußstellung beim Freistoß oder gar die Abseitsregel zu erläutern. Stattdessen würden Sie dem Kind ein Fußballspiel im Fernsehen zeigen und danach einen Ball geben. Sie würden also zunächst das große Ganze zeigen - ohne, dass das Kind alle Details bereits versteht - und es so neugierig auf das Spiel machen. Die Details und Feinheiten folgen dann Schritt für Schritt.</p>
+<p>Gehen Sie diese Fallstudie also nicht mit dem Anspruch durch, alles bereits verstehen und selber umsetzen zu müssen. Vielmehr sollten Sie die übergeordnete Fragestellung durchdenken, um dann zu erleben, wie diese Fragestellung mittels Python beantwortet wird. Dies wird Sie hoffentlich für das große Ganze begeistern und so das Fundament für alles weitere legen.</p>
 </div>
-<div class="section" id="id1">
-<h2><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>Es folgt: eine Fallstudie</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -388,7 +371,6 @@ Hier folgt ein neuer Textabschnitt.</p>
 <p class="admonition-title">Note</p>
 <p>The note body will be hidden!</p>
 </div>
-</div>
 <div class="toctree-wrapper compound">
 </div>
 </div>
@@ -425,10 +407,10 @@ Hier folgt ein neuer Textabschnitt.</p>
             <p class="prev-next-title">Einleitung</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="Einleitung_CaseStudy.html" title="next page">
+    <a class='right-next' id="next-link" href="%C3%9Cberlegungen_Fallstudie.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Fallstudie: Investieren in ETFs</p>
+        <p class="prev-next-title">Wie riskant sind Aktien?</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

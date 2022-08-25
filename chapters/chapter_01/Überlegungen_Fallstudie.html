@@ -1,0 +1,586 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wie riskant sind Aktien?</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/UtilityCode/__pycache__/myfile.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Umsetzung in Python" href="Umsetzung_Fallstudie.html" />
+    <link rel="prev" title="Fallstudie" href="Fallstudie.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/datascience.png" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Dieses Buch durchsuchen ..." aria-label="Dieses Buch durchsuchen ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Vorwort.html">
+   Vorwort
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  01 Einleitung
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Einleitung.html">
+   Einleitung
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="Fallstudie.html">
+   Fallstudie
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Wie riskant sind Aktien?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Umsetzung_Fallstudie.html">
+     Umsetzung in Python
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  02 Python Part 1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_02/Voraussetzungen.html">
+   Technische Voraussetzungen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_02/S01b_Intro_Python.html">
+   Einführung in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_02/S01a_Intro_JN.html">
+   Einführung in Jupyter Notebooks
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  99 Analytics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S02a_Descriptive_Statistics.html">
+   Deskriptive Statistik
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S03a_Simulation.html">
+   Simulationen mit Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S03c_Probability_Distributions.html">
+   Wahrscheinlichkeitsverteilungen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S04a_Estimation%26HyptothesisTesting.html">
+   Testen von Hypothesen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S05a_Regression.html">
+   Lineare Regression
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S06a_TidyData.html">
+   Tidy Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S07a_Classification.html">
+   Klassifikation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S08a_Clustering.html">
+   Clusteranalyse
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S09a_Cross_validation.html">
+   Cross Validation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S11_DecisionTrees.html">
+   Entscheidungsbäume
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S12_Ensembles.html">
+   Ensemble-Methoden
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Navigation umschalten" aria-controls="site-navigation"
+                title="Navigation umschalten" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Laden Sie diese Seite herunter"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/chapters/chapter_01/Überlegungen_Fallstudie.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Quelldatei herunterladen" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="In PDF drucken"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Vollbildmodus"
+        title="Vollbildmodus"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Inhalt
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ausgangslage">
+   Ausgangslage
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#schritt-1-beschaffung-der-daten">
+   Schritt 1: Beschaffung der Daten
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#schritt-2-aufbereitung-der-daten">
+   Schritt 2: Aufbereitung der Daten
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ansatz-1-zuruck-in-die-vergangenheit">
+     Ansatz 1: Zurück in die Vergangenheit
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ansatz-2-historischer-zufall">
+     Ansatz 2: Historischer Zufall
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Wie riskant sind Aktien?</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Inhalt </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ausgangslage">
+   Ausgangslage
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#schritt-1-beschaffung-der-daten">
+   Schritt 1: Beschaffung der Daten
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#schritt-2-aufbereitung-der-daten">
+   Schritt 2: Aufbereitung der Daten
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ansatz-1-zuruck-in-die-vergangenheit">
+     Ansatz 1: Zurück in die Vergangenheit
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ansatz-2-historischer-zufall">
+     Ansatz 2: Historischer Zufall
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="wie-riskant-sind-aktien">
+<h1>Wie riskant sind Aktien?<a class="headerlink" href="#wie-riskant-sind-aktien" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="ausgangslage">
+<h2>Ausgangslage<a class="headerlink" href="#ausgangslage" title="Permalink to this headline">¶</a></h2>
+<p>Sie haben ihr Studium beendet und gelten in ihrer Familie nun als Expert*in für finanzielle Fragestellungen. Ihr Onkel, der überraschend einen größeren Geldbetrag geerbt hat, kommt auf Sie zu und fragt Sie, wie er das Geld sinnvoll anlegen könne. Sie raten Ihm dazu das Geld in einen breiten Aktienindex (passiv) zu investieren. Ihr Onkel winkt direkt ab, weil ihm Aktien “viel zu riskant” seien. Da könne man ja auch sehr viel Geld bei verlieren.</p>
+<p>Einerseits wollen Sie ihrem Onkel nicht raten das Geld in Immobilien oder in Festgeld zu investieren. Anderseits kommen Sie selber ins Grübeln, ob eine Investition in Aktien nicht vielleicht doch zu riskant ist. Sie beschließen deshalb der Frage empirisch nachzugehen.</p>
+<p>Konkret wollen Sie versuchen zu analysieren, wie riskant eine Investition in Aktien tatsächlich ist.</p>
+<p>Obgleich es sich bei unserer Fragestellung um eine “persönliche” Analyse handelt, steht diese doch stellvertretend für ein typisches <strong>Business Analytics</strong>-Problem, bei dem es darum geht ein konkretes Problem bzw. eine konkrete Fragestellung datenbasiert zu beantworten.</p>
+<p>Für unsere Analyse bedarf es daher einer Fragestellung, die konkret bzw. “operationalisierbar” ist</p>
+<p>Dies gilt für die bisherige Fragestellung leider noch nicht. Was bedeutet “riskant” bzw. “Risiko”? In welche Aktien wollen wir investieren?</p>
+<p>Aus Vereinfachungsgründen definieren wir <strong>Risiko</strong> in unserem Fall als die <strong>Wahrscheinlichkeit einen Verlust zu erleiden</strong>. Wir fragen uns also konkret: wie wahrscheinlich ist es, dass ihre Investition innerhalb eines (noch zu bestimmenden) Zeitraums an Wert verliert. Der Einfachheit halber nehmen wir an, dass wir in den DAX (siehe <a class="reference external" href="https://de.wikipedia.org/wiki/DAX">Wikipedia</a>) investieren.</p>
+<p>Die konkrete Fragestellung lautet also: <strong>Wie Wahrscheinlich ist es, dass wir in den DAX investieren und dabei einen Verlust erleiden?</strong></p>
+<p>Lassen Sie uns nun konret überlegen, wie wir diese konkrete Frage empirisch beantworten können.</p>
+</div>
+<div class="section" id="schritt-1-beschaffung-der-daten">
+<h2>Schritt 1: Beschaffung der Daten<a class="headerlink" href="#schritt-1-beschaffung-der-daten" title="Permalink to this headline">¶</a></h2>
+<p>Die formulierte Frage ist natürlich nicht sicher bzw. eindeutig zu beantworten. Wir bräuchten dafür die DAX-Stände der nächsten Jahren; wir müssten also die Zukunft vorhersehen. Wir haben die <em>perfekten</em> Daten nicht.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="note admonition">
+<p class="admonition-title">Hinweis</p>
+<p>Jede Analyse basiert immer auf Annahmen. Diese können prinzipiell nicht falsch sein, sondern sinnvoll oder weniger sinnvoll. Ziel einer datenbasierten Analyse sollte es sein, sinnvolle und konsistente Annahmen zu treffen und diese auch transparent zu machen.</p>
+</div>
+</div>
+<p>In unserem Falle können wir jedoch <code class="docutils literal notranslate"><span class="pre">historische</span> <span class="pre">Daten</span></code> nutzen. Statt in die Zukunft zu schauen, treffen wir also eine Annahme. Für die Zwecke unserer Analyse nehmen wir an, dass die historischen Daten ein guter Schätzer für die Zukunft sind.</p>
+<p>Historische Daten für Aktien sind glücklicherweise - zumindest für unsere Zwecke - einfach und frei zugänglich. Die Beschaffung der Rohdaten stellt also kein Problem dar.</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">“How to”: Download von Aktienkursen</p>
+<p>Aktienkursdaten sind - zumindest für unsere Zwecke - einfach und kostenlos zugänglich. Wir werden als Quelle <a class="reference external" href="https://de.finance.yahoo.com/quote">Yahoo Finance</a> nutzen. Wir können hier (auch historische) Daten von allen wesentlichen Aktien und Indices einsehen und herunterladen. Die heruntergeladenenen Daten können in Form einer <code class="docutils literal notranslate"><span class="pre">csv-Datei</span></code> gespeichert werden.</p>
+<p>Hier ein Beispiel zum Download historischer DAX-Kurse:</p>
+<p><img alt="" src="../../_images/Yahoo_download.gif" />
+<break></break></p>
+<p>Im weiteren Verlauf werden wir noch lernen, dass wir die Kurse via Python noch einfacherer und ohne manuelles Abspeichern von Daten einlesen können.</p>
+</div>
+</div>
+<div class="section" id="schritt-2-aufbereitung-der-daten">
+<h2>Schritt 2: Aufbereitung der Daten<a class="headerlink" href="#schritt-2-aufbereitung-der-daten" title="Permalink to this headline">¶</a></h2>
+<p>Die historischen Kursdaten als Datenquelle (“Rohdaten”) stellen kein Hürde dar. Der Download der Rohdaten ist einfach  (siehe “how to”), liefert jedoch nur bedingt eine Antwort auf unsere Frage. In <a class="reference internal" href="#dax-ref"><span class="std std-numref">Fig. 1</span></a> erkennen wir zwar, dass der DAX seit Beginn und bis zum Juli 2022 stark gestiegen ist (Anfangsstand: <span class="math notranslate nohighlight">\(1.000\)</span>, Endstand: <span class="math notranslate nohighlight">\(13.484\)</span>) und wir unser Geld in etwa um den Faktor <span class="math notranslate nohighlight">\(13x\)</span> vermehrt hätten. Es gab jedoch offensichtlich auch Zeiträume in denen eine Investition an Wert verloren hätte. So hat der Dax z.B. seit seinem Höchsstand von <span class="math notranslate nohighlight">\(16.271,75\)</span> im Januar 2022 bis heute deutlich an Wert verloren. Hätte man am Tag des Höchsttandes investiert, hätte man aktuell einen deutlichen Verlust gemacht.</p>
+<div class="figure align-default" id="dax-ref">
+<img alt="../../_images/Dax.png" src="../../_images/Dax.png" />
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Entwicklung Dax 1987 bis heute</span><a class="headerlink" href="#dax-ref" title="Permalink to this image">¶</a></p>
+</div>
+<p>Wir müssen die Rohdaten deshalb für unsere Zwecke aufbereiten. Was benötigen wir für unsere Zwecke konkret? Um diese Frage zu beantworten müssen wir darüber nachdenken, wie wir die Frage <strong>“Wie Wahrscheinlich ist es, dass wir in den DAX investieren und dabei einen Verlust erleiden?</strong> beantworten wollen.</p>
+<div class="section" id="ansatz-1-zuruck-in-die-vergangenheit">
+<h3>Ansatz 1: Zurück in die Vergangenheit<a class="headerlink" href="#ansatz-1-zuruck-in-die-vergangenheit" title="Permalink to this headline">¶</a></h3>
+<p>Das Grundproblem ist, dass wir zwar historische Daten haben, wir aber theoretisch an jedem Tag in der Vergangenheit “zufällig” unser Geld hätten investieren können. Abhängig vom Tag des Beginns der Investition (und natürlich dem Tag des Verkaufs) produziert unsere Strategie immer unterschiedliche “Gewinne”.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="note admonition">
+<p class="admonition-title">Hinweis</p>
+<p>Wenn ich zum Tag <span class="math notranslate nohighlight">\(t\)</span> eine Aktie zum Preis <span class="math notranslate nohighlight">\(P_t\)</span> kaufe und am Tag <span class="math notranslate nohighlight">\(T\)</span> zum Preis <span class="math notranslate nohighlight">\(P_T\)</span> verkaufe, dann lässt sich die Rendite wiefolgt berechnen:</p>
+<p><span class="math notranslate nohighlight">\(r_T = \frac{P_T}{P_{t}} - 1\)</span></p>
+</div>
+</div>
+<ul class="simple">
+<li><p>Beispiel 1: hätten wir am 10.6.1991 (Stand: <span class="math notranslate nohighlight">\(1.698\)</span>) investiert und am 26.03.2001 (Stand: <span class="math notranslate nohighlight">\(5.726\)</span>) verkauft, dann hätten wir eine <strong>Rendite von ca. <span class="math notranslate nohighlight">\(+237\)</span>%</strong> gemacht.</p></li>
+<li><p>Beispiel 2: hätten wir am 12.04.2007 (Stand: <span class="math notranslate nohighlight">\(7.808\)</span>) investiert und am 19.12.2008 (Stand: <span class="math notranslate nohighlight">\(4.696\)</span>) verkauft, dann hätten wir eine <strong>Rendite von ca. <span class="math notranslate nohighlight">\(-40\)</span>%</strong> gemacht.</p></li>
+</ul>
+<p>Die zwei Beispiele sind zufällig gewählt. Es hätte sehr viele mehr verschiedene Zeitpunkte und Zeiträume gegeben in der man hätte anlegen können. Dabei ist der <em>optimalen</em> Anlagezeitpunkt und Zeitraum leider erst im Nachhinein bekannt.</p>
+<p>Um unsere Frage zu beantworten, müssen wir deshalb <strong>Zurück in die Vergangenheit</strong> gehen und für jeden möglichen Anfangszeitpunkt (d.h. jeder Handelstag seit Beginn des DAX in 1987) über jeden möglichen Anlagezeitraum investieren. Da wir in die Vergangenheit schauen, haben wir die Daten, um unsere Wertentwicklung für jede dieser Investitionen zu beobachten.</p>
+<p>Lassen Sie uns zunächst anhand eines einfachen und fiktiven Beispiels durchspielen, welche Vergangenheitsanalyse wir durchführen wollen. Nehmen wir an, wir hätten <span class="math notranslate nohighlight">\(10\)</span> historische Kurse eines Index, dessen Entwicklung in <a class="reference internal" href="#index-ref"><span class="std std-numref">Fig. 2</span></a> dargestellt sind.</p>
+<div class="figure align-default" id="index-ref">
+<img alt="../../_images/Index_Beispiel.png" src="../../_images/Index_Beispiel.png" />
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Entwicklung Index über 10 Perioden</span><a class="headerlink" href="#index-ref" title="Permalink to this image">¶</a></p>
+</div>
+<p>Wir fragen uns nun, wie Wahrscheinlich es war, einen Verlust zu vereinnahmen. Wir wollen mindestens 5 Perioden investieren (d.h. wir wissen noch nicht wie lange wir investieren wollen, sind uns jedoch sicher, dass wir innerhalb von 5 Perioden nicht verkaufen werden)</p>
+<p>Die für unsere Überlegung benötigten Daten sind in <a class="reference internal" href="#index-table"><span class="std std-numref">Table 1</span></a> abgebildet.</p>
+<table class="colwidths-auto table" id="index-table">
+<caption><span class="caption-number">Table 1 </span><span class="caption-text">Beispiel: Index mit 10 historischen Kursen</span><a class="headerlink" href="#index-table" title="Permalink to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="text-align:right head"><p>1</p></th>
+<th class="text-align:right head"><p>2</p></th>
+<th class="text-align:right head"><p>3</p></th>
+<th class="text-align:right head"><p>4</p></th>
+<th class="text-align:right head"><p>5</p></th>
+<th class="text-align:right head"><p>6</p></th>
+<th class="text-align:right head"><p>7</p></th>
+<th class="text-align:right head"><p>8</p></th>
+<th class="text-align:right head"><p>9</p></th>
+<th class="text-align:right head"><p>10</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Kurs</p></td>
+<td class="text-align:right"><p>102</p></td>
+<td class="text-align:right"><p>105</p></td>
+<td class="text-align:right"><p>109</p></td>
+<td class="text-align:right"><p>108</p></td>
+<td class="text-align:right"><p>106</p></td>
+<td class="text-align:right"><p>107</p></td>
+<td class="text-align:right"><p>109</p></td>
+<td class="text-align:right"><p>106</p></td>
+<td class="text-align:right"><p>101</p></td>
+<td class="text-align:right"><p>111</p></td>
+</tr>
+<tr class="row-odd"><td><p>Rendite</p></td>
+<td class="text-align:right"><p>2,0%</p></td>
+<td class="text-align:right"><p>3,0%</p></td>
+<td class="text-align:right"><p>4,0%</p></td>
+<td class="text-align:right"><p>-1,0%</p></td>
+<td class="text-align:right"><p>-2,0%</p></td>
+<td class="text-align:right"><p>1,0%</p></td>
+<td class="text-align:right"><p>2,0%</p></td>
+<td class="text-align:right"><p>-3,0%</p></td>
+<td class="text-align:right"><p>-5,0%</p></td>
+<td class="text-align:right"><p>10,0%</p></td>
+</tr>
+</tbody>
+</table>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="note admonition">
+<p class="admonition-title">Hinweis</p>
+<p>Wir gehen davon aus, dass wir immer zu Beginn einer Periode investieren. Würden wir in Periode 7 kaufen, würde das Kritierum nicht mehr erfüllt, da wir bis Periode 11 halten müssten, wir aber nur historische Daten bis Periode 10 haben.</p>
+</div>
+</div>
+<p>Wir könnten insgesamt <strong>6</strong> verschiedene Investitionszeitpunkte definieren, die das Kriterium “mindestens 5 Perioden investieren” erfüllen.</p>
+<ul class="simple">
+<li><p>Anlage 1: Kaufen in Periode 1</p></li>
+<li><p>Anlage 2: Kaufen in Periode 2</p></li>
+<li><p>…</p></li>
+<li><p>Anlage 6: Kaufen in Periode 6</p></li>
+</ul>
+<p>Wie ermitteln wir jetzt die Wertentwicklung unserer verschiednen Anlagen über die Zeit?</p>
+<p>Nehmen wir an, dass wir je <span class="math notranslate nohighlight">\(1.00\)</span> EUR investieren. Anlage 1 würde uns in der ersten Periode <span class="math notranslate nohighlight">\(2\)</span>% Rendite bringen. Aus unserer Anfangsinvestition würden also <span class="math notranslate nohighlight">\(1\times(1+0.02) = 1.02\)</span> EUR werden. Dieser neue Wert von <span class="math notranslate nohighlight">\(1.02\)</span> EUR würden sich in der nächsten Periode (Periode 2) mit <span class="math notranslate nohighlight">\(3\)</span>% verzinsen, so dass wir am Ende von Periode 2 insgesamt <span class="math notranslate nohighlight">\(1.02 \times (1.03) = 1.0506\)</span> EUR hätten usw…</p>
+<p>Allgemeiner können wir sagen, dass sich die Performance einer Strategie (<span class="math notranslate nohighlight">\(R_T\)</span>) über die Multiplikation der Perioden-Renditen berechnen lässt.</p>
+<p>Beispiel für Anlage 1 für 5 Perioden (<span class="math notranslate nohighlight">\(I_0\)</span> = Anfangsinvestition; hier: <span class="math notranslate nohighlight">\(1\)</span> EUR):</p>
+<div class="math notranslate nohighlight">
+\[ I_0 \times(1+0.02)\times(1+0.03)\times(1+0.04)\times(1-0.01)\times(1-0.02) - 1 = 0.06\]</div>
+<p>Über eine Haltedauer von 5 Perioden hätte man mit Anlage 1 demnach aus <span class="math notranslate nohighlight">\(1.00\)</span> EUR insgesamt <span class="math notranslate nohighlight">\(1.06\)</span> EUR gemacht, d.h. <span class="math notranslate nohighlight">\(6\)</span>ct verdient bzw. <span class="math notranslate nohighlight">\(6\)</span>% Rendite gemacht.</p>
+<p>Allgemeiner können wir schreiben: die Performance einer Strategie (<span class="math notranslate nohighlight">\(R_T\)</span>) lässt sich über die Multiplikation der Perioden-Renditen ermitteln.</p>
+<div class="math notranslate nohighlight">
+\[
+R_T = I_0 \times \prod_{t=1}^T (1+r_t) - 1
+\]</div>
+<p>In <a class="reference internal" href="#anlagen-ref"><span class="std std-numref">Fig. 3</span></a> ist die Wertentwicklung der 6 Anlagen bei einer Anfangsinvestition von je <span class="math notranslate nohighlight">\(1.00\)</span> EUR dargestellt.</p>
+<div class="figure align-default" id="anlagen-ref">
+<img alt="../../_images/Anlagen_perf.png" src="../../_images/Anlagen_perf.png" />
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Entwicklung der sechs Anlagen</span><a class="headerlink" href="#anlagen-ref" title="Permalink to this image">¶</a></p>
+</div>
+<p>Im obigen Beispiel sehen wir, dass es für unseren Beispielindex Phasen gab, bei denen wir einen Verlust gemacht hätten. Z.B. hat Anlage 4 nach Periode 6 einen Verlust von ca. <span class="math notranslate nohighlight">\(8\)</span>ct. Auf der anderen Seite gab es Phasen, in denen man Gewinn gemacht hat. Z.B. Anlage 1 nach 10 Perioden.</p>
+<p>Unser Beispiel zeigt, dass wir zur Beantwortung unserer Frage <strong>Renditen</strong> benötigen und diese für alle möglichen Investitionszeitpunkte und Zeiträume miteinander multiplizieren müssen. In der praktischen Umsetzung schauen wir uns an, wie dies sehr simple möglich ist.</p>
+</div>
+<div class="section" id="ansatz-2-historischer-zufall">
+<h3>Ansatz 2: Historischer Zufall<a class="headerlink" href="#ansatz-2-historischer-zufall" title="Permalink to this headline">¶</a></h3>
+<p>Im vorrangeganen Beispiel haben wir gesehen, wie wir auf Basis von Vergangenheitsdaten fiktive Anlagen getätigt haben, die in der Form aber real möglich gewesen wären. Man hätte in der Vergangenheit tatsächlich in Periode 1 für z.B. 5 Perioden anlegen können. In diesem Fall hätte man tatsächlich eine Rendite von <span class="math notranslate nohighlight">\(6\)</span>% gemacht.</p>
+<p>Der Nachteil dieses Ansatzes ist jedoch, dass es uns z.B. nicht möglich ist 6 unterschiedliche Anlagen mit einem Investitionshorizont von jeweils 10 Perioden abzubilden. Diese Anlagen wären in der Realität schlicht nicht möglich gewesen, da es in unserem Beispiel nur eine Anlage gibt, für die ein Investitionshorizont von 10 Perioden möglich war  (Anlage 1).</p>
+<p>Im zweiten Ansatz “Historischer Zufall” umgehen wir dieses Problem. Anstatt reale historische Performance abzubilden</p>
+<p>Im ersten Ansatz, wir nennen diesen <strong>“Zurück in die Zukunft”</strong></p>
+<p><strong>Ansatz 2: historischer Zufall</strong></p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters/chapter_01"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Fallstudie.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Fallstudie</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Umsetzung_Fallstudie.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Umsetzung in Python</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      Durch Felix Zeidler<br/>
+    
+        &copy; Urheberrechte © 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
