@@ -1,4 +1,0 @@
-# Technische Voraussetzungen 
-
-Folgen hier....
-
