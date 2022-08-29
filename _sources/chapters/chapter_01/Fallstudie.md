@@ -4,7 +4,7 @@ Wir beenden dieses Kapitel mit einer Fallstudie. Ziel dieser Fallstudie ist es, 
 
 Die Fallstudie ist in zwei Teile aufgeteilt. 
 
-Im **ersten Teil (["Wie riskant sind Aktien"](Überlegungen_Fallstudie.md))** wird die Fallstudie vorgestellt und wir machen uns konzeptionelle Gedanken dazu, wie wir die Fallstudie lösen können und was wir dafür benötigen (Rohdaten, Aufbereitung von Daten, Analyse von Daten etc.). 
+Im **ersten Teil (["Wie riskant sind Aktien"](Introduction_Fallstudie.md))** wird die Fallstudie vorgestellt und wir machen uns konzeptionelle Gedanken dazu, wie wir die Fallstudie lösen können und was wir dafür benötigen (Rohdaten, Aufbereitung von Daten, Analyse von Daten etc.). 
 
 Im **zweiten Teil (["Umsetzung in Python"](Umsetzung_Fallstudie.ipynb))** machen wir uns dann die "Hände schmutzig" und setzen die konzeptionellen Überlegungen in Python um. 
 
