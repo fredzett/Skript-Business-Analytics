@@ -156,58 +156,20 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S02a_Descriptive_Statistics.html">
-   Deskriptive Statistik
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S03a_Simulation.html">
-   Simulationen mit Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S03c_Probability_Distributions.html">
-   Wahrscheinlichkeitsverteilungen
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S04a_Estimation%26HyptothesisTesting.html">
-   Testen von Hypothesen
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S05a_Regression.html">
-   Lineare Regression
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S06a_TidyData.html">
-   Tidy Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S07a_Classification.html">
-   Klassifikation
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../chapter_analytics/S08a_Clustering.html">
    Clusteranalyse
   </a>
  </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Anhang
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S09a_Cross_validation.html">
-   Cross Validation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S11_DecisionTrees.html">
-   Entscheidungsbäume
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S12_Ensembles.html">
-   Ensemble-Methoden
+  <a class="reference internal" href="../literatur.html">
+   Literatur
   </a>
  </li>
 </ul>
@@ -406,7 +368,7 @@ Name: 8760, dtype: object
 
 <span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">mdates</span><span class="o">.</span><span class="n">YearLocator</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">mdates</span><span class="o">.</span><span class="n">DateFormatter</span><span class="p">(</span><span class="s1">&#39;%Y&#39;</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;Dax.png&quot;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;Dax.png&quot;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -460,7 +422,7 @@ Name: Adj Close, dtype: float64
           <span class="n">show_legend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Kursentwicklung &#39;Index&#39;&quot;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">days</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">days</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;Index_Beispiel.png&quot;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;Index_Beispiel.png&quot;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -660,15 +622,16 @@ Name: Adj Close, dtype: float64
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">colors</span> <span class="o">=</span> <span class="n">BA</span><span class="o">.</span><span class="n">plotting</span><span class="o">.</span><span class="n">COLORS</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data_new</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;Periode&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">data_new</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="s2">&quot;Anlage&quot;</span> <span class="ow">in</span> <span class="n">col</span><span class="p">],</span> 
-        <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="n">colors</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s2">&quot;lightgrey&quot;</span><span class="p">,</span> <span class="s2">&quot;lightgrey&quot;</span><span class="p">,</span> <span class="s2">&quot;lightgrey&quot;</span><span class="p">,</span> <span class="s2">&quot;lightgrey&quot;</span><span class="p">,</span> <span class="n">colors</span><span class="p">[</span><span class="mi">3</span><span class="p">]],</span> 
+        <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="n">colors</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s2">&quot;lightgrey&quot;</span><span class="p">,</span> <span class="s2">&quot;lightgrey&quot;</span><span class="p">,</span> <span class="n">colors</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="s2">&quot;lightgrey&quot;</span><span class="p">,</span> <span class="n">colors</span><span class="p">[</span><span class="mi">3</span><span class="p">]],</span> 
         <span class="n">show_legend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="s2">&quot;Periode&quot;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s2">&quot;Wert&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Wertentwicklung der 6 Anlagen über die Zeit&quot;</span><span class="p">)</span>
 
 
 <span class="n">xmin</span><span class="p">,</span> <span class="n">xmax</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_xlim</span><span class="p">()</span>
 <span class="n">ymin</span><span class="p">,</span> <span class="n">ymax</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_ylim</span><span class="p">()</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">&quot;Anlage 1&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">xmax</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">ymax</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">&quot;Anlage 4&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mf">6.3</span><span class="p">,</span> <span class="mf">0.92</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">&quot;Anlage 6&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mf">0.93</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;Anlagen_perf.png&quot;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;Anlagen_perf.png&quot;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -678,197 +641,202 @@ Name: Adj Close, dtype: float64
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data_new</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;Periode&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;value&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;Portfolio&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bucket</span> <span class="o">=</span> <span class="n">rets</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">t</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">smpl</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">bucket</span><span class="p">,</span> <span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">t</span><span class="p">),</span> <span class="n">replace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;Periode&#39;, ylabel=&#39;value&#39;&gt;
-</pre></div>
-</div>
-<img alt="../../_images/assets_14_1.png" src="../../_images/assets_14_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">days</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span>
-<span class="n">rets</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span> <span class="mf">0.00</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">,</span> <span class="mf">0.04</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.01</span><span class="p">,</span> 	<span class="o">-</span><span class="mf">0.02</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">,</span> 	<span class="o">-</span><span class="mf">0.03</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.10</span> <span class="p">])</span>
-<span class="n">start</span> <span class="o">=</span> <span class="mi">100</span>
-
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="n">days</span><span class="p">,</span> <span class="s2">&quot;return&quot;</span><span class="p">:</span><span class="n">rets</span><span class="p">})</span>
-
-<span class="n">new_df</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span>
-<span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="o">**</span><span class="p">{</span><span class="sa">f</span><span class="s2">&quot;lag_</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">:</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;return&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="o">-</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">cumprod</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">6</span><span class="p">)})</span>
-<span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">replace_first_row</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="p">)</span>
-
-<span class="n">new_df</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">smpl</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">cumprod</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">smpl</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)))</span>
+<span class="n">np</span><span class="o">.</span><span class="n">row_stack</span><span class="p">((</span><span class="n">smpl</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="n">t</span><span class="o">+</span><span class="mi">3</span><span class="p">])))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>time</th>
-      <th>return</th>
-      <th>lag_0</th>
-      <th>lag_1</th>
-      <th>lag_2</th>
-      <th>lag_3</th>
-      <th>lag_4</th>
-      <th>lag_5</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>0</td>
-      <td>0.00</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1</td>
-      <td>0.02</td>
-      <td>1.020000</td>
-      <td>1.030000</td>
-      <td>1.040000</td>
-      <td>0.990000</td>
-      <td>0.980000</td>
-      <td>1.010000</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2</td>
-      <td>0.03</td>
-      <td>1.050600</td>
-      <td>1.071200</td>
-      <td>1.029600</td>
-      <td>0.970200</td>
-      <td>0.989800</td>
-      <td>1.030200</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>3</td>
-      <td>0.04</td>
-      <td>1.092624</td>
-      <td>1.060488</td>
-      <td>1.009008</td>
-      <td>0.979902</td>
-      <td>1.009596</td>
-      <td>0.999294</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>4</td>
-      <td>-0.01</td>
-      <td>1.081698</td>
-      <td>1.039278</td>
-      <td>1.019098</td>
-      <td>0.999500</td>
-      <td>0.979308</td>
-      <td>0.949329</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>5</td>
-      <td>-0.02</td>
-      <td>1.060064</td>
-      <td>1.049671</td>
-      <td>1.039480</td>
-      <td>0.969515</td>
-      <td>0.930343</td>
-      <td>1.044262</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>6</td>
-      <td>0.01</td>
-      <td>1.070664</td>
-      <td>1.070664</td>
-      <td>1.008296</td>
-      <td>0.921039</td>
-      <td>1.023377</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>7</td>
-      <td>0.02</td>
-      <td>1.092078</td>
-      <td>1.038545</td>
-      <td>0.957881</td>
-      <td>1.013143</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>8</td>
-      <td>-0.03</td>
-      <td>1.059315</td>
-      <td>0.986617</td>
-      <td>1.053669</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>9</td>
-      <td>-0.05</td>
-      <td>1.006350</td>
-      <td>1.085279</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>10</td>
-      <td>0.10</td>
-      <td>1.106985</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1.00000000e+00, 2.00000000e+00, 6.00000000e+00, ...,
+        3.53340408e+14, 4.70532679e+17, 1.30237340e+21],
+       [1.00000000e+00, 2.00000000e+00, 6.00000000e+00, ...,
+        4.79151774e+14, 7.13602000e+17, 2.30057179e+21],
+       [1.00000000e+00, 2.00000000e+00, 6.00000000e+00, ...,
+        6.08314303e+14, 1.01663899e+18, 3.70586539e+21],
+       ...,
+       [1.00000000e+00, 2.00000000e+00, 6.00000000e+00, ...,
+        1.90041215e+15, 4.15543448e+18, 1.94436697e+22],
+       [1.00000000e+00, 2.00000000e+00, 6.00000000e+00, ...,
+        9.29540039e+13, 8.54658832e+16, 1.55243308e+20],
+       [1.00000000e+00, 1.00000000e+00, 1.00000000e+00, ...,
+        1.00000000e+00, 1.00000000e+00, 1.00000000e+00]])
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">new_df</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="s2">&quot;lag&quot;</span> <span class="ow">in</span> <span class="n">col</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">idx_max</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">smpl</span><span class="p">[:,</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">idx_min</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">smpl</span><span class="p">[:,</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">smpl</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;dashed&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">smpl</span><span class="p">[</span><span class="n">idx_max</span><span class="p">,:],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">smpl</span><span class="p">[</span><span class="n">idx_min</span><span class="p">,:],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;lag_0&#39;, &#39;lag_1&#39;, &#39;lag_2&#39;, &#39;lag_3&#39;, &#39;lag_4&#39;, &#39;lag_5&#39;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f99ae499190&gt;]
+</pre></div>
+</div>
+<img alt="../../_images/assets_18_1.png" src="../../_images/assets_18_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">probs</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">t</span><span class="p">):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">smpl</span><span class="p">[:,</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="p">)</span> <span class="o">/</span> <span class="n">n</span>
+    <span class="n">probs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">probs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f999d2e5580&gt;]
+</pre></div>
+</div>
+<img alt="../../_images/assets_19_1.png" src="../../_images/assets_19_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>np.r_<span class="o">?</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Type:</span>        RClass
+<span class=" -Color -Color-Red">String form:</span> &lt;numpy.lib.index_tricks.RClass object at 0x7f9998f7e940&gt;
+<span class=" -Color -Color-Red">Length:</span>      0
+<span class=" -Color -Color-Red">File:</span>        ~/opt/anaconda3/envs/coding4class/lib/python3.9/site-packages/numpy/lib/index_tricks.py
+<span class=" -Color -Color-Red">Docstring:</span>  
+Translates slice objects to concatenation along the first axis.
+
+This is a simple way to build up arrays quickly. There are two use cases.
+
+1. If the index expression contains comma separated arrays, then stack
+   them along their first axis.
+2. If the index expression contains slice notation or scalars then create
+   a 1-D array with a range indicated by the slice notation.
+
+If slice notation is used, the syntax ``start:stop:step`` is equivalent
+to ``np.arange(start, stop, step)`` inside of the brackets. However, if
+``step`` is an imaginary number (i.e. 100j) then its integer portion is
+interpreted as a number-of-points desired and the start and stop are
+inclusive. In other words ``start:stop:stepj`` is interpreted as
+``np.linspace(start, stop, step, endpoint=1)`` inside of the brackets.
+After expansion of slice notation, all comma separated sequences are
+concatenated together.
+
+Optional character strings placed as the first element of the index
+expression can be used to change the output. The strings &#39;r&#39; or &#39;c&#39; result
+in matrix output. If the result is 1-D and &#39;r&#39; is specified a 1 x N (row)
+matrix is produced. If the result is 1-D and &#39;c&#39; is specified, then a N x 1
+(column) matrix is produced. If the result is 2-D then both provide the
+same matrix result.
+
+A string integer specifies which axis to stack multiple comma separated
+arrays along. A string of two comma-separated integers allows indication
+of the minimum number of dimensions to force each entry into as the
+second integer (the axis to concatenate along is still the first integer).
+
+A string with three comma-separated integers allows specification of the
+axis to concatenate along, the minimum number of dimensions to force the
+entries to, and which axis should contain the start of the arrays which
+are less than the specified number of dimensions. In other words the third
+integer allows you to specify where the 1&#39;s should be placed in the shape
+of the arrays that have their shapes upgraded. By default, they are placed
+in the front of the shape tuple. The third argument allows you to specify
+where the start of the array should be instead. Thus, a third argument of
+&#39;0&#39; would place the 1&#39;s at the end of the array shape. Negative integers
+specify where in the new shape tuple the last dimension of upgraded arrays
+should be placed, so the default is &#39;-1&#39;.
+
+Parameters
+----------
+Not a function, so takes no parameters
+
+
+Returns
+-------
+A concatenated ndarray or matrix.
+
+See Also
+--------
+concatenate : Join a sequence of arrays along an existing axis.
+c_ : Translates slice objects to concatenation along the second axis.
+
+Examples
+--------
+&gt;&gt;&gt; np.r_[np.array([1,2,3]), 0, 0, np.array([4,5,6])]
+array([1, 2, 3, ..., 4, 5, 6])
+&gt;&gt;&gt; np.r_[-1:1:6j, [0]*3, 5, 6]
+array([-1. , -0.6, -0.2,  0.2,  0.6,  1. ,  0. ,  0. ,  0. ,  5. ,  6. ])
+
+String integers specify the axis to concatenate along or the minimum
+number of dimensions to force entries into.
+
+&gt;&gt;&gt; a = np.array([[0, 1, 2], [3, 4, 5]])
+&gt;&gt;&gt; np.r_[&#39;-1&#39;, a, a] # concatenate along last axis
+array([[0, 1, 2, 0, 1, 2],
+       [3, 4, 5, 3, 4, 5]])
+&gt;&gt;&gt; np.r_[&#39;0,2&#39;, [1,2,3], [4,5,6]] # concatenate along first axis, dim&gt;=2
+array([[1, 2, 3],
+       [4, 5, 6]])
+
+&gt;&gt;&gt; np.r_[&#39;0,2,0&#39;, [1,2,3], [4,5,6]]
+array([[1],
+       [2],
+       [3],
+       [4],
+       [5],
+       [6]])
+&gt;&gt;&gt; np.r_[&#39;1,2,0&#39;, [1,2,3], [4,5,6]]
+array([[1, 4],
+       [2, 5],
+       [3, 6]])
+
+Using &#39;r&#39; or &#39;c&#39; as a first string argument creates a matrix.
+
+&gt;&gt;&gt; np.r_[&#39;r&#39;,[1,2,3], [4,5,6]]
+matrix([[1, 2, 3, 4, 5, 6]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">probs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f99acabe2e0&gt;]
+</pre></div>
+</div>
+<img alt="../../_images/assets_21_1.png" src="../../_images/assets_21_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">history</span> -g -f anyfilename
 </pre></div>
 </div>
 </div>

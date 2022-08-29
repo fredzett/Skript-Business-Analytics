@@ -160,58 +160,20 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S02a_Descriptive_Statistics.html">
-   Deskriptive Statistik
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S03a_Simulation.html">
-   Simulationen mit Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S03c_Probability_Distributions.html">
-   Wahrscheinlichkeitsverteilungen
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S04a_Estimation%26HyptothesisTesting.html">
-   Testen von Hypothesen
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S05a_Regression.html">
-   Lineare Regression
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S06a_TidyData.html">
-   Tidy Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S07a_Classification.html">
-   Klassifikation
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../chapter_analytics/S08a_Clustering.html">
    Clusteranalyse
   </a>
  </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Anhang
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S09a_Cross_validation.html">
-   Cross Validation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S11_DecisionTrees.html">
-   Entscheidungsbäume
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S12_Ensembles.html">
-   Ensemble-Methoden
+  <a class="reference internal" href="../literatur.html">
+   Literatur
   </a>
  </li>
 </ul>
@@ -291,13 +253,18 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#schritt-1-beschaffung-der-daten">
-   Schritt 1: Beschaffung der Daten
+  <a class="reference internal nav-link" href="#schritt-1-konkrete-fragestellung">
+   Schritt 1: Konkrete Fragestellung
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#schritt-2-aufbereitung-der-daten">
-   Schritt 2: Aufbereitung der Daten
+  <a class="reference internal nav-link" href="#schritt-2-beschaffung-der-daten">
+   Schritt 2: Beschaffung der Daten
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#schritt-3-aufbereitung-der-daten">
+   Schritt 3: Aufbereitung der Daten
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -311,6 +278,16 @@
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#schritt-4-analyse-der-daten">
+   Schritt 4: Analyse der Daten
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fazit">
+   Fazit
+  </a>
  </li>
 </ul>
 
@@ -338,13 +315,18 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#schritt-1-beschaffung-der-daten">
-   Schritt 1: Beschaffung der Daten
+  <a class="reference internal nav-link" href="#schritt-1-konkrete-fragestellung">
+   Schritt 1: Konkrete Fragestellung
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#schritt-2-aufbereitung-der-daten">
-   Schritt 2: Aufbereitung der Daten
+  <a class="reference internal nav-link" href="#schritt-2-beschaffung-der-daten">
+   Schritt 2: Beschaffung der Daten
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#schritt-3-aufbereitung-der-daten">
+   Schritt 3: Aufbereitung der Daten
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -359,6 +341,16 @@
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#schritt-4-analyse-der-daten">
+   Schritt 4: Analyse der Daten
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fazit">
+   Fazit
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -372,18 +364,20 @@
 <h1>Wie riskant sind Aktien?<a class="headerlink" href="#wie-riskant-sind-aktien" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="ausgangslage">
 <h2>Ausgangslage<a class="headerlink" href="#ausgangslage" title="Permalink to this headline">¶</a></h2>
-<p>Sie haben ihr Studium beendet und gelten in ihrer Familie nun als Expert*in für finanzielle Fragestellungen. Ihr Onkel, der überraschend einen größeren Geldbetrag geerbt hat, kommt auf Sie zu und fragt Sie, wie er das Geld sinnvoll anlegen könne. Sie raten Ihm dazu das Geld in einen breiten Aktienindex (passiv) zu investieren. Ihr Onkel winkt direkt ab, weil ihm Aktien “viel zu riskant” seien. Da könne man ja auch sehr viel Geld bei verlieren.</p>
-<p>Einerseits wollen Sie ihrem Onkel nicht raten das Geld in Immobilien oder in Festgeld zu investieren. Anderseits kommen Sie selber ins Grübeln, ob eine Investition in Aktien nicht vielleicht doch zu riskant ist. Sie beschließen deshalb der Frage empirisch nachzugehen.</p>
-<p>Konkret wollen Sie versuchen zu analysieren, wie riskant eine Investition in Aktien tatsächlich ist.</p>
-<p>Obgleich es sich bei unserer Fragestellung um eine “persönliche” Analyse handelt, steht diese doch stellvertretend für ein typisches <strong>Business Analytics</strong>-Problem, bei dem es darum geht ein konkretes Problem bzw. eine konkrete Fragestellung datenbasiert zu beantworten.</p>
-<p>Für unsere Analyse bedarf es daher einer Fragestellung, die konkret bzw. “operationalisierbar” ist</p>
-<p>Dies gilt für die bisherige Fragestellung leider noch nicht. Was bedeutet “riskant” bzw. “Risiko”? In welche Aktien wollen wir investieren?</p>
-<p>Aus Vereinfachungsgründen definieren wir <strong>Risiko</strong> in unserem Fall als die <strong>Wahrscheinlichkeit einen Verlust zu erleiden</strong>. Wir fragen uns also konkret: wie wahrscheinlich ist es, dass ihre Investition innerhalb eines (noch zu bestimmenden) Zeitraums an Wert verliert. Der Einfachheit halber nehmen wir an, dass wir in den DAX (siehe <a class="reference external" href="https://de.wikipedia.org/wiki/DAX">Wikipedia</a>) investieren.</p>
-<p>Die konkrete Fragestellung lautet also: <strong>Wie Wahrscheinlich ist es, dass wir in den DAX investieren und dabei einen Verlust erleiden?</strong></p>
-<p>Lassen Sie uns nun konret überlegen, wie wir diese konkrete Frage empirisch beantworten können.</p>
+<p>Sie haben ihr Studium beendet und gelten in ihrer Familie nun als Expert*in für finanzielle Fragestellungen. Ihr Onkel, der überraschend einen größeren Geldbetrag geerbt hat, kommt auf Sie zu und fragt Sie, wie er das Geld sinnvoll anlegen könne. Sie raten Ihm dazu, das Geld in einen breiten Aktienindex, d.h. passiv<a class="footnote-reference brackets" href="#id5" id="id1">1</a>, zu investieren. Ihr Onkel winkt direkt ab, weil ihm Aktien “viel zu riskant” seien. Da könne man ja auch sehr viel Geld bei verlieren.</p>
+<p>Einerseits wollen Sie ihrem Onkel nicht raten das Geld in Immobilien oder in Festgeld zu investieren, da das Geld entweder zu wenig fungible oder zu gering verzinst wird. Anderseits kommen Sie selber ins Grübeln, ob eine Investition in Aktien nicht vielleicht doch (zu) riskant ist.</p>
+<p>Sie beschließen deshalb <strong>der Frage empirisch nachzugehen</strong>.</p>
+<p>Konkret wollen Sie analysieren, wie riskant eine Investition in Aktien tatsächlich ist. Obgleich es sich bei unserer Fragestellung um eine “persönliche” Analyse handelt, steht diese doch stellvertretend für ein typisches <strong>Business Analytics</strong>-Problem, bei dem es darum geht ein konkretes Problem bzw. eine konkrete Fragestellung datenbasiert zu beantworten.</p>
 </div>
-<div class="section" id="schritt-1-beschaffung-der-daten">
-<h2>Schritt 1: Beschaffung der Daten<a class="headerlink" href="#schritt-1-beschaffung-der-daten" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="schritt-1-konkrete-fragestellung">
+<h2>Schritt 1: Konkrete Fragestellung<a class="headerlink" href="#schritt-1-konkrete-fragestellung" title="Permalink to this headline">¶</a></h2>
+<p>Für unsere Analyse bedarf es daher einer Fragestellung, die konkret bzw. “operationalisierbar” ist. Dies gilt für die bisherige Fragestellung leider noch nicht. Was bedeutet “riskant” bzw. “Risiko”? In welche Aktien wollen wir investieren? Wie lange wollen wir investieren?</p>
+<p>Aus Vereinfachungsgründen definieren wir <strong>Risiko</strong> in unserem Fall als die <strong>Wahrscheinlichkeit einen Verlust zu erleiden</strong>. Wir fragen uns also konkret: Wie wahrscheinlich ist es, dass ihre Investition innerhalb von X Jahren an Wert verliert. Der Einfachheit halber nehmen wir an, dass wir in den DAX (siehe <a class="reference external" href="https://de.wikipedia.org/wiki/DAX">Wikipedia</a>) investieren.</p>
+<p>Die konkrete Fragestellung lautet also: <strong>Wie wahrscheinlich ist es, dass wir bei einer Investition in den DAX einen Verlust nach X Jahren erleiden?</strong>.</p>
+<p>Lassen Sie uns nun überlegen, wie wir diese konkrete Frage empirisch beantworten können.</p>
+</div>
+<div class="section" id="schritt-2-beschaffung-der-daten">
+<h2>Schritt 2: Beschaffung der Daten<a class="headerlink" href="#schritt-2-beschaffung-der-daten" title="Permalink to this headline">¶</a></h2>
 <p>Die formulierte Frage ist natürlich nicht sicher bzw. eindeutig zu beantworten. Wir bräuchten dafür die DAX-Stände der nächsten Jahren; wir müssten also die Zukunft vorhersehen. Wir haben die <em>perfekten</em> Daten nicht.</p>
 <div class="margin sidebar">
 <p class="sidebar-title"></p>
@@ -394,18 +388,17 @@
 </div>
 <p>In unserem Falle können wir jedoch <code class="docutils literal notranslate"><span class="pre">historische</span> <span class="pre">Daten</span></code> nutzen. Statt in die Zukunft zu schauen, treffen wir also eine Annahme. Für die Zwecke unserer Analyse nehmen wir an, dass die historischen Daten ein guter Schätzer für die Zukunft sind.</p>
 <p>Historische Daten für Aktien sind glücklicherweise - zumindest für unsere Zwecke - einfach und frei zugänglich. Die Beschaffung der Rohdaten stellt also kein Problem dar.</p>
-<div class="tip dropdown admonition">
+<div class="tip dropdown admonition" id="download-yahoo">
 <p class="admonition-title">“How to”: Download von Aktienkursen</p>
-<p>Aktienkursdaten sind - zumindest für unsere Zwecke - einfach und kostenlos zugänglich. Wir werden als Quelle <a class="reference external" href="https://de.finance.yahoo.com/quote">Yahoo Finance</a> nutzen. Wir können hier (auch historische) Daten von allen wesentlichen Aktien und Indices einsehen und herunterladen. Die heruntergeladenenen Daten können in Form einer <code class="docutils literal notranslate"><span class="pre">csv-Datei</span></code> gespeichert werden.</p>
+<p>Aktienkursdaten sind - zumindest für unsere Zwecke - einfach und kostenlos zugänglich. Wir werden als Quelle <a class="reference external" href="https://de.finance.yahoo.com/quote">Yahoo Finance</a> nutzen. Wir können hier (auch historische) Daten von allen wesentlichen Aktien und Indices einsehen und herunterladen. Die heruntergeladenenen Daten können in Form einer <code class="docutils literal notranslate"><span class="pre">csv-Datei</span></code> gespeichert werden<a class="footnote-reference brackets" href="#id6" id="id2">2</a>.</p>
 <p>Hier ein Beispiel zum Download historischer DAX-Kurse:</p>
 <p><img alt="" src="../../_images/Yahoo_download.gif" />
 <break></break></p>
-<p>Im weiteren Verlauf werden wir noch lernen, dass wir die Kurse via Python noch einfacherer und ohne manuelles Abspeichern von Daten einlesen können.</p>
 </div>
 </div>
-<div class="section" id="schritt-2-aufbereitung-der-daten">
-<h2>Schritt 2: Aufbereitung der Daten<a class="headerlink" href="#schritt-2-aufbereitung-der-daten" title="Permalink to this headline">¶</a></h2>
-<p>Die historischen Kursdaten als Datenquelle (“Rohdaten”) stellen kein Hürde dar. Der Download der Rohdaten ist einfach  (siehe “how to”), liefert jedoch nur bedingt eine Antwort auf unsere Frage. In <a class="reference internal" href="#dax-ref"><span class="std std-numref">Fig. 1</span></a> erkennen wir zwar, dass der DAX seit Beginn und bis zum Juli 2022 stark gestiegen ist (Anfangsstand: <span class="math notranslate nohighlight">\(1.000\)</span>, Endstand: <span class="math notranslate nohighlight">\(13.484\)</span>) und wir unser Geld in etwa um den Faktor <span class="math notranslate nohighlight">\(13x\)</span> vermehrt hätten. Es gab jedoch offensichtlich auch Zeiträume in denen eine Investition an Wert verloren hätte. So hat der Dax z.B. seit seinem Höchsstand von <span class="math notranslate nohighlight">\(16.271,75\)</span> im Januar 2022 bis heute deutlich an Wert verloren. Hätte man am Tag des Höchsttandes investiert, hätte man aktuell einen deutlichen Verlust gemacht.</p>
+<div class="section" id="schritt-3-aufbereitung-der-daten">
+<h2>Schritt 3: Aufbereitung der Daten<a class="headerlink" href="#schritt-3-aufbereitung-der-daten" title="Permalink to this headline">¶</a></h2>
+<p>Die historischen Kursdaten als Datenquelle (“Rohdaten”) stellen kein Hürde dar. Der Download der Rohdaten ist einfach  (siehe “💡 how to”), liefert jedoch nur bedingt eine Antwort auf unsere Frage. In <a class="reference internal" href="#dax-ref"><span class="std std-numref">Fig. 1</span></a> erkennen wir zwar, dass der DAX seit Beginn der Aufzeichnung Ende 1987 und bis zum Juli 2022 stark gestiegen ist (Anfangsstand: <span class="math notranslate nohighlight">\(1.000\)</span>, Endstand: <span class="math notranslate nohighlight">\(13.484\)</span>) und wir unser Geld in etwa um den Faktor <span class="math notranslate nohighlight">\(13x\)</span> vermehrt hätten. Es gab jedoch offensichtlich auch Zeiträume in denen eine Investition an Wert verloren hätte. So hat der Dax z.B. seit seinem Höchststand von <span class="math notranslate nohighlight">\(16.271,75\)</span> im Januar 2022 bis heute deutlich an Wert verloren. Hätte man am Tag des Höchsttandes investiert, wäre ein deutlicher Verlust vereinnahmt worden.</p>
 <div class="figure align-default" id="dax-ref">
 <img alt="../../_images/Dax.png" src="../../_images/Dax.png" />
 <p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Entwicklung Dax 1987 bis heute</span><a class="headerlink" href="#dax-ref" title="Permalink to this image">¶</a></p>
@@ -413,7 +406,7 @@
 <p>Wir müssen die Rohdaten deshalb für unsere Zwecke aufbereiten. Was benötigen wir für unsere Zwecke konkret? Um diese Frage zu beantworten müssen wir darüber nachdenken, wie wir die Frage <strong>“Wie Wahrscheinlich ist es, dass wir in den DAX investieren und dabei einen Verlust erleiden?</strong> beantworten wollen.</p>
 <div class="section" id="ansatz-1-zuruck-in-die-vergangenheit">
 <h3>Ansatz 1: Zurück in die Vergangenheit<a class="headerlink" href="#ansatz-1-zuruck-in-die-vergangenheit" title="Permalink to this headline">¶</a></h3>
-<p>Das Grundproblem ist, dass wir zwar historische Daten haben, wir aber theoretisch an jedem Tag in der Vergangenheit “zufällig” unser Geld hätten investieren können. Abhängig vom Tag des Beginns der Investition (und natürlich dem Tag des Verkaufs) produziert unsere Strategie immer unterschiedliche “Gewinne”.</p>
+<p>Das Grundproblem ist, dass wir zwar historische Daten haben, wir aber theoretisch an jedem Tag in der Vergangenheit “zufällig” unser Geld hätten investieren können. Es gab sehr viele existierende Investitionsstrategie, die je nach Investitionszeitpunkt und -raum immer unterschiedliche “Gewinne” produziert hätten.</p>
 <div class="margin sidebar">
 <p class="sidebar-title"></p>
 <div class="note admonition">
@@ -426,8 +419,8 @@
 <li><p>Beispiel 1: hätten wir am 10.6.1991 (Stand: <span class="math notranslate nohighlight">\(1.698\)</span>) investiert und am 26.03.2001 (Stand: <span class="math notranslate nohighlight">\(5.726\)</span>) verkauft, dann hätten wir eine <strong>Rendite von ca. <span class="math notranslate nohighlight">\(+237\)</span>%</strong> gemacht.</p></li>
 <li><p>Beispiel 2: hätten wir am 12.04.2007 (Stand: <span class="math notranslate nohighlight">\(7.808\)</span>) investiert und am 19.12.2008 (Stand: <span class="math notranslate nohighlight">\(4.696\)</span>) verkauft, dann hätten wir eine <strong>Rendite von ca. <span class="math notranslate nohighlight">\(-40\)</span>%</strong> gemacht.</p></li>
 </ul>
-<p>Die zwei Beispiele sind zufällig gewählt. Es hätte sehr viele mehr verschiedene Zeitpunkte und Zeiträume gegeben in der man hätte anlegen können. Dabei ist der <em>optimalen</em> Anlagezeitpunkt und Zeitraum leider erst im Nachhinein bekannt.</p>
-<p>Um unsere Frage zu beantworten, müssen wir deshalb <strong>Zurück in die Vergangenheit</strong> gehen und für jeden möglichen Anfangszeitpunkt (d.h. jeder Handelstag seit Beginn des DAX in 1987) über jeden möglichen Anlagezeitraum investieren. Da wir in die Vergangenheit schauen, haben wir die Daten, um unsere Wertentwicklung für jede dieser Investitionen zu beobachten.</p>
+<p>Die zwei Beispiele sind zufällig gewählt. Es hätte sehr viel mehr Zeitpunkte und Zeiträume gegeben, in der man hätte anlegen können. Dabei ist der <em>optimalen</em> Anlagezeitpunkt und Zeitraum leider erst im Nachhinein bekannt.</p>
+<p>Um unsere Frage zu beantworten, müssen wir deshalb <strong>Zurück in die Vergangenheit</strong> gehen und für jeden möglichen Anfangszeitpunkt (d.h. jeder Handelstag seit Beginn des DAX in 1987) über jeden möglichen Anlagezeitraum investieren. Wir bilden also quasi alle historisch möglichen Anlagezeitpunkte und -räume ab. Aus diesen Daten könnten wir dann eine Aussage ableiten, wie oft wahrscheinlich es war, dass man nach X Jahren einen Verlust gemacht hat. Da wir in die Vergangenheit schauen, haben wir die Daten, um unsere Wertentwicklung für jede dieser Investitionen zu beobachten.</p>
 <p>Lassen Sie uns zunächst anhand eines einfachen und fiktiven Beispiels durchspielen, welche Vergangenheitsanalyse wir durchführen wollen. Nehmen wir an, wir hätten <span class="math notranslate nohighlight">\(10\)</span> historische Kurse eines Index, dessen Entwicklung in <a class="reference internal" href="#index-ref"><span class="std std-numref">Fig. 2</span></a> dargestellt sind.</p>
 <div class="figure align-default" id="index-ref">
 <img alt="../../_images/Index_Beispiel.png" src="../../_images/Index_Beispiel.png" />
@@ -492,9 +485,8 @@
 <li><p>…</p></li>
 <li><p>Anlage 6: Kaufen in Periode 6</p></li>
 </ul>
-<p>Wie ermitteln wir jetzt die Wertentwicklung unserer verschiednen Anlagen über die Zeit?</p>
-<p>Nehmen wir an, dass wir je <span class="math notranslate nohighlight">\(1.00\)</span> EUR investieren. Anlage 1 würde uns in der ersten Periode <span class="math notranslate nohighlight">\(2\)</span>% Rendite bringen. Aus unserer Anfangsinvestition würden also <span class="math notranslate nohighlight">\(1\times(1+0.02) = 1.02\)</span> EUR werden. Dieser neue Wert von <span class="math notranslate nohighlight">\(1.02\)</span> EUR würden sich in der nächsten Periode (Periode 2) mit <span class="math notranslate nohighlight">\(3\)</span>% verzinsen, so dass wir am Ende von Periode 2 insgesamt <span class="math notranslate nohighlight">\(1.02 \times (1.03) = 1.0506\)</span> EUR hätten usw…</p>
-<p>Allgemeiner können wir sagen, dass sich die Performance einer Strategie (<span class="math notranslate nohighlight">\(R_T\)</span>) über die Multiplikation der Perioden-Renditen berechnen lässt.</p>
+<p>Wie ermitteln wir jetzt die Wertentwicklung unserer verschiedenen Anlagen über die Zeit?</p>
+<p>Nehmen wir an, dass wir je <span class="math notranslate nohighlight">\(1.00\)</span> EUR investieren. Anlage 1 würde uns in der ersten Periode <span class="math notranslate nohighlight">\(2\)</span>% Rendite bringen. Aus unserer Anfangsinvestition würden also <span class="math notranslate nohighlight">\(1\times(1+0.02) = 1.02\)</span> EUR werden. Dieser neue Wert von <span class="math notranslate nohighlight">\(1.02\)</span> EUR würden sich in der nächsten Periode (Periode 2) mit <span class="math notranslate nohighlight">\(3\)</span>% verzinsen, so dass wir am Ende von Periode 2 insgesamt <span class="math notranslate nohighlight">\(1.02 \times (1.03) = 1.0506\)</span> EUR hätten. Diese Berechnung können wir für alle verfügbaren Perioden weiterführen.</p>
 <p>Beispiel für Anlage 1 für 5 Perioden (<span class="math notranslate nohighlight">\(I_0\)</span> = Anfangsinvestition; hier: <span class="math notranslate nohighlight">\(1\)</span> EUR):</p>
 <div class="math notranslate nohighlight">
 \[ I_0 \times(1+0.02)\times(1+0.03)\times(1+0.04)\times(1-0.01)\times(1-0.02) - 1 = 0.06\]</div>
@@ -504,22 +496,72 @@
 \[
 R_T = I_0 \times \prod_{t=1}^T (1+r_t) - 1
 \]</div>
-<p>In <a class="reference internal" href="#anlagen-ref"><span class="std std-numref">Fig. 3</span></a> ist die Wertentwicklung der 6 Anlagen bei einer Anfangsinvestition von je <span class="math notranslate nohighlight">\(1.00\)</span> EUR dargestellt.</p>
+<p>In <a class="reference internal" href="#anlagen-ref"><span class="std std-numref">Fig. 3</span></a> ist die Wertentwicklung der 6 Anlagen für alle möglichen Zeiträume bei einer Anfangsinvestition von je <span class="math notranslate nohighlight">\(1.00\)</span> EUR dargestellt.</p>
 <div class="figure align-default" id="anlagen-ref">
 <img alt="../../_images/Anlagen_perf.png" src="../../_images/Anlagen_perf.png" />
 <p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Entwicklung der sechs Anlagen</span><a class="headerlink" href="#anlagen-ref" title="Permalink to this image">¶</a></p>
 </div>
 <p>Im obigen Beispiel sehen wir, dass es für unseren Beispielindex Phasen gab, bei denen wir einen Verlust gemacht hätten. Z.B. hat Anlage 4 nach Periode 6 einen Verlust von ca. <span class="math notranslate nohighlight">\(8\)</span>ct. Auf der anderen Seite gab es Phasen, in denen man Gewinn gemacht hat. Z.B. Anlage 1 nach 10 Perioden.</p>
-<p>Unser Beispiel zeigt, dass wir zur Beantwortung unserer Frage <strong>Renditen</strong> benötigen und diese für alle möglichen Investitionszeitpunkte und Zeiträume miteinander multiplizieren müssen. In der praktischen Umsetzung schauen wir uns an, wie dies sehr simple möglich ist.</p>
+<p>Lassen Sie uns festhalten, wie wir die Rohdaten (Index-Stände) bearbeiten müssen, um eine Grundlage zur Beantwortung der Ausgangsfrage zu schaffen:</p>
+<ol class="simple">
+<li><p>Renditen (<span class="math notranslate nohighlight">\(R_t\)</span>) aus Indexständen berechnen</p></li>
+<li><p>kumulierte Produkte der Renditen (<span class="math notranslate nohighlight">\(\prod (1 + R_t)\)</span>) für jeden historisch möglichen Anfangszeitpunkt berechnen</p></li>
+</ol>
+<p>In der praktischen Umsetzung schauen wir uns an, wie wir dies in Python umsetzen und welche Annahmen wir dafür treffen müssen.</p>
 </div>
 <div class="section" id="ansatz-2-historischer-zufall">
 <h3>Ansatz 2: Historischer Zufall<a class="headerlink" href="#ansatz-2-historischer-zufall" title="Permalink to this headline">¶</a></h3>
-<p>Im vorrangeganen Beispiel haben wir gesehen, wie wir auf Basis von Vergangenheitsdaten fiktive Anlagen getätigt haben, die in der Form aber real möglich gewesen wären. Man hätte in der Vergangenheit tatsächlich in Periode 1 für z.B. 5 Perioden anlegen können. In diesem Fall hätte man tatsächlich eine Rendite von <span class="math notranslate nohighlight">\(6\)</span>% gemacht.</p>
-<p>Der Nachteil dieses Ansatzes ist jedoch, dass es uns z.B. nicht möglich ist 6 unterschiedliche Anlagen mit einem Investitionshorizont von jeweils 10 Perioden abzubilden. Diese Anlagen wären in der Realität schlicht nicht möglich gewesen, da es in unserem Beispiel nur eine Anlage gibt, für die ein Investitionshorizont von 10 Perioden möglich war  (Anlage 1).</p>
-<p>Im zweiten Ansatz “Historischer Zufall” umgehen wir dieses Problem. Anstatt reale historische Performance abzubilden</p>
-<p>Im ersten Ansatz, wir nennen diesen <strong>“Zurück in die Zukunft”</strong></p>
-<p><strong>Ansatz 2: historischer Zufall</strong></p>
+<p>Im vorangeganen Beispiel haben wir gesehen, wie wir auf Basis von Vergangenheitsdaten fiktive Anlagen getätigt haben, die in der Form aber real möglich gewesen wären. So hätte man in der Vergangenheit tatsächlich in Periode 1 für z.B. 5 Perioden anlegen können. In diesem Fall hätte man tatsächlich eine Rendite von <span class="math notranslate nohighlight">\(6\)</span>% gemacht.</p>
+<p>Der Nachteil dieses Ansatzes ist jedoch, dass es uns z.B. nicht möglich ist 6 unterschiedliche Anlagen mit einem Investitionshorizont von jeweils 10 Perioden abzubilden. Diese Anlagen wären in der Realität schlicht nicht möglich gewesen, da es in unserem Beispiel nur eine Anlage gibt, für die ein Investitionshorizont von 10 Perioden möglich war (Anlage 1).</p>
+<p>Im zweiten Ansatz <strong>“Historischer Zufall”</strong> umgehen wir dieses Problem. Anstatt reale historische Performance abzubilden wählen wir ein anderes Vorgehen. Wir greifen wieder auf unseren Beispiel-Index (siehe <a class="reference internal" href="#index-table"><span class="std std-numref">Table 1</span></a> und <a class="reference internal" href="#index-ref"><span class="std std-numref">Fig. 2</span></a>) zurück. Anstatt alle real möglichen Anlagen zu untersuchen bzw. zu replizieren, werden wir alle real möglichen periodischen Renditen betrachten.</p>
+<p>In<a class="reference internal" href="#index-table"><span class="std std-numref">Table 1</span></a> sind alle 10 tatsächlich entstandenen historischen Renditen dargestellt. Stellen Sie sich nun vor, wir hätten 10 Kugeln und auf jeder dieser Kugel stünde eine der 10 Renditen. Diese Kugeln legen wir nun in einen Korb, so dass wir die Kugeln nicht sehen können.</p>
+<p>Nun stellen wir uns vor, wir hätten eine Anlage von <span class="math notranslate nohighlight">\(1.00\)</span> EUR für 3 Perioden getätigt. Wir fragen uns nun, was eine mögliche Wertentwicklung unserer Anlage gewesen sein könnte. Hierbei machen wir uns nun den Korb mit Kugeln zunutze. Wir nehmen eine Kugel aus dem Korb und notieren die darauf enthaltene Rendite. Danach legen wir die Kugel wieder zurück in den Korb und wiederholen den Prozess noch insgesamt zwei mal.</p>
+<p>Wir haben also aus tatsächlich beobachtbaren historischen Renditen eine mögliche Wertentwicklung für unsere Anlage (zufällig) bestimmt. Diese könnte z.B. wiefolgt aussehen:</p>
+<div class="math notranslate nohighlight">
+\[1.00 \times(1+0.01)\times(1-0.05)\times(1-0.05) = 0.91\]</div>
+<p>Über die 3 Perioden haben wir aus <span class="math notranslate nohighlight">\(1.00\)</span> EUR insgesamt <span class="math notranslate nohighlight">\(0.91\)</span> EUR, d.h. einen Verlust von <span class="math notranslate nohighlight">\(9\)</span>ct gemacht. Es handelt sich hierbei um eine fiktive Wertentwicklung. Jedoch basiert diese auf historisch eingetretenen Renditen. Eine Wertentwicklung von z.B. <span class="math notranslate nohighlight">\(+50\)</span>% wäre z.B. in drei Perioden nicht möglich gewesen, da dies hohe Renditen je Periode erfordern würde, die so am Markt noch nicht aufgetreten sind.</p>
+<p>Mit diesen <strong>Zufallsansatz</strong> können wir beliebig viele fiktive Anlagenverläufe erzeugen, die auf Basis der realen Renditen möglich sind.<a class="footnote-reference brackets" href="#id7" id="id3">3</a></p>
+<p>In der untenstehenden Darstellung (<a class="reference internal" href="#anlagen-random"><span class="std std-numref">Fig. 4</span></a>) sind <span class="math notranslate nohighlight">\(10\)</span> mögliche Wertentwicklung für eine Anlage von <span class="math notranslate nohighlight">\(1.00\)</span> EUR über <span class="math notranslate nohighlight">\(10\)</span> Perioden dargestellt.</p>
+<div class="figure align-default" id="anlagen-random">
+<img alt="../../_images/Anlagen_random.png" src="../../_images/Anlagen_random.png" />
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Wertentwicklung von 10 Anlagen</span><a class="headerlink" href="#anlagen-random" title="Permalink to this image">¶</a></p>
 </div>
+<p>Lassen Sie uns wieder festhalten, wie wir die Rohdaten (Index-Stände) bearbeiten müssen, um eine Grundlage zur Beantwortung der Ausgangsfrage zu schaffen:</p>
+<ol class="simple">
+<li><p>Renditen (<span class="math notranslate nohighlight">\(R_t\)</span>) aus Indexständen berechnen</p></li>
+<li><p>kumulierte Produkte der Renditen (<span class="math notranslate nohighlight">\(\prod (1 + R_t)\)</span>) für zufällig gezogene Renditen berechnen</p></li>
+</ol>
+<p>In der praktischen Umsetzung schauen wir uns an, wie wir dies in Python umsetzen und welche Annahmen wir dafür treffen müssen.</p>
+</div>
+</div>
+<div class="section" id="schritt-4-analyse-der-daten">
+<h2>Schritt 4: Analyse der Daten<a class="headerlink" href="#schritt-4-analyse-der-daten" title="Permalink to this headline">¶</a></h2>
+<p>Im nächsten Schritt müssen wir nun die Daten analysieren, um die Frage der Verlustwahrscheinlichkeit zu beantworten. Durch unsere konzeptionelle Vorarbeit ist dies der Schritt aber nicht mehr besonders groß.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="warning admonition">
+<p class="admonition-title">Interpretation</p>
+<p>Wir haben aus didaktischen Gründen unseren Beispiel-Index nur über wenige Perioden dargestellt, was unsere Ergebnisse nur bedingt brauchbar macht. Unsere tatsächliche Analyse basiert jedoch auf  historischen Daten des DAX, was die Anzahl an historischen Wertentwicklungen (Ansatz 1) bzw Renditen (Ansatz 2) wesentlich vergrößert und so auch die Analyse fundierter macht.</p>
+</div>
+</div>
+<p>Wir fragen uns nach der <strong>Verlustwahrscheinlichkeit zu einem Zeitpunkt X</strong>. Greifen wir unseren Beispiel-Index (siehe <a class="reference internal" href="#index-table"><span class="std std-numref">Table 1</span></a> und <a class="reference internal" href="#index-ref"><span class="std std-numref">Fig. 2</span></a>) auf und lassen Sie uns annehmen, dass wir die Verlustwahrscheinlichkeit nach 6 Perioden bestimmen möchten (d.h. X = 6). Eine naheliegende und deshalb nicht weniger sinnvolle Analyse wäre, zu untersuchen wie häufig eine Anlage einen Verlust erlitten hätte. Nehmen wir z.B. unsere 6 Anlagen aus Ansatz 1, so sehen wir, dass 2 der Anlagen in Periode 6 einen Wert von unter <span class="math notranslate nohighlight">\(1.00\)</span> EUR verzeichnen. Bei <span class="math notranslate nohighlight">\(2\)</span> von <span class="math notranslate nohighlight">\(6\)</span> Anlagen könnten wir also sagen, dass die Verlustwahrscheinlichkeit bei <span class="math notranslate nohighlight">\(\frac{2}{6} \approx 33\)</span>% lag. Schauen wir uns den zweiten Ansatz an, dann sehen wir dass auch dort nur <span class="math notranslate nohighlight">\(2\)</span> jedoch von <span class="math notranslate nohighlight">\(10\)</span> Anlagen in Periode 6 einen Verlust verzeichnen. Hier könnten wir also sagen, dass die Verlustwahrscheinlichkeit bei nur <span class="math notranslate nohighlight">\(20\)</span>% lag.</p>
+</div>
+<div class="section" id="fazit">
+<h2>Fazit<a class="headerlink" href="#fazit" title="Permalink to this headline">¶</a></h2>
+<p>Wir haben uns nun konzeptionelle Gedanken gemacht und die simple, aber vage Ausgangsfrage für uns - mit ein paar sinnvollen Annahmen - heruntergebrochen und sind so auf einen Lösungsansatz gekommen. Schauen wir uns den Lösungansatz an, dann stellen wir fest, dass die eigentlich Analyse - zumindest in unserem gewählten Ansatz - recht simple ist (im Grunde zählen wir nur). Dies ist keine Seltenheit. Oft ist die Datenaufbereitung und -strukturierung die im Vergleich zur eigentlichen Analyse deutlich komplexere und zeitaufwändigere Aufgabe; Schätzungen gehen davon aus, dass die Datenaufbereitung und -bereinigung ca. <span class="math notranslate nohighlight">\(80\)</span>% des gesamten Analyseprozesses ausm macht (siehe hierzu auch <span id="id4">[<a class="reference internal" href="../literatur.html#id2">DJ03</a>]</span>).</p>
+<p>Schauen wir uns nun die Umsetzung in Python an.</p>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>In der Investment-Welt wird zwischen aktivem und passivem Investieren unterschieden. Bei ersterem werden “vielversprechende” Aktien identifiziert, die sich aus verschiedenen Gründen in der Zukunft vermeintlich gut entwickeln werden (z.B. Zukunftsbranche, gutes Management, etc.). Bei einer passiven Investitionsstrategie wird davon ausgegangen, dass die Identifikation von vielversprechenden Aktien nicht möglich ist, weil alle Informationen allen (professionellen) Kapitalanlegern zur Verfügung stehen und deshalb bereits im aktuellen Aktienkurs eingepreist sind. Deshalb wird stattdessen in breite Indizes investiert, um am Wirtschaftswachstum allgemein zu partizipieren. Weitere Informationen finden Sie z.B. <a class="reference external" href="https://www.forbes.com/advisor/investing/passive-investing-vs-active-investing/">hier</a>.</p>
+</dd>
+<dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Im weiteren Verlauf werden wir noch lernen, dass wir die Kurse via Python noch einfacherer und ohne manuelles Abspeichern von Daten einlesen können.</p>
+</dd>
+<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p>In unserem Beispiel über 3 Perioden gibt es insgesamt jedoch nur <span class="math notranslate nohighlight">\(1.000\)</span> unterschiedliche Wertentwicklung, da wir in jeder Periode <span class="math notranslate nohighlight">\(10\)</span> mögliche Renditen haben, d.h. es gibt insgesamt <span class="math notranslate nohighlight">\(10\times10\times10=1.000\)</span> Kombinationen.</p>
+</dd>
+</dl>
 </div>
 </div>
 
