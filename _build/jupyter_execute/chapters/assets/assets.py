@@ -3,7 +3,7 @@
 
 # # Generiert Graphiken für Skript
 
-# In[335]:
+# In[5]:
 
 
 import BusinessAnalytics as BA
@@ -16,20 +16,20 @@ import matplotlib.dates as mdates
 
 # ## DAX 1988 - 2022
 
-# In[336]:
+# In[6]:
 
 
 dax = get_stock_data("^GDAXI", start="01-01-1987", end="31-07-2022")
 
 
-# In[337]:
+# In[7]:
 
 
 idx = np.argmax(dax["Adj Close"])
 dax.iloc[idx]
 
 
-# In[338]:
+# In[8]:
 
 
 color = BA.plotting.COLORS[5]
@@ -43,7 +43,7 @@ ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y'))
 plt.savefig("Dax.png", dpi=80)
 
 
-# In[339]:
+# In[9]:
 
 
 start = 898
@@ -53,7 +53,7 @@ dax.iloc[[start, ende]]["Adj Close"].pct_change()
 
 # 
 
-# In[340]:
+# In[10]:
 
 
 start = pd.to_datetime("12.04.2007")
@@ -65,7 +65,7 @@ dax.set_index("Date")[start:ende]["Adj Close"]
 
 # ## 6 fiktive Portfolien
 
-# In[341]:
+# In[11]:
 
 
 days = np.arange(0,11)
@@ -80,7 +80,7 @@ ax.set_xticklabels(days[1:])
 plt.savefig("Index_Beispiel.png", dpi=80)
 
 
-# In[342]:
+# In[12]:
 
 
 def replace_first_row(_df, to_replace=np.nan, value=1):
@@ -89,9 +89,11 @@ def replace_first_row(_df, to_replace=np.nan, value=1):
     return _df
 
 
-# In[343]:
+# In[18]:
 
 
+t_min = 5
+n = len(data) - t_min + 1
 data_new = (data
         .assign(**{f"Anlage_{i}":data["rt"].iloc[1:].add(1).shift(-i+1).cumprod() for i in np.arange(1,n)})
         .pipe(replace_first_row, np.nan, 1)
@@ -100,7 +102,7 @@ data_new = (data
 data_new
 
 
-# In[354]:
+# In[19]:
 
 
 colors = BA.plotting.COLORS
@@ -117,42 +119,132 @@ ax.annotate("Anlage 6", (3,0.93), color=colors[3])
 plt.savefig("Anlagen_perf.png", dpi=80)
 
 
-# In[524]:
+# In[150]:
 
 
-bucket = rets[1:]
-n = 100
+sum(data.query("Periode == 6")["Wert"] < 1)
+
+
+# ## 10 zufällige Portfolios
+
+# In[22]:
+
+
+def sample_data(data, n, t, replace=True):
+    return np.random.choice(data, (n,t), replace=replace)
+
+
+# In[145]:
+
+
+np.random.seed(123545)
+n = 10
 t = 10
-smpl = np.random.choice(bucket, (n,t), replace=True)
+smpl = sample_data(rets[1:], n, t)
+cum_rets = np.column_stack((np.ones(n), np.cumprod(1+smpl, axis=1)))
 
 
-# In[527]:
+# In[146]:
 
 
-smpl = np.column_stack((np.ones(n), np.cumprod(1+smpl, axis=1)))
-np.row_stack((smpl, np.ones([1,t+3])))
+data = (pd.DataFrame(cum_rets.T, columns=[f"Anlage_{i}" for i in range(1,n+1)])
+        .assign(Periode=np.arange(t+1))
+        .melt(id_vars=["Periode"])
+        .rename({"variable":"Anlage", "value":"Wert"}, axis=1)
+        )
+ax = plot(data=data, x="Periode", y="Wert", hue="Anlage", 
+     title="Mögliche Wertentwicklung bei Anlage in Beispiel-Index\n(Bei Anlagezeitraum von 10 Perioden)",
+     colors=["gray" for i in range(n)], 
+     show_legend=False)
+
+idx_max = np.argmax(cum_rets[:,-1])
+idx_min = np.argmin(cum_rets[:,-1])
+
+for i,l in enumerate(ax.lines):
+    l.set_alpha(0.4)
+    if i == idx_max: l.set_color("green")
+    if i == idx_min: l.set_color("red")
+
+ymin, ymax = ax.get_ylim()
+
+ret_max = np.round((cum_rets[idx_max, -1] - 1)*100,2)
+ax.annotate(f"+{ret_max}%", (10,ymax*0.98), color="green", alpha=0.6)
+ret_min = np.round((cum_rets[idx_min, -1] - 1)*100,2)
+ax.annotate(f"-{abs(ret_min)}%", (10,ymin*1.02), color="red", alpha=0.6)
+plt.savefig("Anlagen_random.png", dpi=80)
 
 
-# In[520]:
+# ## 1.000 zufällige Portfolien
+
+# In[105]:
+
+
+np.random.seed(123545)
+n = 1000
+t = 10
+smpl = sample_data(rets[1:], n, t)
+cum_rets = np.column_stack((np.ones(n), np.cumprod(1+smpl, axis=1)))
+data = (pd.DataFrame(cum_rets.T, columns=[f"Anlage_{i}" for i in range(1,n+1)])
+        .assign(Periode=np.arange(t+1))
+        .melt(id_vars=["Periode"])
+        .rename({"variable":"Anlage", "value":"Wert"}, axis=1)
+        )
+ax = plot(data=data, x="Periode", y="Wert", hue="Anlage", 
+     title="Mögliche Wertentwicklung bei Anlage in Beispiel-Index\n(Bei Anlagezeitraum von 10 Perioden)",
+     colors=["gray" for i in range(n)], 
+     show_legend=False)
+
+idx_max = np.argmax(cum_rets[:,-1])
+idx_min = np.argmin(cum_rets[:,-1])
+
+for i,l in enumerate(ax.lines):
+    l.set_alpha(0.1)
+    if i == idx_max: l.set_color("green")
+    if i == idx_min: l.set_color("red")
+
+ymin, ymax = ax.get_ylim()
+
+ret_max = np.round((cum_rets[idx_max, -1] - 1)*100,2)
+ax.annotate(f"+{ret_max}%", (10,ymax*0.98), color="green", alpha=0.6)
+ret_min = np.round((cum_rets[idx_min, -1] - 1)*100,2)
+ax.annotate(f"-{abs(ret_min)}%", (10,ymin*1.02), color="red", alpha=0.6)
+plt.savefig("Anlagen_random_big.png", dpi=80)
+
+
+# In[144]:
+
+
+import seaborn as sns
+data_hist = (data
+             .query("Periode == 6")
+             .assign(Wert=lambda _df: _df["Wert"] - 1)
+            )
+mu = data_hist["Wert"].mean()
+ax = sns.histplot(data=data_hist, x="Wert", color="red", alpha=0.1, kde=True)
+ymin, ymax = ax.get_ylim()
+ax.lines[0].set_color("red")
+ax.vlines(x=mu,color="black", linewidth=3, ymin=ymin, ymax=ymax)
+ax.annotate(f"arithm. Mittel: {np.round(mu,2)}", (mu*1.1,ymax), **{"fontsize": 10});
+
+
+# In[ ]:
 
 
 
+ax = plot(data=data_hist, x="Wert", plot_type="hist", 
+     ylabel="Häufigkeit", 
+     xlabel="Rendite in ct",
+     show_legend=False)
+ax.set_alpha(0.4)
 
 
-# In[507]:
-
-
-idx_max = np.argmax(smpl[:,-1])
-idx_min = np.argmin(smpl[:,-1])
-
-
-# In[508]:
+# In[27]:
 
 
 fig, ax = plt.subplots()
-ax.plot(smpl.T, color="gray", linewidth=0.8, linestyle="dashed", alpha=0.6);
-ax.plot(smpl[idx_max,:], color="green", alpha=0.4)
-ax.plot(smpl[idx_min,:], color="red", alpha=0.4)
+ax.plot(cum_rets.T, color="gray", linewidth=0.8, alpha=0.6);
+ax.plot(cum_rets[idx_max,:], color="green", alpha=0.4)
+ax.plot(cum_rets[idx_min,:], color="red", alpha=0.4)
 
 
 # In[509]:
@@ -181,6 +273,12 @@ plt.plot(probs)
 
 
 get_ipython().run_line_magic('history', '-g -f anyfilename')
+
+
+# In[1]:
+
+
+1 * (1.01) * (0.95) * 0.95
 
 
 # In[ ]:

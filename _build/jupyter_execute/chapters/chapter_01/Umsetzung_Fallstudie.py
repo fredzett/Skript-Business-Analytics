@@ -7,7 +7,7 @@
 # 
 # Bevor wir loslegen, müssen zunächst Module importiert werden, die wir im Rahmen der Analyse benötigen. Im Kapitel [TO COME]() werden wir die Hintergründe hierzu erläutern. Python (wie die meistern Programmiersprachen) wird von Hause aus weitestgehend ohne Funktionalität für Datenanalyse oder Visualisierung bereitstellt. Die dafür benötigten Funktionen können dann jedoch via sogenannter Module importiert werden. Die einzelnen Module werden im weiteren Verlaufe des Skriptes bzw. der Lehrveranstaltung eingeführt und erläutert. 
 
-# In[19]:
+# In[45]:
 
 
 # Modul `BusinessAnalytics` muss bei erster Nutzung zunächst installiert werden:
@@ -36,32 +36,32 @@ import matplotlib.pyplot as plt
 # 
 # Prinzipiell haben beide Varianten Vor- und Nachteile. In [vorherigen Kapitel](Introduction_Fallstudie.md) wurde [hier](download-yahoo) aufgezeigt, wie wir die konkreten DAX-Daten als Datei abspeichern. In unserem Fall verzichten wir darauf und wählen Variante 2, d.h. wir laden die Daten direkt in Python. Wir müssen dafür den Yahoo-Ticker für den DAX (`^GDAXI`) sowie Start- und Enddatum der benötigten Daten angeben. 
 
-# In[81]:
+# In[46]:
 
 
-dax_data = get_stock_data(ticker="^GDAXI", start="30-12-1987", end="31-07-2022")
+data_dax = get_stock_data(ticker="^GDAXI", start="30-12-1987", end="31-07-2022")
 
 
 # Was macht der obige Programmcode? 
 # 
-# Mit der Funktion `get_stock_data` laden wir die Yahoo-Daten herunter. Das Ergebnis ist ein sog. `Dataframe` (stellen Sie sich eine Art Excel-Tabelle vor), in dem alle Yahoo-Daten gespeichert sind. Diesen Dataframe "speichern"[^1] wir unter dem Namen `dax_data`.  Dieser Name ist beliebig; jeder andere Name wäre hier auch möglich gewesen. Es ist jedoch gute Programmier-Praxis beschreibende Namen zu wählen. Wir werden in diesem Skript englische Namen wählen, da dies ebenfalls übliche Praxis ist. 
+# Mit der Funktion `get_stock_data` laden wir die Yahoo-Daten herunter. Das Ergebnis ist ein sog. `Dataframe` (stellen Sie sich eine Art Excel-Tabelle vor), in dem alle Yahoo-Daten gespeichert sind. Diesen Dataframe "speichern"[^1] wir unter dem Namen `data_dax`.  Dieser Name ist beliebig; jeder andere Name wäre hier auch möglich gewesen. Es ist jedoch gute Programmier-Praxis beschreibende Namen zu wählen. Wir werden in diesem Skript englische Namen wählen, da dies ebenfalls übliche Praxis ist. 
 # 
 # [^1]: Der Begriff abspeichern ist an dieser Stelle nicht ganz korrekt bzw. präzise. Eigentlich weisen wir den Output einer Variable zu. Der Computer allokiert dann Speicher für diese Information. In Python beinhaltet die Variable dann die Referenz auf diese Speicheradresse. Für unsere Zwecke sind diese Details jedoch nicht wichtig. In diesem Skript und Kurs werden wir  bewusst unpräzise formulieren, um die Verständlichkeit beim Lesen zu erhöhen. 
 
 # Schauen wir uns die Daten an. Dies machen wir, in dem wir in eine Code-Zelle den Namen der Variable schreiben:
 
-# In[82]:
+# In[47]:
 
 
-dax_data
+data_dax
 
 
 # Bei großen Datenmengen bietet es sich an, nur einen Teil der Informationen anzuzeigen. Wir können z.B. nur die ersten 5 Zeilen ausgeben lassen mit Hilfe der "Funktion" `head`:
 
-# In[83]:
+# In[48]:
 
 
-dax_data.head()
+data_dax.head()
 
 
 # Nachdem wir die Daten nun in Python eingelesen haben, beginnen wir mit dem nächsten Schritt, der Aufbereitung der Daten. 
@@ -78,28 +78,28 @@ dax_data.head()
 # - Volume: Handelsvolumen an dem Tag 
 # - ticker: Yahoo-Ticker des Datenpunktes
 # 
-# Für unsere Zwecke benötigen nur einen Dax-Kurs pro Tag. Wir werden deshalb den `Ad. Close`-Kurs nehmen und alle anderen Daten mit Ausnahme des Datums wieder herausnehmen. Zusätzlich werden wir die Spalten noch umbenennen in "Datum" und "Preis" und fehlende Datenpunkte (gekennzeichnet als `NaN` ("not a number")) löschen[^2]. 
+# Für unsere Zwecke benötigen nur einen Dax-Kurs pro Tag. Wir werden deshalb den `Adj. Close`-Kurs nehmen und alle anderen Daten mit Ausnahme des Datums wieder herausnehmen. Zusätzlich werden wir die Spalten noch umbenennen in "Datum" und "Preis" und fehlende Datenpunkte (gekennzeichnet als `NaN` ("not a number")) löschen[^2]. 
 # 
 # [^2]: An dieser Stelle entfernen wir fehlende Datenpunkte ohne weitere Analyse, weshalb die Datenpunkte überhaupt fehlen. Für viele Analysen sollte man dem Grund für die fehlenden Daten jedoch hinterhergehen, um sicherzustellen, dass (i) die Datenquelle ggf. nicht verlässlich ist und/oder (ii) die Ergebnisse nicht verfälschen werden.
 
-# In[84]:
+# In[49]:
 
 
-dax_data = (dax_data
+data_dax = (data_dax
             .filter(items=["Date", "Adj Close"], axis=1) # Filtern der benötigten Spalten
             .rename({"Date": "Datum", "Adj Close": "Preis"}, axis=1) # Umbenennen der Spaltennamen
             .dropna() # Fehlende Datenpunkte entfernen
             )
 # Ergebnis anzeigen lassen
-dax_data
+data_dax
 
 
 # Bevor wir die Daten für unsere Zwecke weiter aufbereiten, schauen wir uns diese an, um sicherzustellen, dass die Kursentwicklung plausibel aussieht. 
 
-# In[85]:
+# In[50]:
 
 
-plot(data=dax_data, x="Datum", y="Preis", 
+plot(data=data_dax, x="Datum", y="Preis", 
      colors="red",
      title="Tägliche Entwicklung DAX\n(1988 - 2022)",
      show_legend=False);
@@ -111,15 +111,48 @@ plot(data=dax_data, x="Datum", y="Preis",
 # 
 # Im nächsten Schritt müssen wir nun die Renditen berechnen, da wir diese für beide Ansätze - "Zurück in die Vergangenheit" und "historischer Zufall" - benötigen. Wir erstellen deshalb eine neue Spalte ("Rendite"), in der wir die tägliche Rendite (Hinweis: $r_t = \frac{P_t}{P_{t-1}} -1$) speichern. Dies können wir z.B. mit der Funktion `pct_change` berechnen. 
 
-# In[86]:
+# In[51]:
 
 
-dax_data = (dax_data
-            .assign(Rendite=dax_data["Preis"].pct_change()) # Erstelle neue Spalte "Rendite"
+data_dax = (data_dax
+            .assign(Rendite=data_dax["Preis"].pct_change()) # Erstelle neue Spalte "Rendite"
             .dropna() # Entferne NaN-Spalten, da für ersten Kurs kein Vorkurs existiert
+            .drop(columns=["Datum", "Preis"]) # Spalten Datum und Preis werden nicht mehr benötigt
+            .assign(Periode=lambda _df: range(1,len(_df)+1)) # Periode der Investition (1 bis letzte Zeile)
             )
 # Ergebnis anzeigen lassen (hier: erste 10 Zeilen)
-dax_data.head(10)
+data_dax.head(10)
+
+
+# Wir fassen, was wir bisher berechnet haben in eine Funktion `calculate_returns` zusammen. Dies macht den Code übersichtlicher; insbesondere, wenn wir später ggf. Änderungen vornehmen möchten.
+
+# In[52]:
+
+
+def calculate_returns(_df):
+    data = (_df
+            .filter(items=["Date", "Adj Close"], axis=1) # Filtern der benötigten Spalten
+            .rename({"Date": "Datum", "Adj Close": "Preis"}, axis=1) # Umbenennen der Spaltennamen
+            .dropna() # Fehlende Datenpunkte entfernen
+            .assign(Rendite=lambda _data: _data["Preis"].pct_change()) # Erstelle neue Spalte "Rendite"
+            .dropna() # Entferne NaN-Spalten, da für ersten Kurs kein Vorkurs existiert
+            .drop(columns=["Datum", "Preis"]) # Spalten Datum und Preis werden nicht mehr benötigt
+            .assign(Periode=lambda _data: range(1,len(_data)+1)) # Periode der Investition (1 bis letzte Zeile)
+            .reset_index(drop=True)
+            )
+    return data
+
+
+# Wir können jetzt alles zusammenfassen:
+
+# In[53]:
+
+
+data_dax = get_stock_data(ticker="^GDAXI", start="30-12-1987", end="31-07-2022")
+data_dax = (data_dax
+           .pipe(calculate_returns)
+           )
+data_dax.head()
 
 
 # ### Ansatz 1: Zurück in die Vergangenheit
@@ -143,15 +176,13 @@ dax_data.head(10)
 # 
 # Untenstehend ein Beispiel für unsere drei Beispielanlagen:
 
-# In[87]:
+# In[54]:
 
 
-beispiel = (dax_data
-            .drop(columns=["Datum", "Preis"]) # Spalten Datum und Preis werden nicht mehr benötigt
-            .assign(Periode=range(1,len(dax_data)+1), # Periode der Investition (1 bis letzte Zeile)
-                    Anlage1=dax_data["Rendite"].shift(0),  # Renditen für Startdatum 5.1.1988
-                    Anlage2=dax_data["Rendite"].shift(-1), # Renditen für Startdatum 6.1.1988
-                    Anlage3=dax_data["Rendite"].shift(-2)) # Renditen für Startdatum 7.1.1988
+beispiel = (data_dax
+            .assign(Anlage1=data_dax["Rendite"].shift(0),  # Renditen für Startdatum 5.1.1988
+                    Anlage2=data_dax["Rendite"].shift(-1), # Renditen für Startdatum 6.1.1988
+                    Anlage3=data_dax["Rendite"].shift(-2)) # Renditen für Startdatum 7.1.1988
             )
 beispiel
 
@@ -164,15 +195,13 @@ beispiel
 # 
 # Dafür müssen wir den obigen Programmcode nur geringfügig verändern:
 
-# In[88]:
+# In[55]:
 
 
-beispiel = (dax_data
-            .drop(columns=["Datum", "Preis"]) # Spalten Datum und Preis werden nicht mehr benötigt
-            .assign(Periode=range(1,len(dax_data)+1), # Periode der Investition (1 bis letzte Zeile)
-                    Anlage1=(1 + dax_data["Rendite"].shift(0)).cumprod() - 1,  # kum. Produkt der Renditen für Startdatum 5.1.1988
-                    Anlage2=(1 + dax_data["Rendite"].shift(-1)).cumprod() - 1, # kum. Produkt der Renditen für Startdatum 6.1.1988
-                    Anlage3=(1 + dax_data["Rendite"].shift(-2)).cumprod() - 1)  # kum. Produkt der Renditen für Startdatum 7.1.1988
+beispiel = (data_dax
+            .assign(Anlage1=(1 + data_dax["Rendite"].shift(0)).cumprod() - 1,  # kum. Produkt der Renditen für Startdatum 5.1.1988
+                    Anlage2=(1 + data_dax["Rendite"].shift(-1)).cumprod() - 1, # kum. Produkt der Renditen für Startdatum 6.1.1988
+                    Anlage3=(1 + data_dax["Rendite"].shift(-2)).cumprod() - 1)  # kum. Produkt der Renditen für Startdatum 7.1.1988
             )
 beispiel
 
@@ -188,11 +217,11 @@ beispiel
 # 
 # Hier folgt der Code für
 
-# In[7]:
+# In[56]:
 
 
-def calculate_anlagen(data, min_laufzeit):
-    '''Funktion, um Renditen aller Anlagen zu berechnen
+def calculate_cumreturns_hist(data, min_laufzeit):
+    '''Funktion, um kumulierte Renditen aller Anlagen zu berechnen
     
     Input: 
     - data: Datensatz, mit Renditedaten
@@ -204,10 +233,10 @@ def calculate_anlagen(data, min_laufzeit):
     ## Vorarbeiten
     rows = len(data) # Anzahl Zeilen im Datensatz
     data_new = data.copy() # Erstelle Kopie des Datensatz, um bei Fehlern Daten nicht zu überschreiben
-    
+
     ## Berechne Renditen aller Anlagen, die Kriterium min_laufzeit erfüllen
     anlagen = {f"Anlage_{i+1}":(data_new["Rendite"].shift(-i))
-                           for i in range(0,len(data_new)-min_laufzeit)} # Berechne Renditen alle Anlagen
+                           for i in range(0,rows-min_laufzeit)} # Berechne Renditen alle Anlagen
     anlagen = pd.DataFrame(anlagen) # Speicher Anlagen in Dataframe
     
     ## Berechne kumulierte Rendite
@@ -222,21 +251,19 @@ def calculate_anlagen(data, min_laufzeit):
 
 # Den obigen Programmcode nutzen wir nun, um einen neuen Dataframe zu erstellen, in dem das kumulierte Produkt der Renditen aller Anlagen berechnet wurde. 
 
-# In[146]:
+# In[57]:
 
 
 min_t = 1000
-data_anlagen = (dax_data
-                .drop(columns=["Datum", "Preis"]) # Spalten Datum und Preis werden nicht mehr benötigt
-                .assign(Periode=range(1,len(dax_data)+1)) # Periode der Investition (1 bis letzte Zeile)
-                .pipe(calculate_anlagen, min_laufzeit=min_t) # Berechne Renditen aller Anlagen
+data_anlagen = (data_dax
+                .pipe(calculate_cumreturns_hist, min_laufzeit=min_t) # Berechne Renditen aller Anlagen
                )
 data_anlagen.head(10)
 
 
 # Als Ergebnis sehen wir einen Datensatz, der die kumulierten Produkte der Renditen von Anlage 1 bis Anlage 7737 beinhaltet.  Diesen können wir mithilfe des folgenden Programmcode auch graphisch Darstellen.
 
-# In[134]:
+# In[58]:
 
 
 def plot_anlagen(data):
@@ -259,35 +286,59 @@ def plot_anlagen(data):
     return None
 
 
-# In[133]:
+# In[59]:
 
 
 # Hinweis: die Berechnung kann ja nach Computer einige Minuten dauern
 plot_anlagen(data_anlagen);
 
 
+# Wir sehen bereits, dass ca. ab Periode 4.000 keine Anlage (unabhängig vom Startpunkt) noch einen Verlust - d.h. Rendite von unter 0% - gemacht hat. Bevor wir die Verlustwahrscheinlichkeit nun aber konkret, wie im vorherigen Kapitel erläutert, berechnen, wollen wir unseren Programmcode nochmals strukturieren und zusammenfassen. Unsere bisherige Aufbereitung der Daten umfasste im Wesentlichen auf drei Schritte:
+# 
+# 1. Herunterladen der Daten
+# 1. Berechnung der Renditen
+# 2. Berechnung der kumulierten Produkte der Renditen je Anlage
+# 
+# Diese drei Schritte fassen wir nun in drei Funktionen zusammen. In Summe macht dies den Code besser lesbarer und schneller adaptierbar, falls weitere Analysen hinzukommen sollten. 
+
+# In[60]:
+
+
+min_t = 1000
+data = (get_stock_data(ticker="^GDAXI", start="30-12-1987", end="31-07-2022") # Herunterladen der Daten
+             .pipe(calculate_returns) # Berechnung der Renditen
+             .pipe(calculate_cumreturns_hist, min_t) # Berechnung der kumulierten Renditen je Anlagestartpunkt
+             )
+data
+
+
 # ## Schritt 4: Analyse für Ansatz 1
 
-# Wir sehen bereits, dass ca. ab Periode 4.000 keine Anlage (unabhängig vom Startpunkt) noch einen Verlust - d.h. Rendite von unter 0% - gemacht hat. 
-# 
-# Lassen Sie uns diese Verlustwahrscheinlichkeit nun aber konkret, wie im vorherigen Kapitel erläutert, berechnen. 
-# 
-# Hierzu müssen wir für jeden Handelstag die Anzahl der Portfolien addieren, die eine Rendite von unter 0% gemacht haben und durch die Anzahl aller Portfolien teilen. 
+# Schlussendlich wollen wir bestimmen, wie wahrscheinlich ein Verlust nach X Perioden. Im vorherigen Kapitel haben wir uns Gedanken dazu gemacht, wie wir dies berechnen können. Hierzu müssen wir für jeden Handelstag die Anzahl der Anlagen addieren, die eine Rendite von unter 0% gemacht haben und durch die Anzahl aller Anlagen teilen. 
 # 
 # Im Programmcode ist dies sehr einfach abzubilden:
 
-# In[170]:
+# In[61]:
 
 
-data_anlagen = (data_anlagen
-                .assign(Verlustwahrscheinlichkeit= (data_anlagen.filter(like="Anlage", axis=1) < 0).sum(axis=1) / len(data_anlagen))
-)
-data_anlagen[["Periode", "Verlustwahrscheinlichkeit"]]
+def calculate_loss_probabilities(_data):
+    data_new = (_data
+            .assign(Verlustwahrscheinlichkeit=lambda _df: (_df.filter(like="Anlage", axis=1) < 0 ).sum(axis=1) / len(_df))
+            )
+    return data_new
+
+
+# In[62]:
+
+
+data_final = calculate_loss_probabilities(data)
+
+data_final[["Periode", "Verlustwahrscheinlichkeit"]]
 
 
 # An der Tabelle sehen wir, dass die Verlustwahrscheinlichkeit nach einem Tag bei ca. 40% liegt. Jedoch sehen wir, dass die Verlustwahrscheinlichkeit in den letzten Perioden 0% beträgt. D.h. in unserem Datensatz gab es z.B. keine Anlage, die nach 8733 Perioden noch eine Rendite von unter 0% gemacht hatte. Noch klarer wird die Berechnung, wenn wir die Verlustwahrscheinlichkeit plotten. 
 
-# In[24]:
+# In[165]:
 
 
 def plot_verlustwahrscheinlichkeit(data):
@@ -296,50 +347,102 @@ def plot_verlustwahrscheinlichkeit(data):
           title="historische Verlustwahrscheinlichkeit Anlage in DAX",
           show_legend=False);
      day0 = np.argmax(data["Verlustwahrscheinlichkeit"] == 0)
+     loss = 0
+     if day0 == 0:
+          day0 = np.argmin(data["Verlustwahrscheinlichkeit"])
+          loss = np.min(data["Verlustwahrscheinlichkeit"])
      day01 = np.argmin(np.abs(data["Verlustwahrscheinlichkeit"] - 0.1))
-     ax.annotate(f"Tag {day0}: Verlustwahrscheinlichkeit = 0%",(day0,0.01), ha="left" , color="red")
-     ax.hlines(y=0.1, xmin=0, xmax=day01, colors="black", linestyles="--", linewidth=0.5)
-     ax.annotate(f"Tag {day01}: Verlustwahrscheinlichkeit = 10%",(day01,0.10), ha="left" , color="black")
-     return None
+     ax.annotate(f"Tag {day0}: p = {np.round(loss*100,3)}%",xy=(day0,loss), xytext=(day0*0.9,loss+0.1), ha="left" , color="black", arrowprops=dict(arrowstyle= "-|>", color='black',ls='--'))
+     ax.annotate(f"Tag {day01}: p = 10%",xy=(day01,0.1),xytext=(day01,0.15), ha="left" , color="black", arrowprops=dict(arrowstyle= "-|>", color='black',ls='--'))
+     
 
 
-# In[194]:
+# In[166]:
 
 
-plot_verlustwahrscheinlichkeit(data_anlagen)
+plot_verlustwahrscheinlichkeit(data_final);
 
 
-# ## Fazit: Ansatz 1
+# ### Fazit: Ansatz 1
 
 # Mit unserer empirischen Analyse konnten wir die Ausgangsfrage beantworten. Die Verlustwahrscheinlichkeit bei Investition in den DAX ist real. Allerdings beschränkt sich dies historische auf einen kurzen Anlagehorizont. So gab es auf Basis der historischen Daten keinen Zeitpunkt einer Anlage, bei der man nach mehr als 3.444 Tagen (ca. 17 Jahre) noch einen Verlust gemacht hätte. Selbst bei der Hälfte der Anlagedauer, d.h. nach ca. 9 Jahren, betrug die Verlustwahrscheinlichkeit nur noch 10%. 
 # 
 # Hat man einen langfristigen Investitionsansatz, so ist das Risiko einer Investition in den DAX deutlich geringer, als dies oft aus dem Bauch heraus angenommen wird.
 # 
-# ````{margin} 
+# 
 # ```{admonition} Analyse basiert auf Annahmen!
 # :class: warning, dropdown
 # Wichtig ist an dieser Stelle jedoch zu betonen, dass die Analyse auf vielen Annahmen beruht. Einige davon können wir ändern, um zu schauen, wie sensitiv die Analyse auf diese Annahme reagiert (z.B. könnten wir auch den Tagestiefstpreis nehmen). Andere müssen wir aus Mangel an Alternativen so treffen, können jedoch  kritisch sein (z.B. basiert unsere Analyse auf Yahoo-Daten, die ggf. Fehler beinhaltet). Andere Annahmen sind grundsätzlicher Natur: wir basieren unsere Analyse auf historischen Daten und ziehen daraus Schlüsse für die Zukunft. Dies setzt voraus, dass die Kursentwicklungen in der Zukunft ähnlich sind, wie in der Vergangenheit. Jedoch kann die Zukunft auch ganz andere Entwicklungen beinhaltet, die wir so nicht vorhersehen (z.B. könnte die wirtschaftliche und politische Stellung Deutschlands sich in der Zukunft negativ entwickeln)
 # ```
-# ````
 
-# Untenstehend die Analyse zusammengefasst in einem Schritt:
+# Wir haben feststellen können, dass es für die Analyse nicht viel Programmieraufwand bedarf. 
+# 
+# Hier ist die Zusammenfassung unserer Analyse:
 
-# In[43]:
+# In[157]:
 
 
 min_t = 1000
-price = "Adj Close"
-dax_data = get_stock_data(ticker="^GDAXI", start="30-12-1987", end="31-07-2022")
-(dax_data
-    .filter(items=["Date", price], axis=1) # Filtern der benötigten Spalten
-    .rename({"Date": "Datum", price: "Preis"}, axis=1) # Umbenennen der Spaltennamen
-    .assign(Rendite=dax_data.iloc[:,1].pct_change()) # Erstelle neue Spalte "Rendite"
-    .dropna() # Entferne NaN-Spalten, da für ersten Kurs kein Vorkurs existiert
-    .drop(columns=["Datum", "Preis"]) # Spalten Datum und Preis werden nicht mehr benötigt
-    .assign(Periode=lambda _df: range(1,len(_df)+1)) # Periode der Investition (1 bis letzte Zeile)
-    .pipe(calculate_anlagen, min_laufzeit=min_t) # Berechne Renditen aller Anlagen
-    .reset_index(drop=True) # Erstelle den Index des Dataframes neu (weil, NaN-Zeilen gelöscht wurden)
-    .assign(Verlustwahrscheinlichkeit=lambda _df: (_df.filter(like="Anlage", axis=1) < 0).sum(axis=1) / len(_df)) # Berechne Verlustwahrscheinlichkeit
-    .pipe(plot_verlustwahrscheinlichkeit) # Erstelle Plot
-    );
+(get_stock_data(ticker="^GDAXI", start="30-12-1987", end="31-07-2022") # Herunterladen der Daten
+    .pipe(calculate_returns) # Berechnung der Renditen
+    .pipe(calculate_cumreturns_hist, min_t) # Berechnung der kumulierten Renditen je Anlagestartpunkt
+    .pipe(calculate_loss_probabilities) # Berechnung der Verlustwahrscheinlichkeit
+    .pipe(plot_verlustwahrscheinlichkeit) # Visualisierung der Analyse
+)
 
+
+# Im weiteren Verlaufe werden wir uns anschauen, wie wir den Programmcode noch verbessern und lesbarer machen können. 
+
+# ## Schritt 4: Historischer Zufall
+# 
+# Im vorherigen Kapitel haben wir uns zwei Varianten überlegt, wie wir die Ausgangsfrage beantworten können. Schauen wir uns nun an, wie wir die Frage mittels einer Zufallsauswahl der historischen Renditen beantworten können. Viele Veränderung benötigen wir hierfür nicht. Schauen wir uns den vorherigen Programmiercode an, so stellen wir fest, dass nur die Funktion `calculate_cumreturns_anlagen` verändert werden muss bzw. wir hierfür eine andere Funktion schreiben. 
+# 
+# ```
+# min_t = 1000
+# (get_stock_data(ticker="^GDAXI", start="30-12-1987", end="31-07-2022") # Bleibt unverändert
+#     .pipe(calculate_returns) # Bleibt unverändert
+#     .pipe(calculate_cumreturns_hist, min_t) # Muss ersetzt werden durch neue Funktion
+#     .pipe(calculate_loss_probabilities) # Bleibt unverändert
+#     .pipe(plot_verlustwahrscheinlichkeit) # Bleibt unverändert
+# )
+# ```
+# 
+
+# In[108]:
+
+
+def calculate_cumrets_random(_df, n_anlagen, n_time):
+    # Ziehe zufällig (n_time x n_anlagen) Renditen aus Spalte "Rendite"
+    rnd_data = np.random.choice(_df["Rendite"], (n_time, n_anlagen), replace=True)
+    
+    # Speicher Daten in Dataframe
+    anlagen = pd.DataFrame(rnd_data, columns = [f"Anlage_{i}" for i in range(1,n_anlagen+1)])
+    
+    ## Berechne kumulierte Rendite
+    anlagen = (1+anlagen).cumprod() - 1
+
+    ## Verbinde ursprüngliche Daten mit neuen Anlagen-Daten
+    data_combined = pd.concat((_df, anlagen), axis=1).reset_index(drop=True) 
+    
+    ## Gib Daten aus
+    return data_combined
+
+
+# In[167]:
+
+
+(get_stock_data(ticker="^GDAXI", start="30-12-1987", end="31-07-2022") # Bleibt unverändert
+ .pipe(calculate_returns) # Unverändert
+ .pipe(calculate_cumrets_random, n_anlagen=5000, n_time=10_000) # Berechne kumulierte Renditen auf Basis von Zufallsauswahl 
+ .pipe(calculate_loss_probabilities) # Unverändert
+ .pipe(plot_verlustwahrscheinlichkeit) # Unverändert
+)
+
+
+# ## Gesamtfazit
+# 
+# Wie bereits erläutert sollte Ihnen diese Fallstudie einen Eindruck davon vermitteln, was Business Analytics umfasst. Wir haben gesehen, dass ein großer Teil dessen, was wir gemacht haben unabhängig war von operativer Datenanalyse. Zunächst mussten wir die konkrete Frage formulieren und uns detaillierte Gedanken dazu machen, wie wir diese Frage beantworten könnten. Erst im zweiten Schritt haben wir uns dann an die eigentliche Datenanalyse gemacht. Dies zeigt, dass die Nutzung von Tools oder einer Programmiersprache nur Mittel zum Zweck ist. Wir nutzen ein Werkzeug, um ein analytisches Problem zu lösen. 
+# 
+# In unserem Falle haben wir **Python** genutzt. Auch wenn vieles von dem, was hier dargestellt wurde neu und noch nicht zu 100% nachvollziehbar ist, sollte diese Fallstudie dennoch einen Eindruck davon vermitteln, wie Datenanalyse in der Praxis aussieht und welche Schritte dafür nötig sind. 
+# 
+# Widmen wir uns nun Python und schauen uns in den nächsten Kapiteln an, wie Python konkret funktioniert. 

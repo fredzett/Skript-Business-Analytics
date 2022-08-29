@@ -54,7 +54,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Technische Voraussetzungen" href="../chapter_02/Voraussetzungen.html" />
+    <link rel="next" title="Einführung in Jupyter Notebooks" href="../chapter_02/Intro_JupyterNotebooks.html" />
     <link rel="prev" title="Wie riskant sind Aktien?" href="Introduction_Fallstudie.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -138,18 +138,18 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_02/Voraussetzungen.html">
-   Technische Voraussetzungen
+  <a class="reference internal" href="../chapter_02/Intro_JupyterNotebooks.html">
+   Einführung in Jupyter Notebooks
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_02/S01b_Intro_Python.html">
+  <a class="reference internal" href="../chapter_02/Intro_Python.html">
    Einführung in Python
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_02/S01a_Intro_JN.html">
-   Einführung in Jupyter Notebooks
+  <a class="reference internal" href="../chapter_02/Intro_Modules.html">
+   Module nutzen
   </a>
  </li>
 </ul>
@@ -160,8 +160,58 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S02a_Descriptive_Statistics.html">
+   Deskriptive Statistik
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S03a_Simulation.html">
+   Simulationen mit Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S03c_Probability_Distributions.html">
+   Wahrscheinlichkeitsverteilungen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S04a_Estimation%26HyptothesisTesting.html">
+   Testen von Hypothesen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S05a_Regression.html">
+   Lineare Regression
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S06a_TidyData.html">
+   Tidy Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S07a_Classification.html">
+   Klassifikation
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../chapter_analytics/S08a_Clustering.html">
    Clusteranalyse
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S09a_Cross_validation.html">
+   Cross Validation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S11_DecisionTrees.html">
+   Entscheidungsbäume
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S12_Ensembles.html">
+   Ensemble-Methoden
   </a>
  </li>
 </ul>
@@ -300,10 +350,22 @@
   <a class="reference internal nav-link" href="#schritt-4-analyse-fur-ansatz-1">
    Schritt 4: Analyse für Ansatz 1
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fazit-ansatz-1">
+     Fazit: Ansatz 1
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fazit-ansatz-1">
-   Fazit: Ansatz 1
+  <a class="reference internal nav-link" href="#schritt-4-historischer-zufall">
+   Schritt 4: Historischer Zufall
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gesamtfazit">
+   Gesamtfazit
   </a>
  </li>
 </ul>
@@ -357,10 +419,22 @@
   <a class="reference internal nav-link" href="#schritt-4-analyse-fur-ansatz-1">
    Schritt 4: Analyse für Ansatz 1
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fazit-ansatz-1">
+     Fazit: Ansatz 1
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fazit-ansatz-1">
-   Fazit: Ansatz 1
+  <a class="reference internal nav-link" href="#schritt-4-historischer-zufall">
+   Schritt 4: Historischer Zufall
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gesamtfazit">
+   Gesamtfazit
   </a>
  </li>
 </ul>
@@ -407,17 +481,17 @@
 <p>Prinzipiell haben beide Varianten Vor- und Nachteile. In <a class="reference internal" href="Introduction_Fallstudie.html"><span class="doc std std-doc">vorherigen Kapitel</span></a> wurde <a class="reference internal" href="Introduction_Fallstudie.html#download-yahoo"><span class="std std-ref">hier</span></a> aufgezeigt, wie wir die konkreten DAX-Daten als Datei abspeichern. In unserem Fall verzichten wir darauf und wählen Variante 2, d.h. wir laden die Daten direkt in Python. Wir müssen dafür den Yahoo-Ticker für den DAX (<code class="docutils literal notranslate"><span class="pre">^GDAXI</span></code>) sowie Start- und Enddatum der benötigten Daten angeben.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dax_data</span> <span class="o">=</span> <span class="n">get_stock_data</span><span class="p">(</span><span class="n">ticker</span><span class="o">=</span><span class="s2">&quot;^GDAXI&quot;</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="s2">&quot;30-12-1987&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;31-07-2022&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_dax</span> <span class="o">=</span> <span class="n">get_stock_data</span><span class="p">(</span><span class="n">ticker</span><span class="o">=</span><span class="s2">&quot;^GDAXI&quot;</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="s2">&quot;30-12-1987&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;31-07-2022&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <p>Was macht der obige Programmcode?</p>
-<p>Mit der Funktion <code class="docutils literal notranslate"><span class="pre">get_stock_data</span></code> laden wir die Yahoo-Daten herunter. Das Ergebnis ist ein sog. <code class="docutils literal notranslate"><span class="pre">Dataframe</span></code> (stellen Sie sich eine Art Excel-Tabelle vor), in dem alle Yahoo-Daten gespeichert sind. Diesen Dataframe “speichern”<a class="footnote-reference brackets" href="#id4" id="id1">1</a> wir unter dem Namen <code class="docutils literal notranslate"><span class="pre">dax_data</span></code>.  Dieser Name ist beliebig; jeder andere Name wäre hier auch möglich gewesen. Es ist jedoch gute Programmier-Praxis beschreibende Namen zu wählen. Wir werden in diesem Skript englische Namen wählen, da dies ebenfalls übliche Praxis ist.</p>
+<p>Mit der Funktion <code class="docutils literal notranslate"><span class="pre">get_stock_data</span></code> laden wir die Yahoo-Daten herunter. Das Ergebnis ist ein sog. <code class="docutils literal notranslate"><span class="pre">Dataframe</span></code> (stellen Sie sich eine Art Excel-Tabelle vor), in dem alle Yahoo-Daten gespeichert sind. Diesen Dataframe “speichern”<a class="footnote-reference brackets" href="#id4" id="id1">1</a> wir unter dem Namen <code class="docutils literal notranslate"><span class="pre">data_dax</span></code>.  Dieser Name ist beliebig; jeder andere Name wäre hier auch möglich gewesen. Es ist jedoch gute Programmier-Praxis beschreibende Namen zu wählen. Wir werden in diesem Skript englische Namen wählen, da dies ebenfalls übliche Praxis ist.</p>
 <p>Schauen wir uns die Daten an. Dies machen wir, in dem wir in eine Code-Zelle den Namen der Variable schreiben:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dax_data</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_dax</span>
 </pre></div>
 </div>
 </div>
@@ -580,7 +654,7 @@
 <p>Bei großen Datenmengen bietet es sich an, nur einen Teil der Informationen anzuzeigen. Wir können z.B. nur die ersten 5 Zeilen ausgeben lassen mit Hilfe der “Funktion” <code class="docutils literal notranslate"><span class="pre">head</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dax_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_dax</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -687,16 +761,16 @@
 <li><p>Volume: Handelsvolumen an dem Tag</p></li>
 <li><p>ticker: Yahoo-Ticker des Datenpunktes</p></li>
 </ul>
-<p>Für unsere Zwecke benötigen nur einen Dax-Kurs pro Tag. Wir werden deshalb den <code class="docutils literal notranslate"><span class="pre">Ad.</span> <span class="pre">Close</span></code>-Kurs nehmen und alle anderen Daten mit Ausnahme des Datums wieder herausnehmen. Zusätzlich werden wir die Spalten noch umbenennen in “Datum” und “Preis” und fehlende Datenpunkte (gekennzeichnet als <code class="docutils literal notranslate"><span class="pre">NaN</span></code> (“not a number”)) löschen<a class="footnote-reference brackets" href="#id5" id="id2">2</a>.</p>
+<p>Für unsere Zwecke benötigen nur einen Dax-Kurs pro Tag. Wir werden deshalb den <code class="docutils literal notranslate"><span class="pre">Adj.</span> <span class="pre">Close</span></code>-Kurs nehmen und alle anderen Daten mit Ausnahme des Datums wieder herausnehmen. Zusätzlich werden wir die Spalten noch umbenennen in “Datum” und “Preis” und fehlende Datenpunkte (gekennzeichnet als <code class="docutils literal notranslate"><span class="pre">NaN</span></code> (“not a number”)) löschen<a class="footnote-reference brackets" href="#id5" id="id2">2</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dax_data</span> <span class="o">=</span> <span class="p">(</span><span class="n">dax_data</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_dax</span> <span class="o">=</span> <span class="p">(</span><span class="n">data_dax</span>
             <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">items</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">,</span> <span class="s2">&quot;Adj Close&quot;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># Filtern der benötigten Spalten</span>
             <span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s2">&quot;Date&quot;</span><span class="p">:</span> <span class="s2">&quot;Datum&quot;</span><span class="p">,</span> <span class="s2">&quot;Adj Close&quot;</span><span class="p">:</span> <span class="s2">&quot;Preis&quot;</span><span class="p">},</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># Umbenennen der Spaltennamen</span>
             <span class="o">.</span><span class="n">dropna</span><span class="p">()</span> <span class="c1"># Fehlende Datenpunkte entfernen</span>
             <span class="p">)</span>
 <span class="c1"># Ergebnis anzeigen lassen</span>
-<span class="n">dax_data</span>
+<span class="n">data_dax</span>
 </pre></div>
 </div>
 </div>
@@ -787,7 +861,7 @@
 <p>Bevor wir die Daten für unsere Zwecke weiter aufbereiten, schauen wir uns diese an, um sicherzustellen, dass die Kursentwicklung plausibel aussieht.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">dax_data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;Datum&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Preis&quot;</span><span class="p">,</span> 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data_dax</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;Datum&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Preis&quot;</span><span class="p">,</span> 
      <span class="n">colors</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span>
      <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Tägliche Entwicklung DAX</span><span class="se">\n</span><span class="s2">(1988 - 2022)&quot;</span><span class="p">,</span>
      <span class="n">show_legend</span><span class="o">=</span><span class="kc">False</span><span class="p">);</span>
@@ -803,12 +877,14 @@
 <p>Im nächsten Schritt müssen wir nun die Renditen berechnen, da wir diese für beide Ansätze - “Zurück in die Vergangenheit” und “historischer Zufall” - benötigen. Wir erstellen deshalb eine neue Spalte (“Rendite”), in der wir die tägliche Rendite (Hinweis: <span class="math notranslate nohighlight">\(r_t = \frac{P_t}{P_{t-1}} -1\)</span>) speichern. Dies können wir z.B. mit der Funktion <code class="docutils literal notranslate"><span class="pre">pct_change</span></code> berechnen.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dax_data</span> <span class="o">=</span> <span class="p">(</span><span class="n">dax_data</span>
-            <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">Rendite</span><span class="o">=</span><span class="n">dax_data</span><span class="p">[</span><span class="s2">&quot;Preis&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">pct_change</span><span class="p">())</span> <span class="c1"># Erstelle neue Spalte &quot;Rendite&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_dax</span> <span class="o">=</span> <span class="p">(</span><span class="n">data_dax</span>
+            <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">Rendite</span><span class="o">=</span><span class="n">data_dax</span><span class="p">[</span><span class="s2">&quot;Preis&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">pct_change</span><span class="p">())</span> <span class="c1"># Erstelle neue Spalte &quot;Rendite&quot;</span>
             <span class="o">.</span><span class="n">dropna</span><span class="p">()</span> <span class="c1"># Entferne NaN-Spalten, da für ersten Kurs kein Vorkurs existiert</span>
+            <span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Datum&quot;</span><span class="p">,</span> <span class="s2">&quot;Preis&quot;</span><span class="p">])</span> <span class="c1"># Spalten Datum und Preis werden nicht mehr benötigt</span>
+            <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">Periode</span><span class="o">=</span><span class="k">lambda</span> <span class="n">_df</span><span class="p">:</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">_df</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span> <span class="c1"># Periode der Investition (1 bis letzte Zeile)</span>
             <span class="p">)</span>
 <span class="c1"># Ergebnis anzeigen lassen (hier: erste 10 Zeilen)</span>
-<span class="n">dax_data</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">data_dax</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -831,71 +907,143 @@
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Datum</th>
-      <th>Preis</th>
       <th>Rendite</th>
+      <th>Periode</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>3</th>
-      <td>1988-01-04</td>
-      <td>956.489990</td>
       <td>-0.048449</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>1988-01-05</td>
-      <td>996.099976</td>
       <td>0.041412</td>
+      <td>2</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>1988-01-06</td>
-      <td>1006.010010</td>
       <td>0.009949</td>
+      <td>3</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>1988-01-07</td>
-      <td>1014.469971</td>
       <td>0.008409</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>1988-01-08</td>
-      <td>1026.689941</td>
       <td>0.012046</td>
+      <td>5</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>1988-01-11</td>
-      <td>987.520020</td>
       <td>-0.038152</td>
+      <td>6</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>1988-01-12</td>
-      <td>986.890015</td>
       <td>-0.000638</td>
+      <td>7</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>1988-01-13</td>
-      <td>965.770020</td>
       <td>-0.021401</td>
+      <td>8</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>1988-01-14</td>
-      <td>974.460022</td>
       <td>0.008998</td>
+      <td>9</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>1988-01-15</td>
-      <td>952.460022</td>
       <td>-0.022577</td>
+      <td>10</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Wir fassen, was wir bisher berechnet haben in eine Funktion <code class="docutils literal notranslate"><span class="pre">calculate_returns</span></code> zusammen. Dies macht den Code übersichtlicher; insbesondere, wenn wir später ggf. Änderungen vornehmen möchten.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calculate_returns</span><span class="p">(</span><span class="n">_df</span><span class="p">):</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="n">_df</span>
+            <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">items</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">,</span> <span class="s2">&quot;Adj Close&quot;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># Filtern der benötigten Spalten</span>
+            <span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s2">&quot;Date&quot;</span><span class="p">:</span> <span class="s2">&quot;Datum&quot;</span><span class="p">,</span> <span class="s2">&quot;Adj Close&quot;</span><span class="p">:</span> <span class="s2">&quot;Preis&quot;</span><span class="p">},</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># Umbenennen der Spaltennamen</span>
+            <span class="o">.</span><span class="n">dropna</span><span class="p">()</span> <span class="c1"># Fehlende Datenpunkte entfernen</span>
+            <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">Rendite</span><span class="o">=</span><span class="k">lambda</span> <span class="n">_data</span><span class="p">:</span> <span class="n">_data</span><span class="p">[</span><span class="s2">&quot;Preis&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">pct_change</span><span class="p">())</span> <span class="c1"># Erstelle neue Spalte &quot;Rendite&quot;</span>
+            <span class="o">.</span><span class="n">dropna</span><span class="p">()</span> <span class="c1"># Entferne NaN-Spalten, da für ersten Kurs kein Vorkurs existiert</span>
+            <span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Datum&quot;</span><span class="p">,</span> <span class="s2">&quot;Preis&quot;</span><span class="p">])</span> <span class="c1"># Spalten Datum und Preis werden nicht mehr benötigt</span>
+            <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">Periode</span><span class="o">=</span><span class="k">lambda</span> <span class="n">_data</span><span class="p">:</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">_data</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span> <span class="c1"># Periode der Investition (1 bis letzte Zeile)</span>
+            <span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="p">)</span>
+    <span class="k">return</span> <span class="n">data</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Wir können jetzt alles zusammenfassen:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_dax</span> <span class="o">=</span> <span class="n">get_stock_data</span><span class="p">(</span><span class="n">ticker</span><span class="o">=</span><span class="s2">&quot;^GDAXI&quot;</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="s2">&quot;30-12-1987&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;31-07-2022&quot;</span><span class="p">)</span>
+<span class="n">data_dax</span> <span class="o">=</span> <span class="p">(</span><span class="n">data_dax</span>
+           <span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">calculate_returns</span><span class="p">)</span>
+           <span class="p">)</span>
+<span class="n">data_dax</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Rendite</th>
+      <th>Periode</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>-0.048449</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.041412</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.009949</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.008409</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.012046</td>
+      <td>5</td>
     </tr>
   </tbody>
 </table>
@@ -917,12 +1065,10 @@ Hätten wir bspw. am Handelstag vor dem 6.1.1988 investiert, dann hätten wir na
 <p>Untenstehend ein Beispiel für unsere drei Beispielanlagen:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">beispiel</span> <span class="o">=</span> <span class="p">(</span><span class="n">dax_data</span>
-            <span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Datum&quot;</span><span class="p">,</span> <span class="s2">&quot;Preis&quot;</span><span class="p">])</span> <span class="c1"># Spalten Datum und Preis werden nicht mehr benötigt</span>
-            <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">Periode</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">dax_data</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="c1"># Periode der Investition (1 bis letzte Zeile)</span>
-                    <span class="n">Anlage1</span><span class="o">=</span><span class="n">dax_data</span><span class="p">[</span><span class="s2">&quot;Rendite&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span>  <span class="c1"># Renditen für Startdatum 5.1.1988</span>
-                    <span class="n">Anlage2</span><span class="o">=</span><span class="n">dax_data</span><span class="p">[</span><span class="s2">&quot;Rendite&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="c1"># Renditen für Startdatum 6.1.1988</span>
-                    <span class="n">Anlage3</span><span class="o">=</span><span class="n">dax_data</span><span class="p">[</span><span class="s2">&quot;Rendite&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">))</span> <span class="c1"># Renditen für Startdatum 7.1.1988</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">beispiel</span> <span class="o">=</span> <span class="p">(</span><span class="n">data_dax</span>
+            <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">Anlage1</span><span class="o">=</span><span class="n">data_dax</span><span class="p">[</span><span class="s2">&quot;Rendite&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span>  <span class="c1"># Renditen für Startdatum 5.1.1988</span>
+                    <span class="n">Anlage2</span><span class="o">=</span><span class="n">data_dax</span><span class="p">[</span><span class="s2">&quot;Rendite&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="c1"># Renditen für Startdatum 6.1.1988</span>
+                    <span class="n">Anlage3</span><span class="o">=</span><span class="n">data_dax</span><span class="p">[</span><span class="s2">&quot;Rendite&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">))</span> <span class="c1"># Renditen für Startdatum 7.1.1988</span>
             <span class="p">)</span>
 <span class="n">beispiel</span>
 </pre></div>
@@ -956,7 +1102,7 @@ Hätten wir bspw. am Handelstag vor dem 6.1.1988 investiert, dann hätten wir na
   </thead>
   <tbody>
     <tr>
-      <th>3</th>
+      <th>0</th>
       <td>-0.048449</td>
       <td>1</td>
       <td>-0.048449</td>
@@ -964,7 +1110,7 @@ Hätten wir bspw. am Handelstag vor dem 6.1.1988 investiert, dann hätten wir na
       <td>0.009949</td>
     </tr>
     <tr>
-      <th>4</th>
+      <th>1</th>
       <td>0.041412</td>
       <td>2</td>
       <td>0.041412</td>
@@ -972,7 +1118,7 @@ Hätten wir bspw. am Handelstag vor dem 6.1.1988 investiert, dann hätten wir na
       <td>0.008409</td>
     </tr>
     <tr>
-      <th>5</th>
+      <th>2</th>
       <td>0.009949</td>
       <td>3</td>
       <td>0.009949</td>
@@ -980,7 +1126,7 @@ Hätten wir bspw. am Handelstag vor dem 6.1.1988 investiert, dann hätten wir na
       <td>0.012046</td>
     </tr>
     <tr>
-      <th>6</th>
+      <th>3</th>
       <td>0.008409</td>
       <td>4</td>
       <td>0.008409</td>
@@ -988,7 +1134,7 @@ Hätten wir bspw. am Handelstag vor dem 6.1.1988 investiert, dann hätten wir na
       <td>-0.038152</td>
     </tr>
     <tr>
-      <th>7</th>
+      <th>4</th>
       <td>0.012046</td>
       <td>5</td>
       <td>0.012046</td>
@@ -1004,7 +1150,7 @@ Hätten wir bspw. am Handelstag vor dem 6.1.1988 investiert, dann hätten wir na
       <td>...</td>
     </tr>
     <tr>
-      <th>8901</th>
+      <th>8732</th>
       <td>-0.003271</td>
       <td>8733</td>
       <td>-0.003271</td>
@@ -1012,7 +1158,7 @@ Hätten wir bspw. am Handelstag vor dem 6.1.1988 investiert, dann hätten wir na
       <td>0.005303</td>
     </tr>
     <tr>
-      <th>8902</th>
+      <th>8733</th>
       <td>-0.008583</td>
       <td>8734</td>
       <td>-0.008583</td>
@@ -1020,7 +1166,7 @@ Hätten wir bspw. am Handelstag vor dem 6.1.1988 investiert, dann hätten wir na
       <td>0.008790</td>
     </tr>
     <tr>
-      <th>8903</th>
+      <th>8734</th>
       <td>0.005303</td>
       <td>8735</td>
       <td>0.005303</td>
@@ -1028,7 +1174,7 @@ Hätten wir bspw. am Handelstag vor dem 6.1.1988 investiert, dann hätten wir na
       <td>0.015204</td>
     </tr>
     <tr>
-      <th>8904</th>
+      <th>8735</th>
       <td>0.008790</td>
       <td>8736</td>
       <td>0.008790</td>
@@ -1036,7 +1182,7 @@ Hätten wir bspw. am Handelstag vor dem 6.1.1988 investiert, dann hätten wir na
       <td>NaN</td>
     </tr>
     <tr>
-      <th>8905</th>
+      <th>8736</th>
       <td>0.015204</td>
       <td>8737</td>
       <td>0.015204</td>
@@ -1055,12 +1201,10 @@ Hätten wir bspw. am Handelstag vor dem 6.1.1988 investiert, dann hätten wir na
 <p>Dafür müssen wir den obigen Programmcode nur geringfügig verändern:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">beispiel</span> <span class="o">=</span> <span class="p">(</span><span class="n">dax_data</span>
-            <span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Datum&quot;</span><span class="p">,</span> <span class="s2">&quot;Preis&quot;</span><span class="p">])</span> <span class="c1"># Spalten Datum und Preis werden nicht mehr benötigt</span>
-            <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">Periode</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">dax_data</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="c1"># Periode der Investition (1 bis letzte Zeile)</span>
-                    <span class="n">Anlage1</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">dax_data</span><span class="p">[</span><span class="s2">&quot;Rendite&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span><span class="o">.</span><span class="n">cumprod</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1"># kum. Produkt der Renditen für Startdatum 5.1.1988</span>
-                    <span class="n">Anlage2</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">dax_data</span><span class="p">[</span><span class="s2">&quot;Rendite&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">cumprod</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="c1"># kum. Produkt der Renditen für Startdatum 6.1.1988</span>
-                    <span class="n">Anlage3</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">dax_data</span><span class="p">[</span><span class="s2">&quot;Rendite&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">))</span><span class="o">.</span><span class="n">cumprod</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># kum. Produkt der Renditen für Startdatum 7.1.1988</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">beispiel</span> <span class="o">=</span> <span class="p">(</span><span class="n">data_dax</span>
+            <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">Anlage1</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">data_dax</span><span class="p">[</span><span class="s2">&quot;Rendite&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span><span class="o">.</span><span class="n">cumprod</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1"># kum. Produkt der Renditen für Startdatum 5.1.1988</span>
+                    <span class="n">Anlage2</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">data_dax</span><span class="p">[</span><span class="s2">&quot;Rendite&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">cumprod</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="c1"># kum. Produkt der Renditen für Startdatum 6.1.1988</span>
+                    <span class="n">Anlage3</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">data_dax</span><span class="p">[</span><span class="s2">&quot;Rendite&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">))</span><span class="o">.</span><span class="n">cumprod</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># kum. Produkt der Renditen für Startdatum 7.1.1988</span>
             <span class="p">)</span>
 <span class="n">beispiel</span>
 </pre></div>
@@ -1094,7 +1238,7 @@ Hätten wir bspw. am Handelstag vor dem 6.1.1988 investiert, dann hätten wir na
   </thead>
   <tbody>
     <tr>
-      <th>3</th>
+      <th>0</th>
       <td>-0.048449</td>
       <td>1</td>
       <td>-0.048449</td>
@@ -1102,7 +1246,7 @@ Hätten wir bspw. am Handelstag vor dem 6.1.1988 investiert, dann hätten wir na
       <td>0.009949</td>
     </tr>
     <tr>
-      <th>4</th>
+      <th>1</th>
       <td>0.041412</td>
       <td>2</td>
       <td>-0.009043</td>
@@ -1110,7 +1254,7 @@ Hätten wir bspw. am Handelstag vor dem 6.1.1988 investiert, dann hätten wir na
       <td>0.018442</td>
     </tr>
     <tr>
-      <th>5</th>
+      <th>2</th>
       <td>0.009949</td>
       <td>3</td>
       <td>0.000816</td>
@@ -1118,7 +1262,7 @@ Hätten wir bspw. am Handelstag vor dem 6.1.1988 investiert, dann hätten wir na
       <td>0.030710</td>
     </tr>
     <tr>
-      <th>6</th>
+      <th>3</th>
       <td>0.008409</td>
       <td>4</td>
       <td>0.009232</td>
@@ -1126,7 +1270,7 @@ Hätten wir bspw. am Handelstag vor dem 6.1.1988 investiert, dann hätten wir na
       <td>-0.008614</td>
     </tr>
     <tr>
-      <th>7</th>
+      <th>4</th>
       <td>0.012046</td>
       <td>5</td>
       <td>0.021389</td>
@@ -1142,7 +1286,7 @@ Hätten wir bspw. am Handelstag vor dem 6.1.1988 investiert, dann hätten wir na
       <td>...</td>
     </tr>
     <tr>
-      <th>8901</th>
+      <th>8732</th>
       <td>-0.003271</td>
       <td>8733</td>
       <td>12.142113</td>
@@ -1150,7 +1294,7 @@ Hätten wir bspw. am Handelstag vor dem 6.1.1988 investiert, dann hätten wir na
       <td>12.217930</td>
     </tr>
     <tr>
-      <th>8902</th>
+      <th>8733</th>
       <td>-0.008583</td>
       <td>8734</td>
       <td>12.029308</td>
@@ -1158,7 +1302,7 @@ Hätten wir bspw. am Handelstag vor dem 6.1.1988 investiert, dann hätten wir na
       <td>12.334114</td>
     </tr>
     <tr>
-      <th>8903</th>
+      <th>8734</th>
       <td>0.005303</td>
       <td>8735</td>
       <td>12.098399</td>
@@ -1166,7 +1310,7 @@ Hätten wir bspw. am Handelstag vor dem 6.1.1988 investiert, dann hätten wir na
       <td>12.536844</td>
     </tr>
     <tr>
-      <th>8904</th>
+      <th>8735</th>
       <td>0.008790</td>
       <td>8736</td>
       <td>12.213532</td>
@@ -1174,7 +1318,7 @@ Hätten wir bspw. am Handelstag vor dem 6.1.1988 investiert, dann hätten wir na
       <td>NaN</td>
     </tr>
     <tr>
-      <th>8905</th>
+      <th>8736</th>
       <td>0.015204</td>
       <td>8737</td>
       <td>12.414429</td>
@@ -1192,8 +1336,8 @@ Hätten wir bspw. am Handelstag vor dem 6.1.1988 investiert, dann hätten wir na
 <p>Hier folgt der Code für</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calculate_anlagen</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">min_laufzeit</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;Funktion, um Renditen aller Anlagen zu berechnen</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calculate_cumreturns_hist</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">min_laufzeit</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;Funktion, um kumulierte Renditen aller Anlagen zu berechnen</span>
 <span class="sd">    </span>
 <span class="sd">    Input: </span>
 <span class="sd">    - data: Datensatz, mit Renditedaten</span>
@@ -1205,10 +1349,10 @@ Hätten wir bspw. am Handelstag vor dem 6.1.1988 investiert, dann hätten wir na
     <span class="c1">## Vorarbeiten</span>
     <span class="n">rows</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="c1"># Anzahl Zeilen im Datensatz</span>
     <span class="n">data_new</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> <span class="c1"># Erstelle Kopie des Datensatz, um bei Fehlern Daten nicht zu überschreiben</span>
-    
+
     <span class="c1">## Berechne Renditen aller Anlagen, die Kriterium min_laufzeit erfüllen</span>
     <span class="n">anlagen</span> <span class="o">=</span> <span class="p">{</span><span class="sa">f</span><span class="s2">&quot;Anlage_</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">:(</span><span class="n">data_new</span><span class="p">[</span><span class="s2">&quot;Rendite&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="o">-</span><span class="n">i</span><span class="p">))</span>
-                           <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">data_new</span><span class="p">)</span><span class="o">-</span><span class="n">min_laufzeit</span><span class="p">)}</span> <span class="c1"># Berechne Renditen alle Anlagen</span>
+                           <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">rows</span><span class="o">-</span><span class="n">min_laufzeit</span><span class="p">)}</span> <span class="c1"># Berechne Renditen alle Anlagen</span>
     <span class="n">anlagen</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">anlagen</span><span class="p">)</span> <span class="c1"># Speicher Anlagen in Dataframe</span>
     
     <span class="c1">## Berechne kumulierte Rendite</span>
@@ -1227,10 +1371,8 @@ Hätten wir bspw. am Handelstag vor dem 6.1.1988 investiert, dann hätten wir na
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">min_t</span> <span class="o">=</span> <span class="mi">1000</span>
-<span class="n">data_anlagen</span> <span class="o">=</span> <span class="p">(</span><span class="n">dax_data</span>
-                <span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Datum&quot;</span><span class="p">,</span> <span class="s2">&quot;Preis&quot;</span><span class="p">])</span> <span class="c1"># Spalten Datum und Preis werden nicht mehr benötigt</span>
-                <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">Periode</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">dax_data</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span> <span class="c1"># Periode der Investition (1 bis letzte Zeile)</span>
-                <span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">calculate_anlagen</span><span class="p">,</span> <span class="n">min_laufzeit</span><span class="o">=</span><span class="n">min_t</span><span class="p">)</span> <span class="c1"># Berechne Renditen aller Anlagen</span>
+<span class="n">data_anlagen</span> <span class="o">=</span> <span class="p">(</span><span class="n">data_dax</span>
+                <span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">calculate_cumreturns_hist</span><span class="p">,</span> <span class="n">min_laufzeit</span><span class="o">=</span><span class="n">min_t</span><span class="p">)</span> <span class="c1"># Berechne Renditen aller Anlagen</span>
                <span class="p">)</span>
 <span class="n">data_anlagen</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
@@ -1557,23 +1699,361 @@ Hätten wir bspw. am Handelstag vor dem 6.1.1988 investiert, dann hätten wir na
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/Umsetzung_Fallstudie_31_0.png" src="../../_images/Umsetzung_Fallstudie_31_0.png" />
+<img alt="../../_images/Umsetzung_Fallstudie_35_0.png" src="../../_images/Umsetzung_Fallstudie_35_0.png" />
 </div>
+</div>
+<p>Wir sehen bereits, dass ca. ab Periode 4.000 keine Anlage (unabhängig vom Startpunkt) noch einen Verlust - d.h. Rendite von unter 0% - gemacht hat. Bevor wir die Verlustwahrscheinlichkeit nun aber konkret, wie im vorherigen Kapitel erläutert, berechnen, wollen wir unseren Programmcode nochmals strukturieren und zusammenfassen. Unsere bisherige Aufbereitung der Daten umfasste im Wesentlichen auf drei Schritte:</p>
+<ol class="simple">
+<li><p>Herunterladen der Daten</p></li>
+<li><p>Berechnung der Renditen</p></li>
+<li><p>Berechnung der kumulierten Produkte der Renditen je Anlage</p></li>
+</ol>
+<p>Diese drei Schritte fassen wir nun in drei Funktionen zusammen. In Summe macht dies den Code besser lesbarer und schneller adaptierbar, falls weitere Analysen hinzukommen sollten.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">min_t</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="n">get_stock_data</span><span class="p">(</span><span class="n">ticker</span><span class="o">=</span><span class="s2">&quot;^GDAXI&quot;</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="s2">&quot;30-12-1987&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;31-07-2022&quot;</span><span class="p">)</span> <span class="c1"># Herunterladen der Daten</span>
+             <span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">calculate_returns</span><span class="p">)</span> <span class="c1"># Berechnung der Renditen</span>
+             <span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">calculate_cumreturns_hist</span><span class="p">,</span> <span class="n">min_t</span><span class="p">)</span> <span class="c1"># Berechnung der kumulierten Renditen je Anlagestartpunkt</span>
+             <span class="p">)</span>
+<span class="n">data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Rendite</th>
+      <th>Periode</th>
+      <th>Anlage_1</th>
+      <th>Anlage_2</th>
+      <th>Anlage_3</th>
+      <th>Anlage_4</th>
+      <th>Anlage_5</th>
+      <th>Anlage_6</th>
+      <th>Anlage_7</th>
+      <th>Anlage_8</th>
+      <th>...</th>
+      <th>Anlage_7728</th>
+      <th>Anlage_7729</th>
+      <th>Anlage_7730</th>
+      <th>Anlage_7731</th>
+      <th>Anlage_7732</th>
+      <th>Anlage_7733</th>
+      <th>Anlage_7734</th>
+      <th>Anlage_7735</th>
+      <th>Anlage_7736</th>
+      <th>Anlage_7737</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>-0.048449</td>
+      <td>1</td>
+      <td>-0.048449</td>
+      <td>0.041412</td>
+      <td>0.009949</td>
+      <td>0.008409</td>
+      <td>0.012046</td>
+      <td>-0.038152</td>
+      <td>-0.000638</td>
+      <td>-0.021401</td>
+      <td>...</td>
+      <td>0.005534</td>
+      <td>-0.001391</td>
+      <td>0.003967</td>
+      <td>-0.001158</td>
+      <td>0.003370</td>
+      <td>-0.019861</td>
+      <td>-0.005281</td>
+      <td>0.000011</td>
+      <td>-0.015848</td>
+      <td>0.006097</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.041412</td>
+      <td>2</td>
+      <td>-0.009043</td>
+      <td>0.051773</td>
+      <td>0.018442</td>
+      <td>0.020556</td>
+      <td>-0.026566</td>
+      <td>-0.038765</td>
+      <td>-0.022025</td>
+      <td>-0.012595</td>
+      <td>...</td>
+      <td>0.004135</td>
+      <td>0.002571</td>
+      <td>0.002804</td>
+      <td>0.002207</td>
+      <td>-0.016558</td>
+      <td>-0.025037</td>
+      <td>-0.005270</td>
+      <td>-0.015837</td>
+      <td>-0.009847</td>
+      <td>0.003909</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.009949</td>
+      <td>3</td>
+      <td>0.000816</td>
+      <td>0.060617</td>
+      <td>0.030710</td>
+      <td>-0.018380</td>
+      <td>-0.027187</td>
+      <td>-0.059336</td>
+      <td>-0.013225</td>
+      <td>-0.034887</td>
+      <td>...</td>
+      <td>0.008119</td>
+      <td>0.001409</td>
+      <td>0.006183</td>
+      <td>-0.017697</td>
+      <td>-0.021752</td>
+      <td>-0.025027</td>
+      <td>-0.021034</td>
+      <td>-0.009837</td>
+      <td>-0.012001</td>
+      <td>0.013836</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.008409</td>
+      <td>4</td>
+      <td>0.009232</td>
+      <td>0.073393</td>
+      <td>-0.008614</td>
+      <td>-0.019006</td>
+      <td>-0.048005</td>
+      <td>-0.050872</td>
+      <td>-0.035503</td>
+      <td>0.016456</td>
+      <td>...</td>
+      <td>0.006951</td>
+      <td>0.004784</td>
+      <td>-0.013800</td>
+      <td>-0.022885</td>
+      <td>-0.021741</td>
+      <td>-0.040478</td>
+      <td>-0.015066</td>
+      <td>-0.011991</td>
+      <td>-0.002231</td>
+      <td>0.018209</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.012046</td>
+      <td>5</td>
+      <td>0.021389</td>
+      <td>0.032442</td>
+      <td>-0.009246</td>
+      <td>-0.040000</td>
+      <td>-0.039439</td>
+      <td>-0.072300</td>
+      <td>0.015807</td>
+      <td>-0.006799</td>
+      <td>...</td>
+      <td>0.010344</td>
+      <td>-0.015172</td>
+      <td>-0.019008</td>
+      <td>-0.022874</td>
+      <td>-0.037245</td>
+      <td>-0.034627</td>
+      <td>-0.017208</td>
+      <td>-0.002220</td>
+      <td>0.002073</td>
+      <td>0.018309</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>8732</th>
+      <td>-0.003271</td>
+      <td>8733</td>
+      <td>12.142113</td>
+      <td>12.692699</td>
+      <td>12.217930</td>
+      <td>12.202762</td>
+      <td>12.291719</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>8733</th>
+      <td>-0.008583</td>
+      <td>8734</td>
+      <td>12.029308</td>
+      <td>12.765309</td>
+      <td>12.334114</td>
+      <td>12.403495</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>8734</th>
+      <td>0.005303</td>
+      <td>8735</td>
+      <td>12.098399</td>
+      <td>12.886304</td>
+      <td>12.536844</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>8735</th>
+      <td>0.008790</td>
+      <td>8736</td>
+      <td>12.213532</td>
+      <td>13.097429</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>8736</th>
+      <td>0.015204</td>
+      <td>8737</td>
+      <td>12.414429</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>8737 rows × 7739 columns</p>
+</div></div></div>
 </div>
 </div>
 </div>
 <div class="section" id="schritt-4-analyse-fur-ansatz-1">
 <h2>Schritt 4: Analyse für Ansatz 1<a class="headerlink" href="#schritt-4-analyse-fur-ansatz-1" title="Permalink to this headline">¶</a></h2>
-<p>Wir sehen bereits, dass ca. ab Periode 4.000 keine Anlage (unabhängig vom Startpunkt) noch einen Verlust - d.h. Rendite von unter 0% - gemacht hat.</p>
-<p>Lassen Sie uns diese Verlustwahrscheinlichkeit nun aber konkret, wie im vorherigen Kapitel erläutert, berechnen.</p>
-<p>Hierzu müssen wir für jeden Handelstag die Anzahl der Portfolien addieren, die eine Rendite von unter 0% gemacht haben und durch die Anzahl aller Portfolien teilen.</p>
+<p>Schlussendlich wollen wir bestimmen, wie wahrscheinlich ein Verlust nach X Perioden. Im vorherigen Kapitel haben wir uns Gedanken dazu gemacht, wie wir dies berechnen können. Hierzu müssen wir für jeden Handelstag die Anzahl der Anlagen addieren, die eine Rendite von unter 0% gemacht haben und durch die Anzahl aller Anlagen teilen.</p>
 <p>Im Programmcode ist dies sehr einfach abzubilden:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_anlagen</span> <span class="o">=</span> <span class="p">(</span><span class="n">data_anlagen</span>
-                <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">Verlustwahrscheinlichkeit</span><span class="o">=</span> <span class="p">(</span><span class="n">data_anlagen</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">like</span><span class="o">=</span><span class="s2">&quot;Anlage&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">data_anlagen</span><span class="p">))</span>
-<span class="p">)</span>
-<span class="n">data_anlagen</span><span class="p">[[</span><span class="s2">&quot;Periode&quot;</span><span class="p">,</span> <span class="s2">&quot;Verlustwahrscheinlichkeit&quot;</span><span class="p">]]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calculate_loss_probabilities</span><span class="p">(</span><span class="n">_data</span><span class="p">):</span>
+    <span class="n">data_new</span> <span class="o">=</span> <span class="p">(</span><span class="n">_data</span>
+            <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">Verlustwahrscheinlichkeit</span><span class="o">=</span><span class="k">lambda</span> <span class="n">_df</span><span class="p">:</span> <span class="p">(</span><span class="n">_df</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">like</span><span class="o">=</span><span class="s2">&quot;Anlage&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">_df</span><span class="p">))</span>
+            <span class="p">)</span>
+    <span class="k">return</span> <span class="n">data_new</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_final</span> <span class="o">=</span> <span class="n">calculate_loss_probabilities</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="n">data_final</span><span class="p">[[</span><span class="s2">&quot;Periode&quot;</span><span class="p">,</span> <span class="s2">&quot;Verlustwahrscheinlichkeit&quot;</span><span class="p">]]</span>
 </pre></div>
 </div>
 </div>
@@ -1670,62 +2150,111 @@ Hätten wir bspw. am Handelstag vor dem 6.1.1988 investiert, dann hätten wir na
           <span class="n">title</span><span class="o">=</span><span class="s2">&quot;historische Verlustwahrscheinlichkeit Anlage in DAX&quot;</span><span class="p">,</span>
           <span class="n">show_legend</span><span class="o">=</span><span class="kc">False</span><span class="p">);</span>
      <span class="n">day0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;Verlustwahrscheinlichkeit&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+     <span class="n">loss</span> <span class="o">=</span> <span class="mi">0</span>
+     <span class="k">if</span> <span class="n">day0</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+          <span class="n">day0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;Verlustwahrscheinlichkeit&quot;</span><span class="p">])</span>
+          <span class="n">loss</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;Verlustwahrscheinlichkeit&quot;</span><span class="p">])</span>
      <span class="n">day01</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;Verlustwahrscheinlichkeit&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="mf">0.1</span><span class="p">))</span>
-     <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Tag </span><span class="si">{</span><span class="n">day0</span><span class="si">}</span><span class="s2">: Verlustwahrscheinlichkeit = 0%&quot;</span><span class="p">,(</span><span class="n">day0</span><span class="p">,</span><span class="mf">0.01</span><span class="p">),</span> <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;left&quot;</span> <span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
-     <span class="n">ax</span><span class="o">.</span><span class="n">hlines</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">xmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">xmax</span><span class="o">=</span><span class="n">day01</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linestyles</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
-     <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Tag </span><span class="si">{</span><span class="n">day01</span><span class="si">}</span><span class="s2">: Verlustwahrscheinlichkeit = 10%&quot;</span><span class="p">,(</span><span class="n">day01</span><span class="p">,</span><span class="mf">0.10</span><span class="p">),</span> <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;left&quot;</span> <span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
-     <span class="k">return</span> <span class="kc">None</span>
+     <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Tag </span><span class="si">{</span><span class="n">day0</span><span class="si">}</span><span class="s2">: p = </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">loss</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">day0</span><span class="p">,</span><span class="n">loss</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="n">day0</span><span class="o">*</span><span class="mf">0.9</span><span class="p">,</span><span class="n">loss</span><span class="o">+</span><span class="mf">0.1</span><span class="p">),</span> <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;left&quot;</span> <span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span> <span class="s2">&quot;-|&gt;&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">))</span>
+     <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Tag </span><span class="si">{</span><span class="n">day01</span><span class="si">}</span><span class="s2">: p = 10%&quot;</span><span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">day01</span><span class="p">,</span><span class="mf">0.1</span><span class="p">),</span><span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="n">day01</span><span class="p">,</span><span class="mf">0.15</span><span class="p">),</span> <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;left&quot;</span> <span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span> <span class="s2">&quot;-|&gt;&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">))</span>
+     
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_verlustwahrscheinlichkeit</span><span class="p">(</span><span class="n">data_anlagen</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_verlustwahrscheinlichkeit</span><span class="p">(</span><span class="n">data_final</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/Umsetzung_Fallstudie_37_0.png" src="../../_images/Umsetzung_Fallstudie_37_0.png" />
-</div>
+<img alt="../../_images/Umsetzung_Fallstudie_44_0.png" src="../../_images/Umsetzung_Fallstudie_44_0.png" />
 </div>
 </div>
 <div class="section" id="fazit-ansatz-1">
-<h2>Fazit: Ansatz 1<a class="headerlink" href="#fazit-ansatz-1" title="Permalink to this headline">¶</a></h2>
+<h3>Fazit: Ansatz 1<a class="headerlink" href="#fazit-ansatz-1" title="Permalink to this headline">¶</a></h3>
 <p>Mit unserer empirischen Analyse konnten wir die Ausgangsfrage beantworten. Die Verlustwahrscheinlichkeit bei Investition in den DAX ist real. Allerdings beschränkt sich dies historische auf einen kurzen Anlagehorizont. So gab es auf Basis der historischen Daten keinen Zeitpunkt einer Anlage, bei der man nach mehr als 3.444 Tagen (ca. 17 Jahre) noch einen Verlust gemacht hätte. Selbst bei der Hälfte der Anlagedauer, d.h. nach ca. 9 Jahren, betrug die Verlustwahrscheinlichkeit nur noch 10%.</p>
 <p>Hat man einen langfristigen Investitionsansatz, so ist das Risiko einer Investition in den DAX deutlich geringer, als dies oft aus dem Bauch heraus angenommen wird.</p>
-<div class="margin sidebar">
-<p class="sidebar-title"></p>
 <div class="warning dropdown admonition">
 <p class="admonition-title">Analyse basiert auf Annahmen!</p>
 <p>Wichtig ist an dieser Stelle jedoch zu betonen, dass die Analyse auf vielen Annahmen beruht. Einige davon können wir ändern, um zu schauen, wie sensitiv die Analyse auf diese Annahme reagiert (z.B. könnten wir auch den Tagestiefstpreis nehmen). Andere müssen wir aus Mangel an Alternativen so treffen, können jedoch  kritisch sein (z.B. basiert unsere Analyse auf Yahoo-Daten, die ggf. Fehler beinhaltet). Andere Annahmen sind grundsätzlicher Natur: wir basieren unsere Analyse auf historischen Daten und ziehen daraus Schlüsse für die Zukunft. Dies setzt voraus, dass die Kursentwicklungen in der Zukunft ähnlich sind, wie in der Vergangenheit. Jedoch kann die Zukunft auch ganz andere Entwicklungen beinhaltet, die wir so nicht vorhersehen (z.B. könnte die wirtschaftliche und politische Stellung Deutschlands sich in der Zukunft negativ entwickeln)</p>
 </div>
-</div>
-<p>Untenstehend die Analyse zusammengefasst in einem Schritt:</p>
+<p>Wir haben feststellen können, dass es für die Analyse nicht viel Programmieraufwand bedarf.</p>
+<p>Hier ist die Zusammenfassung unserer Analyse:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">min_t</span> <span class="o">=</span> <span class="mi">1000</span>
-<span class="n">price</span> <span class="o">=</span> <span class="s2">&quot;Adj Close&quot;</span>
-<span class="n">dax_data</span> <span class="o">=</span> <span class="n">get_stock_data</span><span class="p">(</span><span class="n">ticker</span><span class="o">=</span><span class="s2">&quot;^GDAXI&quot;</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="s2">&quot;30-12-1987&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;31-07-2022&quot;</span><span class="p">)</span>
-<span class="p">(</span><span class="n">dax_data</span>
-    <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">items</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">,</span> <span class="n">price</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># Filtern der benötigten Spalten</span>
-    <span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s2">&quot;Date&quot;</span><span class="p">:</span> <span class="s2">&quot;Datum&quot;</span><span class="p">,</span> <span class="n">price</span><span class="p">:</span> <span class="s2">&quot;Preis&quot;</span><span class="p">},</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># Umbenennen der Spaltennamen</span>
-    <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">Rendite</span><span class="o">=</span><span class="n">dax_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">pct_change</span><span class="p">())</span> <span class="c1"># Erstelle neue Spalte &quot;Rendite&quot;</span>
-    <span class="o">.</span><span class="n">dropna</span><span class="p">()</span> <span class="c1"># Entferne NaN-Spalten, da für ersten Kurs kein Vorkurs existiert</span>
-    <span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Datum&quot;</span><span class="p">,</span> <span class="s2">&quot;Preis&quot;</span><span class="p">])</span> <span class="c1"># Spalten Datum und Preis werden nicht mehr benötigt</span>
-    <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">Periode</span><span class="o">=</span><span class="k">lambda</span> <span class="n">_df</span><span class="p">:</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">_df</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span> <span class="c1"># Periode der Investition (1 bis letzte Zeile)</span>
-    <span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">calculate_anlagen</span><span class="p">,</span> <span class="n">min_laufzeit</span><span class="o">=</span><span class="n">min_t</span><span class="p">)</span> <span class="c1"># Berechne Renditen aller Anlagen</span>
-    <span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># Erstelle den Index des Dataframes neu (weil, NaN-Zeilen gelöscht wurden)</span>
-    <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">Verlustwahrscheinlichkeit</span><span class="o">=</span><span class="k">lambda</span> <span class="n">_df</span><span class="p">:</span> <span class="p">(</span><span class="n">_df</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">like</span><span class="o">=</span><span class="s2">&quot;Anlage&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">_df</span><span class="p">))</span> <span class="c1"># Berechne Verlustwahrscheinlichkeit</span>
-    <span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">plot_verlustwahrscheinlichkeit</span><span class="p">)</span> <span class="c1"># Erstelle Plot</span>
-    <span class="p">);</span>
+<span class="p">(</span><span class="n">get_stock_data</span><span class="p">(</span><span class="n">ticker</span><span class="o">=</span><span class="s2">&quot;^GDAXI&quot;</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="s2">&quot;30-12-1987&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;31-07-2022&quot;</span><span class="p">)</span> <span class="c1"># Herunterladen der Daten</span>
+    <span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">calculate_returns</span><span class="p">)</span> <span class="c1"># Berechnung der Renditen</span>
+    <span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">calculate_cumreturns_hist</span><span class="p">,</span> <span class="n">min_t</span><span class="p">)</span> <span class="c1"># Berechnung der kumulierten Renditen je Anlagestartpunkt</span>
+    <span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">calculate_loss_probabilities</span><span class="p">)</span> <span class="c1"># Berechnung der Verlustwahrscheinlichkeit</span>
+    <span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">plot_verlustwahrscheinlichkeit</span><span class="p">)</span> <span class="c1"># Visualisierung der Analyse</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/Umsetzung_Fallstudie_41_0.png" src="../../_images/Umsetzung_Fallstudie_41_0.png" />
+<img alt="../../_images/Umsetzung_Fallstudie_48_0.png" src="../../_images/Umsetzung_Fallstudie_48_0.png" />
 </div>
 </div>
+<p>Im weiteren Verlaufe werden wir uns anschauen, wie wir den Programmcode noch verbessern und lesbarer machen können.</p>
+</div>
+</div>
+<div class="section" id="schritt-4-historischer-zufall">
+<h2>Schritt 4: Historischer Zufall<a class="headerlink" href="#schritt-4-historischer-zufall" title="Permalink to this headline">¶</a></h2>
+<p>Im vorherigen Kapitel haben wir uns zwei Varianten überlegt, wie wir die Ausgangsfrage beantworten können. Schauen wir uns nun an, wie wir die Frage mittels einer Zufallsauswahl der historischen Renditen beantworten können. Viele Veränderung benötigen wir hierfür nicht. Schauen wir uns den vorherigen Programmiercode an, so stellen wir fest, dass nur die Funktion <code class="docutils literal notranslate"><span class="pre">calculate_cumreturns_anlagen</span></code> verändert werden muss bzw. wir hierfür eine andere Funktion schreiben.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">min_t</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="p">(</span><span class="n">get_stock_data</span><span class="p">(</span><span class="n">ticker</span><span class="o">=</span><span class="s2">&quot;^GDAXI&quot;</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="s2">&quot;30-12-1987&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;31-07-2022&quot;</span><span class="p">)</span> <span class="c1"># Bleibt unverändert</span>
+    <span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">calculate_returns</span><span class="p">)</span> <span class="c1"># Bleibt unverändert</span>
+    <span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">calculate_cumreturns_hist</span><span class="p">,</span> <span class="n">min_t</span><span class="p">)</span> <span class="c1"># Muss ersetzt werden durch neue Funktion</span>
+    <span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">calculate_loss_probabilities</span><span class="p">)</span> <span class="c1"># Bleibt unverändert</span>
+    <span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">plot_verlustwahrscheinlichkeit</span><span class="p">)</span> <span class="c1"># Bleibt unverändert</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calculate_cumrets_random</span><span class="p">(</span><span class="n">_df</span><span class="p">,</span> <span class="n">n_anlagen</span><span class="p">,</span> <span class="n">n_time</span><span class="p">):</span>
+    <span class="c1"># Ziehe zufällig (n_time x n_anlagen) Renditen aus Spalte &quot;Rendite&quot;</span>
+    <span class="n">rnd_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">_df</span><span class="p">[</span><span class="s2">&quot;Rendite&quot;</span><span class="p">],</span> <span class="p">(</span><span class="n">n_time</span><span class="p">,</span> <span class="n">n_anlagen</span><span class="p">),</span> <span class="n">replace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    
+    <span class="c1"># Speicher Daten in Dataframe</span>
+    <span class="n">anlagen</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">rnd_data</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;Anlage_</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n_anlagen</span><span class="o">+</span><span class="mi">1</span><span class="p">)])</span>
+    
+    <span class="c1">## Berechne kumulierte Rendite</span>
+    <span class="n">anlagen</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">anlagen</span><span class="p">)</span><span class="o">.</span><span class="n">cumprod</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span>
+
+    <span class="c1">## Verbinde ursprüngliche Daten mit neuen Anlagen-Daten</span>
+    <span class="n">data_combined</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">((</span><span class="n">_df</span><span class="p">,</span> <span class="n">anlagen</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> 
+    
+    <span class="c1">## Gib Daten aus</span>
+    <span class="k">return</span> <span class="n">data_combined</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">get_stock_data</span><span class="p">(</span><span class="n">ticker</span><span class="o">=</span><span class="s2">&quot;^GDAXI&quot;</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="s2">&quot;30-12-1987&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;31-07-2022&quot;</span><span class="p">)</span> <span class="c1"># Bleibt unverändert</span>
+ <span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">calculate_returns</span><span class="p">)</span> <span class="c1"># Unverändert</span>
+ <span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">calculate_cumrets_random</span><span class="p">,</span> <span class="n">n_anlagen</span><span class="o">=</span><span class="mi">5000</span><span class="p">,</span> <span class="n">n_time</span><span class="o">=</span><span class="mi">10_000</span><span class="p">)</span> <span class="c1"># Berechne kumulierte Renditen auf Basis von Zufallsauswahl </span>
+ <span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">calculate_loss_probabilities</span><span class="p">)</span> <span class="c1"># Unverändert</span>
+ <span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">plot_verlustwahrscheinlichkeit</span><span class="p">)</span> <span class="c1"># Unverändert</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/Umsetzung_Fallstudie_52_0.png" src="../../_images/Umsetzung_Fallstudie_52_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="gesamtfazit">
+<h2>Gesamtfazit<a class="headerlink" href="#gesamtfazit" title="Permalink to this headline">¶</a></h2>
+<p>Wie bereits erläutert sollte Ihnen diese Fallstudie einen Eindruck davon vermitteln, was Business Analytics umfasst. Wir haben gesehen, dass ein großer Teil dessen, was wir gemacht haben unabhängig war von operativer Datenanalyse. Zunächst mussten wir die konkrete Frage formulieren und uns detaillierte Gedanken dazu machen, wie wir diese Frage beantworten könnten. Erst im zweiten Schritt haben wir uns dann an die eigentliche Datenanalyse gemacht. Dies zeigt, dass die Nutzung von Tools oder einer Programmiersprache nur Mittel zum Zweck ist. Wir nutzen ein Werkzeug, um ein analytisches Problem zu lösen.</p>
+<p>In unserem Falle haben wir <strong>Python</strong> genutzt. Auch wenn vieles von dem, was hier dargestellt wurde neu und noch nicht zu 100% nachvollziehbar ist, sollte diese Fallstudie dennoch einen Eindruck davon vermitteln, wie Datenanalyse in der Praxis aussieht und welche Schritte dafür nötig sind.</p>
+<p>Widmen wir uns nun Python und schauen uns in den nächsten Kapiteln an, wie Python konkret funktioniert.</p>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
@@ -1773,10 +2302,10 @@ Hätten wir bspw. am Handelstag vor dem 6.1.1988 investiert, dann hätten wir na
             <p class="prev-next-title">Wie riskant sind Aktien?</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../chapter_02/Voraussetzungen.html" title="next page">
+    <a class='right-next' id="next-link" href="../chapter_02/Intro_JupyterNotebooks.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Technische Voraussetzungen</p>
+        <p class="prev-next-title">Einführung in Jupyter Notebooks</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

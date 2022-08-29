@@ -1,0 +1,910 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module nutzen</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/UtilityCode/__pycache__/myfile.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Deskriptive Statistik" href="../chapter_analytics/S02a_Descriptive_Statistics.html" />
+    <link rel="prev" title="Einführung in Python" href="Intro_Python.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/datascience.png" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Dieses Buch durchsuchen ..." aria-label="Dieses Buch durchsuchen ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Vorwort.html">
+   Vorwort
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  01 Einleitung
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_01/Einleitung.html">
+   Einleitung
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter_01/Fallstudie.html">
+   Fallstudie
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter_01/Introduction_Fallstudie.html">
+     Wie riskant sind Aktien?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter_01/Umsetzung_Fallstudie.html">
+     Umsetzung in Python
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  02 Python Part 1
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Intro_JupyterNotebooks.html">
+   Einführung in Jupyter Notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Intro_Python.html">
+   Einführung in Python
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Module nutzen
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  99 Analytics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S02a_Descriptive_Statistics.html">
+   Deskriptive Statistik
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S03a_Simulation.html">
+   Simulationen mit Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S03c_Probability_Distributions.html">
+   Wahrscheinlichkeitsverteilungen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S04a_Estimation%26HyptothesisTesting.html">
+   Testen von Hypothesen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S05a_Regression.html">
+   Lineare Regression
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S06a_TidyData.html">
+   Tidy Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S07a_Classification.html">
+   Klassifikation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S08a_Clustering.html">
+   Clusteranalyse
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S09a_Cross_validation.html">
+   Cross Validation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S11_DecisionTrees.html">
+   Entscheidungsbäume
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S12_Ensembles.html">
+   Ensemble-Methoden
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Anhang
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../literatur.html">
+   Literatur
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Navigation umschalten" aria-controls="site-navigation"
+                title="Navigation umschalten" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Laden Sie diese Seite herunter"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/chapters/chapter_02/Intro_Modules.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Quelldatei herunterladen" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="In PDF drucken"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Vollbildmodus"
+        title="Vollbildmodus"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/fredzett/Skript-Business-Analytics/master?urlpath=tree/chapters/chapter_02/Intro_Modules.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Starten Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/fredzett/Skript-Business-Analytics/blob/master/chapters/chapter_02/Intro_Modules.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Starten Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Inhalt
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-importieren">
+   Module importieren
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#importieren-des-gesamten-moduls">
+     Importieren des gesamten Moduls
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#importieren-einzelner-funktionen-oder-klassen-eines-moduls">
+     Importieren einzelner Funktionen oder Klassen eines Moduls
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#importieren-und-umbenennen-des-moduls">
+     Importieren und umbenennen des Moduls
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wichtige-module-fur-die-datenanalyse">
+   Wichtige Module für die Datenanalyse
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#numpy">
+     Numpy
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pandas">
+     Pandas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#matplotlib">
+     Matplotlib
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fazit">
+   Fazit
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Module nutzen</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Inhalt </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-importieren">
+   Module importieren
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#importieren-des-gesamten-moduls">
+     Importieren des gesamten Moduls
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#importieren-einzelner-funktionen-oder-klassen-eines-moduls">
+     Importieren einzelner Funktionen oder Klassen eines Moduls
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#importieren-und-umbenennen-des-moduls">
+     Importieren und umbenennen des Moduls
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wichtige-module-fur-die-datenanalyse">
+   Wichtige Module für die Datenanalyse
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#numpy">
+     Numpy
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pandas">
+     Pandas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#matplotlib">
+     Matplotlib
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fazit">
+   Fazit
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="module-nutzen">
+<h1>Module nutzen<a class="headerlink" href="#module-nutzen" title="Permalink to this headline">¶</a></h1>
+<p>Bislang haben wir einige Grundlagen in Python kennengelernt. Wie wissen, was Listen sind, wie eigene Funktionen geschrieben werden etc.</p>
+<p>Grundsätzlich könnten wir also mit der Datenanalyse anfangen. Jedoch müssten wir jegliche Funktionalität (z.B. CSV-Dateien einlesen, Graphen plotten etc.) selber von Grund auf programmieren.</p>
+<p>Dies ist aber natürlich nicht notwendig, da Python sich eine großen Community erfreut und viele der <strong>benötigten Funktionalitäten bereits von anderen programmiert</strong> wurden. Um diese Funktionalitäten nutzen zu können (Hinweis: Python ist Open Source, d.h. der Source Code ist grundsätzlich frei zugänglich) müssen wir spezifische Module importieren.</p>
+<div class="section" id="module-importieren">
+<h2>Module importieren<a class="headerlink" href="#module-importieren" title="Permalink to this headline">¶</a></h2>
+<p>Dies ist in Python ziemlich einfach und wird durch den <code class="docutils literal notranslate"><span class="pre">import</span></code> Befehl erreicht.</p>
+<p><strong>Ein anschauliches Beispiel:</strong> wir möchten den Sinus der Zahl 0.5 berechnen, jedoch ist diese Funktion bei den 70 buildin Funktionen nicht enthalten. Wir können also ganz einfach das Modul <code class="docutils literal notranslate"><span class="pre">math</span></code> importieren und aus diesem Modul die Funktion <code class="docutils literal notranslate"><span class="pre">sin</span></code> nutzen.</p>
+<div class="section" id="importieren-des-gesamten-moduls">
+<h3>Importieren des gesamten Moduls<a class="headerlink" href="#importieren-des-gesamten-moduls" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="importieren-einzelner-funktionen-oder-klassen-eines-moduls">
+<h3>Importieren einzelner Funktionen oder Klassen eines Moduls<a class="headerlink" href="#importieren-einzelner-funktionen-oder-klassen-eines-moduls" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sin</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="importieren-und-umbenennen-des-moduls">
+<h3>Importieren und umbenennen des Moduls<a class="headerlink" href="#importieren-und-umbenennen-des-moduls" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span> <span class="k">as</span> <span class="nn">m</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Anmerkung: für viele Module hat sich ein de facto Standard für die Umbenennung herausgebilded.</p>
+<p>So werden die für uns so wichtigen Module <code class="docutils literal notranslate"><span class="pre">pandas</span></code>, <code class="docutils literal notranslate"><span class="pre">numpy</span></code> und <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> von den meisten Python-Programmieren wiefolgt importiert:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="wichtige-module-fur-die-datenanalyse">
+<h2>Wichtige Module für die Datenanalyse<a class="headerlink" href="#wichtige-module-fur-die-datenanalyse" title="Permalink to this headline">¶</a></h2>
+<p>Python hat tausende von Modulen. Für nahezu jedes Problem gibt es bereits eine Lösung. Dies gilt natürlich auch für die Datenanalyse.</p>
+<div class="section" id="numpy">
+<h3><a class="reference external" href="http://www.numpy.org/">Numpy</a><a class="headerlink" href="#numpy" title="Permalink to this headline">¶</a></h3>
+<p>Numpy ist eines der wichtigsten Module in Python. Es ermöglicht schnelle (weil meist vektorisierte) Berechnungen mit Vektoren und Matrizen. Dies ist sehr hilfreich, selbst wenn man sich nicht mit Linearer Algebra beschäftigen muss oder möchte. Jede Tabelle mit Daten kann als Matrix angesehen werden (man stelle sich bspw. eine Exceltabelle vor).</p>
+<p>Es gibt unzählige Tutorials und Supportseiten für die Bibliothek numpy. Zwei sehr gute Tutorials finden Sie hier:</p>
+<ul class="simple">
+<li><p>kurze Einführung auf deutsch: <a class="reference external" href="https://www.grund-wissen.de/informatik/python/scipy/numpy.html">Link</a></p></li>
+<li><p>ausführliches Tutorial auf englisch: <a class="reference external" href="https://stackabuse.com/numpy-tutorial-a-simple-example-based-guide/">Link</a></p></li>
+</ul>
+<p>Im folgenden seien die Vorteiel von <code class="docutils literal notranslate"><span class="pre">numpy</span></code> und einer vektorisierten Form der Berechnung gegenüber einer Berechnung mit For-Schleifen dargestellt.</p>
+<p><strong>Aufgabe:</strong> addiere die Elemente zweier (gleich großer) Vektoren.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vector1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">vector2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
+
+<span class="n">vector1</span> <span class="o">+</span> <span class="n">vector2</span> <span class="c1"># das ist nicht was wir wollen. </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3, 4, 5, 6, 7, 8]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">vector1</span><span class="p">,</span><span class="n">vector2</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[6, 8, 10, 12]
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Elementweise Addition mit For-Schleife</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">neuer_vector</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">vector1</span><span class="p">,</span><span class="n">vector2</span><span class="p">):</span>
+    <span class="n">neuer_vector</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">)</span>
+<span class="n">neuer_vector</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Besser: mit List Comprehension</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">x</span><span class="o">+</span><span class="n">y</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">vector1</span><span class="p">,</span><span class="n">vector2</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Noch besser: mit Numpy</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arr1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">vector1</span><span class="p">)</span>
+<span class="n">arr2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">vector2</span><span class="p">)</span>
+
+<span class="n">arr1</span> <span class="o">+</span> <span class="n">arr2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 6,  8, 10, 12])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Die Variante via Numpy ist nicht nur syntaktisch bedeutend einfacher, sondern bei großen Datenmengen auch um ein Vielfaches schneller. Mit Numpy können so ohne Probleme Millionen von Werten errechnet, transformiert etc. werden.</p>
+</div>
+<div class="section" id="pandas">
+<h3><a class="reference external" href="https://pandas.pydata.org/">Pandas</a><a class="headerlink" href="#pandas" title="Permalink to this headline">¶</a></h3>
+<p>Pandas baut auf numpy auf, d.h. nutzt die Funktionalität von numpy und dient insbesondere der Datenanalyse. Mithilfe von Pandas können z.B. Exceldateien sehr einfach eingelesen, angezeigt und manipuliert werden.</p>
+<p>Sehr gute Tutorials zu Pandas finden Sie z.B hier:</p>
+<ul class="simple">
+<li><p>ein einführendes deutsches Tutorial: <a class="reference external" href="https://www.statworx.com/de/blog/data-science-in-python-pandas-teil-3/">Link</a></p></li>
+<li><p>ein sehr ausführliches englisches Tutorial: <a class="reference external" href="https://bitbucket.org/hrojas/learn-pandas">Link</a></p></li>
+</ul>
+<p>Hier ein kurzes Beispiel: Einlesen einer Excel-Datei und Berechnung des durchschnittlichen Umsatzes je Region</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Nutzen Sie diese Zelle in GoogleColab</span>
+<span class="c1">#!wget -O &quot;MyData.xlsx&quot; &quot;https://www.dropbox.com/s/csjk3w6hraitb86/MyData.xlsx?dl=0&quot;</span>
+<span class="c1">#fpath = &quot;MyData.xlsx&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Nutzen Sie diese Zelle in MyBinder </span>
+<span class="n">fpath</span> <span class="o">=</span> <span class="s2">&quot;data/MyData.xlsx&quot;</span>    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>pd.read_csv<span class="o">??</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">fpath</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span> <span class="c1"># Ersten 5 Zeilen des Datensatzes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Datum</th>
+      <th>Region</th>
+      <th>Umsatz</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2018-12-31</td>
+      <td>A</td>
+      <td>704.918727</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2019-01-01</td>
+      <td>B</td>
+      <td>533.373392</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2019-01-02</td>
+      <td>C</td>
+      <td>979.392207</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2019-01-03</td>
+      <td>A</td>
+      <td>12.770177</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2019-01-04</td>
+      <td>D</td>
+      <td>338.737756</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span> <span class="c1"># Letzten 5 Zeilen des Datensatzes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Datum</th>
+      <th>Region</th>
+      <th>Umsatz</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>255</th>
+      <td>2019-09-12</td>
+      <td>A</td>
+      <td>112.755191</td>
+    </tr>
+    <tr>
+      <th>256</th>
+      <td>2019-09-13</td>
+      <td>D</td>
+      <td>195.626379</td>
+    </tr>
+    <tr>
+      <th>257</th>
+      <td>2019-09-14</td>
+      <td>A</td>
+      <td>80.226625</td>
+    </tr>
+    <tr>
+      <th>258</th>
+      <td>2019-09-15</td>
+      <td>A</td>
+      <td>612.953476</td>
+    </tr>
+    <tr>
+      <th>259</th>
+      <td>2019-09-16</td>
+      <td>B</td>
+      <td>832.691966</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">shape</span> <span class="c1"># Datensatz hat 260 Zeilen und 3 Spalten</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Durchschnittlicher Umsatz je Region</span>
+<span class="n">mean_per_region</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Region&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s2">&quot;Umsatz&quot;</span><span class="p">:[</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">]})</span>
+<span class="n">mean_per_region</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="matplotlib">
+<h3>Matplotlib<a class="headerlink" href="#matplotlib" title="Permalink to this headline">¶</a></h3>
+<p>Der große Vorteil von Jupyter Notebooks und einer der Hauptgründe für den großen Erfolg ist die Möglichkeit neben Text und ausführbarem Code auch Graphiken darzustellen. Um dies zu tun benötigen Sie natürlich ein Modul zum Erstellen von Charts (es sei denn, Sie wollen diese Funktionalität von Grund auf selber implementieren).</p>
+<p>Es gibt unzählige Visualisierungs-Module. Das wohl beliebteste und in Summe vielseitigste ist <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>.</p>
+<p>Für eine gute Einführung in Matplotlib ist die offizielle Dokumentation recht hilfreich (<a class="reference external" href="https://matplotlib.org/users/index.html">hier</a>).</p>
+<p>Andere gute Bibliotheken, auf die an dieser Stelle nicht weiter eingegangen werden soll, sind z.B.:</p>
+<ul class="simple">
+<li><p>die deklarative Visualisierungsbibliothek <a class="reference external" href="https://altair-viz.github.io/">Altair</a></p></li>
+<li><p>die webfähige Bibliothek <a class="reference external" href="https://plot.ly/python/">Plotly</a> bzw. die darauf aufbauende Bibliothek zur Erstellung von Dashboards <a class="reference external" href="https://dash.plot.ly/">Dash</a></p></li>
+</ul>
+<p>Matplotlib ermöglicht es nahezu jedes Detail eines Charts selber zu definieren. Das wirkt zu Anfang etwas umständlich, hat aber große Vorteile, weil man nicht - wie z.B. in Excel - beschränkt ist in dem, was man darstellen möchte.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> <span class="c1"># Importieren der Bibliothek</span>
+<span class="c1"># Ermöglicht die Darstellung im Jupyter Notebook direkt </span>
+<span class="o">%</span><span class="k">matplotlib</span> inline  
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s2">&quot;seaborn&quot;</span><span class="p">)</span> <span class="c1"># unter plt.style.available können sie sich eine Liste der verfügbaren Styles ausgeben lassen. Es ist aber auch möglich eigene Styles zu definieren</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mean_per_region</span><span class="p">))</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">mean_per_region</span><span class="p">[</span><span class="s2">&quot;Umsatz&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">mean_per_region</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">align</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Umsatz per Region&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Da <code class="docutils literal notranslate"><span class="pre">Pandas</span></code> und <code class="docutils literal notranslate"><span class="pre">Matplotlib</span></code> zusammenarbeiten kann man in diesem Fall jedoch den Plot auch sehr viel einfacher erstellen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mean_per_region</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Umsatz per Region&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="fazit">
+<h2>Fazit<a class="headerlink" href="#fazit" title="Permalink to this headline">¶</a></h2>
+<p>In Summe sollte diese Zusammenstellung zwei Dinge zeigen:</p>
+<ol class="simple">
+<li><p>Durch den Import von Modulen kann Python um speziell benötigte Funktionalitäten erweitert werden</p></li>
+<li><p>Die Bibliotheken Numpy, Pandas und Matplotlib sind drei der grundlegenden Bibliotheken zur Datenanalyse in Python</p></li>
+</ol>
+<p>Natürlich gibt es noch unzählige weitere Bibliothken, die für die Datenanalyse wichtig sind. Mit den o.g. Bibliotheken kann man jedoch schon sehr viel erreichen.</p>
+<p><span class="xref myst"><center>&lt;&lt; zurück zu Einführung Python</center></span><span class="xref myst"><center>weiter zur Datenanalyse &gt;&gt;</center></span></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters/chapter_02"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Intro_Python.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Einführung in Python</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../chapter_analytics/S02a_Descriptive_Statistics.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Deskriptive Statistik</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      Durch Felix Zeidler<br/>
+    
+        &copy; Urheberrechte © 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

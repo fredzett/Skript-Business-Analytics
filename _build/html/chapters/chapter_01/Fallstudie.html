@@ -43,8 +43,6 @@
     <script src="../../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -138,18 +136,18 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_02/Voraussetzungen.html">
-   Technische Voraussetzungen
+  <a class="reference internal" href="../chapter_02/Intro_JupyterNotebooks.html">
+   Einführung in Jupyter Notebooks
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_02/S01b_Intro_Python.html">
+  <a class="reference internal" href="../chapter_02/Intro_Python.html">
    Einführung in Python
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_02/S01a_Intro_JN.html">
-   Einführung in Jupyter Notebooks
+  <a class="reference internal" href="../chapter_02/Intro_Modules.html">
+   Module nutzen
   </a>
  </li>
 </ul>
@@ -160,8 +158,58 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S02a_Descriptive_Statistics.html">
+   Deskriptive Statistik
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S03a_Simulation.html">
+   Simulationen mit Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S03c_Probability_Distributions.html">
+   Wahrscheinlichkeitsverteilungen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S04a_Estimation%26HyptothesisTesting.html">
+   Testen von Hypothesen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S05a_Regression.html">
+   Lineare Regression
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S06a_TidyData.html">
+   Tidy Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S07a_Classification.html">
+   Klassifikation
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../chapter_analytics/S08a_Clustering.html">
    Clusteranalyse
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S09a_Cross_validation.html">
+   Cross Validation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S11_DecisionTrees.html">
+   Entscheidungsbäume
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S12_Ensembles.html">
+   Ensemble-Methoden
   </a>
  </li>
 </ul>
@@ -271,67 +319,6 @@
 <p>In dieser Fallstudie werden Dinge vorgegriffen, die Sie noch nicht gelernt haben. Ziel der Fallstudie ist es ausdrücklich nicht, dass Sie jede Code-Zeile nachvollziehen können. Vielmehr sollen Sie einen Eindruck davon vermittelt bekommen, was Sie in diesem Kurs erwartet bzw. was Sie - vorausgesetzt Sie arbeiten kontinuierlich mit - am Ende in der Lage sind selber umzusetzen.</p>
 <p>Als <strong>Analogie</strong> können Sie sich vorstellen, dass wir einem kleinen Kind beibringen wollen, wie man Fußball spielt. Sie würden nie auf die Idee kommen, dem kleinen Kind als erstes die korrekte Fußstellung beim Freistoß oder gar die Abseitsregel zu erläutern. Stattdessen würden Sie dem Kind ein Fußballspiel im Fernsehen zeigen und danach einen Ball geben. Sie würden also zunächst das große Ganze zeigen - ohne, dass das Kind alle Details bereits versteht - und es so neugierig auf das Spiel machen. Die Details und Feinheiten folgen dann Schritt für Schritt.</p>
 <p>Gehen Sie diese Fallstudie also nicht mit dem Anspruch durch, alles bereits verstehen und selber umsetzen zu müssen. Vielmehr sollten Sie die übergeordnete Fragestellung durchdenken, um dann zu erleben, wie diese Fragestellung mittels Python beantwortet wird. Dies wird Sie hoffentlich für das große Ganze begeistern und so das Fundament für alles weitere legen.</p>
-</div>
-<p>Es folgt: eine Fallstudie</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Dies ist ein Hinweis</p>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Der folgende Code funktioniert meist:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randing</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Er produziert zufällige Zahlen (insgesamt 100) zwischen 1 und 10.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Dies ist eine Warnung!</p>
-</div>
-<div class="admonition-wichtiger-hinweis admonition">
-<p class="admonition-title">Wichtiger Hinweis</p>
-<p>Dies ist ein Hinweis!</p>
-</div>
-<div class="warning admonition">
-<p class="admonition-title">Wichtige Warnung</p>
-<p>Dies ist eine Warnung!</p>
-</div>
-<blockquote class="epigraph">
-<div><p>Here is a cool quotation.</p>
-<p class="attribution">—Jo the Jovyan</p>
-</div></blockquote>
-<p>Hier folgt ein neuer Textabschnitt.</p>
-<p>Viele wichtige Inhalte werden hier demnächst stehen…</p>
-<div class="sidebar">
-<p class="sidebar-title">Merke!</p>
-<p>My sidebar content</p>
-</div>
-<p>Hier folgt ein neuer Textabschnitt.</p>
-<p>Viele wichtige Inhalte werden hier demnächst stehen…
-Hier folgt ein neuer Textabschnitt.</p>
-<p>Viele wichtige Inhalte werden hier demnächst stehen…
-Hier folgt ein neuer Textabschnitt.</p>
-<p>Viele wichtige Inhalte werden hier demnächst stehen…</p>
-<div class="margin sidebar">
-<p class="sidebar-title">Hinweis</p>
-<p>Man könnte die Formel auch anders darstellen:</p>
-<div class="math notranslate nohighlight">
-\[
-\sum_{i=0}^N \frac{CF_i}{(1+r)^i}
-\]</div>
-</div>
-<p>Hier folgt ein neuer Textabschnitt.</p>
-<p>Viele wichtige Inhalte werden hier demnächst stehen…
-Hier folgt ein neuer Textabschnitt.</p>
-<p>Viele wichtige Inhalte werden hier demnächst stehen…
-Hier folgt ein neuer Textabschnitt.</p>
-<p>Viele wichtige Inhalte werden hier demnächst stehen…</p>
-<div class="dropdown admonition note">
-<p class="admonition-title">Note</p>
-<p>The note body will be hidden!</p>
 </div>
 <div class="toctree-wrapper compound">
 </div>
