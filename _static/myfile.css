@@ -1,0 +1,41 @@
+h1 {
+    color: red;
+}
+
+p {
+    text-align: justify;
+    /*color: gray;*/
+}
+
+.heading-style,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD",
+    "Book Antiqua", Georgia, serif;
+}
+
+h1 {
+    font-weight: 400;
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+    font-size: 3.2rem;
+    line-height: 1;
+    color: green;
+  }
+
+  .caption-text {
+    color: gray;
+  }
+
+.footnote.docutils, hr {
+  border-top: 2px solid gray;
+}
+
+.footnote.brackets > dd > p {
+  font-size: 0.8rem;
+  color: gray; 
+}

@@ -7,7 +7,7 @@
 # 
 # Bevor wir loslegen, müssen zunächst Module importiert werden, die wir im Rahmen der Analyse benötigen. Im Kapitel [TO COME]() werden wir die Hintergründe hierzu erläutern. Python (wie die meistern Programmiersprachen) wird von Hause aus weitestgehend ohne Funktionalität für Datenanalyse oder Visualisierung bereitstellt. Die dafür benötigten Funktionen können dann jedoch via sogenannter Module importiert werden. Die einzelnen Module werden im weiteren Verlaufe des Skriptes bzw. der Lehrveranstaltung eingeführt und erläutert. 
 
-# In[45]:
+# In[1]:
 
 
 # Modul `BusinessAnalytics` muss bei erster Nutzung zunächst installiert werden:
@@ -36,7 +36,7 @@ import matplotlib.pyplot as plt
 # 
 # Prinzipiell haben beide Varianten Vor- und Nachteile. In [vorherigen Kapitel](Introduction_Fallstudie.md) wurde [hier](download-yahoo) aufgezeigt, wie wir die konkreten DAX-Daten als Datei abspeichern. In unserem Fall verzichten wir darauf und wählen Variante 2, d.h. wir laden die Daten direkt in Python. Wir müssen dafür den Yahoo-Ticker für den DAX (`^GDAXI`) sowie Start- und Enddatum der benötigten Daten angeben. 
 
-# In[46]:
+# In[6]:
 
 
 data_dax = get_stock_data(ticker="^GDAXI", start="30-12-1987", end="31-07-2022")
@@ -50,7 +50,7 @@ data_dax = get_stock_data(ticker="^GDAXI", start="30-12-1987", end="31-07-2022")
 
 # Schauen wir uns die Daten an. Dies machen wir, in dem wir in eine Code-Zelle den Namen der Variable schreiben:
 
-# In[47]:
+# In[7]:
 
 
 data_dax

@@ -6,17 +6,19 @@ root: chapters/Vorwort
 parts:
 - caption: 01 Einleitung
   chapters:
-  - file: chapters/chapter_01/Einleitung
-  - file: chapters/chapter_01/Fallstudie
+  - file: chapters/chapter_01/Einleitung.md
+  - file: chapters/chapter_01/Warum_Coding.md
+  - file: chapters/chapter_01/Fallstudie.md
     sections:
     - file: chapters/chapter_01/Introduction_Fallstudie.md
     - file: chapters/chapter_01/Umsetzung_Fallstudie.ipynb
-- caption: 02 Python Part 1
+- caption: 02 Python | Basics
   chapters:
+  - file: chapters/chapter_02/01_Warum_Python
   - file: chapters/chapter_02/Intro_JupyterNotebooks.ipynb
   - file: chapters/chapter_02/Intro_Python.ipynb
   - file: chapters/chapter_02/Intro_Modules
-- caption: 99 Analytics
+- caption: 99 Sandbox
   chapters:
   - file: chapters/chapter_analytics/S02a_Descriptive_Statistics.ipynb
   - file: chapters/chapter_analytics/S03a_Simulation.ipynb

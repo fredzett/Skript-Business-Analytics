@@ -1,4 +1,4 @@
-# Einleitung
+# Business Analytics
 
 
 ## Warum ein Modul zum Thema "Business Analytics"
@@ -7,11 +7,11 @@ Bevor wir inhaltlich in ein spannendes und (teilweise) neues Themenfeld einsteig
 
 **Business Analytics** umfasst drei wichtige Elemente, die nicht getrennt von einander adressiert werden sollten: 
 
-1.  **Datenkompetenz**: in einer digitalen (Unternehmens)Welt werden Entscheidungen zunehmend datenunterstützt getroffen. Studierende der Betriebswirtschaftlehre sollten deshalb Kompetenzen im Umgang mit und der Analyse von Daten erlernen. 
-
-2. **Technologiekompetenz**: die Nutzung von Daten und die teilweise Automatisierung von (Entscheidungs-)prozessen ist eng verknüpft mit der Nutzung von IT-Technologie. Das Themenfeld **Business Analytics** sollte deshalb nicht ausschließlich auf qualitativer "strategischer" Ebene gelehrt werden, sondern sollte sich ganz konkret mit der praktischen Datenaufbereitung und -analyse sowie Visualisierung beschäftigen. Ganz platt formuliert, sollten Studierende der Betriebswirtschaftlehre nicht nur wissen, was Business Analytics ist, sondern vielmehr auch lernen, wie Business Analytics geht.
-
-3. **Fachexpertise**: wir werden später noch feststellen, dass Business Analytics nicht einheitlich definiert ist und somit viele Facetten hat. Nach unserem Verständnis dient Business Analytics dazu, unternehmerische Entscheidungen durch die sinnvolle Nutzung von Daten zu unterstützen. Wir wollen also konkret Daten und Informationen berücksichtigen, die einen Bezug zu betriebswirtschaftlichen Fachfunktionen - z.B. Marketing, Vertrieb, Finanzen, HR oder Controlling - haben. 
+(1) **Datenkompetenz:** in einer digitalen (Unternehmens-)Welt werden Entscheidungen zunehmend datenunterstützt getroffen. Studierende der Betriebswirtschaftlehre sollten deshalb Kompetenzen im Umgang mit und der Analyse von Daten erlernen. 
++++
+(2) **Technologiekompetenz:** die Nutzung von Daten und die teilweise Automatisierung von (Entscheidungs-)prozessen ist eng verknüpft mit der Nutzung von IT-Technologie. Das Themenfeld **Business Analytics** sollte deshalb nicht ausschließlich auf qualitativer "strategischer" Ebene gelehrt werden, sondern sollte sich ganz konkret mit der praktischen Datenaufbereitung und -analyse sowie Visualisierung beschäftigen. Ganz platt formuliert, sollten Studierende der Betriebswirtschaftlehre nicht nur wissen, was Business Analytics ist, sondern vielmehr auch lernen, wie Business Analytics geht.  
++++
+(3) **Fachexpertise:** wir werden später noch feststellen, dass Business Analytics nicht einheitlich definiert ist und somit viele Facetten hat. Nach unserem Verständnis dient Business Analytics dazu, unternehmerische Entscheidungen durch die sinnvolle Nutzung von Daten zu unterstützen. Wir wollen also konkret Daten und Informationen berücksichtigen, die einen Bezug zu betriebswirtschaftlichen Fachfunktionen - z.B. Marketing, Vertrieb, Finanzen, HR oder Controlling - haben. 
 
 Nun ist es so, dass das Thema "Business Analytics" oder Datenanalyse und -kompetenz nicht neu ist. Darüber hinaus gibt es viel gute Quellen, um sich dem Thema inhaltlich zu widmen. Zum einem gibt es bereits viele Studiengänge und spezielle Kurse in eher technischen Fachbereichen wie der Informatik oder dem Ingenieurwesen, die sich dem Thema explizit widmen. Zum zweiten gibt es auch sehr gute Online-Quellen, die das Thema bespielen. Wieso also ein weiteres Angebot? 
 
@@ -44,7 +44,7 @@ Aufbauend auf der zuvor geführten Diskussion verfolgen wir mit diesem Modul dre
 
 1. Sie sollen den **Umgang mit Daten** erlernen und in der Lage sein Daten so aufzubereiten, dass diese sinnvoll zusammengefasst und analysiert werden können.  
 
-2. Sie sollen **Schlüsse aus Daten ziehen** erlernen und in der Lage sein Entscheidungen durch die Analyse von Daten zu untermauern oder zu unterfüttern.  
+2. Sie sollen **Schlüsse aus Daten ziehen** erlernen und in der Lage sein Entscheidungen durch die Analyse von Daten zu untermauern oder zu unterfüttern.   
 
 3. Sie sollen **Daten und Analyse kommunizieren** können und in der Lage sein, Ergebnisse von Analyse oder den Entscheidungen zugrunde liegende Daten sinnvoll und adressatengerecht zu kommunizieren. Konkret umfasst dies die Fähigkeit, Daten und Analyse sinnvoll zu visualisieren und in eine "Data Story" zu verpacken.   
 

@@ -2,7 +2,8 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: #Business Analytics
-author: Felix Zeidler
+copyright: "2022"
+author: "" # Hinweis: removes footer in main block!
 logo: datascience.png
 
 # Force re-execution of notebooks on each build.
@@ -31,15 +32,21 @@ html:
   use_issues_button: false
   use_repository_button: false
 
+only_build_toc_files: true # excludes files that are in folder but not for book (e.g. assets.ipynb)
+
 launch_buttons: 
+  binderhub_url: ""
   colab_url: "https://colab.research.google.com"
 
-# sphinx:
-#   config:
-#     html_extra_path: ['utilities']
+sphinx:
+  config:
+    html_show_copyright: false
 
 html:
-    footer: |
+    extra_navbar: |
         <div>
-            your html
+            
         </div>
+    
+
+
