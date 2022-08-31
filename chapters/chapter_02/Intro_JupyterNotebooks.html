@@ -28,7 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/UtilityCode/__pycache__/myfile.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/myfile.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -55,7 +55,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Einführung in Python" href="Intro_Python.html" />
-    <link rel="prev" title="Umsetzung in Python" href="../chapter_01/Umsetzung_Fallstudie.html" />
+    <link rel="prev" title="Warum Python" href="01_Warum_Python.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -105,12 +105,17 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../chapter_01/Einleitung.html">
-   Einleitung
+   Business Analytics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_01/Warum_Coding.html">
+   Warum Programmieren?
   </a>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../chapter_01/Fallstudie.html">
-   Fallstudie
+   Fallstudie: was sie erwartet
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -133,10 +138,15 @@
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  02 Python Part 1
+  02 Python | Basics
  </span>
 </p>
 <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_Warum_Python.html">
+   Warum Python
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Einführung in Jupyter Notebooks
@@ -155,7 +165,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  99 Analytics
+  99 Sandbox
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -232,7 +242,10 @@
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+  <div>
+    
+</div>
+
 </div>
 
 </div>
@@ -291,12 +304,6 @@
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/fredzett/Skript-Business-Analytics/master?urlpath=tree/chapters/chapter_02/Intro_JupyterNotebooks.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Starten Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
         
         
         
@@ -517,12 +524,7 @@ können.</p>
 </ul>
 <p>Neben den o.g. Markdown-Zellen gibt es desweiteren <strong>Code Zellen</strong>. In diesen wird der Programmcode geschrieben und ausgeführt. Da wir in unserem Fall einen IPython Kernel nutzen, handelt es sich dabei um Python Code.</p>
 <p>So ist die nachfolgende Zelle bspw eine Code-Zelle:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span> <span class="o">+</span> <span class="mi">3</span>
-</pre></div>
-</div>
-</div>
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
 </pre></div>
@@ -753,11 +755,11 @@ können.</p>
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../chapter_01/Umsetzung_Fallstudie.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="01_Warum_Python.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Umsetzung in Python</p>
+            <p class="prev-next-title">Warum Python</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="Intro_Python.html" title="next page">
@@ -774,9 +776,6 @@ können.</p>
     <footer class="footer">
   <p>
     
-      Durch Felix Zeidler<br/>
-    
-        &copy; Urheberrechte © 2021.<br/>
   </p>
 </footer>
 </main>

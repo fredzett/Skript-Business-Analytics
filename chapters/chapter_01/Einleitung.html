@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Einleitung</title>
+    <title>Business Analytics</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -28,7 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/UtilityCode/__pycache__/myfile.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/myfile.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -52,7 +52,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Fallstudie" href="Fallstudie.html" />
+    <link rel="next" title="Warum Programmieren?" href="Warum_Coding.html" />
     <link rel="prev" title="Vorwort" href="../Vorwort.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -103,12 +103,17 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Einleitung
+   Business Analytics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Warum_Coding.html">
+   Warum Programmieren?
   </a>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="Fallstudie.html">
-   Fallstudie
+   Fallstudie: was sie erwartet
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -131,10 +136,15 @@
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  02 Python Part 1
+  02 Python | Basics
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_02/01_Warum_Python.html">
+   Warum Python
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../chapter_02/Intro_JupyterNotebooks.html">
    Einführung in Jupyter Notebooks
@@ -153,7 +163,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  99 Analytics
+  99 Sandbox
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -230,7 +240,10 @@
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+  <div>
+    
+</div>
+
 </div>
 
 </div>
@@ -315,7 +328,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Einleitung</h1>
+                <h1>Business Analytics</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -344,17 +357,15 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="einleitung">
-<h1>Einleitung<a class="headerlink" href="#einleitung" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="business-analytics">
+<h1>Business Analytics<a class="headerlink" href="#business-analytics" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="warum-ein-modul-zum-thema-business-analytics">
 <h2>Warum ein Modul zum Thema “Business Analytics”<a class="headerlink" href="#warum-ein-modul-zum-thema-business-analytics" title="Permalink to this headline">¶</a></h2>
 <p>Bevor wir inhaltlich in ein spannendes und (teilweise) neues Themenfeld einsteigen, möchte ich zunächst die Beweggründe für die Konzeption dieses neuen Moduls erläutern.</p>
 <p><strong>Business Analytics</strong> umfasst drei wichtige Elemente, die nicht getrennt von einander adressiert werden sollten:</p>
-<ol class="simple">
-<li><p><strong>Datenkompetenz</strong>: in einer digitalen (Unternehmens)Welt werden Entscheidungen zunehmend datenunterstützt getroffen. Studierende der Betriebswirtschaftlehre sollten deshalb Kompetenzen im Umgang mit und der Analyse von Daten erlernen.</p></li>
-<li><p><strong>Technologiekompetenz</strong>: die Nutzung von Daten und die teilweise Automatisierung von (Entscheidungs-)prozessen ist eng verknüpft mit der Nutzung von IT-Technologie. Das Themenfeld <strong>Business Analytics</strong> sollte deshalb nicht ausschließlich auf qualitativer “strategischer” Ebene gelehrt werden, sondern sollte sich ganz konkret mit der praktischen Datenaufbereitung und -analyse sowie Visualisierung beschäftigen. Ganz platt formuliert, sollten Studierende der Betriebswirtschaftlehre nicht nur wissen, was Business Analytics ist, sondern vielmehr auch lernen, wie Business Analytics geht.</p></li>
-<li><p><strong>Fachexpertise</strong>: wir werden später noch feststellen, dass Business Analytics nicht einheitlich definiert ist und somit viele Facetten hat. Nach unserem Verständnis dient Business Analytics dazu, unternehmerische Entscheidungen durch die sinnvolle Nutzung von Daten zu unterstützen. Wir wollen also konkret Daten und Informationen berücksichtigen, die einen Bezug zu betriebswirtschaftlichen Fachfunktionen - z.B. Marketing, Vertrieb, Finanzen, HR oder Controlling - haben.</p></li>
-</ol>
+<p>(1) <strong>Datenkompetenz:</strong> in einer digitalen (Unternehmens-)Welt werden Entscheidungen zunehmend datenunterstützt getroffen. Studierende der Betriebswirtschaftlehre sollten deshalb Kompetenzen im Umgang mit und der Analyse von Daten erlernen.</p>
+<p>(2) <strong>Technologiekompetenz:</strong> die Nutzung von Daten und die teilweise Automatisierung von (Entscheidungs-)prozessen ist eng verknüpft mit der Nutzung von IT-Technologie. Das Themenfeld <strong>Business Analytics</strong> sollte deshalb nicht ausschließlich auf qualitativer “strategischer” Ebene gelehrt werden, sondern sollte sich ganz konkret mit der praktischen Datenaufbereitung und -analyse sowie Visualisierung beschäftigen. Ganz platt formuliert, sollten Studierende der Betriebswirtschaftlehre nicht nur wissen, was Business Analytics ist, sondern vielmehr auch lernen, wie Business Analytics geht.</p>
+<p>(3) <strong>Fachexpertise:</strong> wir werden später noch feststellen, dass Business Analytics nicht einheitlich definiert ist und somit viele Facetten hat. Nach unserem Verständnis dient Business Analytics dazu, unternehmerische Entscheidungen durch die sinnvolle Nutzung von Daten zu unterstützen. Wir wollen also konkret Daten und Informationen berücksichtigen, die einen Bezug zu betriebswirtschaftlichen Fachfunktionen - z.B. Marketing, Vertrieb, Finanzen, HR oder Controlling - haben.</p>
 <p>Nun ist es so, dass das Thema “Business Analytics” oder Datenanalyse und -kompetenz nicht neu ist. Darüber hinaus gibt es viel gute Quellen, um sich dem Thema inhaltlich zu widmen. Zum einem gibt es bereits viele Studiengänge und spezielle Kurse in eher technischen Fachbereichen wie der Informatik oder dem Ingenieurwesen, die sich dem Thema explizit widmen. Zum zweiten gibt es auch sehr gute Online-Quellen, die das Thema bespielen. Wieso also ein weiteres Angebot?</p>
 <p>Die Antwort auf die Frage ist einfach und banal: es gibt bisher kein Angebot, was zu gleichen Teilen (i) auf die speziellen inhaltlichen und didaktischen Anforderungen der Betriebswirtschaftlehre eingeht und (ii) den Anspruch hat über die qualitativen und strategischen Aspekte hinaus auch die technische Dimension von Business Analytics zu vermitteln.</p>
 <p>Warum ist das so?</p>
@@ -422,10 +433,10 @@
             <p class="prev-next-title">Vorwort</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="Fallstudie.html" title="next page">
+    <a class='right-next' id="next-link" href="Warum_Coding.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Fallstudie</p>
+        <p class="prev-next-title">Warum Programmieren?</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -436,9 +447,6 @@
     <footer class="footer">
   <p>
     
-      Durch Felix Zeidler<br/>
-    
-        &copy; Urheberrechte © 2021.<br/>
   </p>
 </footer>
 </main>
