@@ -474,10 +474,9 @@
 <p><code class="docutils literal notranslate"><span class="pre">*</span></code> = Multiplikation</p>
 <p><code class="docutils literal notranslate"><span class="pre">/</span></code> = Division</p>
 <p><code class="docutils literal notranslate"><span class="pre">**</span></code> =  Potenzieren (❗ die Schreibweise für <span class="math notranslate nohighlight">\(3^4\)</span> in Python lautet <span class="math notranslate nohighlight">\(3{**}4\)</span>)</p>
-<p>Dieses Vorgehen ist jedoch meist nicht sinnvoll und wenig vorteilhaft gegenüber einem Taschenrechner.</p>
-<p>Als Analogie können wir uns kurz Excel (oder ein alternatives Tabellenkalkulationsprogramm) vorstellen. Dort schreiben wir auch typischerweise nicht in eine Zelle eine komplette Formel mit fest codierten Werten.</p>
+<p>Dieses Vorgehen ist jedoch meist nicht sinnvoll und wenig vorteilhaft gegenüber z.B. einem Taschenrechner. Auch in einem typischen Tabellenkalkulationsprogramm wie Excel würden wir anders vorgehen, da wird dort typischerweise nicht eine komplette Formel mit fest codierten Werten in eine Zelle schreiben, da dies umständlich, wenig flexibel und fehleranfällig wäre. Gleiches gilt für Python.</p>
 <p><img alt="Excel schlecht" src="../../_images/Excel_bad.png" /></p>
-<p>Stattdessen würden sie die Werte auf verschiedene Zellen aufteilen und in einer Ergebniszelle verknüpfen. Dieses Vorgehen hat den Vorteil, dass die Annahmen für das Ergebnis viel transparenter sind. So wird z.B. deutlich, dass es sich bei der <span class="math notranslate nohighlight">\(12\)</span>, die in der Berechnung zwei Mal vorkommt um tatsächlich zwei verschiedene Annahmen handelt, die nur zufällig den selben Wert haben.</p>
+<p>In Excel würden wir stattdessen die Werte auf verschiedene Zellen aufteilen und in einer Ergebniszelle verknüpfen. Dieses Vorgehen hat den Vorteil, dass die Annahmen für das Ergebnis viel transparenter und Änderungen in Annahmen auf einen Blick ersichtlich sind. So wird z.B. deutlich, dass es sich bei der <span class="math notranslate nohighlight">\(12\)</span>, die in der Berechnung zwei Mal vorkommt (Zellen C5 und C7) um tatsächlich zwei verschiedene Annahmen handelt - sonst würden wir nicht zwei Inputparameter benötigen -, die nur zufällig den selben Wert haben.</p>
 <p><img alt="Excel gut" src="../../_images/Excel_good.png" /></p>
 </div>
 <div class="section" id="zuweisen-von-variablen">
@@ -487,7 +486,7 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">variable</span> <span class="o">=</span> <span class="n">wert</span>
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">variable</span></code> kann hier jeden Namen annehmen<a class="footnote-reference brackets" href="#id6" id="id2">2</a>. Für <code class="docutils literal notranslate"><span class="pre">wert</span></code> können wir Ganzahlen, Dezimalzahlen, Wörter oder auch ganz andere Objekte - z.B. Graphen oder Dataframes die wir teilweise noch kennenlernen werden - einsetzen.</p>
+<p><code class="docutils literal notranslate"><span class="pre">variable</span></code> kann hier jeden Namen annehmen<a class="footnote-reference brackets" href="#id6" id="id2">2</a>. Für <code class="docutils literal notranslate"><span class="pre">wert</span></code> können wir Ganzahlen, Dezimalzahlen, Wörter oder auch ganz andere sog. Datentypen - z.B. Listen, Graphen oder Dataframes die wir jeweils noch kennenlernen werden - einsetzen.</p>
 <p>Hier ein paar Beispiele:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -507,7 +506,7 @@
 </div>
 </div>
 </div>
-<p>Diese Konvention ist für die Funktion eines Programms nicht entscheiden, jedoch erleichtert dies die Lesbarkeit des Codes.</p>
+<p>Diese Konvention ist für die Funktion eines Programms nicht entscheiden, jedoch erleichtert diese die Lesbarkeit des Codes.</p>
 <p>Wir können unser obiges Formelbeispiel also verbessern, in dem wir die Annahmen in verschiedene Variablen speichern und dann miteinander zu einem Ergebnis kombinieren.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -543,7 +542,7 @@
 \[KW_0 = \sum_{t=0}^{T} \frac{CF_t}{(1+i)^t}\]</div>
 </div>
 </div>
-<p>Wir suchen den Kapitalbarwert (<span class="math notranslate nohighlight">\(KW_0\)</span>) der Investition und können dies mit untenstehendem Code umsetzen.</p>
+<p>Wir suchen den Kapitalbarwert (<span class="math notranslate nohighlight">\(KW_0\)</span>) der Investition und können diesen mit dem untenstehendem Code berechnen</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">I_0</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10000</span>
@@ -562,21 +561,98 @@
 </div>
 </div>
 </div>
-<p>Die Umsetzung war einfach und hat viele Vorteile gegenüber einer Variante, in der wir keine Variablen nutzen. Jedoch hat der bis hierin vorgestellte Ansatz immer noch relativ viele Nachteile, z.B.:</p>
-<ol class="simple">
-<li><p>jeder Cashflow benötigt eine eigene Variable. Bei großen Zahlenreihen ist dies viel manueller Aufwand (und auch fehleranfällig)</p></li>
-<li><p>die Formel für den Kapitalwert muss für jeden zusätzlichen Cashflow angepasst</p></li>
-</ol>
-<p>Im Folgenden wollen wir versuchen unseren Code Schritt für Schritt zu verbessern bzw. zu optimieren.</p>
+<p>Die Umsetzung war einfach und hat viele Vorteile gegenüber einer Variante, in der wir keine Variablen nutzen. Jedoch hat der bis hierhin vorgestellte Ansatz immer noch relativ viele Nachteile.</p>
+<p>Zum einen ist der Code sehr repetitive, d.h. wir müssen bspw. für jeden Cashflow eine eigene Variable definieren und addieren auch jeden Cashflow separat auf. Dies ist nicht nur ein relativ großer manueller Aufwand, sondern auch fehleranfällig.</p>
+<p>Zum anderen muss die Formel für den Kapitalbarwert für jede unterschiedliche Anzahl an Cashflows angepasst werden. Hat ein Projekt bspw. zwei oder sechs verschiedene Cashflows, dann müsste die Formel angepasst werden.</p>
+<div class="tip admonition">
+<p class="admonition-title">Repetitiver Code</p>
+<p>Als generelle Daumenregel können wir bereits an dieser Stelle darauf hinweisen, dass wir repetitiven Code generell vermeiden und wir diesen optimieren sollten.</p>
+</div>
+<p>Im Folgenden wollen wir versuchen unseren Code  zu verbessern bzw. zu optimieren. Wir werden Schritt für Schritt neue Konzepte einführen. Der Code wird so weniger repetitv und flexibler einsetzbar. Die hier eingeführten Konzepte sind unabhängig vom gewählten Beispiel und generisch einsetzbar.</p>
 </div>
 <div class="section" id="wichtige-regeln-in-python">
 <h2>Wichtige Regeln in Python<a class="headerlink" href="#wichtige-regeln-in-python" title="Permalink to this headline">¶</a></h2>
-<p>[to come]</p>
-<ol class="simple">
-<li><p>Einrücken / Leerzeichen haben eine Bedeutung</p></li>
-<li><p>Lange Zeilen kann ich unterbrechen mit <code class="docutils literal notranslate"><span class="pre">\</span></code> oder durch <code class="docutils literal notranslate"><span class="pre">(</span> <span class="pre">)</span></code></p></li>
-<li><p>Hilfe durch ??</p></li>
-</ol>
+<p>An dieser Stelle macht es Sinn einige grundsätzliche Regeln von Python zu erläutern.</p>
+<p><strong>Kommentare</strong>: Statements, denen ein “<code class="docutils literal notranslate"><span class="pre">#</span></code>” vorangestellt wird, werden von Python nicht als Code erkannt. Wir können so Kommentare im Code einfügen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Dies ist ein Statement, um einer Variable einen Wert zuzuweisen</span>
+<span class="n">var</span> <span class="o">=</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Einrücken zu Beginn eines Statments:</strong> im Gegensatz nahezu allen anderen Programmiersprachen hat das Einrücken von Text eine Bedeutung. Ein Statement muss also zu Anfang einer Zeile beginnen. Es sei denn, es handelt sich um bestimmte Art von Statements, die wir noch kennenlernen werden (z.B. eine Wenn-Bedingung)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Code beginnt am Anfang einer Zeile</span>
+<span class="n">var</span> <span class="o">=</span> <span class="mi">13</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># FEHLER: Code beginnt nicht zu Anfang einer Zeile</span>
+   <span class="n">var</span> <span class="o">=</span> <span class="mi">13</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/cj/9s881x057_12d_qyp3jcmb380000gn/T/ipykernel_10605/1894495079.py&quot;</span><span class="gt">, line </span><span class="mi">2</span>
+    <span class="n">var</span> <span class="o">=</span> <span class="mi">13</span>
+    <span class="o">^</span>
+<span class="ne">IndentationError</span>: unexpected indent
+</pre></div>
+</div>
+</div>
+</div>
+<p>Python gibt im obigen Beispiel eine Fehlermeldung aus. Diese signalisiert, dass der Python-Code nicht korrekt ist. Hierbei geht es nicht um inhaltliche Fehler, sondern um formale Fehler, d.h. Python kann das Statement nicht verstehen. Der Grund ist in diesem Falle ein <code class="docutils literal notranslate"><span class="pre">IndentationError</span></code>, d.h. ein Fehler wegen fehlerhaften Einrückens von Text.</p>
+<p>Hinweis: innerhalb eines Statements werden Leerzeichen hingegen ignoriert.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="o">=</span> <span class="mi">3</span>         <span class="o">+</span>               <span class="mi">4</span>
+<span class="n">var</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Umgang mit langen Statments:</strong> lange Statements können mit “<code class="docutils literal notranslate"><span class="pre">()</span></code>” über mehrere Zeilen verbunden werden. Dies bietet sich auch für die Lesbarkeit von Code an.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">komplexe_rechnung</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1234</span>
+                     <span class="o">+</span> <span class="mi">12</span>
+                     <span class="o">-</span> <span class="mi">13</span>
+                     <span class="o">*</span> <span class="mi">14</span>
+                    <span class="p">)</span>
+<span class="n">komplexe_rechnung</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1064
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">komplexe_rechnung</span> <span class="o">=</span> <span class="mi">1234</span> <span class="o">+</span> <span class="mi">12</span> <span class="o">-</span> <span class="mi">13</span> <span class="o">*</span> <span class="mi">14</span>
+<span class="n">komplexe_rechnung</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1064
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="datentypen">
 <h2>Datentypen<a class="headerlink" href="#datentypen" title="Permalink to this headline">¶</a></h2>
@@ -615,7 +691,7 @@
 </div>
 </div>
 <p>Für das Programm bzw. den Computer, aber auch für uns als Datenanalyst oder Programmierer, sind Datentypen aus unterschiedlichen Gründen wichtig:</p>
-<p><strong>1. Speichplatz des Datentyps</strong></p>
+<p><strong>1. Speicherplatz des Datentyps</strong></p>
 <p>Jeder Datentyp benötigt unterschiedlich viel Speicher. So macht es für den Computer einen Unterschied, ob wir <code class="docutils literal notranslate"><span class="pre">42</span></code> oder <code class="docutils literal notranslate"><span class="pre">42.0</span></code> schreiben, da er für diese Variablen unterschiedlich viel Speicherplatz “freimacht”. Im Rahmen unserer Beispiele ist der Unterschied nicht von Bedeutung. Jedoch kann die Nutzung von Datentypen, die weniger Speicherplatz benötigen sinnvoll sein, wenn wir mit großen Datenmengen umgehen wollen. Im Rahmen dieses Kurses ist das Speicherargument jedoch nicht von großer Bedeutung.</p>
 <p><strong>2. Fähigkeiten des Datentyps</strong></p>
 <p>Jeder Datentyp hat unterschiedliche “Fähigkeiten”.<a class="footnote-reference brackets" href="#id7" id="id3">3</a> Wir haben z.B. nicht weiter hinterfragt (bzw. es ist für uns intuitiv und logisch), dass wir die Operation “<code class="docutils literal notranslate"><span class="pre">+</span></code>” mit den Datentypen <code class="docutils literal notranslate"><span class="pre">integer</span></code> und <code class="docutils literal notranslate"><span class="pre">float</span></code> nutzen können. Wir kennen das aus der Mathematik, von Excel oder unserem Taschenrechner. In einer Programmiersprache muss diese “Fähigkeit” jedoch “hinterlegt” sein, d.h. es muss festgelegt sein, dass dies möglich ist. Andersherum können für andere Datentypen jede Art von Fähigkeit hinterlegen - wir werden in den weiteren Kapiteln noch viele dieser Fähigkeiten kennenlernen.</p>
@@ -658,8 +734,21 @@
 <p>Lassen Sie uns deshalb unser Kapitalwert-Beispiel aufgreifen und andere (neue) Datentypen mit weiteren Fähigkeiten kennenlernen.</p>
 <div class="section" id="listen">
 <h3>Listen<a class="headerlink" href="#listen" title="Permalink to this headline">¶</a></h3>
-<p>Der Datentyp <code class="docutils literal notranslate"><span class="pre">list</span></code> (Liste) kann beliebig viele Variablen enhalten und wird mit “<code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">]</span></code>” erzeugt.</p>
+<p>Der Datentyp <code class="docutils literal notranslate"><span class="pre">list</span></code> (Liste) kann beliebig viele Variablen enhalten und wird mit “<code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">]</span></code>” erzeugt. Auch wenn eine Liste theoretisch unterschiedliche Datentypen beinhalten kann, wird diese meist eingesetzt, um zusammenhängende Elemente zusammenzufassen (z.B. unsere Cashflows)</p>
 <p>Beispiel:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diverses</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">]</span>
+<span class="n">diverses</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, &#39;a&#39;, &#39;d&#39;, 4.5]
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zahlen</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">11</span><span class="p">]</span>
@@ -704,7 +793,7 @@
 <p class="admonition-title">Index</p>
 <p>Der Index beginnt in Python bei allen Datentypen, die mehrere Elemente beinhalten, immer mit <code class="docutils literal notranslate"><span class="pre">0</span></code>. D.h. das erste Element befindet sich immer an Position <code class="docutils literal notranslate"><span class="pre">0</span></code> und NICHT an Position <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
 </div>
-<p>Listen haben verschiedene Fähigkeiten. Viele dieser Fähigkeiten (in diesem Falle sprechen wir von Methoden) können sie aufrufen, in dem “<code class="docutils literal notranslate"><span class="pre">.</span></code>” drücken.</p>
+<p>Listen haben verschiedene Fähigkeiten. Viele dieser Fähigkeiten (die Fähigkeiten der Datentypen werden auch (Klassen-)<code class="docutils literal notranslate"><span class="pre">Methoden</span></code> genannt) können sie aufrufen, in dem “<code class="docutils literal notranslate"><span class="pre">.</span></code>” drücken.</p>
 <p>Beispiel: sortieren einer Liste erfolgt via “<code class="docutils literal notranslate"><span class="pre">.sort()</span></code>”</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -745,6 +834,22 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_first_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Begrüßung&quot;</span><span class="p">:</span> <span class="s2">&quot;Hallo&quot;</span><span class="p">,</span> <span class="s2">&quot;liste_zahlen&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="mi">2</span><span class="p">:</span> <span class="mf">4.32</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Hinweis: wir können - zur besseren Lesbarkeit - das obige Beispiel auch wiefolgt schreiben.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_first_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Begrüßung&quot;</span><span class="p">:</span> <span class="s2">&quot;Hallo&quot;</span><span class="p">,</span> 
+                 <span class="s2">&quot;liste_zahlen&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> 
+                 <span class="mi">2</span><span class="p">:</span> <span class="mf">4.32</span><span class="p">}</span>
+<span class="n">my_first_dict</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Begrüßung&#39;: &#39;Hallo&#39;, &#39;liste_zahlen&#39;: [1, 2, 3, 4], 2: 4.32}
 </pre></div>
 </div>
 </div>
@@ -837,7 +942,7 @@
 <li><p>es gibt einige wenige Regeln, die wir beachten müssen, um keine “technischen” Fehler zu produzieren; insbesonder müssen wir darauf achten, dass wir keine Leerzeichen an den falschen Stellen setzen</p></li>
 <li><p>es gibt unterschiedliche Datentypen, die wir für unsere Analysen nutzen können und sollten. Nicht jeder Datentyp ist für jede Art der Problem geignet. Wir haben bisher <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code>, <code class="docutils literal notranslate"><span class="pre">str</span></code>, <code class="docutils literal notranslate"><span class="pre">list</span></code> und <code class="docutils literal notranslate"><span class="pre">dict</span></code> kennengelernt. Bei diesen Datentypen handelt es sich um solche, die bereits standardmäßig in Python integriert sind (sog. <code class="docutils literal notranslate"><span class="pre">build-in</span> <span class="pre">types</span></code><a class="footnote-reference brackets" href="#id8" id="id4">4</a>). Wir werden im weiteren Verlauf noch sehr viel mächtigere Datentypen kennenlernen, die wir explizit für die Zwecke der Datenanalyse entwickelt wurden und sehr hilfreiche “Fähigkeiten” haben.</p></li>
 </ol>
-<p>Im folgenden Kapitel werden wir unser Beispiel weiter optimieren. Denn - so ehrlich müssen wir sein - unsere bisherige Optimierung lässt noch keinen großen Vorteil gegenüber einem Taschenrechner und insbesondere nicht gegenüber Excel erkennen.</p>
+<p>Im folgenden Kapitel werden wir unser Beispiel weiter optimieren. Denn - so ehrlich müssen wir sein - unsere bisherige Optimierung lässt noch keinen großen Vorteil gegenüber einem Taschenrechner und insbesondere nicht gegenüber Excel erkennen. Auch wenn wir die repetitive Definition von Cashflow-Variablen vermieden haben, ist unsere Berechnung selber noch (i) repetitiv (wir schreiben die Variable <code class="docutils literal notranslate"><span class="pre">cash_flows</span></code> insgesamt 4x auf) und (ii) unflexibel, da unsere gesamte Berechnung weiterhin für jede andere Anzahl an Cashflows neu beschrieben werden müsste.</p>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
