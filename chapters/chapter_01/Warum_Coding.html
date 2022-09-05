@@ -52,8 +52,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Fallstudie: was sie erwartet" href="Fallstudie.html" />
-    <link rel="prev" title="Business Analytics" href="Einleitung.html" />
+    <link rel="next" title="Warum Python?" href="01_Warum_Python.html" />
+    <link rel="prev" title="Warum Business Analytics?" href="Business_Analytics.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -79,7 +79,7 @@
         
       
       
-      <img src="../../_static/datascience.png" class="logo" alt="logo">
+      <img src="../../_static/datascience2.png" class="logo" alt="logo">
       
       
     </a>
@@ -102,8 +102,8 @@
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="Einleitung.html">
-   Business Analytics
+  <a class="reference internal" href="Business_Analytics.html">
+   Warum Business Analytics?
   </a>
  </li>
  <li class="toctree-l1 current active">
@@ -111,9 +111,14 @@
    Warum Programmieren?
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_Warum_Python.html">
+   Warum Python?
+  </a>
+ </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="Fallstudie.html">
-   Fallstudie: was sie erwartet
+   Ausblick: was sie erwartet
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -123,7 +128,7 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="Introduction_Fallstudie.html">
-     Wie riskant sind Aktien?
+     Fragestellung
     </a>
    </li>
    <li class="toctree-l2">
@@ -136,28 +141,35 @@
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  02 Python | Basics
+  02 Technisches Setup
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_02/01_Warum_Python.html">
-   Warum Python
+  <a class="reference internal" href="../chapter_02/Installation.html">
+   Installation &amp; Setup
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_02/Intro_JupyterNotebooks.html">
-   Einführung in Jupyter Notebooks
+  <a class="reference internal" href="../chapter_02/Intro_Jupyter.html">
+   Einführung Jupyter Notebooks
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_02/Intro_Python.html">
+  <a class="reference internal" href="../chapter_02/Intro_Skript.html">
+   Nutzung dieses Skripts
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  03 Python | Grundlagen
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_03/Intro_Python.html">
    Einführung in Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_02/Intro_Modules.html">
-   Module nutzen
   </a>
  </li>
 </ul>
@@ -234,11 +246,6 @@
    Literatur
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../sandkasten.html">
-   Spielecke
-  </a>
- </li>
 </ul>
 
     </div>
@@ -308,6 +315,34 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Inhalt
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#daten-effizient-aufbereiten-und-analysieren">
+   1. Daten effizient aufbereiten und analysieren
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#automatisierung-von-repetitiven-aufgaben">
+   2. Automatisierung von repetitiven Aufgaben
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#problemlosungsfahigkeit-verbessern">
+   3. Problemlösungsfähigkeit verbessern
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#programmieren-software-entwicklung-vs-coding">
+   4. Programmieren: Software-Entwicklung vs. Coding
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -320,6 +355,34 @@
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Inhalt </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#daten-effizient-aufbereiten-und-analysieren">
+   1. Daten effizient aufbereiten und analysieren
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#automatisierung-von-repetitiven-aufgaben">
+   2. Automatisierung von repetitiven Aufgaben
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#problemlosungsfahigkeit-verbessern">
+   3. Problemlösungsfähigkeit verbessern
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#programmieren-software-entwicklung-vs-coding">
+   4. Programmieren: Software-Entwicklung vs. Coding
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -328,7 +391,40 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="warum-programmieren">
 <h1>Warum Programmieren?<a class="headerlink" href="#warum-programmieren" title="Permalink to this headline">¶</a></h1>
-<p>[ TEXT FOLGT ]</p>
+<p>[<code class="docutils literal notranslate"><span class="pre">NO</span> <span class="pre">CODE</span> <span class="pre">LÖSUNGEN</span> <span class="pre">WIE</span> <span class="pre">POWERBI</span> <span class="pre">GEGENÜBERSTELLEN</span></code>]</p>
+<p>Warum sollten - wie in diesem Kurs angedacht - Studierende der Betriebswirtschaftslehre (BWL) programmieren lernen? Die Frage wird nicht unkontrovers (und im Übrigen auch nicht zum ersten Mal in der Geschichte der BWL) disktutiert. Auf der einen Seite diejenigen Befürworter, die argumentieren, dass die Fähigkeit zu Programmieren in Zukunft wichtig wird, da die Welt digitaler wird und ein technisches Verständnis unerlässlich ist. Auf der anderen Seite diejenigen, die dagegenhalten und argumentieren, dass die BWL sich mit den strategischen Implikationen der digitalen Transformation auseinandersetzen muss.</p>
+<p>Für beides gibt es Argumente und die beiden Argumente schließen sich auch nicht einander aus. Lassen Sie uns im Folgenden ein wenig tiefer mit der Frage auseinandersetzen, weshalb auch die BWL sich mit dem Thema <code class="docutils literal notranslate"><span class="pre">Programmieren</span></code> auseinandersetzen sollte.</p>
+<p>Zunächst ist die Behauptung, dass die Fähigkeiten mit Daten umzugehen und zu programmieren wichtige Zukunftskompetenzen sind nicht neu. So erklärte beispielsweise die ehemalige Bundeskanzlerin, Frau Dr. Angela Merkel, im Jahr 2016, dass „das Programmieren eine Kernkompetenz ähnlich wie das Lesen, Schreiben und Rechnen werden wird“ [QUELLE EINFÜGEN]. Wir möchten diese Vorhersage nicht wiederholen und wir wissen auch nicht, ob die Vorhersage zutreffend ist - wir haben unsere Zweifel. Dennoch glauben wir, dass es sehr gute Argumente für das Programmieren gibt. Aus unserer Sicht mindestens drei:</p>
+<p>Studierende der BWL sollten programmieren lernen, um:</p>
+<ol class="simple">
+<li><p>Daten effizient für Entscheidungsunterstützung aufbereiten und analysieren zu können</p></li>
+<li><p>repetitive Aufgaben zu automatisieren</p></li>
+<li><p>Problemlösungsfähigkeiten zu verbessern</p></li>
+</ol>
+<div class="section" id="daten-effizient-aufbereiten-und-analysieren">
+<h2>1. Daten effizient aufbereiten und analysieren<a class="headerlink" href="#daten-effizient-aufbereiten-und-analysieren" title="Permalink to this headline">¶</a></h2>
+<p>Programmierkenntnisse sind bisher kein Muss für BWLer. Jedoch verändert sich der Arbeitsalltag rasant. Die Analyse von Daten und Informationen zur Entscheidungsunterstützung ist immer eine Kernaufgabe in kaufmännischen Bereichen gewesen. Diese Aufgabe verändert sich aufgrund der verfügbaren Datenmengen, die für potentielle Analysen zur Verfügung stehen. Die Fähigkeit Daten effizeint aufzubereiten und zu analysieren wird deshalb wichtiger. Programmierkenntnisse helfen hier, diesen Datenaufbereitungs- und analyseprozess zu beschleunigen und teilweise überhaupt erst zu ermöglichen.</p>
+</div>
+<div class="section" id="automatisierung-von-repetitiven-aufgaben">
+<h2>2. Automatisierung von repetitiven Aufgaben<a class="headerlink" href="#automatisierung-von-repetitiven-aufgaben" title="Permalink to this headline">¶</a></h2>
+<p>Die Diskrepanz zwischen  technischen Möglichkeiten und unternehmerischer Realität ist oft groß. Schaut man sich Arbeitsabläufe in Unternehmen an, so stellt man fest, dass diese - trotz anderer technischer Möglichkeiten - oft durch manuelle Schnittstellenwechsel unterbrochen werden. Dateien werden manuell heruntergeladen und geöffnet und dann mit anderen Dateien zusammengeführt, bevor das Ergebnis dann per Email weitergeschickt wird, um dann wieder manuell geöffnet und mit anderen Daten verknüpft zu werden. Für diese Brüche gibt es natürlich “große” Lösungen. Diese bedingen jedoch oft den Erwerbe einer neuen Standardsoftware sowie die Veränderung von Abläufen. Auch wenn diese “große” Lösung in der Theorie oft die wirtschaftlichste ist, dauert es - wenn überhaupt - Jahre bis zur Einführung, weil Investition gescheut und ein “weiter so” scheinbar einfacher ist. Die Alternative zur großen Lösung muss jedoch nicht das “weiter so” sein. Bereits geringe Programmierkenntnisse ermöglichen die (zumindest teilweise) Automatisierung der oben beschriebenen Brüche. Programmierkenntnisse helfen dabei, Potentiale für “kleine Lösungen” zu identifizieren und sogar selber zu implementieren. Letzteres ist aber gar nicht unbedingt von Nöten, da bereits das Erkennen von Automatisierungspotentialen eine Diskussion mit IT-Experten anstoßen kann, die sonst nicht geführt worden wäre. Die Identifikation von Verbesserungspotentialen in Arbeitsabläufen benötigt Experten, die diese Abläufe kennen und wird typischerweise nicht von außen angestoßen.</p>
+</div>
+<div class="section" id="problemlosungsfahigkeit-verbessern">
+<h2>3. Problemlösungsfähigkeit verbessern<a class="headerlink" href="#problemlosungsfahigkeit-verbessern" title="Permalink to this headline">¶</a></h2>
+<p>Schließlich hilft die Fähigkeit zu programmieren, komplexe Probleme besser zu verstehen und zu lösen. Programmieren ist ein Prozess zum Erstellen von Algorithmen, bei denen es sich um eine Reihe von Anweisungen handelt, die ein Computer befolgen muss. In der Wirtschaft sind Studierende oft an komplexen Entscheidungen beteiligt, was die Fähigkeit erfordert, komplexe Probleme zu verstehen und zu lösen. Programmieren kann dabei helfen, indem es den Studierenden beibringt, wie man ein Problem in kleinere Stücke zerlegt und dann einen Schritt-für-Schritt-Plan erstellt, um es zu lösen.</p>
+</div>
+<div class="section" id="programmieren-software-entwicklung-vs-coding">
+<h2>4. Programmieren: Software-Entwicklung vs. Coding<a class="headerlink" href="#programmieren-software-entwicklung-vs-coding" title="Permalink to this headline">¶</a></h2>
+<p>Es besteht kein Zweifel daran, dass die Fähigkeit zu Programmieren wertvoll ist. Jedoch wollen wir an dieser Stelle kurz darauf eingehen, was mit <code class="docutils literal notranslate"><span class="pre">Programmieren</span></code> eigentlich konkret gemeint ist.</p>
+<p>Keine der drei genannten Argumente bedingen, dass Studierende der BWL zu Softwareentwicklern werden. <code class="docutils literal notranslate"><span class="pre">Softwareentwicklung</span></code> ist ein hochspezialisiertes Gebiet, das jahrelange Ausbildung (ggf. auch ein Informatikstudium) und Erfahrung erfordert. Programmieren hingegen ist eine relativ einfache Fähigkeit, die innerhalb weniger Wochen erlernt werden kann.<a class="footnote-reference brackets" href="#id2" id="id1">1</a></p>
+<p>Dies ist ein allgemeines Missverständnis, bei dem viele die Fähigkeit zum Programmieren mit der spezialisierten Funktion oder Aufgabe verwechseln, die normalerweise von sehr spezialisierten Personen mit Informatikhintergrund übernommen werden. Wir argumentieren, dass Wirtschaftsstudenten eine Teilmenge einer breiten Palette von Programmierkenntnissen beigebracht werden sollte. Um diese Verwechslungsgefahr zu vermeiden, sprechen wir von nun an von <code class="docutils literal notranslate"><span class="pre">Coding</span></code>,  wenn wir von der Untergruppe von Programmierkenntnissen sprechen, die Wirtschaftsstudenten erlernen sollten.</p>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>jedoch bedarf es - wie bei jeder anderen Sache -  auch viel Übung, um gut darin zu werden.</p>
+</dd>
+</dl>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -356,17 +452,17 @@
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="Einleitung.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="Business_Analytics.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Business Analytics</p>
+            <p class="prev-next-title">Warum Business Analytics?</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="Fallstudie.html" title="next page">
+    <a class='right-next' id="next-link" href="01_Warum_Python.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Fallstudie: was sie erwartet</p>
+        <p class="prev-next-title">Warum Python?</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

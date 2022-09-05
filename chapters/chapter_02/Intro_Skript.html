@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ausblick: was sie erwartet</title>
+    <title>Nutzung dieses Skripts</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -52,8 +52,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Fragestellung" href="Introduction_Fallstudie.html" />
-    <link rel="prev" title="Warum Python?" href="01_Warum_Python.html" />
+    <link rel="next" title="Einführung in Python" href="../chapter_03/Intro_Python.html" />
+    <link rel="prev" title="Einführung Jupyter Notebooks" href="Intro_Jupyter.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -100,39 +100,39 @@
   01 Einleitung
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="Business_Analytics.html">
+  <a class="reference internal" href="../chapter_01/Business_Analytics.html">
    Warum Business Analytics?
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Warum_Coding.html">
+  <a class="reference internal" href="../chapter_01/Warum_Coding.html">
    Warum Programmieren?
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="01_Warum_Python.html">
+  <a class="reference internal" href="../chapter_01/01_Warum_Python.html">
    Warum Python?
   </a>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter_01/Fallstudie.html">
    Ausblick: was sie erwartet
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="Introduction_Fallstudie.html">
+    <a class="reference internal" href="../chapter_01/Introduction_Fallstudie.html">
      Fragestellung
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Umsetzung_Fallstudie.html">
+    <a class="reference internal" href="../chapter_01/Umsetzung_Fallstudie.html">
      Umsetzung in Python
     </a>
    </li>
@@ -144,19 +144,19 @@
   02 Technisches Setup
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_02/Installation.html">
+  <a class="reference internal" href="Installation.html">
    Installation &amp; Setup
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_02/Intro_Jupyter.html">
+  <a class="reference internal" href="Intro_Jupyter.html">
    Einführung Jupyter Notebooks
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_02/Intro_Skript.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Nutzung dieses Skripts
   </a>
  </li>
@@ -290,9 +290,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/chapters/chapter_01/Fallstudie.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/chapters/chapter_02/Intro_Skript.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Quelldatei herunterladen" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="In PDF drucken"
                 onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -310,11 +310,45 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/fredzett/Skript-Business-Analytics/blob/master/chapters/chapter_02/Intro_Skript.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Starten Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Inhalt
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cloud-coding">
+   Cloud Coding (🚀)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#download-von-kapitel">
+   Download von Kapitel
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -322,30 +356,121 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Ausblick: was sie erwartet</h1>
+                <h1>Nutzung dieses Skripts</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Inhalt </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cloud-coding">
+   Cloud Coding (🚀)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#download-von-kapitel">
+   Download von Kapitel
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="ausblick-was-sie-erwartet">
-<h1>Ausblick: was sie erwartet<a class="headerlink" href="#ausblick-was-sie-erwartet" title="Permalink to this headline">¶</a></h1>
-<p>Wir beenden dieses Kapitel mit einer Fallstudie. Ziel dieser Fallstudie ist es, darzustellen, wie Sie mit relativ wenig Programmierung detaillierte und (teilweise) komplexe Analysen durchführen können. Die Fallstudie nimmt vorweg, was Sie am Ende der Veranstaltung (unter anderem) gelernt haben werden.</p>
-<p>Die Fallstudie ist in zwei Teile aufgeteilt.</p>
-<p>Im <strong>ersten Teil (<a class="reference internal" href="Introduction_Fallstudie.html"><span class="doc std std-doc">“Wie riskant sind Aktien”</span></a>)</strong> wird die Fallstudie vorgestellt und wir machen uns konzeptionelle Gedanken dazu, wie wir die Fallstudie lösen können und was wir dafür benötigen (Rohdaten, Aufbereitung von Daten, Analyse von Daten etc.).</p>
-<p>Im <strong>zweiten Teil (<a class="reference internal" href="Umsetzung_Fallstudie.html"><span class="doc std std-doc">“Umsetzung in Python”</span></a>)</strong> machen wir uns dann die “Hände schmutzig” und setzen die konzeptionellen Überlegungen in Python um.</p>
-<div class="warning admonition">
-<p class="admonition-title">Hinweis</p>
-<p>In dieser Fallstudie werden Dinge vorgegriffen, die Sie noch nicht gelernt haben. Ziel der Fallstudie ist es ausdrücklich nicht, dass Sie jede Code-Zeile nachvollziehen können. Vielmehr sollen Sie einen Eindruck davon vermittelt bekommen, was Sie in diesem Kurs erwartet bzw. was Sie - vorausgesetzt Sie arbeiten kontinuierlich mit - am Ende in der Lage sind selber umzusetzen.</p>
-<p>Als <strong>Analogie</strong> können Sie sich vorstellen, dass wir einem kleinen Kind beibringen wollen Fußball zu spielen. Sie würden nie auf die Idee kommen, dem kleinen Kind als erstes die korrekte Fußstellung beim Freistoß oder gar die Abseitsregel zu erläutern. Stattdessen würden Sie vielleicht mit dem Kind auf den nächsten Fußballplatz gehen und zuschauen, wie andere Fußball spielen. Sie würden also zunächst das große Ganze zeigen - ohne, dass das Kind alle Details bereits versteht - und es so neugierig auf das Spiel machen. Die Details und Feinheiten folgen dann Schritt für Schritt. Das Kind wird einen Ball haben und auch spielen wollen.</p>
-<p>Gehen Sie diese Fallstudie also nicht mit dem Anspruch durch, alles bereits verstehen und selber umsetzen zu müssen. Vielmehr sollten Sie die übergeordnete Fragestellung durchdenken, um dann zu erleben, wie diese Fragestellung mittels Python beantwortet wird. Dies wird Sie hoffentlich für das große Ganze begeistern und so das Fundament für alles weitere legen.</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="nutzung-dieses-skripts">
+<h1>Nutzung dieses Skripts<a class="headerlink" href="#nutzung-dieses-skripts" title="Permalink to this headline">¶</a></h1>
+<p>Programmieren lernt man nicht, indem man Büchern darüber liest oder Youtube-Tutorials passiv konsumiert. Um Programmieren ernsthaft zu lernen, muss man es üben und zusätzlich zur Theorie einfach ausprobieren. In diesem Sinne ist das Erlernen einer Programmiersprache nicht so unterschiedlich vom Lernen einer gesprochenen Sprache - auch wenn Sie feststellen werden, dass die “Grammatik” und das “Vokabular” einer Programmiersprache sehr viel simpler ist, als die einer gesprochen Sprache.</p>
+<p>Um Lösungen und Ansätze zu verstehen, muss man diese ausprobieren, adaptieren und alternative Ansätze implementieren. Wir haben dieses Skript deshalb bewusst so aufgesetzt, dass Sie interaktiv mitmachen können. So können Sie per Knopfdruck alle Programmierbeispiele selber ausführen, ausprobieren und adaptieren.</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Navigationsleiste</p>
+<p><img alt="Rocket Button" src="../../_images/Navbar.gif" /></p>
 </div>
-<div class="toctree-wrapper compound">
+<div class="section" id="cloud-coding">
+<h2>Cloud Coding (🚀)<a class="headerlink" href="#cloud-coding" title="Permalink to this headline">¶</a></h2>
+<p>Alle Programmierbeispiele erkennen Sie an der speziellen Formatierung. Hier sind zwei Beispiele:</p>
+<p><strong>Programmierbeispiel 1</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zahlen</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">ergebnis</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">zahlen</span><span class="p">)</span>
+<span class="n">ergebnis</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Programmierbeispiel 2</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Preise&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">300</span><span class="p">],</span> 
+        <span class="s2">&quot;Produkte&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Produkt 1&quot;</span><span class="p">,</span> <span class="s2">&quot;Produkt 2&quot;</span><span class="p">,</span> <span class="s2">&quot;Produkt 3&quot;</span><span class="p">]}</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Preise</th>
+      <th>Produkte</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>100</td>
+      <td>Produkt 1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>200</td>
+      <td>Produkt 2</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>300</td>
+      <td>Produkt 3</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Nahezu jede Seite, die ein solches Beispiel beinhaltet, kann dann per Knopfdruck in einer Cloudumgebung geöffnet werden. In dieser Cloudumgebung (siehe hier: <a class="reference external" href="https://colab.research.google.com/">google colab</a>) kann der Programmcode dann ausgeführt und beliebig verändert werden. Sie verändern dabei eine in ihrer Cloud gespeicherte lokale Variante dieser Seite, nicht jedoch das originale Kapitel dieses Buchs.</p>
+<p>Dazu klicken Sie einfach auf das Raketensymbol 🚀 oben rechts auf der Seite. Dieses Symbol ist auf allen Seiten enthalten, auf denen Programmierbeispiele enthalten sind (mit einigen wenigen Ausnahmen).</p>
+</div>
+<div class="section" id="download-von-kapitel">
+<h2>Download von Kapitel<a class="headerlink" href="#download-von-kapitel" title="Permalink to this headline">¶</a></h2>
+<p>Darüber hinaus können Sie sich jedes Kapitel auch lokal herunterladen. So können alle Seiten als <code class="docutils literal notranslate"><span class="pre">pdf</span></code> heruntergeladen und gespeichert werden. Darüber hinaus können Seiten mit Programmierbeispielen auch als sogenannte <code class="docutils literal notranslate"><span class="pre">ipynb</span></code>-Files heruntergeladen werden.  Dies ist dann sinnvoll, wenn Sie sich entscheiden Python lokal auf ihrem Computer zu installieren und die Beispiele lokal ausprobieren wollen. Sie können die Dateien dann via <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> öffnen und bearbeiten.</p>
 </div>
 </div>
 
@@ -362,7 +487,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./chapters/chapter_01"
+            path: "./chapters/chapter_02"
         },
         predefinedOutput: true
     }
@@ -374,17 +499,17 @@
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="01_Warum_Python.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="Intro_Jupyter.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Warum Python?</p>
+            <p class="prev-next-title">Einführung Jupyter Notebooks</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="Introduction_Fallstudie.html" title="next page">
+    <a class='right-next' id="next-link" href="../chapter_03/Intro_Python.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Fragestellung</p>
+        <p class="prev-next-title">Einführung in Python</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

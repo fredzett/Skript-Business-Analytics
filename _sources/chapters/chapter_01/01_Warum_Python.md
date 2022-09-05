@@ -1,4 +1,4 @@
-# Warum Python
+# Warum Python?
 
 Es gibt zahlreiche und sehr unterschiedliche Programmiersprachen. Einige sind sehr bekannt (z.B. [Java](https://de.wikipedia.org/wiki/Java-Technologie#Programmiersprache_Java), [C](https://de.wikipedia.org/wiki/C_(Programmiersprache)), oder [Python](https://de.wikipedia.org/wiki/Python_(Programmiersprache))), andere sind eher Nischensprachen (z.B. [R](https://de.wikipedia.org/wiki/R_(Programmiersprache)), [Julia](https://de.wikipedia.org/wiki/Julia_(Programmiersprache)) oder [Scheme](https://de.wikipedia.org/wiki/Scheme)), die entweder nur für spezielle Anwendungszwecke entwickelt wurden oder sich aus anderen Gründen für die breite Masse nicht durchgesetzt haben. Neue Programmiersprachen kommen in unregelmäßigen Abständen hinzu. So hat Google z.B. erst kürzlich die Entwicklung einer [neuen Sprache](https://thenewstack.io/google-launches-carbon-an-experimental-replacement-for-c/) angekündigt.
 
@@ -84,7 +84,7 @@ print(m)
 
 Welche Sprache finden Sie intuitiver oder einfacher zu lesen? Die meisten Leser*innen werden das Beispiel in Python wegen der intuitiven Syntax einfacher finden. Auch wenn komplexe Programme in Python ähnlich komplex werden (können), wie in jeder anderen Programmiersprache, hat diese einfache(re) Syntax einen großen Vorteil: Sie werden schneller Fortschritte machen und können bereits nach kurzer Zeit praxisrelevante Skripte schreiben.
 
-## 3. Python ist Datenanalyse
+## 3. Python ist geeignet für Datenanalyse
 
 Ein Grund für die große Popularität und insbesondere das starke Wachstum von Python ist, dass Python insbesondere auch im Bereich Datenanalyse eingesetzt wird. So hat sich Python als eine der weit verbreitetsten Sprachen im Bereich `Datenaufbereitung`, `Machinelles Lernen` und `Deep Learning` entwickelt. Durch die einfache Syntax ist Python sehr gut geeignet, um schnell Prototypen für komplexe Datenanalysethemen zu erstellen. Dies hat dazu geführt, dass in den letzten Jahren eine Vielzahl von Modulen und Packages (d.h. Bibliotheken, die die Standardsprache erweitern) entstanden sind. Diese `Add-ons`, sind teilweise von großen Unternehmen, wie Google oder Facebook, (mit)entwickelt worden und sind frei verfügbar. Die Lösung von komplexen Datenanalysethemen ist insofern durch die Vielzahl an geeigneten Hilfsmitteln sehr viel einfacher und mächtiger geworden und erfordert (teilweise) keine jahrelange Programmiererfahrung. Zusatzmodule wie `pandas`, `numpy`, `matplotlib` oder `scikit-learn` - diese werden Sie in den folgenden Kapiteln noch kennenlernen - haben Python zu einer Art Schweizer Taschenmesser der Datenanalyse - insbesondere auch für Programmieranfänger - gemacht. 
 

@@ -52,7 +52,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Business Analytics" href="chapter_01/Einleitung.html" />
+    <link rel="next" title="Warum Business Analytics?" href="chapter_01/Business_Analytics.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -78,7 +78,7 @@
         
       
       
-      <img src="../_static/datascience.png" class="logo" alt="logo">
+      <img src="../_static/datascience2.png" class="logo" alt="logo">
       
       
     </a>
@@ -101,8 +101,8 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter_01/Einleitung.html">
-   Business Analytics
+  <a class="reference internal" href="chapter_01/Business_Analytics.html">
+   Warum Business Analytics?
   </a>
  </li>
  <li class="toctree-l1">
@@ -110,9 +110,14 @@
    Warum Programmieren?
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapter_01/01_Warum_Python.html">
+   Warum Python?
+  </a>
+ </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="chapter_01/Fallstudie.html">
-   Fallstudie: was sie erwartet
+   Ausblick: was sie erwartet
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -122,7 +127,7 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="chapter_01/Introduction_Fallstudie.html">
-     Wie riskant sind Aktien?
+     Fragestellung
     </a>
    </li>
    <li class="toctree-l2">
@@ -135,28 +140,35 @@
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  02 Python | Basics
+  02 Technisches Setup
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter_02/01_Warum_Python.html">
-   Warum Python
+  <a class="reference internal" href="chapter_02/Installation.html">
+   Installation &amp; Setup
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter_02/Intro_JupyterNotebooks.html">
-   Einführung in Jupyter Notebooks
+  <a class="reference internal" href="chapter_02/Intro_Jupyter.html">
+   Einführung Jupyter Notebooks
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter_02/Intro_Python.html">
+  <a class="reference internal" href="chapter_02/Intro_Skript.html">
+   Nutzung dieses Skripts
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  03 Python | Grundlagen
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapter_03/Intro_Python.html">
    Einführung in Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="chapter_02/Intro_Modules.html">
-   Module nutzen
   </a>
  </li>
 </ul>
@@ -231,11 +243,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="literatur.html">
    Literatur
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="sandkasten.html">
-   Spielecke
   </a>
  </li>
 </ul>
@@ -329,7 +336,9 @@
 <h1>Vorwort<a class="headerlink" href="#vorwort" title="Permalink to this headline">¶</a></h1>
 <p>Bei diesem Skript handelt es sich um Selbstlernmaterial zum Thema <code class="docutils literal notranslate"><span class="pre">Datenanalyse</span></code>. Noch konkreter beschäftigt sich dieses Skript mit <code class="docutils literal notranslate"><span class="pre">Business</span> <span class="pre">Analytics</span></code>. Das Skript wurde neu konzipiert und richtet sich explizit an <code class="docutils literal notranslate"><span class="pre">Studierende</span> <span class="pre">der</span> <span class="pre">Betriebswirtschaftlehre</span></code>. Aktuell “atmet” das Dokument noch, d.h. Aktualisierungen und Ergänzungen sind wahrscheinlich. Auch werden perspektivisch fortgeschrittenere Themenblöcke zum Bereich der <code class="docutils literal notranslate"><span class="pre">Predictive</span> <span class="pre">Analytics</span></code> hinzukommen.</p>
 <p>Das Skript ist explizit mit dem Ziel verfasst, als Selbstlernmaterial verwendet zu werden. Zumindest ist dies beim Verfassen des Skripts immer meine ausdrückliche Intention gewesen. Alle Code-Beispiele können via Knopfdruck selbst ausprobiert und adaptiert werden. Das Dokument ist somit zu Teilen interaktiv und sollte deshalb auch nicht nur passiv konsumiert werden.</p>
-<p>Ob mein Vorhaben tatsächlich gelungen ist, können schlussendlich nur Sie beurteilen. Sollten Sie also Fragen oder Anmerkungen bzw. technische Probleme haben oder - und dies bleibt leider nie aus - Fehler entdecken, dann bin ich dankbar für Ihr Feedback. Sprechen Sie mich entweder in den Veranstaltungen zum Modul direkt an oder schreiben mir eine Email (<a class="reference external" href="mailto:felix&#46;zeidler&#37;&#52;&#48;fh-bielefeld&#46;de">felix<span>&#46;</span>zeidler<span>&#64;</span>fh-bielefeld<span>&#46;</span>de</a>). Auch wenn es mir vermutlich nicht immer gelingen wird, Ihnen direkt zu antworten, bin ich dankbar für jede Art von Rückmeldung.</p>
+<p>Ob mein Vorhaben tatsächlich gelungen ist, können schlussendlich nur Sie beurteilen. Sollten Sie also Fragen oder Anmerkungen bzw. technische Probleme haben oder - und dies bleibt leider nie aus - Fehler entdecken, dann bin ich dankbar für Ihr Feedback. Sprechen Sie mich entweder in den Veranstaltungen zum Modul direkt an oder schreiben mir eine Email (<code class="docutils literal notranslate"><span class="pre">felix.zeidler[at]fh-bielefeld.de</span></code>). Auch wenn es mir vermutlich nicht immer gelingen wird, Ihnen direkt zu antworten, bin ich dankbar für jede Art von Rückmeldung.</p>
+<div class="toctree-wrapper compound">
+</div>
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
@@ -365,10 +374,10 @@
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='right-next' id="next-link" href="chapter_01/Einleitung.html" title="next page">
+    <a class='right-next' id="next-link" href="chapter_01/Business_Analytics.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Business Analytics</p>
+        <p class="prev-next-title">Warum Business Analytics?</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

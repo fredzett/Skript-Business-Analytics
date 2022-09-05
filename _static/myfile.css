@@ -1,12 +1,9 @@
-h1 {
-    color: red;
-}
-
 p {
     text-align: justify;
     /*color: gray;*/
 }
 
+/*
 .heading-style,
 h1,
 h2,
@@ -31,11 +28,14 @@ h1 {
     color: gray;
   }
 
-.footnote.docutils, hr {
-  border-top: 2px solid gray;
-}
-
+  
 .footnote.brackets > dd > p {
-  font-size: 0.8rem;
-  color: gray; 
+    font-size: 0.8rem;
+    color: gray; 
 }
+*/
+  
+.footnote.docutils, hr {
+    border-top: 2px solid gray;
+  }
+

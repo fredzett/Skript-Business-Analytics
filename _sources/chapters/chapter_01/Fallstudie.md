@@ -1,4 +1,4 @@
-# Fallstudie: was sie erwartet
+# Ausblick: was sie erwartet
 
 Wir beenden dieses Kapitel mit einer Fallstudie. Ziel dieser Fallstudie ist es, darzustellen, wie Sie mit relativ wenig Programmierung detaillierte und (teilweise) komplexe Analysen durchführen können. Die Fallstudie nimmt vorweg, was Sie am Ende der Veranstaltung (unter anderem) gelernt haben werden. 
 

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Einführung in Jupyter Notebooks</title>
+    <title>Einführung Jupyter Notebooks</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -54,8 +54,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Einführung in Python" href="Intro_Python.html" />
-    <link rel="prev" title="Warum Python" href="01_Warum_Python.html" />
+    <link rel="next" title="Nutzung dieses Skripts" href="Intro_Skript.html" />
+    <link rel="prev" title="Installation &amp; Setup" href="Installation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -81,7 +81,7 @@
         
       
       
-      <img src="../../_static/datascience.png" class="logo" alt="logo">
+      <img src="../../_static/datascience2.png" class="logo" alt="logo">
       
       
     </a>
@@ -104,8 +104,8 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_01/Einleitung.html">
-   Business Analytics
+  <a class="reference internal" href="../chapter_01/Business_Analytics.html">
+   Warum Business Analytics?
   </a>
  </li>
  <li class="toctree-l1">
@@ -113,9 +113,14 @@
    Warum Programmieren?
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_01/01_Warum_Python.html">
+   Warum Python?
+  </a>
+ </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../chapter_01/Fallstudie.html">
-   Fallstudie: was sie erwartet
+   Ausblick: was sie erwartet
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -125,7 +130,7 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter_01/Introduction_Fallstudie.html">
-     Wie riskant sind Aktien?
+     Fragestellung
     </a>
    </li>
    <li class="toctree-l2">
@@ -138,28 +143,35 @@
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  02 Python | Basics
+  02 Technisches Setup
  </span>
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="01_Warum_Python.html">
-   Warum Python
+  <a class="reference internal" href="Installation.html">
+   Installation &amp; Setup
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Einführung in Jupyter Notebooks
+   Einführung Jupyter Notebooks
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Intro_Python.html">
+  <a class="reference internal" href="Intro_Skript.html">
+   Nutzung dieses Skripts
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  03 Python | Grundlagen
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_03/Intro_Python.html">
    Einführung in Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Intro_Modules.html">
-   Module nutzen
   </a>
  </li>
 </ul>
@@ -236,11 +248,6 @@
    Literatur
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../sandkasten.html">
-   Spielecke
-  </a>
- </li>
 </ul>
 
     </div>
@@ -285,7 +292,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/chapters/chapter_02/Intro_JupyterNotebooks.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/chapters/chapter_02/Intro_Jupyter.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Quelldatei herunterladen" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -312,7 +319,7 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/fredzett/Skript-Business-Analytics/blob/master/chapters/chapter_02/Intro_JupyterNotebooks.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/fredzett/Skript-Business-Analytics/blob/master/chapters/chapter_02/Intro_Jupyter.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Starten Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -332,67 +339,38 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#was-sind-jupyter-notebooks-and-warum-nutzen-wir-diese">
-   Was sind Jupyter Notebooks and warum nutzen wir diese?
+  <a class="reference internal nav-link" href="#markdown-und-code-zellen">
+   Markdown und Code Zellen
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#wie-funktionieren-jupyter-notebooks">
-   Wie funktionieren Jupyter Notebooks
+  <a class="reference internal nav-link" href="#wechseln-von-zellen-typ">
+   Wechseln von Zellen-Typ
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#markdown-und-code-zellen">
-     Markdown und Code Zellen
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#wechseln-von-zellen-typ">
-     Wechseln von Zellen-Typ
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#einfugen-von-zellen">
-     Einfügen von Zellen
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ausfuhren-von-zellen">
-     Ausführen von Zellen
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#nutzung-von-zellergebnissen">
-     Nutzung von Zellergebnissen
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tab-completion">
-     Tab Completion
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#teil-1">
-       Teil 1
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#teil-2">
-       Teil 2
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#kommentare-in-code-zellen">
-     Kommentare in Code-Zellen
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#kurze-ubungsaufgabe">
-   Kurze Übungsaufgabe
+  <a class="reference internal nav-link" href="#einfugen-von-zellen">
+   Einfügen von Zellen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ausfuhren-von-zellen">
+   Ausführen von Zellen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nutzung-von-zellergebnissen">
+   Nutzung von Zellergebnissen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tab-completion">
+   Tab Completion
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kommentare-in-code-zellen">
+   Kommentare in Code-Zellen
   </a>
  </li>
 </ul>
@@ -405,7 +383,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Einführung in Jupyter Notebooks</h1>
+                <h1>Einführung Jupyter Notebooks</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -416,67 +394,38 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#was-sind-jupyter-notebooks-and-warum-nutzen-wir-diese">
-   Was sind Jupyter Notebooks and warum nutzen wir diese?
+  <a class="reference internal nav-link" href="#markdown-und-code-zellen">
+   Markdown und Code Zellen
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#wie-funktionieren-jupyter-notebooks">
-   Wie funktionieren Jupyter Notebooks
+  <a class="reference internal nav-link" href="#wechseln-von-zellen-typ">
+   Wechseln von Zellen-Typ
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#markdown-und-code-zellen">
-     Markdown und Code Zellen
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#wechseln-von-zellen-typ">
-     Wechseln von Zellen-Typ
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#einfugen-von-zellen">
-     Einfügen von Zellen
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ausfuhren-von-zellen">
-     Ausführen von Zellen
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#nutzung-von-zellergebnissen">
-     Nutzung von Zellergebnissen
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tab-completion">
-     Tab Completion
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#teil-1">
-       Teil 1
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#teil-2">
-       Teil 2
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#kommentare-in-code-zellen">
-     Kommentare in Code-Zellen
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#kurze-ubungsaufgabe">
-   Kurze Übungsaufgabe
+  <a class="reference internal nav-link" href="#einfugen-von-zellen">
+   Einfügen von Zellen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ausfuhren-von-zellen">
+   Ausführen von Zellen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nutzung-von-zellergebnissen">
+   Nutzung von Zellergebnissen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tab-completion">
+   Tab Completion
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kommentare-in-code-zellen">
+   Kommentare in Code-Zellen
   </a>
  </li>
 </ul>
@@ -488,48 +437,36 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="einfuhrung-in-jupyter-notebooks">
-<h1>Einführung in Jupyter Notebooks<a class="headerlink" href="#einfuhrung-in-jupyter-notebooks" title="Permalink to this headline">¶</a></h1>
-<p>[PLATZHALTER - HIER KOMMEN NOCH VIELE VERÄNDERUNGEN]</p>
-<p>Sie befinden Sie in einem Jupyter Notebook. Das hier spezifische Notebook ist mit einem <code class="docutils literal notranslate"><span class="pre">iPython</span></code> Kernel verbunden, welcher in der Lage ist, <code class="docutils literal notranslate"><span class="pre">Python</span></code> Kommandos auszuführen.</p>
-<div class="section" id="was-sind-jupyter-notebooks-and-warum-nutzen-wir-diese">
-<h2>Was sind Jupyter Notebooks and warum nutzen wir diese?<a class="headerlink" href="#was-sind-jupyter-notebooks-and-warum-nutzen-wir-diese" title="Permalink to this headline">¶</a></h2>
-<p>Jupyter Notebooks (JN) sind eine <strong>interaktive Umgebung</strong> innerhalb derer Sie</p>
-<ul class="simple">
-<li><p>Programmcode ausführen können,</p></li>
-<li><p>Ergebnisse visualisieren können,</p></li>
-<li><p>Markdown, HTML oder Latex nutzen können</p></li>
-</ul>
-<p>Es handelt sich deshalb um eine Form des <code class="docutils literal notranslate"><span class="pre">Literate</span> <span class="pre">Computing</span></code> in der komplexe Analysen durchgeführt UND erläutert werden
-können.</p>
-<p>JN bieten sich deshalb für komplexe Datenanalyse sehr gut an und haben sich hier als “state of the art” Werkzeug durchgesetzt.</p>
-<p>Siehe hierzu auch einen Artikel aus <a class="reference external" href="https://www.nature.com/articles/d41586-018-07196-1"><strong>Nature</strong></a>.</p>
-</div>
-<div class="section" id="wie-funktionieren-jupyter-notebooks">
-<h2>Wie funktionieren Jupyter Notebooks<a class="headerlink" href="#wie-funktionieren-jupyter-notebooks" title="Permalink to this headline">¶</a></h2>
-<p>Alle JN bestehen aus Zellen. Jeglicher Inhalt - inklusive dieses Textes - befindet sich in einer Zelle.</p>
+  <div class="section" id="einfuhrung-jupyter-notebooks">
+<h1>Einführung Jupyter Notebooks<a class="headerlink" href="#einfuhrung-jupyter-notebooks" title="Permalink to this headline">¶</a></h1>
+<p>Alle Jupyter Notebooks (gilt auch für google colab, auch wenn die Darstellung dort etwas abweichend ist) bestehen aus Zellen. Jeglicher Inhalt - inklusive dieses Textes - befindet sich in einer Zelle.</p>
 <p>Es muss dabei zwischen <code class="docutils literal notranslate"><span class="pre">zwei</span> <span class="pre">Arten</span></code> von Zellen unterschieden werden:</p>
 <ol class="simple">
-<li><p>Markdown Zellen und</p></li>
-<li><p>Code Zellen</p></li>
+<li><p>Text-Zellen und</p></li>
+<li><p>Code-Zellen</p></li>
 </ol>
 <div class="section" id="markdown-und-code-zellen">
-<h3>Markdown und Code Zellen<a class="headerlink" href="#markdown-und-code-zellen" title="Permalink to this headline">¶</a></h3>
+<h2>Markdown und Code Zellen<a class="headerlink" href="#markdown-und-code-zellen" title="Permalink to this headline">¶</a></h2>
 <p>Die bisherigen Zellen waren alle <strong>Markdown-Zellen</strong> und beinhalten deshalb nur Text. Markdown ist eine vereinfachte Auszeichnungssprache, die zum Ziel hat ohne große Formatierung und Konvertierung gut und leicht lesbaren Text zu produzieren. Sie wird vor allem auf Plattformen wie GitHub oder Stackoverflow oder von Webbloggern genutzt.</p>
 <p>Markdown ermöglicht es <strong>Bilder</strong>:</p>
-<p><img alt="FH Bielefeld" src="chapters/chapter_02/assets/FH_Bielefeld.png" /></p>
+<p><img alt="FH Bielefeld" src="../../_images/FH_Bielefeld.png" /></p>
 <p>oder <strong>Formeln</strong></p>
 <div class="math notranslate nohighlight">
-\[f(x) = \sum_{t=1}^{T} \frac{CF_t}{(1+i)^t} + \sqrt{a^2 + b^2}\]</div>
+\[\text{Kapitalbarwert} = \sum_{t=1}^{T} \frac{CF_t}{(1+i)^t}\]</div>
 <p>einzubetten</p>
 <p>Weiterführende Links zu <strong>Markdown</strong>:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://de.wikipedia.org/wiki/Markdown">Was ist Markdown</a></p></li>
 <li><p><a class="reference external" href="https://cmsstash.de/website-praxis/markdown-fur-webseiten">Wie funktioniert Markdown</a></p></li>
 </ul>
-<p>Neben den o.g. Markdown-Zellen gibt es desweiteren <strong>Code Zellen</strong>. In diesen wird der Programmcode geschrieben und ausgeführt. Da wir in unserem Fall einen IPython Kernel nutzen, handelt es sich dabei um Python Code.</p>
+<p>Neben den o.g. Markdown-Zellen gibt es sog. <strong>Code-Zellen</strong>. In diesen wird der Programmcode geschrieben und ausgeführt. In unserem Falle handelt es sich dabei um Python-Code.</p>
 <p>So ist die nachfolgende Zelle bspw eine Code-Zelle:</p>
-<div class="cell tag_remove-input docutils container">
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span> <span class="o">+</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
 </pre></div>
@@ -537,25 +474,25 @@ können.</p>
 </div>
 </div>
 <p>Wie man sehen kann wird in der Zelle die Berechnung <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">+</span> <span class="pre">3</span></code> durchgeführt. Das Ergebnis <code class="docutils literal notranslate"><span class="pre">=6</span></code> wird dann direkt darunter ausgegeben.</p>
-<p>Hierzu später noch mehr….</p>
+<p>Wir können also in einem Word-ähnlichen Dokument programmieren.</p>
 </div>
 <div class="section" id="wechseln-von-zellen-typ">
-<h3>Wechseln von Zellen-Typ<a class="headerlink" href="#wechseln-von-zellen-typ" title="Permalink to this headline">¶</a></h3>
+<h2>Wechseln von Zellen-Typ<a class="headerlink" href="#wechseln-von-zellen-typ" title="Permalink to this headline">¶</a></h2>
 <p>Zwischen Markdown und Code Zellen kann ganz einfach gewechselt werden durch <code class="docutils literal notranslate"><span class="pre">ESC</span> <span class="pre">+</span> <span class="pre">M</span></code> für Markdown und <code class="docutils literal notranslate"><span class="pre">ESC</span> <span class="pre">+</span> <span class="pre">Y</span></code> für Code. Alternativ kann auch das <code class="docutils literal notranslate"><span class="pre">Menü</span></code> genutzt werden</p>
-<p><strong>Menü: Jupyter Notebooks</strong>
-<img alt="Menü_Jupyter" src="chapters/chapter_02/assets/Men%C3%BC.png" /></p>
+<p><strong>Menü: Jupyter Notebooks</strong></p>
+<p><img alt="Menü_Jupyter" src="../../_images/Menue.png" /></p>
 <p><strong>Menü: Google Colab</strong></p>
-<p><img alt="Menü Colab" src="chapters/chapter_02/assets/Men%C3%BC_Colab.png" /></p>
+<p><img alt="Menü Colab" src="../../_images/Menue_Colab.png" /></p>
 <p><strong>Hinweis</strong>: die Tastenkombinationen sowie die Menüleiste (siehe oben) sind in <code class="docutils literal notranslate"><span class="pre">Google</span> <span class="pre">Colab</span></code> teilweise etwas abweichend. Jedoch können die Tastenkombinationen selber festgelegt werden. Außerdem ist das Menü relativ intuitiv und selbsterklärend, so dass die Erläuterungen in diesem Notebook ausreichend sein sollten.</p>
 </div>
 <div class="section" id="einfugen-von-zellen">
-<h3>Einfügen von Zellen<a class="headerlink" href="#einfugen-von-zellen" title="Permalink to this headline">¶</a></h3>
+<h2>Einfügen von Zellen<a class="headerlink" href="#einfugen-von-zellen" title="Permalink to this headline">¶</a></h2>
 <p>Der große Vorteil von Jupyter Notebooks ist - neben der Integration von Textverarbeitung und Progammcode - die ermöglichte explorative Vorgehensweise bei der Durchführung von Analysen. Der Code eines Jupyter Notebooks muss nicht sequentiell ausgeführt werden, sondern man kann in jede beliebige Zelle springen und diese ausführen.</p>
-<p>Darüber hinaus können Zellen an vor oder nach jeder belieben Zelle eingefügt werden. Dies erfolgt wieder enweder über das Menü oder über die Tastenkürzel <code class="docutils literal notranslate"><span class="pre">ESC</span> <span class="pre">+</span> <span class="pre">A</span></code> (Zelle oberhalb der selektierten Zelle einfügen) oder <code class="docutils literal notranslate"><span class="pre">ESC</span> <span class="pre">+</span> <span class="pre">B</span></code> (Zelle unterhalb der selektierten Zelle einfügen.</p>
+<p>Darüber hinaus können Zellen vor oder nach jeder belieben Zelle eingefügt werden. Dies erfolgt wieder enweder über das Menü oder über die Tastenkürzel <code class="docutils literal notranslate"><span class="pre">ESC</span> <span class="pre">+</span> <span class="pre">A</span></code> (Zelle oberhalb der selektierten Zelle einfügen) oder <code class="docutils literal notranslate"><span class="pre">ESC</span> <span class="pre">+</span> <span class="pre">B</span></code> (Zelle unterhalb der selektierten Zelle einfügen.</p>
 </div>
 <div class="section" id="ausfuhren-von-zellen">
-<h3>Ausführen von Zellen<a class="headerlink" href="#ausfuhren-von-zellen" title="Permalink to this headline">¶</a></h3>
-<p>Jede Zelle - unabhängig davon, ob Markdown oder Code Zelle, kann u.a. durch die Tastenkombination <code class="docutils literal notranslate"><span class="pre">shift</span> <span class="pre">+</span> <span class="pre">ENTER</span></code> ausgeführt werden. Alle <code class="docutils literal notranslate"><span class="pre">Code</span> <span class="pre">Zellen</span></code> liefern immer eine <strong><code class="docutils literal notranslate"><span class="pre">Out</span></code></strong> Zelle mit, in welcher das Ergebnis dargestellt wird.</p>
+<h2>Ausführen von Zellen<a class="headerlink" href="#ausfuhren-von-zellen" title="Permalink to this headline">¶</a></h2>
+<p>Jede Zelle - unabhängig davon, ob Markdown oder Code Zelle, kann u.a. durch die Tastenkombination <code class="docutils literal notranslate"><span class="pre">shift</span> <span class="pre">+</span> <span class="pre">ENTER</span></code> ausgeführt werden. Alle <strong>Code Zellen</strong> liefern immer eine <strong><code class="docutils literal notranslate"><span class="pre">Out</span></code></strong> Zelle mit, in welcher das Ergebnis dargestellt wird.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">9</span> <span class="o">+</span> <span class="mi">12</span>
@@ -568,7 +505,7 @@ können.</p>
 </div>
 </div>
 </div>
-<p>Ein Ergebnis wird jedoch immer nur dann ausgegeben, wenn die letzte Zeile der Code-Zelle einen Output hat. Dies ist nicht der Fall, wenn z.B. das Ergebnis einer Rechnung in einer Variable festgehalten wird.</p>
+<p>Ein Ergebnis wird jedoch immer nur dann ausgegeben, wenn die letzte Zeile der Code-Zelle einen Output hat. Dies ist nicht der Fall, wenn z.B. das Ergebnis einer Rechnung in einer Variable festgehalten wird (hierzu später mehr).</p>
 <p><strong>Beispiel:</strong> Hier wird kein Ergebnis ausgegeben, sondern in der Variable “ergebnis” gespeichert</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -641,7 +578,7 @@ können.</p>
 </div>
 </div>
 <div class="section" id="nutzung-von-zellergebnissen">
-<h3>Nutzung von Zellergebnissen<a class="headerlink" href="#nutzung-von-zellergebnissen" title="Permalink to this headline">¶</a></h3>
+<h2>Nutzung von Zellergebnissen<a class="headerlink" href="#nutzung-von-zellergebnissen" title="Permalink to this headline">¶</a></h2>
 <p>Ergebnisse von Zellen können überall im Notebook weiterverwendet werden. So wurde z.B. einige Zellen vorab</p>
 <p>b = 3 + 12 definiert (= 15). Die Variable b kann dann einfach in einer anderen Zelle weitergenutzt werden.</p>
 <div class="cell docutils container">
@@ -658,16 +595,14 @@ können.</p>
 </div>
 </div>
 <div class="section" id="tab-completion">
-<h3>Tab Completion<a class="headerlink" href="#tab-completion" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="teil-1">
-<h4>Teil 1<a class="headerlink" href="#teil-1" title="Permalink to this headline">¶</a></h4>
+<h2>Tab Completion<a class="headerlink" href="#tab-completion" title="Permalink to this headline">¶</a></h2>
 <p>Mit Hilfe von <code class="docutils literal notranslate"><span class="pre">tab</span> <span class="pre">completion</span></code> werden die bereits definierten bzw. verwendeten Variablen angezeigt. Hat man bspw. zwei Variablen im Notebook definiert</p>
 <ul class="simple">
 <li><p>kleine_Zahl_1 = 12</p></li>
 <li><p>kleine_Zahl_2 = 15</p></li>
 </ul>
 <p>So kann man durch eingabe von <code class="docutils literal notranslate"><span class="pre">kl</span></code> + <code class="docutils literal notranslate"><span class="pre">tab</span></code> eine Vorschlagsliste erhalten, in dem die bereits definierten Variablen aufgeführt sind.</p>
-<p><img alt="Tab Completion" src="chapters/chapter_02/assets/Tab_Completion.png" /></p>
+<p><img alt="Tab Completion" src="../../_images/Tab_Completion.png" /></p>
 <p>Probieren Sie es aus….</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -678,60 +613,22 @@ können.</p>
 </div>
 </div>
 </div>
-<div class="section" id="teil-2">
-<h4>Teil 2<a class="headerlink" href="#teil-2" title="Permalink to this headline">¶</a></h4>
-<p>Neben der Anzeige von bereits definierten Variablen kann <code class="docutils literal notranslate"><span class="pre">tab</span> <span class="pre">completion</span></code> jedoch auf genutzt werden, um verfügbare Operationen einer Variable anzeigen zu lassen.</p>
-<p>So verfügt in Python eine Variable vom Type <code class="docutils literal notranslate"><span class="pre">list</span></code> über verschiedene Operationen, z.B.</p>
-<ul class="simple">
-<li><p>sortieren</p></li>
-<li><p>einfügen</p></li>
-<li><p>löschen</p></li>
-</ul>
-<p>etc.</p>
-<p>Diese Operationen werden einem via <code class="docutils literal notranslate"><span class="pre">tab</span> <span class="pre">completion</span></code> angezeigt, so dass man diese nicht alle auswendig im Kopf haben muss.</p>
-<p><code class="docutils literal notranslate"><span class="pre">liste</span> <span class="pre">=</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">6]</span></code></p>
-<p>Durch die Eingabe der Variable (hier “liste”) sowie <code class="docutils literal notranslate"><span class="pre">.</span></code> und <code class="docutils literal notranslate"><span class="pre">tab</span></code> werden einem die verfügbaren Operationen angezeigt.</p>
-<p><img alt="Tab Completion 2" src="chapters/chapter_02/assets/Tab_Completion_2.png" /></p>
-<p>Probieren Sie es aus….</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">liste</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
 <div class="section" id="kommentare-in-code-zellen">
-<h3>Kommentare in Code-Zellen<a class="headerlink" href="#kommentare-in-code-zellen" title="Permalink to this headline">¶</a></h3>
+<h2>Kommentare in Code-Zellen<a class="headerlink" href="#kommentare-in-code-zellen" title="Permalink to this headline">¶</a></h2>
 <p>Es ist möglich Kommentare in Code-Zellen einzufügen - auch wenn das in Jupyter Notebooks oft nicht nötig ist, da die Kommentierung auch über die Markdown Zellen erfolgen kann. Die Kommentarfunktion ist abhängig von der Programmiersprache und damit vom Kernel, der genutzt wird. In unserem Fall kann deshalb das “#” aus Python genutzt werden.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># hier wird eine wichtige Berechnung durchgeführt</span>
-<span class="mi">3</span> <span class="o">/</span> <span class="mf">2.5</span>
+<span class="mi">3</span> <span class="o">/</span> <span class="mi">2</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.2
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.5
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="kurze-ubungsaufgabe">
-<h2>Kurze Übungsaufgabe<a class="headerlink" href="#kurze-ubungsaufgabe" title="Permalink to this headline">¶</a></h2>
-<p>Wieviele Sekunden hat das Semester?</p>
-<p>Annahme: ein Semester dauert 12 Wochen.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ihr Code hier</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><span class="xref myst"><center>&lt;&lt; zurück zur Einführung</center></span><span class="xref myst"><center>weiter zur Einführung Python &gt;&gt;</center></span></p>
 </div>
 </div>
 
@@ -760,17 +657,17 @@ können.</p>
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="01_Warum_Python.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="Installation.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Warum Python</p>
+            <p class="prev-next-title">Installation &amp; Setup</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="Intro_Python.html" title="next page">
+    <a class='right-next' id="next-link" href="Intro_Skript.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Einführung in Python</p>
+        <p class="prev-next-title">Nutzung dieses Skripts</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

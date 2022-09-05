@@ -1,9 +1,9 @@
-# Business Analytics
+# Warum Business Analytics?
 
 
 ## Warum ein Modul zum Thema "Business Analytics"
 
-Bevor wir inhaltlich in ein spannendes und (teilweise) neues Themenfeld einsteigen, möchte ich zunächst die Beweggründe für die Konzeption dieses neuen Moduls erläutern. 
+Bevor wir inhaltlich in ein spannendes Themenfeld einsteigen, möchte ich zunächst die Beweggründe für die Konzeption dieses neuen Moduls erläutern. 
 
 **Business Analytics** umfasst drei wichtige Elemente, die nicht getrennt von einander adressiert werden sollten: 
 
