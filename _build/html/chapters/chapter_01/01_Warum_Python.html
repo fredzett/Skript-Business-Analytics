@@ -1,0 +1,542 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Warum Python?</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/myfile.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Ausblick: was sie erwartet" href="Fallstudie.html" />
+    <link rel="prev" title="Warum Programmieren?" href="Warum_Coding.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/datascience2.png" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Dieses Buch durchsuchen ..." aria-label="Dieses Buch durchsuchen ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Vorwort.html">
+   Vorwort
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  01 Einleitung
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Business_Analytics.html">
+   Warum Business Analytics?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Warum_Coding.html">
+   Warum Programmieren?
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Warum Python?
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="Fallstudie.html">
+   Ausblick: was sie erwartet
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Introduction_Fallstudie.html">
+     Fragestellung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Umsetzung_Fallstudie.html">
+     Umsetzung in Python
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  02 Technisches Setup
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_02/Installation.html">
+   Installation &amp; Setup
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_02/Intro_Jupyter.html">
+   Einführung Jupyter Notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_02/Intro_Skript.html">
+   Nutzung dieses Skripts
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  03 Python | Grundlagen
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_03/Intro_Python.html">
+   Einführung in Python
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  99 Sandbox
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S02a_Descriptive_Statistics.html">
+   Deskriptive Statistik
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S03a_Simulation.html">
+   Simulationen mit Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S03c_Probability_Distributions.html">
+   Wahrscheinlichkeitsverteilungen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S04a_Estimation%26HyptothesisTesting.html">
+   Testen von Hypothesen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S05a_Regression.html">
+   Lineare Regression
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S06a_TidyData.html">
+   Tidy Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S07a_Classification.html">
+   Klassifikation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S08a_Clustering.html">
+   Clusteranalyse
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S09a_Cross_validation.html">
+   Cross Validation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S11_DecisionTrees.html">
+   Entscheidungsbäume
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S12_Ensembles.html">
+   Ensemble-Methoden
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Anhang
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../literatur.html">
+   Literatur
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <div>
+    
+</div>
+
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Navigation umschalten" aria-controls="site-navigation"
+                title="Navigation umschalten" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Laden Sie diese Seite herunter"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/chapters/chapter_01/01_Warum_Python.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Quelldatei herunterladen" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="In PDF drucken"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Vollbildmodus"
+        title="Vollbildmodus"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Inhalt
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-ist-popular">
+   1. Python ist populär
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-ist-einfach-er">
+   2. Python ist einfach(er)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-ist-geeignet-fur-datenanalyse">
+   3. Python ist geeignet für Datenanalyse
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-ist-allzweckwaffe">
+   4. Python ist Allzweckwaffe
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Warum Python?</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Inhalt </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-ist-popular">
+   1. Python ist populär
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-ist-einfach-er">
+   2. Python ist einfach(er)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-ist-geeignet-fur-datenanalyse">
+   3. Python ist geeignet für Datenanalyse
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-ist-allzweckwaffe">
+   4. Python ist Allzweckwaffe
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="warum-python">
+<h1>Warum Python?<a class="headerlink" href="#warum-python" title="Permalink to this headline">¶</a></h1>
+<p>Es gibt zahlreiche und sehr unterschiedliche Programmiersprachen. Einige sind sehr bekannt (z.B. <a class="reference external" href="https://de.wikipedia.org/wiki/Java-Technologie#Programmiersprache_Java">Java</a>, <a class="reference external" href="https://de.wikipedia.org/wiki/C_(Programmiersprache)">C</a>, oder <a class="reference external" href="https://de.wikipedia.org/wiki/Python_(Programmiersprache)">Python</a>), andere sind eher Nischensprachen (z.B. <a class="reference external" href="https://de.wikipedia.org/wiki/R_(Programmiersprache)">R</a>, <a class="reference external" href="https://de.wikipedia.org/wiki/Julia_(Programmiersprache)">Julia</a> oder <a class="reference external" href="https://de.wikipedia.org/wiki/Scheme">Scheme</a>), die entweder nur für spezielle Anwendungszwecke entwickelt wurden oder sich aus anderen Gründen für die breite Masse nicht durchgesetzt haben. Neue Programmiersprachen kommen in unregelmäßigen Abständen hinzu. So hat Google z.B. erst kürzlich die Entwicklung einer <a class="reference external" href="https://thenewstack.io/google-launches-carbon-an-experimental-replacement-for-c/">neuen Sprache</a> angekündigt.</p>
+<p>In diesem Skript soll nicht nur theoretisch über Datenanlayse gesprochen werden, sondern auch ganz praktisch Daten analysiert werden. Hierzu werden wir die Programmiersprache Python nutzen. Wieso aber genau Python und nicht z.B. R oder Java?</p>
+<p>Bei der Wahl der Programmiersprache ist die Entscheidung nicht zufällig auf <code class="docutils literal notranslate"><span class="pre">Python</span></code> gefallen. Prinzipiell können zwar viele Programmiersprachen dieselben Probleme mehr oder weniger gut lösen. Es ist also nicht so, dass das Thema Datenanalyse oder Business Analytcis ausschließlich mit Python adressiert werden könnte. So würde sich z.B. <code class="docutils literal notranslate"><span class="pre">R</span></code> oder <code class="docutils literal notranslate"><span class="pre">Julia</span></code> würde sich z.B. <code class="docutils literal notranslate"><span class="pre">auch</span> <span class="pre">hervorragend</span> <span class="pre">geeignet</span></code>. Dennoch gibt es vier Kriterien, die eine Programmiersprache aus meiner Sicht erfüllen sollte, um besonders geeignet zu sein:</p>
+<ol class="simple">
+<li><p>Die Sprache sollte populär sein</p></li>
+<li><p>Die Sprache sollte “einfach” zu erlernen sein</p></li>
+<li><p>Die Sprache sollte für Datenanalyse geeignet sein</p></li>
+<li><p>Die Sprache sollte für weitere Anwendungsfälle geeignet sein</p></li>
+</ol>
+<div class="section" id="python-ist-popular">
+<h2>1. Python ist populär<a class="headerlink" href="#python-ist-popular" title="Permalink to this headline">¶</a></h2>
+<p>Ein Entscheidungskriterium ist die Popularität. Python hat seit seiner Erfindung in den 90er Jahren enorm an Beliebtheit gewonnen und wird aktuell von sehr vielen Softwareentwicklern und Datenanalysten genutzt und ist im Ranking der beliebtesten Programmiersprachen<a class="footnote-reference brackets" href="#id3" id="id1">1</a> mittlerweile auf Platz 1, d.h. auch vor Java oder C.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Klick: Popularität verschiedener Programmiersprachen<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><img alt="Popularity" src="../../_images/Tiobe_Ranking.png" /></p>
+<p class="card-text">Quelle: <a class="reference external" href="https://www.tiobe.com/tiobe-index/">Tiobe-Ranking</a>)</p>
+</div>
+</details><p>Eine Programmiersprache kann gut oder schlecht sein ganz unabhängig von ihrer Popularität. Dennoch ist die Popularität aus unserer Sicht ein sehr wichtiges Kriterium.</p>
+<p>Zum einen ist es wesentlich einfacher Unterstützung zu finden, wenn man ein bestimmtes Problem in Python nicht lösen kann. So gibt es unzählige Lehrbücher und -tutorials, die einem beim Erlernen der Programmiersprachen helfen. Aus unserer Sicht noch wichtiger: es gibt eine sehr große Online-Community, die bei Fragen unterstützen kann. Im Rahmen dieses Kurses werden Sie auf Programmierprobleme stoßen:</p>
+<ul class="simple">
+<li><p>Ihr Code produziert Fehlermeldungen,</p></li>
+<li><p>Sie wissen nicht mehr, wie die geeignete Funktion zum Visualisieren von Balkencharts ist oder</p></li>
+<li><p>Ihnen fehlt der Ansatz, wie Sie ein Problem konkret angehen sollen.</p></li>
+</ul>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="tip admonition">
+<p class="admonition-title">Stackoverflow</p>
+<p>Besonders hilfreich ist hierbei das Online-Forum <a class="reference external" href="https://stackoverflow.com/questions/tagged/python">Stackoverflow</a>, in der Sie nach Antworten auf bereits gestellte Fragen suchen oder eigene Fragen stellen können.</p>
+</div>
+</div>
+<p>Zum anderen sorgt die Popularität von Python für eine praktische Relevanz in Unternehmen. Auch wenn Sie in Ihrem zukünftigen Job vielleicht nicht programmieren werden (müssen), ist es dennoch hilfreich zu wissen, dass Python mit hoher Wahrscheinlichkeit in Ihrem zukünftigen Unternehmen genutzt wird. Oder sollten Sie vorschlagen, Python für bestimmte (z.B. Daten-) Analysen zu nutzen, so wird die IT-Abteilung dies sicherlich zulassen.</p>
+</div>
+<div class="section" id="python-ist-einfach-er">
+<h2>2. Python ist einfach(er)<a class="headerlink" href="#python-ist-einfach-er" title="Permalink to this headline">¶</a></h2>
+<p>Die grundlegenden Konzepte einer Programmiersprache sind oft sehr ähnlich und Programmieren lernen erfordert - wie jede andere Tätigkeit - Zeit und Erfahrung. Dennoch unterscheiden sich Programmiersprachen oft in Ihrer Komplexität für Anfänger. So gibt es Programmiersprachen, die darfür bekannt sind, sehr schwer erlernbar zu sein (z.B. <a class="reference external" href="https://de.wikipedia.org/wiki/Rust_(Programmiersprache)">Rust</a>). Andere Programmiersprachen gelten als eher einfach zu erlernen. Python gilt als eine eher einfach zu erlernende Programmiersprache. Dies bedeutet nicht, dass Python einfach per se ist. Vielmehr ist damit oft die <strong>Syntax</strong> der Sprache gemeint, d.h. welche Begriffe und Worte fehlerfreie Programme liefen. Darüber hinaus sind andere Dinge - wie z.B. die Art der Typisierung - wichtig.</p>
+<p>Beispiel: stellen Sie sich vor, wir möchten das arithmetische Mittel einer Zahlenreihe berechnen (engl. <code class="docutils literal notranslate"><span class="pre">mean</span></code>).</p>
+<p>Schauen wir uns an, wie wir dies in <strong>Rust</strong> und <strong>Python</strong> umsetzen können.<a class="footnote-reference brackets" href="#id4" id="id2">2</a></p>
+<p><strong>Rust</strong></p>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="n">fn</span> <span class="nf">sum</span><span class="p">(</span><span class="n">arr</span><span class="p">:</span> <span class="o">&amp;[</span><span class="n">f64</span><span class="o">]</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">f64</span> <span class="p">{</span>
+    <span class="n">arr</span><span class="p">.</span><span class="na">iter</span><span class="p">().</span><span class="na">fold</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="o">|</span><span class="n">p</span><span class="p">,</span><span class="o">&amp;</span><span class="n">q</span><span class="o">|</span> <span class="n">p</span> <span class="o">+</span> <span class="n">q</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">fn</span> <span class="nf">mean</span><span class="p">(</span><span class="n">arr</span><span class="p">:</span> <span class="o">&amp;[</span><span class="n">f64</span><span class="o">]</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">f64</span> <span class="p">{</span>
+    <span class="n">sum</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">/</span> <span class="n">arr</span><span class="p">.</span><span class="na">len</span><span class="p">()</span> <span class="n">as</span> <span class="n">f64</span>
+<span class="p">}</span>
+
+<span class="n">fn</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">let</span> <span class="n">v</span> <span class="o">=</span> <span class="o">&amp;[</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mf">7.0</span><span class="p">,</span> <span class="mf">13.0</span><span class="p">,</span> <span class="mf">21.0</span><span class="p">,</span> <span class="mf">33.0</span><span class="p">,</span> <span class="mf">54.0</span><span class="o">]</span><span class="p">;</span>
+    <span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;mean of {:?}: {:?}&quot;</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">mean</span><span class="p">(</span><span class="n">v</span><span class="p">));</span>
+
+    <span class="n">let</span> <span class="n">w</span> <span class="o">=</span> <span class="o">&amp;[]</span><span class="p">;</span>
+    <span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;mean of {:?}: {:?}&quot;</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">mean</span><span class="p">(</span><span class="n">w</span><span class="p">));</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Python</strong></p>
+<div class="highlight-Pytho notranslate"><div class="highlight"><pre><span></span>from statistics import mean
+m = mean([2.0, 3.0, 5.0, 7.0, 13.0, 21.0, 33.0, 54.0])
+print(m)
+</pre></div>
+</div>
+<p>Welche Sprache finden Sie intuitiver oder einfacher zu lesen? Die meisten Leser*innen werden das Beispiel in Python wegen der intuitiven Syntax einfacher finden. Auch wenn komplexe Programme in Python ähnlich komplex werden (können), wie in jeder anderen Programmiersprache, hat diese einfache(re) Syntax einen großen Vorteil: Sie werden schneller Fortschritte machen und können bereits nach kurzer Zeit praxisrelevante Skripte schreiben.</p>
+</div>
+<div class="section" id="python-ist-geeignet-fur-datenanalyse">
+<h2>3. Python ist geeignet für Datenanalyse<a class="headerlink" href="#python-ist-geeignet-fur-datenanalyse" title="Permalink to this headline">¶</a></h2>
+<p>Ein Grund für die große Popularität und insbesondere das starke Wachstum von Python ist, dass Python insbesondere auch im Bereich Datenanalyse eingesetzt wird. So hat sich Python als eine der weit verbreitetsten Sprachen im Bereich <code class="docutils literal notranslate"><span class="pre">Datenaufbereitung</span></code>, <code class="docutils literal notranslate"><span class="pre">Machinelles</span> <span class="pre">Lernen</span></code> und <code class="docutils literal notranslate"><span class="pre">Deep</span> <span class="pre">Learning</span></code> entwickelt. Durch die einfache Syntax ist Python sehr gut geeignet, um schnell Prototypen für komplexe Datenanalysethemen zu erstellen. Dies hat dazu geführt, dass in den letzten Jahren eine Vielzahl von Modulen und Packages (d.h. Bibliotheken, die die Standardsprache erweitern) entstanden sind. Diese <code class="docutils literal notranslate"><span class="pre">Add-ons</span></code>, sind teilweise von großen Unternehmen, wie Google oder Facebook, (mit)entwickelt worden und sind frei verfügbar. Die Lösung von komplexen Datenanalysethemen ist insofern durch die Vielzahl an geeigneten Hilfsmitteln sehr viel einfacher und mächtiger geworden und erfordert (teilweise) keine jahrelange Programmiererfahrung. Zusatzmodule wie <code class="docutils literal notranslate"><span class="pre">pandas</span></code>, <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> oder <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code> - diese werden Sie in den folgenden Kapiteln noch kennenlernen - haben Python zu einer Art Schweizer Taschenmesser der Datenanalyse - insbesondere auch für Programmieranfänger - gemacht.</p>
+</div>
+<div class="section" id="python-ist-allzweckwaffe">
+<h2>4. Python ist Allzweckwaffe<a class="headerlink" href="#python-ist-allzweckwaffe" title="Permalink to this headline">¶</a></h2>
+<p>Auch andere Sprachen sind für das Thema Datenanalyse sehr geeignet; insbesondere <code class="docutils literal notranslate"><span class="pre">R</span></code> ist in den Bereichen Aufbereitung von Daten und statistischer Analyse führend. Jedoch hat Python einen Vorteil gegenüber einer Sprache wie R: Python ist eine sogenannte “all purpose programming language”, d.h. Python kann auch andere Dinge sehr gut. So wird Python auch zur Entwicklung von Software und Webapps oder Automatisierung von Prozessen genutzt. Der Einsatzzweck ist im Grunde nicht beschränkt. Im Rahmen dieses Kurses erscheint mir dies als Vorteil, da Sie als Einsteiger so in den Genuss einer Programmiersprache kommen, deren Einsatzzweck Sie für sich persönlich beliebig erweitern können. Das so vermittelte Programmierwissen kann so also zukünftig - sofern tatsächlich weitergehendes Interesse besteht - breit eingesetzt werden.</p>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Methodisch ist nicht eindeutig zu bestimmen, welche Programmiersprache die beliebteste ist. Insofern gibt es verschiedene Rankings. Hier wurde ein bekanntes Ranking ausgewählt. Es gibt jedoch auch andere Rankings. In diesen ist Python nicht immer auf Platz 1, aber in den meisten Fällen auf den ersten drei Plätzen zu finden.</p>
+</dd>
+<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Beide Beispiele sind aus <a class="reference external" href="https://rosettacode.org/wiki/Averages/Arithmetic_mean#Rust">rosettacode</a> und im Falle für Python leicht adaptiert.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters/chapter_01"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Warum_Coding.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Warum Programmieren?</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Fallstudie.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Ausblick: was sie erwartet</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      Durch Felix Zeidler<br/>
+    
+        &copy; Urheberrechte © 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

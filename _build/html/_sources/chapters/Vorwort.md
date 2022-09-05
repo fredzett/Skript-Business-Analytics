@@ -4,7 +4,7 @@ Bei diesem Skript handelt es sich um Selbstlernmaterial zum Thema `Datenanalyse`
 
 Das Skript ist explizit mit dem Ziel verfasst, als Selbstlernmaterial verwendet zu werden. Zumindest ist dies beim Verfassen des Skripts immer meine ausdrückliche Intention gewesen. Alle Code-Beispiele können via Knopfdruck selbst ausprobiert und adaptiert werden. Das Dokument ist somit zu Teilen interaktiv und sollte deshalb auch nicht nur passiv konsumiert werden. 
 
-Ob mein Vorhaben tatsächlich gelungen ist, können schlussendlich nur Sie beurteilen. Sollten Sie also Fragen oder Anmerkungen bzw. technische Probleme haben oder - und dies bleibt leider nie aus - Fehler entdecken, dann bin ich dankbar für Ihr Feedback. Sprechen Sie mich entweder in den Veranstaltungen zum Modul direkt an oder schreiben mir eine Email (felix.zeidler@fh-bielefeld.de). Auch wenn es mir vermutlich nicht immer gelingen wird, Ihnen direkt zu antworten, bin ich dankbar für jede Art von Rückmeldung. 
+Ob mein Vorhaben tatsächlich gelungen ist, können schlussendlich nur Sie beurteilen. Sollten Sie also Fragen oder Anmerkungen bzw. technische Probleme haben oder - und dies bleibt leider nie aus - Fehler entdecken, dann bin ich dankbar für Ihr Feedback. Sprechen Sie mich entweder in den Veranstaltungen zum Modul direkt an oder schreiben mir eine Email (`felix.zeidler[at]fh-bielefeld.de`). Auch wenn es mir vermutlich nicht immer gelingen wird, Ihnen direkt zu antworten, bin ich dankbar für jede Art von Rückmeldung. 
 
 
 

@@ -4,7 +4,7 @@
 title: #Business Analytics
 copyright: "2022"
 author: "Felix Zeidler" # Hinweis: removes footer in main block!
-logo: datascience.png
+logo: datascience2.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html

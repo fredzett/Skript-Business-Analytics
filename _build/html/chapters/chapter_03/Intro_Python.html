@@ -1,0 +1,919 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Einführung in Python</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/myfile.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Deskriptive Statistik" href="../chapter_analytics/S02a_Descriptive_Statistics.html" />
+    <link rel="prev" title="Nutzung dieses Skripts" href="../chapter_02/Intro_Skript.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/datascience2.png" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Dieses Buch durchsuchen ..." aria-label="Dieses Buch durchsuchen ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Vorwort.html">
+   Vorwort
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  01 Einleitung
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_01/Business_Analytics.html">
+   Warum Business Analytics?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_01/Warum_Coding.html">
+   Warum Programmieren?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_01/01_Warum_Python.html">
+   Warum Python?
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter_01/Fallstudie.html">
+   Ausblick: was sie erwartet
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter_01/Introduction_Fallstudie.html">
+     Fragestellung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter_01/Umsetzung_Fallstudie.html">
+     Umsetzung in Python
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  02 Technisches Setup
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_02/Installation.html">
+   Installation &amp; Setup
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_02/Intro_Jupyter.html">
+   Einführung Jupyter Notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_02/Intro_Skript.html">
+   Nutzung dieses Skripts
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  03 Python | Grundlagen
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Einführung in Python
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  99 Sandbox
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S02a_Descriptive_Statistics.html">
+   Deskriptive Statistik
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S03a_Simulation.html">
+   Simulationen mit Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S03c_Probability_Distributions.html">
+   Wahrscheinlichkeitsverteilungen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S04a_Estimation%26HyptothesisTesting.html">
+   Testen von Hypothesen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S05a_Regression.html">
+   Lineare Regression
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S06a_TidyData.html">
+   Tidy Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S07a_Classification.html">
+   Klassifikation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S08a_Clustering.html">
+   Clusteranalyse
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S09a_Cross_validation.html">
+   Cross Validation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S11_DecisionTrees.html">
+   Entscheidungsbäume
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S12_Ensembles.html">
+   Ensemble-Methoden
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Anhang
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../literatur.html">
+   Literatur
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <div>
+    
+</div>
+
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Navigation umschalten" aria-controls="site-navigation"
+                title="Navigation umschalten" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Laden Sie diese Seite herunter"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/chapters/chapter_03/Intro_Python.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Quelldatei herunterladen" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="In PDF drucken"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Vollbildmodus"
+        title="Vollbildmodus"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/fredzett/Skript-Business-Analytics/blob/master/chapters/chapter_03/Intro_Python.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Starten Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Inhalt
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#einfache-arithmetik">
+   Einfache Arithmetik
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zuweisen-von-variablen">
+   Zuweisen von Variablen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wichtige-regeln-in-python">
+   Wichtige Regeln in Python
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#datentypen">
+   Datentypen
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#listen">
+     Listen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dictionary">
+     Dictionary
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">
+   Zusammenfassung und Ausblick
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Einführung in Python</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Inhalt </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#einfache-arithmetik">
+   Einfache Arithmetik
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zuweisen-von-variablen">
+   Zuweisen von Variablen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wichtige-regeln-in-python">
+   Wichtige Regeln in Python
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#datentypen">
+   Datentypen
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#listen">
+     Listen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dictionary">
+     Dictionary
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">
+   Zusammenfassung und Ausblick
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="einfuhrung-in-python">
+<h1>Einführung in Python<a class="headerlink" href="#einfuhrung-in-python" title="Permalink to this headline">¶</a></h1>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Online-Resourcen</p>
+<p>Es gibt im Internet eine Vielzahl an guten Einführungen zum Thema Programmieren in Python.</p>
+<p>Hier zwei Beispiele:</p>
+<ul class="simple">
+<li><p>Detaillierte Python-Kurs:  <a class="reference external" href="https://www.python-kurs.eu/python3_variablen.php">hier</a></p></li>
+<li><p>Links mit weiteren Ressourcen: <a class="reference external" href="https://wiki.python.org/moin/BeginnersGuide/NonProgrammers">hier</a></p></li>
+</ul>
+<p>Insbesondere zu als Anfänger ist die Menge an Tutorial überwältigend und es fällt schwer zu beurteilen, was davon geeignet und für unsere Zwecke sinnvoll ist. Je mehr Erfahrung und Übung Sie jedoch bekommen, desto einfacher fällt es zielgerichtet im Internet nach Hilfe zu suchen.</p>
+</div>
+<div class="section" id="einfache-arithmetik">
+<h2>Einfache Arithmetik<a class="headerlink" href="#einfache-arithmetik" title="Permalink to this headline">¶</a></h2>
+<p>Wie bereits im vorangegangenen Kapitel gesehen, können wir mit Python ganz einfache Berechnungen durchführen</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">+</span> <span class="p">(</span><span class="mi">5</span> <span class="o">*</span> <span class="mi">12</span><span class="p">)</span> <span class="o">/</span> <span class="mi">3</span> <span class="o">-</span> <span class="mi">12</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>69.44444444444444
+</pre></div>
+</div>
+</div>
+</div>
+<p>Wie man sieht, kann man - analog zu einem Taschenrechner (oder Excel) - die bekannten arithmetischen Operatoren verwenden.</p>
+<p><code class="docutils literal notranslate"><span class="pre">+</span></code> = Addition</p>
+<p><code class="docutils literal notranslate"><span class="pre">-</span></code> = Subtraktion</p>
+<p><code class="docutils literal notranslate"><span class="pre">*</span></code> = Multiplikation</p>
+<p><code class="docutils literal notranslate"><span class="pre">/</span></code> = Division</p>
+<p><code class="docutils literal notranslate"><span class="pre">**</span></code> =  Potenzieren (❗ die Schreibweise für <span class="math notranslate nohighlight">\(3^4\)</span> in Python lautet <span class="math notranslate nohighlight">\(3{**}4\)</span>)</p>
+<p>Dieses Vorgehen ist jedoch meist nicht sinnvoll und wenig vorteilhaft gegenüber einem Taschenrechner.</p>
+<p>Als Analogie können wir uns kurz Excel (oder ein alternatives Tabellenkalkulationsprogramm) vorstellen. Dort schreiben wir auch typischerweise nicht in eine Zelle eine komplette Formel mit fest codierten Werten.</p>
+<p><img alt="Excel schlecht" src="../../_images/Excel_bad.png" /></p>
+<p>Stattdessen würden sie die Werte auf verschiedene Zellen aufteilen und in einer Ergebniszelle verknüpfen. Dieses Vorgehen hat den Vorteil, dass die Annahmen für das Ergebnis viel transparenter sind. So wird z.B. deutlich, dass es sich bei der <span class="math notranslate nohighlight">\(12\)</span>, die in der Berechnung zwei Mal vorkommt um tatsächlich zwei verschiedene Annahmen handelt, die nur zufällig den selben Wert haben.</p>
+<p><img alt="Excel gut" src="../../_images/Excel_good.png" /></p>
+</div>
+<div class="section" id="zuweisen-von-variablen">
+<h2>Zuweisen von Variablen<a class="headerlink" href="#zuweisen-von-variablen" title="Permalink to this headline">¶</a></h2>
+<p>Das Äquivalen in Python ist die Nutzung von Variablen. Wir können Werte als Variablen abspeichern<a class="footnote-reference brackets" href="#id5" id="id1">1</a>, in dem wir das “<code class="docutils literal notranslate"><span class="pre">=</span></code>”-Symbol benutzen.</p>
+<p>Wir schreiben also</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">variable</span> <span class="o">=</span> <span class="n">wert</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">variable</span></code> kann hier jeden Namen annehmen<a class="footnote-reference brackets" href="#id6" id="id2">2</a>. Für <code class="docutils literal notranslate"><span class="pre">wert</span></code> können wir Ganzahlen, Dezimalzahlen, Wörter oder auch ganz andere Objekte - z.B. Graphen oder Dataframes die wir teilweise noch kennenlernen werden - einsetzen.</p>
+<p>Hier ein paar Beispiele:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zahl</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="n">wort</span> <span class="o">=</span> <span class="s2">&quot;Spaghetti&quot;</span>
+<span class="n">satz</span> <span class="o">=</span> <span class="s2">&quot;Deutscher Meister wird nur der BVB&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Namen für Variablen sollten sinnvoll und prägnant (d.h. nicht zu lang) sein. In Python gibt es darüber hinaus die Konvention (siehe <a class="reference external" href="https://peps.python.org/pep-0008/#function-and-variable-names">PEP 8</a>), dass Variablen klein geschrieben werden und mehrere Wörter mit “<code class="docutils literal notranslate"><span class="pre">_</span></code>” getrennt werden.</p>
+<p>Beispiel:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sehr_wichtige_variabel</span> <span class="o">=</span> <span class="mi">321</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Diese Konvention ist für die Funktion eines Programms nicht entscheiden, jedoch erleichtert dies die Lesbarkeit des Codes.</p>
+<p>Wir können unser obiges Formelbeispiel also verbessern, in dem wir die Annahmen in verschiedene Variablen speichern und dann miteinander zu einem Ergebnis kombinieren.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">input1</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">input2</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">input3</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="n">input4</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">input5</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="n">ergebnis</span> <span class="o">=</span> <span class="n">input1</span> <span class="o">+</span> <span class="p">(</span><span class="n">input2</span> <span class="o">*</span> <span class="n">input3</span><span class="p">)</span> <span class="o">/</span> <span class="n">input4</span> <span class="o">-</span> <span class="n">input5</span>
+<span class="n">ergebnis</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9.0
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Beispiel: Berechnung Kapitalbarwert</strong></p>
+<p>Lassen Sie uns unser neugewonnenes Wissen direkt mithilfe eines konkreten Anwendungsfalles ausprobieren. Wir wollen berechnen, ob sich eine Investition lohnt. Hierfür haben wir untenstehende Annahmen gegeben:</p>
+<ul class="simple">
+<li><p>Investition (<span class="math notranslate nohighlight">\(I_0\)</span>): -10.000</p></li>
+<li><p>Cashflows (<span class="math notranslate nohighlight">\(CF_t\)</span>) in den Jahren 1 bis 3: 5.000, 4.000 und 3.000</p></li>
+<li><p>Zinssatz (<span class="math notranslate nohighlight">\(i\)</span>): 4%</p></li>
+</ul>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="note admonition">
+<p class="admonition-title">Hinweis</p>
+<p>Der Kapitalbarwert (<a class="reference external" href="https://de.wikipedia.org/wiki/Kapitalwert">hier</a>) lässt sich berechnen als die Summe der Barwerte der einzelnen Ein- und Auszahlungen.</p>
+<div class="math notranslate nohighlight">
+\[KW_0 = \sum_{t=0}^{T} \frac{CF_t}{(1+i)^t}\]</div>
+</div>
+</div>
+<p>Wir suchen den Kapitalbarwert (<span class="math notranslate nohighlight">\(KW_0\)</span>) der Investition und können dies mit untenstehendem Code umsetzen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">I_0</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10000</span>
+<span class="n">CF_1</span> <span class="o">=</span> <span class="mi">5000</span>
+<span class="n">CF_2</span> <span class="o">=</span> <span class="mi">4000</span>
+<span class="n">CF_3</span> <span class="o">=</span> <span class="mi">3000</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mf">0.04</span>
+<span class="n">KW</span> <span class="o">=</span> <span class="n">I_0</span> <span class="o">+</span> <span class="n">CF_1</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">i</span><span class="p">)</span><span class="o">**</span><span class="mi">1</span> <span class="o">+</span> <span class="n">CF_2</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">i</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">CF_3</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">i</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span>
+<span class="n">KW</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1172.9062357760577
+</pre></div>
+</div>
+</div>
+</div>
+<p>Die Umsetzung war einfach und hat viele Vorteile gegenüber einer Variante, in der wir keine Variablen nutzen. Jedoch hat der bis hierin vorgestellte Ansatz immer noch relativ viele Nachteile, z.B.:</p>
+<ol class="simple">
+<li><p>jeder Cashflow benötigt eine eigene Variable. Bei großen Zahlenreihen ist dies viel manueller Aufwand (und auch fehleranfällig)</p></li>
+<li><p>die Formel für den Kapitalwert muss für jeden zusätzlichen Cashflow angepasst</p></li>
+</ol>
+<p>Im Folgenden wollen wir versuchen unseren Code Schritt für Schritt zu verbessern bzw. zu optimieren.</p>
+</div>
+<div class="section" id="wichtige-regeln-in-python">
+<h2>Wichtige Regeln in Python<a class="headerlink" href="#wichtige-regeln-in-python" title="Permalink to this headline">¶</a></h2>
+<p>[to come]</p>
+<ol class="simple">
+<li><p>Einrücken / Leerzeichen haben eine Bedeutung</p></li>
+<li><p>Lange Zeilen kann ich unterbrechen mit <code class="docutils literal notranslate"><span class="pre">\</span></code> oder durch <code class="docutils literal notranslate"><span class="pre">(</span> <span class="pre">)</span></code></p></li>
+<li><p>Hilfe durch ??</p></li>
+</ol>
+</div>
+<div class="section" id="datentypen">
+<h2>Datentypen<a class="headerlink" href="#datentypen" title="Permalink to this headline">¶</a></h2>
+<p>Jede Variable kann unterschiedliche Datentypen annehmen. In unseren obigen Beispielen haben wir bereits einige kennengelernt.</p>
+<ol class="simple">
+<li><p>Die Variable <code class="docutils literal notranslate"><span class="pre">zahl</span></code> hat den Wert <code class="docutils literal notranslate"><span class="pre">42</span></code> angenommen. <code class="docutils literal notranslate"><span class="pre">42</span></code> ist vom Typ <code class="docutils literal notranslate"><span class="pre">integer</span></code>, d.h. eine Ganzzahl</p></li>
+<li><p>Die Variablen <code class="docutils literal notranslate"><span class="pre">wort</span></code> und <code class="docutils literal notranslate"><span class="pre">satz</span></code> sind vom Typ <code class="docutils literal notranslate"><span class="pre">str</span></code>, d.h. ein Text</p></li>
+<li><p>Die Variable <code class="docutils literal notranslate"><span class="pre">KW</span></code> ist vom Typ <code class="docutils literal notranslate"><span class="pre">float</span></code>, d.h. eine Dezimalzahl</p></li>
+</ol>
+<p>Wir können den Datentyp einer Variable feststellen, in dem wir <code class="docutils literal notranslate"><span class="pre">type</span></code> nutzen.</p>
+<p>Beispiel:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>int
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mf">42.0</span> 
+<span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>float
+</pre></div>
+</div>
+</div>
+</div>
+<p>Für das Programm bzw. den Computer, aber auch für uns als Datenanalyst oder Programmierer, sind Datentypen aus unterschiedlichen Gründen wichtig:</p>
+<p><strong>1. Speichplatz des Datentyps</strong></p>
+<p>Jeder Datentyp benötigt unterschiedlich viel Speicher. So macht es für den Computer einen Unterschied, ob wir <code class="docutils literal notranslate"><span class="pre">42</span></code> oder <code class="docutils literal notranslate"><span class="pre">42.0</span></code> schreiben, da er für diese Variablen unterschiedlich viel Speicherplatz “freimacht”. Im Rahmen unserer Beispiele ist der Unterschied nicht von Bedeutung. Jedoch kann die Nutzung von Datentypen, die weniger Speicherplatz benötigen sinnvoll sein, wenn wir mit großen Datenmengen umgehen wollen. Im Rahmen dieses Kurses ist das Speicherargument jedoch nicht von großer Bedeutung.</p>
+<p><strong>2. Fähigkeiten des Datentyps</strong></p>
+<p>Jeder Datentyp hat unterschiedliche “Fähigkeiten”.<a class="footnote-reference brackets" href="#id7" id="id3">3</a> Wir haben z.B. nicht weiter hinterfragt (bzw. es ist für uns intuitiv und logisch), dass wir die Operation “<code class="docutils literal notranslate"><span class="pre">+</span></code>” mit den Datentypen <code class="docutils literal notranslate"><span class="pre">integer</span></code> und <code class="docutils literal notranslate"><span class="pre">float</span></code> nutzen können. Wir kennen das aus der Mathematik, von Excel oder unserem Taschenrechner. In einer Programmiersprache muss diese “Fähigkeit” jedoch “hinterlegt” sein, d.h. es muss festgelegt sein, dass dies möglich ist. Andersherum können für andere Datentypen jede Art von Fähigkeit hinterlegen - wir werden in den weiteren Kapiteln noch viele dieser Fähigkeiten kennenlernen.</p>
+<p>Beispiel: für uns macht die Operation <code class="docutils literal notranslate"><span class="pre">&quot;Text</span> <span class="pre">1&quot;</span></code> + <code class="docutils literal notranslate"><span class="pre">&quot;Text</span> <span class="pre">2&quot;</span></code> wenig Sinn. Die Addition von zwei Texten (hier: vom Datentyp <code class="docutils literal notranslate"><span class="pre">str</span></code>) ergibt mathematisch keinen Sinn. Dennoch ist diese Operation in Python ohne Probleme möglich, weil diese - aus verschiedenen Gründen - hinterlegt ist.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text1</span> <span class="o">=</span> <span class="s2">&quot;Vorname &quot;</span>
+<span class="n">text2</span> <span class="o">=</span> <span class="s2">&quot;Nachname&quot;</span>
+<span class="n">text1</span> <span class="o">+</span> <span class="n">text2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Vorname Nachname&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Die Addition von zwei Texten verbindet die beiden Texte zu einem Text.</p>
+<p><strong>3. Eignung des Datentyps</strong></p>
+<p>Nicht jeder Datentyp ist für jede Fragestellung sinnvoll einsetzbar. So macht es keinen Sinn, dass wir Variablen, die für Berechnungen genutzt werden sollen z.B. als <code class="docutils literal notranslate"><span class="pre">str</span></code> definieren. Hierdurch können sich Fehler in das Programm einschleichen ohne dass wir vor einem Fehler gewarnt werden.</p>
+<p>Beispiel:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zahl1</span> <span class="o">=</span> <span class="s2">&quot;1&quot;</span>
+<span class="n">zahl2</span> <span class="o">=</span> <span class="s2">&quot;2&quot;</span>
+<span class="n">ergebnis</span> <span class="o">=</span> <span class="n">zahl1</span> <span class="o">+</span> <span class="n">zahl2</span>
+<span class="n">ergebnis</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;12&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Die Operation ist in Python erlaubt und liefert uns deshalb keinen Fehler. In unserem Fall macht das Ergebnis jedoch keinen Sinn..</p>
+<p>Wir müssen also darauf achten, dass wir Datentypen nutzen, die für unsere Fragestellung sinnvoll sind. Außerdem müssen wir uns immer fragen, ob die Nutzung von anderen Datentypen unser Programm verbessern.</p>
+<p>Lassen Sie uns deshalb unser Kapitalwert-Beispiel aufgreifen und andere (neue) Datentypen mit weiteren Fähigkeiten kennenlernen.</p>
+<div class="section" id="listen">
+<h3>Listen<a class="headerlink" href="#listen" title="Permalink to this headline">¶</a></h3>
+<p>Der Datentyp <code class="docutils literal notranslate"><span class="pre">list</span></code> (Liste) kann beliebig viele Variablen enhalten und wird mit “<code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">]</span></code>” erzeugt.</p>
+<p>Beispiel:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zahlen</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">11</span><span class="p">]</span>
+<span class="n">zahlen</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 14, 3, 11]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Auf die einzelnen Elemente der Liste (hier: Variable <code class="docutils literal notranslate"><span class="pre">zahlen</span></code>) kann dann mittels eines Index zugegriffen werden:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zahl1</span> <span class="o">=</span> <span class="n">zahlen</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">zahl1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zahl2</span> <span class="o">=</span> <span class="n">zahlen</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> 
+<span class="n">zahl2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>14
+</pre></div>
+</div>
+</div>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Index</p>
+<p>Der Index beginnt in Python bei allen Datentypen, die mehrere Elemente beinhalten, immer mit <code class="docutils literal notranslate"><span class="pre">0</span></code>. D.h. das erste Element befindet sich immer an Position <code class="docutils literal notranslate"><span class="pre">0</span></code> und NICHT an Position <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
+</div>
+<p>Listen haben verschiedene Fähigkeiten. Viele dieser Fähigkeiten (in diesem Falle sprechen wir von Methoden) können sie aufrufen, in dem “<code class="docutils literal notranslate"><span class="pre">.</span></code>” drücken.</p>
+<p>Beispiel: sortieren einer Liste erfolgt via “<code class="docutils literal notranslate"><span class="pre">.sort()</span></code>”</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zahlen</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="n">zahlen</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 3, 11, 14]
+</pre></div>
+</div>
+</div>
+</div>
+<p>In Jupyter Notebooks und in Google Colab können Sie via <code class="docutils literal notranslate"><span class="pre">tab</span> <span class="pre">completion</span></code>, d.h. “<code class="docutils literal notranslate"><span class="pre">.</span></code>” + <code class="docutils literal notranslate"><span class="pre">tab</span></code> alle dieser Methoden anzeigen lassen. Hinweis: teilweise müssen Sie runterscrollen, um weitere Methoden anzeigen zu lassen.</p>
+<p><img alt="tab" src="../../_images/liste_tab.png" /></p>
+<p>Wir können unser Beispiel signifikant vereinfachen, in dem wir den Datentyp <code class="docutils literal notranslate"><span class="pre">list</span></code> nutzen, welcher alle unsere Cashflows umfasst.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cash_flows</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">5000</span><span class="p">,</span> <span class="mi">4000</span><span class="p">,</span> <span class="mi">3000</span><span class="p">]</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mf">0.04</span>
+<span class="n">KW</span> <span class="o">=</span> <span class="n">cash_flows</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">cash_flows</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">i</span><span class="p">)</span><span class="o">**</span><span class="mi">1</span> <span class="o">+</span> <span class="n">cash_flows</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">i</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">cash_flows</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">i</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span>
+<span class="n">KW</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1172.9062357760577
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="dictionary">
+<h3>Dictionary<a class="headerlink" href="#dictionary" title="Permalink to this headline">¶</a></h3>
+<p>Ein weiterer sehr nützlicher Datentyp in Python ist das sog. Dictionary (<code class="docutils literal notranslate"><span class="pre">dict</span></code>). Dieses können wir uns vorstellen, wie ein tatsächliches Wörterbuch. Wir können hier zu jedem Element ein passendes anderes Element abspeichern. Ein Dictionary wird mit “<code class="docutils literal notranslate"><span class="pre">{}</span></code>” erzeugt. Die sogenannten <code class="docutils literal notranslate"><span class="pre">key:value</span></code>-Paare werden dann im Dictionary gespeichert und können von unterschiedlichen Datentypen sein und werden via <code class="docutils literal notranslate"><span class="pre">[key]</span></code> abgerufen.</p>
+<p>Beispiel:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_first_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Begrüßung&quot;</span><span class="p">:</span> <span class="s2">&quot;Hallo&quot;</span><span class="p">,</span> <span class="s2">&quot;liste_zahlen&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="mi">2</span><span class="p">:</span> <span class="mf">4.32</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_first_dict</span><span class="p">[</span><span class="s2">&quot;Begrüßung&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Hallo&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_first_dict</span><span class="p">[</span><span class="s2">&quot;liste_zahlen&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3, 4]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_first_dict</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="c1"># Hier ist `2` kein Index, sondern ein sogenannte Schlüssel (engl. `Key``)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.32
+</pre></div>
+</div>
+</div>
+</div>
+<p>Auch hier können wir via <code class="docutils literal notranslate"><span class="pre">tab</span> <span class="pre">completion</span></code>, d.h. “<code class="docutils literal notranslate"><span class="pre">.</span></code>” + <code class="docutils literal notranslate"><span class="pre">tab</span></code> alle Methoden anzeigen lassen.</p>
+<p><img alt="tab_dict" src="../../_images/tab_dict.png" /></p>
+<p>Dictionaries eignen sich hervorragend, um Parameter und Annahmen zu speichern. Wir können unser Beispiel also weiterfassen und z.B. zwei verschiedene Szenarien rechnen:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Szenarien und Annahmen</span>
+<span class="n">cf_szenario</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;base&quot;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">5000</span><span class="p">,</span> <span class="mi">4000</span><span class="p">,</span> <span class="mi">3000</span><span class="p">],</span> 
+            <span class="s2">&quot;high&quot;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">6000</span><span class="p">,</span> <span class="mi">5000</span><span class="p">,</span> <span class="mi">4000</span><span class="p">],</span>
+            <span class="s2">&quot;low&quot;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">4000</span><span class="p">,</span> <span class="mi">3000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">],}</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mf">0.04</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cash_flows</span> <span class="o">=</span> <span class="n">cf_szenario</span><span class="p">[</span><span class="s2">&quot;base&quot;</span><span class="p">]</span>
+<span class="n">KW</span> <span class="o">=</span> <span class="n">cash_flows</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">cash_flows</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">i</span><span class="p">)</span><span class="o">**</span><span class="mi">1</span> <span class="o">+</span> <span class="n">cash_flows</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">i</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">cash_flows</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">i</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span>
+<span class="n">KW</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1172.9062357760577
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cash_flows</span> <span class="o">=</span> <span class="n">cf_szenario</span><span class="p">[</span><span class="s2">&quot;high&quot;</span><span class="p">]</span>
+<span class="n">KW</span> <span class="o">=</span> <span class="n">cash_flows</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">cash_flows</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">i</span><span class="p">)</span><span class="o">**</span><span class="mi">1</span> <span class="o">+</span> <span class="n">cash_flows</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">i</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">cash_flows</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">i</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span>
+<span class="n">KW</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3947.9972690031846
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Permalink to this headline">¶</a></h2>
+<p>Wir haben unsere ersten Zeilen programmiert und dabei unsere Beispielaufgabe Schritt für Schritt verändert und optimiert. Dabei haben wir folgende Dinge gelernt:</p>
+<ol class="simple">
+<li><p>einfache mathematische Operationen können in Python genutzt werden</p></li>
+<li><p>es gibt einige wenige Regeln, die wir beachten müssen, um keine “technischen” Fehler zu produzieren; insbesonder müssen wir darauf achten, dass wir keine Leerzeichen an den falschen Stellen setzen</p></li>
+<li><p>es gibt unterschiedliche Datentypen, die wir für unsere Analysen nutzen können und sollten. Nicht jeder Datentyp ist für jede Art der Problem geignet. Wir haben bisher <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code>, <code class="docutils literal notranslate"><span class="pre">str</span></code>, <code class="docutils literal notranslate"><span class="pre">list</span></code> und <code class="docutils literal notranslate"><span class="pre">dict</span></code> kennengelernt. Bei diesen Datentypen handelt es sich um solche, die bereits standardmäßig in Python integriert sind (sog. <code class="docutils literal notranslate"><span class="pre">build-in</span> <span class="pre">types</span></code><a class="footnote-reference brackets" href="#id8" id="id4">4</a>). Wir werden im weiteren Verlauf noch sehr viel mächtigere Datentypen kennenlernen, die wir explizit für die Zwecke der Datenanalyse entwickelt wurden und sehr hilfreiche “Fähigkeiten” haben.</p></li>
+</ol>
+<p>Im folgenden Kapitel werden wir unser Beispiel weiter optimieren. Denn - so ehrlich müssen wir sein - unsere bisherige Optimierung lässt noch keinen großen Vorteil gegenüber einem Taschenrechner und insbesondere nicht gegenüber Excel erkennen.</p>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>diese Formulierung ist nicht ganz korrekt, jedoch für unsere Zwecke ausreichend.</p>
+</dd>
+<dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Ausnahmen sind in Python bereits belegte Wörter, sog. Keywords, diese sind hier aufgeführt <a class="reference external" href="https://www.w3schools.com/python/python_ref_keywords.asp">keywords</a>.</p>
+</dd>
+<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p>Sie können die “hinterlegten Fähigkeiten” ausgeben lassen (via: <code class="docutils literal notranslate"><span class="pre">dir(variable)</span></code>). Die Ausgabe ist für Programmieranfänger jedoch zunächst eher verwirrend und wenig hilfreich, weshalb wir an dieser Stelle nicht weiter darauf eingehen werden.</p>
+</dd>
+<dt class="label" id="id8"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dd><p>siehe <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html">hier</a> für weitere Informationen zu den <code class="docutils literal notranslate"><span class="pre">build-in</span> <span class="pre">types</span></code>.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters/chapter_03"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../chapter_02/Intro_Skript.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Nutzung dieses Skripts</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../chapter_analytics/S02a_Descriptive_Statistics.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Deskriptive Statistik</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      Durch Felix Zeidler<br/>
+    
+        &copy; Urheberrechte © 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

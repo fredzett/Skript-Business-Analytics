@@ -1,4 +1,4 @@
-# Wie riskant sind Aktien?
+# Fragestellung
 
 ## Ausgangslage
 
