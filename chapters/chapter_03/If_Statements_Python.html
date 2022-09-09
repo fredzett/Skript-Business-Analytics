@@ -460,7 +460,7 @@
 </div></blockquote>
 <p>Die Antwort auf diese Frage ist theoretisch - und dies haben Sie spätestens im 3. Semester im Rahmen der Investitionsrechnung gelernt - simple zu beantworten:</p>
 <p>Ist der Kapitalwert &gt; 0, so lohnt sich eine Investition, da wir mit dieser “Wert schaffen”, d.h. wir auf heute diskontiert mehr Cash-Rückflüsse generieren, als wir in Summe investieren.</p>
-<p>Es wäre also hilfreich, wenn unser Programm uns die Rückmeldung gibt, ob der Kapitalwert größer 0 ist. Unser Programm müsste also in der Lage sein, folgende Analyse durchzuführen:</p>
+<p>Es wäre also hilfreich, wenn unser Programm uns die Rückmeldung gäbe, ob der Kapitalwert größer 0 ist. Unser Programm müsste also in der Lage sein, folgende Analyse durchzuführen:</p>
 <ul class="simple">
 <li><p>Wenn Kapitalwert größer 0, dann gib positive Rückmeldung (z.B. “das Projekt ist super!”)</p></li>
 <li><p>Wenn Kapitalwert kleiner oder gleich 0 dann gib negative Rückmeldung (z.B. “das Projekt ist schlecht! Finger weg”)</p></li>
@@ -474,7 +474,57 @@
     <span class="o">&lt;</span><span class="n">mach</span> <span class="n">etwas</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p><strong>Beispiel</strong></p>
+<p><strong>Beispiel 1:</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zahl</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="k">if</span> <span class="n">zahl</span> <span class="o">==</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Eine 10!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Eine 10!
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Beispiel 2:</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zahl</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="k">if</span> <span class="n">zahl</span> <span class="o">==</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Eine 10!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Wir sehen, dass der Code scheinbar nichts macht. Dies liegt daran, dass die Bedingung (<code class="docutils literal notranslate"><span class="pre">zahl</span> <span class="pre">==</span> <span class="pre">10</span></code>) in diesem Fall nicht erfüllt ist (weil: <code class="docutils literal notranslate"><span class="pre">zahl</span> <span class="pre">==</span> <span class="pre">12</span></code>). Wir sollten also noch angeben, was wir für den Fall machen wollen, dass die Bedingung nicht erfüllt ist. Eine sog. Default-Bedingung. Dies machen wir mit dem <code class="docutils literal notranslate"><span class="pre">else</span></code>-Statement. Wir schreiben dann:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">&lt;</span><span class="n">bedingung</span><span class="o">&gt;</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">mach</span> <span class="n">etwas</span><span class="o">&gt;</span> 
+<span class="k">else</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">mach</span> <span class="n">etwas</span> <span class="n">anderes</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p><strong>Beispiel:</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zahl</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="k">if</span> <span class="n">zahl</span> <span class="o">==</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Eine 10!&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Keine 10!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Keine 10!
+</pre></div>
+</div>
+</div>
+</div>
+<p>Wir können <code class="docutils literal notranslate"><span class="pre">if-statements</span></code> natürlich auch in andere Konstrukte integrieren. Häufig verwenden wir ein solches Statement, um Entscheidungen für Listen (oder andere iterierbare Objekte) herbeizuführen.</p>
+<p><strong>Beispiel:</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">werte</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">300</span><span class="p">]</span>
@@ -513,13 +563,7 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">4</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span>
+<span class="n">a</span> <span class="o">==</span> <span class="n">b</span>
 </pre></div>
 </div>
 </div>
@@ -572,7 +616,7 @@
 </div>
 <p>Wir können über die logischen Operatoren <code class="docutils literal notranslate"><span class="pre">and</span></code> und <code class="docutils literal notranslate"><span class="pre">or</span></code> auch verbinden. Wir könnten also z.B. abfragen:</p>
 <blockquote>
-<div><p>wenn bedingung1 erfüllt und bedingung2 erfüllt, dann mache etwas</p>
+<div><p>wenn bedingung1 erfüllt oder bedingung2 erfüllt, dann mache etwas</p>
 </div></blockquote>
 <p><strong>Beispiel</strong></p>
 <div class="cell docutils container">
