@@ -36,7 +36,7 @@ import matplotlib.pyplot as plt
 # 
 # Prinzipiell haben beide Varianten Vor- und Nachteile. In [vorherigen Kapitel](Introduction_Fallstudie.md) wurde [hier](download-yahoo) aufgezeigt, wie wir die konkreten DAX-Daten als Datei abspeichern. In unserem Fall verzichten wir darauf und wählen Variante 2, d.h. wir laden die Daten direkt in Python. Wir müssen dafür den Yahoo-Ticker für den DAX (`^GDAXI`) sowie Start- und Enddatum der benötigten Daten angeben. 
 
-# In[6]:
+# In[2]:
 
 
 data_dax = get_stock_data(ticker="^GDAXI", start="30-12-1987", end="31-07-2022")
@@ -50,7 +50,7 @@ data_dax = get_stock_data(ticker="^GDAXI", start="30-12-1987", end="31-07-2022")
 
 # Schauen wir uns die Daten an. Dies machen wir, in dem wir in eine Code-Zelle den Namen der Variable schreiben:
 
-# In[7]:
+# In[3]:
 
 
 data_dax
@@ -58,7 +58,7 @@ data_dax
 
 # Bei großen Datenmengen bietet es sich an, nur einen Teil der Informationen anzuzeigen. Wir können z.B. nur die ersten 5 Zeilen ausgeben lassen mit Hilfe der "Funktion" `head`:
 
-# In[48]:
+# In[4]:
 
 
 data_dax.head()
@@ -82,7 +82,7 @@ data_dax.head()
 # 
 # [^2]: An dieser Stelle entfernen wir fehlende Datenpunkte ohne weitere Analyse, weshalb die Datenpunkte überhaupt fehlen. Für viele Analysen sollte man dem Grund für die fehlenden Daten jedoch hinterhergehen, um sicherzustellen, dass (i) die Datenquelle ggf. nicht verlässlich ist und/oder (ii) die Ergebnisse nicht verfälschen werden.
 
-# In[49]:
+# In[5]:
 
 
 data_dax = (data_dax
@@ -96,7 +96,7 @@ data_dax
 
 # Bevor wir die Daten für unsere Zwecke weiter aufbereiten, schauen wir uns diese an, um sicherzustellen, dass die Kursentwicklung plausibel aussieht. 
 
-# In[50]:
+# In[6]:
 
 
 plot(data=data_dax, x="Datum", y="Preis", 
@@ -111,7 +111,7 @@ plot(data=data_dax, x="Datum", y="Preis",
 # 
 # Im nächsten Schritt müssen wir nun die Renditen berechnen, da wir diese für beide Ansätze - "Zurück in die Vergangenheit" und "historischer Zufall" - benötigen. Wir erstellen deshalb eine neue Spalte ("Rendite"), in der wir die tägliche Rendite (Hinweis: $r_t = \frac{P_t}{P_{t-1}} -1$) speichern. Dies können wir z.B. mit der Funktion `pct_change` berechnen. 
 
-# In[51]:
+# In[7]:
 
 
 data_dax = (data_dax
@@ -126,7 +126,7 @@ data_dax.head(10)
 
 # Wir fassen, was wir bisher berechnet haben in eine Funktion `calculate_returns` zusammen. Dies macht den Code übersichtlicher; insbesondere, wenn wir später ggf. Änderungen vornehmen möchten.
 
-# In[52]:
+# In[8]:
 
 
 def calculate_returns(_df):
@@ -145,7 +145,7 @@ def calculate_returns(_df):
 
 # Wir können jetzt alles zusammenfassen:
 
-# In[53]:
+# In[9]:
 
 
 data_dax = get_stock_data(ticker="^GDAXI", start="30-12-1987", end="31-07-2022")
@@ -176,7 +176,7 @@ data_dax.head()
 # 
 # Untenstehend ein Beispiel für unsere drei Beispielanlagen:
 
-# In[54]:
+# In[10]:
 
 
 beispiel = (data_dax
@@ -195,7 +195,7 @@ beispiel
 # 
 # Dafür müssen wir den obigen Programmcode nur geringfügig verändern:
 
-# In[55]:
+# In[11]:
 
 
 beispiel = (data_dax
@@ -217,7 +217,7 @@ beispiel
 # 
 # Hier folgt der Code für
 
-# In[56]:
+# In[12]:
 
 
 def calculate_cumreturns_hist(data, min_laufzeit):
@@ -251,7 +251,7 @@ def calculate_cumreturns_hist(data, min_laufzeit):
 
 # Den obigen Programmcode nutzen wir nun, um einen neuen Dataframe zu erstellen, in dem das kumulierte Produkt der Renditen aller Anlagen berechnet wurde. 
 
-# In[57]:
+# In[13]:
 
 
 min_t = 1000
@@ -263,7 +263,7 @@ data_anlagen.head(10)
 
 # Als Ergebnis sehen wir einen Datensatz, der die kumulierten Produkte der Renditen von Anlage 1 bis Anlage 7737 beinhaltet.  Diesen können wir mithilfe des folgenden Programmcode auch graphisch Darstellen.
 
-# In[58]:
+# In[46]:
 
 
 def plot_anlagen(data):
@@ -278,7 +278,8 @@ def plot_anlagen(data):
     plt.plot(data_plot, color="green", linewidth=0.025,alpha=0.05)
     ax.set_xlabel("Periode")
     ax.set_ylabel("Rendite der Anlage")
-    fig.suptitle(f"Wertentwicklung aller Anlagen in DAX\n(Anlagezeitraum mindestens {min_t} Tage)")
+    fig.suptitle(f"Wertentwicklung aller Anlagen in DAX\n(Anlagezeitraum mindestens {min_t} Tage)", y=1.08)
+    #ax.set_title(f"Wertentwicklung aller Anlagen in DAX\n(Anlagezeitraum mindestens {min_t} Tage)", y=1.08)
 
     xmin, xmax = ax.get_xlim()
     ax.hlines(0, xmin, xmax, colors="black", linestyles="--", label="Verlustlinie")
@@ -286,7 +287,7 @@ def plot_anlagen(data):
     return None
 
 
-# In[59]:
+# In[49]:
 
 
 # Hinweis: die Berechnung kann ja nach Computer einige Minuten dauern
@@ -301,7 +302,7 @@ plot_anlagen(data_anlagen);
 # 
 # Diese drei Schritte fassen wir nun in drei Funktionen zusammen. In Summe macht dies den Code besser lesbarer und schneller adaptierbar, falls weitere Analysen hinzukommen sollten. 
 
-# In[60]:
+# In[16]:
 
 
 min_t = 1000
@@ -318,7 +319,7 @@ data
 # 
 # Im Programmcode ist dies sehr einfach abzubilden:
 
-# In[61]:
+# In[17]:
 
 
 def calculate_loss_probabilities(_data):
@@ -328,7 +329,7 @@ def calculate_loss_probabilities(_data):
     return data_new
 
 
-# In[62]:
+# In[18]:
 
 
 data_final = calculate_loss_probabilities(data)
@@ -338,7 +339,7 @@ data_final[["Periode", "Verlustwahrscheinlichkeit"]]
 
 # An der Tabelle sehen wir, dass die Verlustwahrscheinlichkeit nach einem Tag bei ca. 40% liegt. Jedoch sehen wir, dass die Verlustwahrscheinlichkeit in den letzten Perioden 0% beträgt. D.h. in unserem Datensatz gab es z.B. keine Anlage, die nach 8733 Perioden noch eine Rendite von unter 0% gemacht hatte. Noch klarer wird die Berechnung, wenn wir die Verlustwahrscheinlichkeit plotten. 
 
-# In[165]:
+# In[19]:
 
 
 def plot_verlustwahrscheinlichkeit(data):
@@ -357,7 +358,7 @@ def plot_verlustwahrscheinlichkeit(data):
      
 
 
-# In[166]:
+# In[20]:
 
 
 plot_verlustwahrscheinlichkeit(data_final);
@@ -379,7 +380,7 @@ plot_verlustwahrscheinlichkeit(data_final);
 # 
 # Hier ist die Zusammenfassung unserer Analyse:
 
-# In[157]:
+# In[21]:
 
 
 min_t = 1000
@@ -408,7 +409,7 @@ min_t = 1000
 # ```
 # 
 
-# In[108]:
+# In[22]:
 
 
 def calculate_cumrets_random(_df, n_anlagen, n_time):
@@ -428,7 +429,7 @@ def calculate_cumrets_random(_df, n_anlagen, n_time):
     return data_combined
 
 
-# In[167]:
+# In[23]:
 
 
 (get_stock_data(ticker="^GDAXI", start="30-12-1987", end="31-07-2022") # Bleibt unverändert

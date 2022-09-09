@@ -68,7 +68,7 @@
 # Wir schreiben also 
 # 
 # ```
-# variable = wert
+# <variable> = <wert>
 # ```
 # 
 # `variable` kann hier jeden Namen annehmen[^2]. Für `wert` können wir Ganzahlen, Dezimalzahlen, Wörter oder auch ganz andere sog. Datentypen - z.B. Listen, Graphen oder Dataframes die wir jeweils noch kennenlernen werden - einsetzen. 
@@ -155,7 +155,7 @@ KW
 # Als generelle Daumenregel können wir bereits an dieser Stelle darauf hinweisen, dass wir repetitiven Code generell vermeiden und wir diesen optimieren sollten. 
 # ```
 # 
-# Im Folgenden wollen wir versuchen unseren Code  zu verbessern bzw. zu optimieren. Wir werden Schritt für Schritt neue Konzepte einführen. Der Code wird so weniger repetitv und flexibler einsetzbar. Die hier eingeführten Konzepte sind unabhängig vom gewählten Beispiel und generisch einsetzbar. 
+# Im Folgenden wollen wir versuchen unseren Code  zu verbessern bzw. zu optimieren. Wir werden Schritt für Schritt neue Konstrukte einführen. Der Code wird so weniger repetitv und flexibler einsetzbar. Die hier eingeführten Konstrukte sind unabhängig vom gewählten Beispiel und generisch einsetzbar. 
 
 # ## Wichtige Regeln in Python
 

@@ -7,7 +7,7 @@
 # 
 # Sie haben eine Liste mit Wörtern. Erstellen Sie eine neue Liste, die nur diejenigen Wörter beinhaltet, die nicht mit "vor" oder "Vor" beginnen. 
 # 
-# (Hinweis: Wörter sind vom Typ `str`. Schauen Sie sich die Methoden `lower` und `startswith` an)
+# (Hinweis: die einzelnen Wörter sind vom Typ `str`. Schauen Sie sich die `str`-Methoden `lower` und `startswith` an, um dieses Problem zu lösen)
 
 # In[5]:
 

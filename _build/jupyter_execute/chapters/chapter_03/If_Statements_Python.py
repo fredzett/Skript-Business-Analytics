@@ -13,7 +13,7 @@
 # 
 # Ist der Kapitalwert > 0, so lohnt sich eine Investition, da wir mit dieser "Wert schaffen", d.h. wir auf heute diskontiert mehr Cash-Rückflüsse generieren, als wir in Summe investieren. 
 # 
-# Es wäre also hilfreich, wenn unser Programm uns die Rückmeldung gibt, ob der Kapitalwert größer 0 ist. Unser Programm müsste also in der Lage sein, folgende Analyse durchzuführen:
+# Es wäre also hilfreich, wenn unser Programm uns die Rückmeldung gäbe, ob der Kapitalwert größer 0 ist. Unser Programm müsste also in der Lage sein, folgende Analyse durchzuführen:
 # 
 # - Wenn Kapitalwert größer 0, dann gib positive Rückmeldung (z.B. "das Projekt ist super!")
 # - Wenn Kapitalwert kleiner oder gleich 0 dann gib negative Rückmeldung (z.B. "das Projekt ist schlecht! Finger weg")
@@ -32,9 +32,52 @@
 #     <mach etwas>
 # ```
 # 
-# **Beispiel**
+# **Beispiel 1:**
 
-# In[20]:
+# In[35]:
+
+
+zahl = 10
+if zahl == 10:
+    print("Eine 10!")
+
+
+# **Beispiel 2:**
+
+# In[36]:
+
+
+zahl = 12
+if zahl == 10:
+    print("Eine 10!")
+
+
+# Wir sehen, dass der Code scheinbar nichts macht. Dies liegt daran, dass die Bedingung (`zahl == 10`) in diesem Fall nicht erfüllt ist (weil: `zahl == 12`). Wir sollten also noch angeben, was wir für den Fall machen wollen, dass die Bedingung nicht erfüllt ist. Eine sog. Default-Bedingung. Dies machen wir mit dem `else`-Statement. Wir schreiben dann:
+# 
+# ```
+# if <bedingung>:
+#     <mach etwas> 
+# else:
+#     <mach etwas anderes>
+# ```
+# 
+# **Beispiel:**
+
+# In[37]:
+
+
+zahl = 12
+if zahl == 10:
+    print("Eine 10!")
+else:
+    print("Keine 10!")
+
+
+# Wir können `if-statements` natürlich auch in andere Konstrukte integrieren. Häufig verwenden wir ein solches Statement, um Entscheidungen für Listen (oder andere iterierbare Objekte) herbeizuführen. 
+# 
+# **Beispiel:**
+
+# In[38]:
 
 
 werte = [100, 0, 20, 300]
@@ -61,25 +104,18 @@ for el in werte:
 # Die gleich-Bedingung wird mit "`==`" abgefragt und nicht mit dem einfache "`=`"-Zeichen, da dieses bereits für die Zuweisung von Variabeln belegt ist!
 # ```
 # ````
-# 
-# 
 
 # Schauen wir uns an, was das Ergebnis einer solchen Bedingung ist. 
 
-# In[8]:
+# In[39]:
 
 
 a = 3
 b = 4
-
-
-# In[9]:
-
-
 a == b
 
 
-# In[11]:
+# In[40]:
 
 
 a < b
@@ -87,7 +123,7 @@ a < b
 
 # Das Ergebnis einer Bedingung ist immer `True` oder `False`. Wir haben es also mit einem neuen uns bisher noch nicht bekannten Datentyp zu tun. Das Ergebnis einer Bedingung liefert den Datentyp `bool` zurück; dieser kann nur die genannten Werte `true` und `false` annehmen. Der Datentyp ist sehr nützlich, weil wir - insbesondere auch in der Datenanalyse - oft Bedingungen prüfen müssen. 
 
-# In[17]:
+# In[41]:
 
 
 condition_result = a > b 
@@ -98,7 +134,7 @@ type(condition_result)
 # 
 # **Beispiel:**
 
-# In[19]:
+# In[42]:
 
 
 bools = [True, False, True, False, False, False]
@@ -107,11 +143,11 @@ sum(bools)
 
 # Wir können über die logischen Operatoren `and` und `or` auch verbinden. Wir könnten also z.B. abfragen:
 # 
-# > wenn bedingung1 erfüllt und bedingung2 erfüllt, dann mache etwas
+# > wenn bedingung1 erfüllt oder bedingung2 erfüllt, dann mache etwas
 # 
 # **Beispiel**
 
-# In[22]:
+# In[43]:
 
 
 for el in werte:
@@ -125,7 +161,7 @@ for el in werte:
 # 
 # Es ist deshalb oft hilfreich mehrere Wenn-Dann-Abfragen zu verbinden. Dies können wir mit `elif` tun. 
 
-# In[24]:
+# In[44]:
 
 
 for el in werte:
@@ -145,7 +181,7 @@ for el in werte:
 # 
 # Wir haben eine Liste mit Zahlen, benötigen aber nur die positiven Zahlen. 
 
-# In[25]:
+# In[45]:
 
 
 werte = [100, 200, 300, -100, 200, 20, 40, -10, 0, 12]
@@ -157,7 +193,7 @@ werte_positiv
 # 
 # Wir haben eine Liste mit Wörtern und wollen Wörter, die ein bestimmtes Kriterium nicht erfüllen, aussortieren
 
-# In[27]:
+# In[46]:
 
 
 wörter = ["Umsatz", "Gewinn", "Preis", "Absatz"]
@@ -167,7 +203,7 @@ wörter_filtered
 
 # Greifen wir nun unser Ausgangsbeispiel wieder auf und ergänzen dieses um eine Wenn-Dann-Abfrage. Hier zunächst die Code-Blöcke, die wir bereits implementiert hatten
 
-# In[30]:
+# In[47]:
 
 
 def berechne_kapitalwert(cashflows, zins):
@@ -175,7 +211,7 @@ def berechne_kapitalwert(cashflows, zins):
     return KW
 
 
-# In[31]:
+# In[48]:
 
 
 # Annahmen im Base Case
@@ -191,7 +227,7 @@ ergebnisse
 
 # In unserem Beispiel haben wir drei Szenarien, die alle drei eintreten könnten. Wir könnten diese mit Wahrscheinlichkeiten gewichten und eine Art Erwartungswert berechnen. Wir werden dann mit einer Wenn-Dann-Abfrage, checken, ob der Erwartungswert > 0 ist und sich die Investition lohnt.
 
-# In[34]:
+# In[49]:
 
 
 wahrscheinlichkeiten = [0.5, 0.1, 0.4] # Wahrscheinlichkeiten für Szenarien
@@ -209,7 +245,7 @@ else:
 # 2. Wir lagern die Wenn-Dann-Abfrage in eine Funktion aus
 # 3. Wir schreiben eine Funktion für die gesamte Analyse, in der wir alle Einzelfunktionen nutzen
 
-# In[41]:
+# In[50]:
 
 
 def calc_erwartungswert(kapitalwerte, probs):
@@ -223,7 +259,7 @@ def print_result(erwartungswert):
         print("Die Investition ist schlecht. Der EW beträgt", erwartungswert)
 
 
-# In[44]:
+# In[51]:
 
 
 def check_investment(cash_szenarien, i, probs):
@@ -240,7 +276,7 @@ def check_investment(cash_szenarien, i, probs):
 
 # Unsere gesamte Analyse erstreckt sich jetzt auf folgenden Code:
 
-# In[45]:
+# In[52]:
 
 
 i = 0.04

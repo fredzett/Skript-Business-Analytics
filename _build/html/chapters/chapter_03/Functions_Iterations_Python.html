@@ -524,7 +524,7 @@
 </ul>
 <p>Der Name der Funktion lautet <code class="docutils literal notranslate"><span class="pre">len</span></code>. Die Funktion wird dann aber erst ausgeführt (bzw. aufgerufen), in dem der Funktion die benötigten Parameter übergeben werden. Bei der Funktion <code class="docutils literal notranslate"><span class="pre">len</span></code> ist dies z.B. eine Liste, deren Anzahl an Elementen bestimmt werden soll.</p>
 <p>Wenn wir eine bestehende Funktion nutzen wollen, schreiben wir also immer:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">funktionsname</span><span class="p">(</span><span class="n">parameter</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">funktionsname</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&lt;</span><span class="n">parameter</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Die “<code class="docutils literal notranslate"><span class="pre">...</span></code>” stehen hier für weitere Parameter, die ggf. für eine Funktion benötigt werden. Das Vorgehen ist also prinzipiell sehr ähnlich zum Vorgehen bei Excel.</p>
@@ -573,10 +573,10 @@ Hallo John
 <p>Das Äquivalent in Excel würde wiefolgt aussehen:</p>
 <p><img alt="xls-for-loop2" src="../../_images/xls_for_loop2.gif" /></p>
 <p>Im obigen Python-Beispiel definieren wir eine Variabel <code class="docutils literal notranslate"><span class="pre">liste_namen</span></code>. Diese ist vom Datentyp <code class="docutils literal notranslate"><span class="pre">list</span></code>. Listen sind in Python immer iterierbar, d.h. wir können diese mittels einer <code class="docutils literal notranslate"><span class="pre">for-loop</span></code> durchlaufen. Wir tun dies in dem wir schreiben</p>
-<p><code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">name</span> <span class="pre">in</span> <span class="pre">liste_name:</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">&lt;name&gt;</span> <span class="pre">in</span> <span class="pre">&lt;liste_name&gt;:</span></code></p>
 <p>Dies zeigt Python an, dass wir die Liste <code class="docutils literal notranslate"><span class="pre">liste_namen</span></code> durchlaufen wollen und für jedes Element - wir bezeichnen es hier als <code class="docutils literal notranslate"><span class="pre">name</span></code> - etwas tun möchten. Unter dieser Definition schreiben wir dann - eingerückt mit <code class="docutils literal notranslate"><span class="pre">4</span> <span class="pre">Leerzeichen</span></code> bzw. <code class="docutils literal notranslate"><span class="pre">tab</span></code> - , was wir konkret tun möchten. In unserem Falle wollen wir nur etwas ausgeben lassen. Hierfür nutzen wir eine der build-in Funktionen (<code class="docutils literal notranslate"><span class="pre">print</span></code>). Wenn wir Zwischenergebnisse innerhalb einer <code class="docutils literal notranslate"><span class="pre">for-loop</span></code> nicht in Variabeln “abspeichern”, sondern nur anzeigen lassen wollen, müssen wir immer die (build-in) Funktion <code class="docutils literal notranslate"><span class="pre">print</span></code> nutzen.</p>
 <p>Jede For-Schleife in Python hat also immer die folgende grundsätzliche Strukur:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; for element in objekt:
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; for &lt;element&gt; in &lt;objekt&gt;:
         mach irgendetwas
 </pre></div>
 </div>
@@ -662,7 +662,7 @@ Wir erstellen dafür eine leere Liste (“<code class="docutils literal notransl
 </div>
 </div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">mach</span> <span class="n">irgendetwas</span> <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">objekt</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">mach</span> <span class="n">irgendetwas</span> <span class="k">for</span> <span class="o">&lt;</span><span class="n">element</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">objekt</span><span class="o">&gt;</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>In Python werden - wenn möglich - typischerweise <code class="docutils literal notranslate"><span class="pre">list</span> <span class="pre">comprehension</span></code> bevorzugt, da dies den Code insgesamt übersichtlicher und lesbarer macht.</p>

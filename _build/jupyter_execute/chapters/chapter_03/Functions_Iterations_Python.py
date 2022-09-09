@@ -50,7 +50,7 @@ len(werte) # Gibt die Anzahl an Elementen in der Liste "werte" zurück
 # Wenn wir eine bestehende Funktion nutzen wollen, schreiben wir also immer:
 # 
 # ```
-# funktionsname(parameter, ...)
+# <funktionsname>(<parameter>, ...)
 # ```
 # 
 # Die "`...`" stehen hier für weitere Parameter, die ggf. für eine Funktion benötigt werden. Das Vorgehen ist also prinzipiell sehr ähnlich zum Vorgehen bei Excel. 
@@ -107,13 +107,13 @@ for name in liste_namen:
 
 # Im obigen Python-Beispiel definieren wir eine Variabel `liste_namen`. Diese ist vom Datentyp `list`. Listen sind in Python immer iterierbar, d.h. wir können diese mittels einer `for-loop` durchlaufen. Wir tun dies in dem wir schreiben 
 # 
-# `for name in liste_name:`
+# `for <name> in <liste_name>:`
 # 
 # Dies zeigt Python an, dass wir die Liste `liste_namen` durchlaufen wollen und für jedes Element - wir bezeichnen es hier als `name` - etwas tun möchten. Unter dieser Definition schreiben wir dann - eingerückt mit `4 Leerzeichen` bzw. `tab` - , was wir konkret tun möchten. In unserem Falle wollen wir nur etwas ausgeben lassen. Hierfür nutzen wir eine der build-in Funktionen (`print`). Wenn wir Zwischenergebnisse innerhalb einer `for-loop` nicht in Variabeln "abspeichern", sondern nur anzeigen lassen wollen, müssen wir immer die (build-in) Funktion `print` nutzen.  
 
 # Jede For-Schleife in Python hat also immer die folgende grundsätzliche Strukur:
 # 
-#     >>> for element in objekt:
+#     >>> for <element> in <objekt>:
 #             mach irgendetwas
 #         
 # Hierbei muss `objekt` iterierbar sein. `element` können wir uns als eine Art Platzhalter für das jeweilige Element vorstellen. Wir können hier auch jeden anderen Namen wählen. Wir sollten uns jedoch angewöhnen sinnvolle und beschreibende Namen zu wählen. 
@@ -190,7 +190,7 @@ anzahl_buchstaben
 
 
 # ```
-# >>> [mach irgendetwas for element in objekt]
+# >>> [mach irgendetwas for <element> in <objekt>]
 # ```
 
 # In Python werden - wenn möglich - typischerweise `list comprehension` bevorzugt, da dies den Code insgesamt übersichtlicher und lesbarer macht. 
