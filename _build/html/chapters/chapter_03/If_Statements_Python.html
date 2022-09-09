@@ -1,0 +1,833 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entscheidungsstrukturen</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/myfile.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Übungen 3" href="If_Statements_Python_Excercises.html" />
+    <link rel="prev" title="Übungen 2" href="Functions_Iterations_Python_Excercises.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/datascience2.png" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Dieses Buch durchsuchen ..." aria-label="Dieses Buch durchsuchen ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Vorwort.html">
+   Vorwort
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  01 Einleitung
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_01/Business_Analytics.html">
+   Warum Business Analytics?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_01/Warum_Coding.html">
+   Warum Programmieren?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_01/01_Warum_Python.html">
+   Warum Python?
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter_01/Fallstudie.html">
+   Ausblick: was sie erwartet
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter_01/Introduction_Fallstudie.html">
+     Fragestellung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter_01/Umsetzung_Fallstudie.html">
+     Umsetzung in Python
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  02 Technisches Setup
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_02/Installation.html">
+   Installation &amp; Setup
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_02/Intro_Jupyter.html">
+   Einführung Jupyter Notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_02/Intro_Skript.html">
+   Nutzung dieses Skripts
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  03 Python | Grundlagen
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="Intro_Python.html">
+   Einführung in Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Intro_Python_Excercises.html">
+     Übungen 1
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="Functions_Iterations_Python.html">
+   Iterationen und Funktionen
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Functions_Iterations_Python_Excercises.html">
+     Übungen 2
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   Entscheidungsstrukturen
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="If_Statements_Python_Excercises.html">
+     Übungen 3
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  99 Sandbox
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S02a_Descriptive_Statistics.html">
+   Deskriptive Statistik
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S03a_Simulation.html">
+   Simulationen mit Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S03c_Probability_Distributions.html">
+   Wahrscheinlichkeitsverteilungen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S04a_Estimation%26HyptothesisTesting.html">
+   Testen von Hypothesen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S05a_Regression.html">
+   Lineare Regression
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S06a_TidyData.html">
+   Tidy Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S07a_Classification.html">
+   Klassifikation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S08a_Clustering.html">
+   Clusteranalyse
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S09a_Cross_validation.html">
+   Cross Validation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S11_DecisionTrees.html">
+   Entscheidungsbäume
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S12_Ensembles.html">
+   Ensemble-Methoden
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Anhang
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../literatur.html">
+   Literatur
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <div>
+    
+</div>
+
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Navigation umschalten" aria-controls="site-navigation"
+                title="Navigation umschalten" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Laden Sie diese Seite herunter"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/chapters/chapter_03/If_Statements_Python.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Quelldatei herunterladen" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="In PDF drucken"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Vollbildmodus"
+        title="Vollbildmodus"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/fredzett/Skript-Business-Analytics/blob/master/chapters/chapter_03/If_Statements_Python.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Starten Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Inhalt
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#einfache-if-statements">
+   Einfache if-Statements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#komplexere-if-statements">
+   Komplexere if-statements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#list-comprehsions-und-if-statments">
+   List comprehsions und if statments
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fazit">
+   Fazit
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Entscheidungsstrukturen</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Inhalt </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#einfache-if-statements">
+   Einfache if-Statements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#komplexere-if-statements">
+   Komplexere if-statements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#list-comprehsions-und-if-statments">
+   List comprehsions und if statments
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fazit">
+   Fazit
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="entscheidungsstrukturen">
+<h1>Entscheidungsstrukturen<a class="headerlink" href="#entscheidungsstrukturen" title="Permalink to this headline">¶</a></h1>
+<p>In unserem Ausgangsbeispiel wollten wir berechnen, ob sich ein Projekt lohnt. Auch wenn wir im vorherigen Kapitel bereits viele Verbesserungen ggü. dem ursprünglichen Programm gemacht haben, so haben wir die eigentliche Frage noch nicht beantwortet. Dies wollen wir nun nachholen.</p>
+<p>Die Frage, die wir untersuchen wollten und die unser Programm beantworten sollte, lautete:</p>
+<blockquote>
+<div><p>“Lohnt es sich, die Investition zu tätigen?”</p>
+</div></blockquote>
+<p>Die Antwort auf diese Frage ist theoretisch - und dies haben Sie spätestens im 3. Semester im Rahmen der Investitionsrechnung gelernt - simple zu beantworten:</p>
+<p>Ist der Kapitalwert &gt; 0, so lohnt sich eine Investition, da wir mit dieser “Wert schaffen”, d.h. wir auf heute diskontiert mehr Cash-Rückflüsse generieren, als wir in Summe investieren.</p>
+<p>Es wäre also hilfreich, wenn unser Programm uns die Rückmeldung gibt, ob der Kapitalwert größer 0 ist. Unser Programm müsste also in der Lage sein, folgende Analyse durchzuführen:</p>
+<ul class="simple">
+<li><p>Wenn Kapitalwert größer 0, dann gib positive Rückmeldung (z.B. “das Projekt ist super!”)</p></li>
+<li><p>Wenn Kapitalwert kleiner oder gleich 0 dann gib negative Rückmeldung (z.B. “das Projekt ist schlecht! Finger weg”)</p></li>
+</ul>
+<p>Für eine solche Analyse benötigen wir das Konstrukt eines sog. “<code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">statement</span></code>”. Schauen wir uns zunächst an, wie dieses Konstrukt in Python funktioniert und implementiert wird und es so dann auf unser Beispiel anwenden.</p>
+<div class="section" id="einfache-if-statements">
+<h2>Einfache if-Statements<a class="headerlink" href="#einfache-if-statements" title="Permalink to this headline">¶</a></h2>
+<p>In Python können wir “wenn-dann”-Konstrukte relativ einfach implementieren.</p>
+<p>Die einfachste Form des Konstruktes funktioniert in Python wiefolgt:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">&lt;</span><span class="n">bedingung</span><span class="o">&gt;</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">mach</span> <span class="n">etwas</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p><strong>Beispiel</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">werte</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">300</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">werte</span><span class="p">:</span>
+
+    <span class="c1"># einfache Wenn-Bedingung</span>
+    <span class="k">if</span> <span class="n">el</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Wir habe eine 0 gefunden&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Wir habe eine 0 gefunden
+</pre></div>
+</div>
+</div>
+</div>
+<p>Das “<code class="docutils literal notranslate"><span class="pre">if-statment</span></code>” beginnt immer mit dem Keyword <code class="docutils literal notranslate"><span class="pre">if</span></code> und wird gefolgt von einer Bedingung. In Python kann ich folgende logische Bedingungen abfragen:</p>
+<ul class="simple">
+<li><p>gleich: <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">==</span> <span class="pre">b</span></code>; fragt ab, ob die Bedingung “a hat den gleichen Wert wie b” erfüllt ist</p></li>
+<li><p>nicht gleich: <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">!=</span> <span class="pre">b</span></code>; fragt ab, ob die Bedingung “a hat nicht den gleichen Wert wie b” erfüllt ist</p></li>
+<li><p>weniger als: <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&lt;</span> <span class="pre">b</span></code>; fragt ab, ob die Bedingung “a ist kleiner als b” erfüllt ist</p></li>
+<li><p>weniger oder gleich: <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&lt;=</span> <span class="pre">b</span></code>; fragt ab, ob die Bedingung “a ist kleiner oder gleich b” erfüllt ist</p></li>
+<li><p>größer als: <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&gt;</span> <span class="pre">b</span></code>; fragt ab, ob die Bedingung “a ist größer als b” erfüllt ist</p></li>
+<li><p>größer oder gleich: <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&gt;=</span> <span class="pre">b</span></code>; fragt ab, ob die Bedingung “a ist größer oder gleich b” erfüllt ist</p></li>
+</ul>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="warning admonition">
+<p class="admonition-title">Wichtig</p>
+<p>Die gleich-Bedingung wird mit “<code class="docutils literal notranslate"><span class="pre">==</span></code>” abgefragt und nicht mit dem einfache “<code class="docutils literal notranslate"><span class="pre">=</span></code>”-Zeichen, da dieses bereits für die Zuweisung von Variabeln belegt ist!</p>
+</div>
+</div>
+<p>Schauen wir uns an, was das Ergebnis einer solchen Bedingung ist.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Das Ergebnis einer Bedingung ist immer <code class="docutils literal notranslate"><span class="pre">True</span></code> oder <code class="docutils literal notranslate"><span class="pre">False</span></code>. Wir haben es also mit einem neuen uns bisher noch nicht bekannten Datentyp zu tun. Das Ergebnis einer Bedingung liefert den Datentyp <code class="docutils literal notranslate"><span class="pre">bool</span></code> zurück; dieser kann nur die genannten Werte <code class="docutils literal notranslate"><span class="pre">true</span></code> und <code class="docutils literal notranslate"><span class="pre">false</span></code> annehmen. Der Datentyp ist sehr nützlich, weil wir - insbesondere auch in der Datenanalyse - oft Bedingungen prüfen müssen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">condition_result</span> <span class="o">=</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span> 
+<span class="nb">type</span><span class="p">(</span><span class="n">condition_result</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bool
+</pre></div>
+</div>
+</div>
+</div>
+<p>Wir können mit dem Datentyp <code class="docutils literal notranslate"><span class="pre">bool</span></code> auch ganz normale Rechenoperationen durchführen. Dies stellt sich oft als nützlich heraus, wie wir noch feststellen werden. Python behandelt <code class="docutils literal notranslate"><span class="pre">True</span></code> wie eine 1 und <code class="docutils literal notranslate"><span class="pre">False</span></code> wie eine 0.</p>
+<p><strong>Beispiel:</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bools</span> <span class="o">=</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>
+<span class="nb">sum</span><span class="p">(</span><span class="n">bools</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+<p>Wir können über die logischen Operatoren <code class="docutils literal notranslate"><span class="pre">and</span></code> und <code class="docutils literal notranslate"><span class="pre">or</span></code> auch verbinden. Wir könnten also z.B. abfragen:</p>
+<blockquote>
+<div><p>wenn bedingung1 erfüllt und bedingung2 erfüllt, dann mache etwas</p>
+</div></blockquote>
+<p><strong>Beispiel</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">werte</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">el</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">el</span> <span class="o">==</span> <span class="mi">20</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Klasse! Der Wert beträgt 0 oder 20.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Klasse! Der Wert beträgt 0 oder 20.
+Klasse! Der Wert beträgt 0 oder 20.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="komplexere-if-statements">
+<h2>Komplexere if-statements<a class="headerlink" href="#komplexere-if-statements" title="Permalink to this headline">¶</a></h2>
+<p>Oft werden wir Probleme und Fragestellungen haben, bei denen die Wenn-Dann-Abfrage komplexer ist. Im obigen Beispiel liefert unser Code z.B. keine Antwort auf die Frage, ob eine 0 oder eine 20 gefunden wurde, sondern nur, dass einer der beiden Werte gefunden wurde.</p>
+<p>Es ist deshalb oft hilfreich mehrere Wenn-Dann-Abfragen zu verbinden. Dies können wir mit <code class="docutils literal notranslate"><span class="pre">elif</span></code> tun.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">werte</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">el</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Wir haben eine 0 gefunden&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">el</span> <span class="o">==</span> <span class="mi">20</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Wir haben eine 20 gefunden&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nix gefunden&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nix gefunden
+Wir haben eine 0 gefunden
+Wir haben eine 20 gefunden
+Nix gefunden
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="list-comprehsions-und-if-statments">
+<h2>List comprehsions und if statments<a class="headerlink" href="#list-comprehsions-und-if-statments" title="Permalink to this headline">¶</a></h2>
+<p>Wir können das Konstrukt der Wenn-Dann-Bedingungen auch im Rahmen einer <code class="docutils literal notranslate"><span class="pre">list</span> <span class="pre">comprehension</span></code> nutzen. Dies ist in Python sehr üblich und liest sich oft wesentlich kompakter. Ein häufiger Anwendungsfall ist das Filtern von Listen.</p>
+<p><strong>Beispiel:</strong></p>
+<p>Wir haben eine Liste mit Zahlen, benötigen aber nur die positiven Zahlen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">werte</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
+<span class="n">werte_positiv</span> <span class="o">=</span> <span class="p">[</span><span class="n">el</span> <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">werte</span> <span class="k">if</span> <span class="n">el</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">werte_positiv</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[100, 200, 300, 200, 20, 40, 12]
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Beispiel:</strong></p>
+<p>Wir haben eine Liste mit Wörtern und wollen Wörter, die ein bestimmtes Kriterium nicht erfüllen, aussortieren</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wörter</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Umsatz&quot;</span><span class="p">,</span> <span class="s2">&quot;Gewinn&quot;</span><span class="p">,</span> <span class="s2">&quot;Preis&quot;</span><span class="p">,</span> <span class="s2">&quot;Absatz&quot;</span><span class="p">]</span>
+<span class="n">wörter_filtered</span> <span class="o">=</span> <span class="p">[</span><span class="n">el</span> <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">wörter</span> <span class="k">if</span> <span class="s2">&quot;z&quot;</span> <span class="ow">in</span> <span class="n">el</span><span class="p">]</span>
+<span class="n">wörter_filtered</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Umsatz&#39;, &#39;Absatz&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Greifen wir nun unser Ausgangsbeispiel wieder auf und ergänzen dieses um eine Wenn-Dann-Abfrage. Hier zunächst die Code-Blöcke, die wir bereits implementiert hatten</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">berechne_kapitalwert</span><span class="p">(</span><span class="n">cashflows</span><span class="p">,</span> <span class="n">zins</span><span class="p">):</span>
+    <span class="n">KW</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="n">cf</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">zins</span><span class="p">)</span><span class="o">**</span><span class="n">t</span> <span class="k">for</span> <span class="n">t</span><span class="p">,</span> <span class="n">cf</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">cashflows</span><span class="p">)])</span>
+    <span class="k">return</span> <span class="n">KW</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Annahmen im Base Case</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mf">0.04</span>
+<span class="n">cf_szenario</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;base&quot;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">5000</span><span class="p">,</span> <span class="mi">4000</span><span class="p">,</span> <span class="mi">3000</span><span class="p">],</span> 
+            <span class="s2">&quot;high&quot;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">6000</span><span class="p">,</span> <span class="mi">5000</span><span class="p">,</span> <span class="mi">4000</span><span class="p">],</span>
+            <span class="s2">&quot;low&quot;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">4000</span><span class="p">,</span> <span class="mi">3000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">],}</span>
+
+<span class="n">szenarien</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;base&quot;</span><span class="p">,</span> <span class="s2">&quot;high&quot;</span><span class="p">,</span> <span class="s2">&quot;low&quot;</span><span class="p">]</span>
+<span class="n">ergebnisse</span> <span class="o">=</span> <span class="p">[</span><span class="n">berechne_kapitalwert</span><span class="p">(</span><span class="n">cf_szenario</span><span class="p">[</span><span class="n">szenario</span><span class="p">],</span> <span class="n">i</span> <span class="p">)</span> <span class="k">for</span> <span class="n">szenario</span> <span class="ow">in</span> <span class="n">szenarien</span><span class="p">]</span>
+<span class="n">ergebnisse</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1172.9062357760577, 3947.9972690031846, -2491.1811561219856]
+</pre></div>
+</div>
+</div>
+</div>
+<p>In unserem Beispiel haben wir drei Szenarien, die alle drei eintreten könnten. Wir könnten diese mit Wahrscheinlichkeiten gewichten und eine Art Erwartungswert berechnen. Wir werden dann mit einer Wenn-Dann-Abfrage, checken, ob der Erwartungswert &gt; 0 ist und sich die Investition lohnt.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wahrscheinlichkeiten</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">]</span> <span class="c1"># Wahrscheinlichkeiten für Szenarien</span>
+<span class="n">erwartungswert</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="n">p</span><span class="o">*</span><span class="n">kw</span> <span class="k">for</span> <span class="n">p</span><span class="p">,</span> <span class="n">kw</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">wahrscheinlichkeiten</span><span class="p">,</span> <span class="n">ergebnisse</span><span class="p">)])</span>
+<span class="k">if</span> <span class="n">erwartungswert</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Investition ist gut! Der EW beträgt&quot;</span><span class="p">,</span> <span class="n">erwartungswert</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Die Investition ist schlecht. Der EW beträgt&quot;</span><span class="p">,</span> <span class="n">erwartungswert</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Die Investition ist schlecht. Der EW beträgt -15.219617660446943
+</pre></div>
+</div>
+</div>
+</div>
+<p>Der Code beinhaltet nun alles, was wir zur Lösung unserer Fragestellung benötigen. Lassen Sie uns diesen nun noch einmal optimieren, so dass wir diesen schnell adaptieren könnten, falls sich Annahmen änderten (z.B. anderer Zinssatz oder andere Wahrscheinlichkeiten). Wir machen dies in drei Schritten:</p>
+<ol class="simple">
+<li><p>Wir lagern die Berechnung des Erwartungswertes in eine separate Funktion aus</p></li>
+<li><p>Wir lagern die Wenn-Dann-Abfrage in eine Funktion aus</p></li>
+<li><p>Wir schreiben eine Funktion für die gesamte Analyse, in der wir alle Einzelfunktionen nutzen</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calc_erwartungswert</span><span class="p">(</span><span class="n">kapitalwerte</span><span class="p">,</span> <span class="n">probs</span><span class="p">):</span>
+    <span class="n">erwartungswert</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="n">p</span><span class="o">*</span><span class="n">kw</span> <span class="k">for</span> <span class="n">p</span><span class="p">,</span> <span class="n">kw</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">probs</span><span class="p">,</span> <span class="n">kapitalwerte</span><span class="p">)])</span>
+    <span class="k">return</span> <span class="n">erwartungswert</span>
+
+<span class="k">def</span> <span class="nf">print_result</span><span class="p">(</span><span class="n">erwartungswert</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">erwartungswert</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Investition ist gut! Der EW beträgt&quot;</span><span class="p">,</span> <span class="n">erwartungswert</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Die Investition ist schlecht. Der EW beträgt&quot;</span><span class="p">,</span> <span class="n">erwartungswert</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">check_investment</span><span class="p">(</span><span class="n">cash_szenarien</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">probs</span><span class="p">):</span>
+    
+    <span class="c1"># 1. Schritt: Kapitalwerte der Szenarien berechnen</span>
+    <span class="n">kapitalwerte</span> <span class="o">=</span> <span class="p">[</span><span class="n">berechne_kapitalwert</span><span class="p">(</span><span class="n">cashflows</span><span class="p">,</span> <span class="n">i</span> <span class="p">)</span> <span class="k">for</span> <span class="n">cashflows</span> <span class="ow">in</span> <span class="n">cash_szenarien</span><span class="o">.</span><span class="n">values</span><span class="p">()]</span>
+
+    <span class="c1"># 2. Schritt: Erwartungswert der Kapitalwerte berechnen (d.h. mit Wahrscheinlichkeiten gewichten)</span>
+    <span class="n">erwartungswert</span> <span class="o">=</span> <span class="n">calc_erwartungswert</span><span class="p">(</span><span class="n">kapitalwerte</span><span class="p">,</span> <span class="n">probs</span><span class="p">)</span>
+
+    <span class="c1"># 3. Schritt: Wenn-Dann-Abfrage, ob Erwartungswert (EW) &gt; 0</span>
+    <span class="n">print_result</span><span class="p">(</span><span class="n">erwartungswert</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Unsere gesamte Analyse erstreckt sich jetzt auf folgenden Code:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mf">0.04</span>
+<span class="n">cf_szenario</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;base&quot;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">5000</span><span class="p">,</span> <span class="mi">4000</span><span class="p">,</span> <span class="mi">3000</span><span class="p">],</span> 
+            <span class="s2">&quot;high&quot;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">6000</span><span class="p">,</span> <span class="mi">5000</span><span class="p">,</span> <span class="mi">4000</span><span class="p">],</span>
+            <span class="s2">&quot;low&quot;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">4000</span><span class="p">,</span> <span class="mi">3000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">],}</span>
+<span class="n">probs</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">]</span>
+<span class="n">check_investment</span><span class="p">(</span><span class="n">cf_szenario</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">probs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Die Investition ist schlecht. Der EW beträgt -15.219617660446943
+</pre></div>
+</div>
+</div>
+</div>
+<p>Der gesamte Code ist jetzt hierarchisch aufgebaut. Die eigentliche Analyse erfolgt in einer Zeile (<code class="docutils literal notranslate"><span class="pre">check_investment(...)</span></code>). Um zu sehen, was diese Funktion tut, können wir uns diese anschauen und sehen, dass diese drei Funktionen aufruft. Diese können wir uns dann wieder im Detail anschauen etc. Dieses Vorgehen erleichtert es unseren Code les- und handhabbar zu machen. Wir können auch in 3 Monaten noch nachvollziehen, was unser Code macht und könnten Fehler schnell finden.</p>
+</div>
+<div class="section" id="fazit">
+<h2>Fazit<a class="headerlink" href="#fazit" title="Permalink to this headline">¶</a></h2>
+<p>Wir sind einen großen Schritt gegangen und haben bereits wesentliche Konstrukte in Python kennengelernt, um komplexe Programme zu schreiben.</p>
+<ul class="simple">
+<li><p>Mit der Einführung von Wenn-Dann-Abfragen, können Sie nun den Computer vordefinierte Entscheidungen durchlaufen lassen.</p></li>
+<li><p>wir haben bei der Optimierung gesehen, dass wir Code - wenn sinnvoll - in Funktionen auslagern sollten, um diesen lesbarer zu machen.</p></li>
+</ul>
+<p>In den nächsten Kapiteln werden wir uns nun mit dem Importieren von externen Modulen beschäftigen, die uns viele wichtige Funktionen für eine ernsthafte Datenanalyse geben werden. Es ist jedoch wichtig, dass sie das bisher vorgestellte üben und nachvollziehen, um die weiteren Kapitel gut verfolgen zu können.</p>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters/chapter_03"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Functions_Iterations_Python_Excercises.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Übungen 2</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="If_Statements_Python_Excercises.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Übungen 3</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      Durch Felix Zeidler<br/>
+    
+        &copy; Urheberrechte © 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

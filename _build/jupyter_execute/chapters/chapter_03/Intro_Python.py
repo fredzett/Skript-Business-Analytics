@@ -14,15 +14,23 @@
 # 
 # - Links mit weiteren Ressourcen: [hier](https://wiki.python.org/moin/BeginnersGuide/NonProgrammers)
 # 
-# Insbesondere zu als Anfänger ist die Menge an Tutorial überwältigend und es fällt schwer zu beurteilen, was davon geeignet und für unsere Zwecke sinnvoll ist. Je mehr Erfahrung und Übung Sie jedoch bekommen, desto einfacher fällt es zielgerichtet im Internet nach Hilfe zu suchen. 
+# Insbesondere zu als Anfänger ist die Menge an Tutorials überwältigend und es fällt schwer zu beurteilen, was davon geeignet und für unsere Zwecke sinnvoll ist. Je mehr Erfahrung und Übung Sie jedoch bekommen, desto einfacher fällt es zielgerichtet im Internet nach Hilfe zu suchen. 
+# 
+# Natürlich gibt es auch eine Vielzahl an guten Büchern zum Thema Programmieren und Python. Eine ganz besonders gelungene Einführung in das Thema Programmieren mit Python bietet {cite:ts}`zelle_python_2016`. (siehe [hier](https://fhb-bielefeld.digibib.net/search/eds/record/edshbz:edshbz.DE.605.HBZ01.022046291/availability?be-eds-expander=fulltext%2Crelatedsubjects&be-eds-q-al=Python+Programming&be-eds-sort=relevance&parent_request_id=009t3eg3tsr7uit4fa9g&parent_request_id_hmac=c5a79bf0a06e4f3acfab103b8795e305620574be&q-au=Zelle&q-tf=Python+Programming&start=1&count=20&hitcount=6&pos=1&parent_request_id=009t3eg3tsr7uit4fa9g&parent_request_id_hmac=c5a79bf0a06e4f3acfab103b8795e305620574be)). Das Buch empfiehlt sich insbesondere für diejenigen von Ihnen, die die Grundlagen des Programmierens nicht nur aus Datenanalyse-Perspektive betrachten wollen. 
 # 
 # ```
 # 
 # 
 
-# ### Einfache Arithmetik
+# In[ ]:
 
-# Wie bereits im vorangegangenen Kapitel gesehen, können wir mit Python ganz einfache Berechnungen durchführen 
+
+
+
+
+# ## Einfache Arithmetik
+
+# Beginnen wir mit einfachen mathematischen Operationen. Das Beispiel zeigt einen Ausdruck bzw. Statement (im Folgenden verwenden wir den Begriff `Statement`) mit Berechnungen. Dieser Ausdruck ist in Python geschrieben:
 
 # In[3]:
 
@@ -50,7 +58,7 @@
 # 
 # ![Excel gut](../assets/Excel_good.png)
 
-# ### Zuweisen von Variablen
+# ## Zuweisen von Variablen
 
 # Das Äquivalen in Python ist die Nutzung von Variablen. Wir können Werte als Variablen abspeichern[^1], in dem wir das "`=`"-Symbol benutzen. 
 # 
@@ -149,7 +157,7 @@ KW
 # 
 # Im Folgenden wollen wir versuchen unseren Code  zu verbessern bzw. zu optimieren. Wir werden Schritt für Schritt neue Konzepte einführen. Der Code wird so weniger repetitv und flexibler einsetzbar. Die hier eingeführten Konzepte sind unabhängig vom gewählten Beispiel und generisch einsetzbar. 
 
-# ### Wichtige Regeln in Python
+# ## Wichtige Regeln in Python
 
 # An dieser Stelle macht es Sinn einige grundsätzliche Regeln von Python zu erläutern. 
 # 
@@ -210,7 +218,7 @@ komplexe_rechnung = 1234 + 12 - 13 * 14
 komplexe_rechnung
 
 
-# ### Datentypen
+# ## Datentypen
 
 # Jede Variable kann unterschiedliche Datentypen annehmen. In unseren obigen Beispielen haben wir bereits einige kennengelernt. 
 # 
@@ -288,7 +296,7 @@ ergebnis
 # 
 # 
 
-# #### Listen
+# ### Listen
 # 
 # Der Datentyp `list` (Liste) kann beliebig viele Variablen enhalten und wird mit "`[ ]`" erzeugt. Auch wenn eine Liste theoretisch unterschiedliche Datentypen beinhalten kann, wird diese meist eingesetzt, um zusammenhängende Elemente zusammenzufassen (z.B. unsere Cashflows)
 # 
@@ -355,7 +363,7 @@ KW = cash_flows[0] + cash_flows[1]/(1+i)**1 + cash_flows[2]/(1+i)**2 + cash_flow
 KW
 
 
-# #### Dictionary
+# ### Dictionary
 
 # Ein weiterer sehr nützlicher Datentyp in Python ist das sog. Dictionary (`dict`). Dieses können wir uns vorstellen, wie ein tatsächliches Wörterbuch. Wir können hier zu jedem Element ein passendes anderes Element abspeichern. Ein Dictionary wird mit "`{}`" erzeugt. Die sogenannten `key:value`-Paare werden dann im Dictionary gespeichert und können von unterschiedlichen Datentypen sein und werden via `[key]` abgerufen. 
 # 
@@ -401,6 +409,8 @@ my_first_dict[2] # Hier ist `2` kein Index, sondern ein sogenannte Schlüssel (e
 # ![tab_dict](../assets/tab_dict.png)
 
 # Dictionaries eignen sich hervorragend, um Parameter und Annahmen zu speichern. Wir können unser Beispiel also weiterfassen und z.B. zwei verschiedene Szenarien rechnen:
+# 
+# (code:status:one)=
 
 # In[61]:
 
@@ -428,7 +438,7 @@ KW = cash_flows[0] + cash_flows[1]/(1+i)**1 + cash_flows[2]/(1+i)**2 + cash_flow
 KW
 
 
-# ### Zusammenfassung und Ausblick
+# ## Zusammenfassung und Ausblick
 # 
 # Wir haben unsere ersten Zeilen programmiert und dabei unsere Beispielaufgabe Schritt für Schritt verändert und optimiert. Dabei haben wir folgende Dinge gelernt:
 # 
@@ -441,5 +451,3 @@ KW
 # Im folgenden Kapitel werden wir unser Beispiel weiter optimieren. Denn - so ehrlich müssen wir sein - unsere bisherige Optimierung lässt noch keinen großen Vorteil gegenüber einem Taschenrechner und insbesondere nicht gegenüber Excel erkennen. Auch wenn wir die repetitive Definition von Cashflow-Variablen vermieden haben, ist unsere Berechnung selber noch (i) repetitiv (wir schreiben die Variable `cash_flows` insgesamt 4x auf) und (ii) unflexibel, da unsere gesamte Berechnung weiterhin für jede andere Anzahl an Cashflows neu beschrieben werden müsste. 
 # 
 # [^4]: siehe [hier](https://docs.python.org/3/library/stdtypes.html) für weitere Informationen zu den `build-in types`. 
-
-# 

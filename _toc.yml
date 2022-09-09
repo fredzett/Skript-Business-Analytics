@@ -21,6 +21,14 @@ parts:
 - caption: 03 Python | Grundlagen
   chapters:
   - file: chapters/chapter_03/Intro_Python.ipynb
+    sections:
+    - file: chapters/chapter_03/Intro_Python_Excercises.ipynb
+  - file: chapters/chapter_03/Functions_Iterations_Python.ipynb
+    sections:
+    - file: chapters/chapter_03/Functions_Iterations_Python_Excercises.ipynb
+  - file: chapters/chapter_03/If_Statements_Python.ipynb
+    sections:
+    - file: chapters/chapter_03/If_Statements_Python_Excercises.ipynb
 - caption: 99 Sandbox
   chapters:
   - file: chapters/chapter_analytics/S02a_Descriptive_Statistics.ipynb

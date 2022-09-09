@@ -54,7 +54,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Deskriptive Statistik" href="../chapter_analytics/S02a_Descriptive_Statistics.html" />
+    <link rel="next" title="Übungen 1" href="Intro_Python_Excercises.html" />
     <link rel="prev" title="Nutzung dieses Skripts" href="../chapter_02/Intro_Skript.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -169,10 +169,56 @@
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
+ <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
    Einführung in Python
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Intro_Python_Excercises.html">
+     Übungen 1
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="Functions_Iterations_Python.html">
+   Iterationen und Funktionen
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Functions_Iterations_Python_Excercises.html">
+     Übungen 2
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="If_Statements_Python.html">
+   Entscheidungsstrukturen
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="If_Statements_Python_Excercises.html">
+     Übungen 3
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -451,11 +497,12 @@
 <li><p>Detaillierte Python-Kurs:  <a class="reference external" href="https://www.python-kurs.eu/python3_variablen.php">hier</a></p></li>
 <li><p>Links mit weiteren Ressourcen: <a class="reference external" href="https://wiki.python.org/moin/BeginnersGuide/NonProgrammers">hier</a></p></li>
 </ul>
-<p>Insbesondere zu als Anfänger ist die Menge an Tutorial überwältigend und es fällt schwer zu beurteilen, was davon geeignet und für unsere Zwecke sinnvoll ist. Je mehr Erfahrung und Übung Sie jedoch bekommen, desto einfacher fällt es zielgerichtet im Internet nach Hilfe zu suchen.</p>
+<p>Insbesondere zu als Anfänger ist die Menge an Tutorials überwältigend und es fällt schwer zu beurteilen, was davon geeignet und für unsere Zwecke sinnvoll ist. Je mehr Erfahrung und Übung Sie jedoch bekommen, desto einfacher fällt es zielgerichtet im Internet nach Hilfe zu suchen.</p>
+<p>Natürlich gibt es auch eine Vielzahl an guten Büchern zum Thema Programmieren und Python. Eine ganz besonders gelungene Einführung in das Thema Programmieren mit Python bietet <span id="id1">Zelle [<a class="reference internal" href="../literatur.html#id4">Zel16</a>]</span>. (siehe <a class="reference external" href="https://fhb-bielefeld.digibib.net/search/eds/record/edshbz:edshbz.DE.605.HBZ01.022046291/availability?be-eds-expander=fulltext%2Crelatedsubjects&amp;be-eds-q-al=Python+Programming&amp;be-eds-sort=relevance&amp;parent_request_id=009t3eg3tsr7uit4fa9g&amp;parent_request_id_hmac=c5a79bf0a06e4f3acfab103b8795e305620574be&amp;q-au=Zelle&amp;q-tf=Python+Programming&amp;start=1&amp;count=20&amp;hitcount=6&amp;pos=1&amp;parent_request_id=009t3eg3tsr7uit4fa9g&amp;parent_request_id_hmac=c5a79bf0a06e4f3acfab103b8795e305620574be">hier</a>). Das Buch empfiehlt sich insbesondere für diejenigen von Ihnen, die die Grundlagen des Programmierens nicht nur aus Datenanalyse-Perspektive betrachten wollen.</p>
 </div>
 <div class="section" id="einfache-arithmetik">
 <h2>Einfache Arithmetik<a class="headerlink" href="#einfache-arithmetik" title="Permalink to this headline">¶</a></h2>
-<p>Wie bereits im vorangegangenen Kapitel gesehen, können wir mit Python ganz einfache Berechnungen durchführen</p>
+<p>Beginnen wir mit einfachen mathematischen Operationen. Das Beispiel zeigt einen Ausdruck bzw. Statement (im Folgenden verwenden wir den Begriff <code class="docutils literal notranslate"><span class="pre">Statement</span></code>) mit Berechnungen. Dieser Ausdruck ist in Python geschrieben:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">+</span> <span class="p">(</span><span class="mi">5</span> <span class="o">*</span> <span class="mi">12</span><span class="p">)</span> <span class="o">/</span> <span class="mi">3</span> <span class="o">-</span> <span class="mi">12</span>
@@ -481,12 +528,12 @@
 </div>
 <div class="section" id="zuweisen-von-variablen">
 <h2>Zuweisen von Variablen<a class="headerlink" href="#zuweisen-von-variablen" title="Permalink to this headline">¶</a></h2>
-<p>Das Äquivalen in Python ist die Nutzung von Variablen. Wir können Werte als Variablen abspeichern<a class="footnote-reference brackets" href="#id5" id="id1">1</a>, in dem wir das “<code class="docutils literal notranslate"><span class="pre">=</span></code>”-Symbol benutzen.</p>
+<p>Das Äquivalen in Python ist die Nutzung von Variablen. Wir können Werte als Variablen abspeichern<a class="footnote-reference brackets" href="#id6" id="id2">1</a>, in dem wir das “<code class="docutils literal notranslate"><span class="pre">=</span></code>”-Symbol benutzen.</p>
 <p>Wir schreiben also</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">variable</span> <span class="o">=</span> <span class="n">wert</span>
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">variable</span></code> kann hier jeden Namen annehmen<a class="footnote-reference brackets" href="#id6" id="id2">2</a>. Für <code class="docutils literal notranslate"><span class="pre">wert</span></code> können wir Ganzahlen, Dezimalzahlen, Wörter oder auch ganz andere sog. Datentypen - z.B. Listen, Graphen oder Dataframes die wir jeweils noch kennenlernen werden - einsetzen.</p>
+<p><code class="docutils literal notranslate"><span class="pre">variable</span></code> kann hier jeden Namen annehmen<a class="footnote-reference brackets" href="#id7" id="id3">2</a>. Für <code class="docutils literal notranslate"><span class="pre">wert</span></code> können wir Ganzahlen, Dezimalzahlen, Wörter oder auch ganz andere sog. Datentypen - z.B. Listen, Graphen oder Dataframes die wir jeweils noch kennenlernen werden - einsetzen.</p>
 <p>Hier ein paar Beispiele:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -694,7 +741,7 @@
 <p><strong>1. Speicherplatz des Datentyps</strong></p>
 <p>Jeder Datentyp benötigt unterschiedlich viel Speicher. So macht es für den Computer einen Unterschied, ob wir <code class="docutils literal notranslate"><span class="pre">42</span></code> oder <code class="docutils literal notranslate"><span class="pre">42.0</span></code> schreiben, da er für diese Variablen unterschiedlich viel Speicherplatz “freimacht”. Im Rahmen unserer Beispiele ist der Unterschied nicht von Bedeutung. Jedoch kann die Nutzung von Datentypen, die weniger Speicherplatz benötigen sinnvoll sein, wenn wir mit großen Datenmengen umgehen wollen. Im Rahmen dieses Kurses ist das Speicherargument jedoch nicht von großer Bedeutung.</p>
 <p><strong>2. Fähigkeiten des Datentyps</strong></p>
-<p>Jeder Datentyp hat unterschiedliche “Fähigkeiten”.<a class="footnote-reference brackets" href="#id7" id="id3">3</a> Wir haben z.B. nicht weiter hinterfragt (bzw. es ist für uns intuitiv und logisch), dass wir die Operation “<code class="docutils literal notranslate"><span class="pre">+</span></code>” mit den Datentypen <code class="docutils literal notranslate"><span class="pre">integer</span></code> und <code class="docutils literal notranslate"><span class="pre">float</span></code> nutzen können. Wir kennen das aus der Mathematik, von Excel oder unserem Taschenrechner. In einer Programmiersprache muss diese “Fähigkeit” jedoch “hinterlegt” sein, d.h. es muss festgelegt sein, dass dies möglich ist. Andersherum können für andere Datentypen jede Art von Fähigkeit hinterlegen - wir werden in den weiteren Kapiteln noch viele dieser Fähigkeiten kennenlernen.</p>
+<p>Jeder Datentyp hat unterschiedliche “Fähigkeiten”.<a class="footnote-reference brackets" href="#id8" id="id4">3</a> Wir haben z.B. nicht weiter hinterfragt (bzw. es ist für uns intuitiv und logisch), dass wir die Operation “<code class="docutils literal notranslate"><span class="pre">+</span></code>” mit den Datentypen <code class="docutils literal notranslate"><span class="pre">integer</span></code> und <code class="docutils literal notranslate"><span class="pre">float</span></code> nutzen können. Wir kennen das aus der Mathematik, von Excel oder unserem Taschenrechner. In einer Programmiersprache muss diese “Fähigkeit” jedoch “hinterlegt” sein, d.h. es muss festgelegt sein, dass dies möglich ist. Andersherum können für andere Datentypen jede Art von Fähigkeit hinterlegen - wir werden in den weiteren Kapiteln noch viele dieser Fähigkeiten kennenlernen.</p>
 <p>Beispiel: für uns macht die Operation <code class="docutils literal notranslate"><span class="pre">&quot;Text</span> <span class="pre">1&quot;</span></code> + <code class="docutils literal notranslate"><span class="pre">&quot;Text</span> <span class="pre">2&quot;</span></code> wenig Sinn. Die Addition von zwei Texten (hier: vom Datentyp <code class="docutils literal notranslate"><span class="pre">str</span></code>) ergibt mathematisch keinen Sinn. Dennoch ist diese Operation in Python ohne Probleme möglich, weil diese - aus verschiedenen Gründen - hinterlegt ist.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -893,7 +940,7 @@
 <p>Auch hier können wir via <code class="docutils literal notranslate"><span class="pre">tab</span> <span class="pre">completion</span></code>, d.h. “<code class="docutils literal notranslate"><span class="pre">.</span></code>” + <code class="docutils literal notranslate"><span class="pre">tab</span></code> alle Methoden anzeigen lassen.</p>
 <p><img alt="tab_dict" src="../../_images/tab_dict.png" /></p>
 <p>Dictionaries eignen sich hervorragend, um Parameter und Annahmen zu speichern. Wir können unser Beispiel also weiterfassen und z.B. zwei verschiedene Szenarien rechnen:</p>
-<div class="cell docutils container">
+<div class="cell docutils container" id="code-status-one">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Szenarien und Annahmen</span>
 <span class="n">cf_szenario</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;base&quot;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">5000</span><span class="p">,</span> <span class="mi">4000</span><span class="p">,</span> <span class="mi">3000</span><span class="p">],</span> 
@@ -940,24 +987,26 @@
 <ol class="simple">
 <li><p>einfache mathematische Operationen können in Python genutzt werden</p></li>
 <li><p>es gibt einige wenige Regeln, die wir beachten müssen, um keine “technischen” Fehler zu produzieren; insbesonder müssen wir darauf achten, dass wir keine Leerzeichen an den falschen Stellen setzen</p></li>
-<li><p>es gibt unterschiedliche Datentypen, die wir für unsere Analysen nutzen können und sollten. Nicht jeder Datentyp ist für jede Art der Problem geignet. Wir haben bisher <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code>, <code class="docutils literal notranslate"><span class="pre">str</span></code>, <code class="docutils literal notranslate"><span class="pre">list</span></code> und <code class="docutils literal notranslate"><span class="pre">dict</span></code> kennengelernt. Bei diesen Datentypen handelt es sich um solche, die bereits standardmäßig in Python integriert sind (sog. <code class="docutils literal notranslate"><span class="pre">build-in</span> <span class="pre">types</span></code><a class="footnote-reference brackets" href="#id8" id="id4">4</a>). Wir werden im weiteren Verlauf noch sehr viel mächtigere Datentypen kennenlernen, die wir explizit für die Zwecke der Datenanalyse entwickelt wurden und sehr hilfreiche “Fähigkeiten” haben.</p></li>
+<li><p>es gibt unterschiedliche Datentypen, die wir für unsere Analysen nutzen können und sollten. Nicht jeder Datentyp ist für jede Art der Problem geignet. Wir haben bisher <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code>, <code class="docutils literal notranslate"><span class="pre">str</span></code>, <code class="docutils literal notranslate"><span class="pre">list</span></code> und <code class="docutils literal notranslate"><span class="pre">dict</span></code> kennengelernt. Bei diesen Datentypen handelt es sich um solche, die bereits standardmäßig in Python integriert sind (sog. <code class="docutils literal notranslate"><span class="pre">build-in</span> <span class="pre">types</span></code><a class="footnote-reference brackets" href="#id9" id="id5">4</a>). Wir werden im weiteren Verlauf noch sehr viel mächtigere Datentypen kennenlernen, die wir explizit für die Zwecke der Datenanalyse entwickelt wurden und sehr hilfreiche “Fähigkeiten” haben.</p></li>
 </ol>
 <p>Im folgenden Kapitel werden wir unser Beispiel weiter optimieren. Denn - so ehrlich müssen wir sein - unsere bisherige Optimierung lässt noch keinen großen Vorteil gegenüber einem Taschenrechner und insbesondere nicht gegenüber Excel erkennen. Auch wenn wir die repetitive Definition von Cashflow-Variablen vermieden haben, ist unsere Berechnung selber noch (i) repetitiv (wir schreiben die Variable <code class="docutils literal notranslate"><span class="pre">cash_flows</span></code> insgesamt 4x auf) und (ii) unflexibel, da unsere gesamte Berechnung weiterhin für jede andere Anzahl an Cashflows neu beschrieben werden müsste.</p>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
-<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
 <dd><p>diese Formulierung ist nicht ganz korrekt, jedoch für unsere Zwecke ausreichend.</p>
 </dd>
-<dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id3">2</a></span></dt>
 <dd><p>Ausnahmen sind in Python bereits belegte Wörter, sog. Keywords, diese sind hier aufgeführt <a class="reference external" href="https://www.w3schools.com/python/python_ref_keywords.asp">keywords</a>.</p>
 </dd>
-<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dt class="label" id="id8"><span class="brackets"><a class="fn-backref" href="#id4">3</a></span></dt>
 <dd><p>Sie können die “hinterlegten Fähigkeiten” ausgeben lassen (via: <code class="docutils literal notranslate"><span class="pre">dir(variable)</span></code>). Die Ausgabe ist für Programmieranfänger jedoch zunächst eher verwirrend und wenig hilfreich, weshalb wir an dieser Stelle nicht weiter darauf eingehen werden.</p>
 </dd>
-<dt class="label" id="id8"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id5">4</a></span></dt>
 <dd><p>siehe <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html">hier</a> für weitere Informationen zu den <code class="docutils literal notranslate"><span class="pre">build-in</span> <span class="pre">types</span></code>.</p>
 </dd>
 </dl>
+</div>
+<div class="toctree-wrapper compound">
 </div>
 </div>
 
@@ -993,10 +1042,10 @@
             <p class="prev-next-title">Nutzung dieses Skripts</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../chapter_analytics/S02a_Descriptive_Statistics.html" title="next page">
+    <a class='right-next' id="next-link" href="Intro_Python_Excercises.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Deskriptive Statistik</p>
+        <p class="prev-next-title">Übungen 1</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
