@@ -1,0 +1,1028 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iterationen und Funktionen</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/myfile.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Übungen 2" href="Functions_Iterations_Python_Excercises.html" />
+    <link rel="prev" title="Übungen 1" href="Intro_Python_Excercises.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/datascience2.png" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Dieses Buch durchsuchen ..." aria-label="Dieses Buch durchsuchen ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Vorwort.html">
+   Vorwort
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  01 Einleitung
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_01/Business_Analytics.html">
+   Warum Business Analytics?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_01/Warum_Coding.html">
+   Warum Programmieren?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_01/01_Warum_Python.html">
+   Warum Python?
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter_01/Fallstudie.html">
+   Ausblick: was sie erwartet
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter_01/Introduction_Fallstudie.html">
+     Fragestellung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter_01/Umsetzung_Fallstudie.html">
+     Umsetzung in Python
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  02 Technisches Setup
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_02/Installation.html">
+   Installation &amp; Setup
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_02/Intro_Jupyter.html">
+   Einführung Jupyter Notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_02/Intro_Skript.html">
+   Nutzung dieses Skripts
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  03 Python | Grundlagen
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="Intro_Python.html">
+   Einführung in Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Intro_Python_Excercises.html">
+     Übungen 1
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   Iterationen und Funktionen
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Functions_Iterations_Python_Excercises.html">
+     Übungen 2
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="If_Statements_Python.html">
+   Entscheidungsstrukturen
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="If_Statements_Python_Excercises.html">
+     Übungen 3
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  99 Sandbox
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S02a_Descriptive_Statistics.html">
+   Deskriptive Statistik
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S03a_Simulation.html">
+   Simulationen mit Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S03c_Probability_Distributions.html">
+   Wahrscheinlichkeitsverteilungen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S04a_Estimation%26HyptothesisTesting.html">
+   Testen von Hypothesen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S05a_Regression.html">
+   Lineare Regression
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S06a_TidyData.html">
+   Tidy Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S07a_Classification.html">
+   Klassifikation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S08a_Clustering.html">
+   Clusteranalyse
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S09a_Cross_validation.html">
+   Cross Validation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S11_DecisionTrees.html">
+   Entscheidungsbäume
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_analytics/S12_Ensembles.html">
+   Ensemble-Methoden
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Anhang
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../literatur.html">
+   Literatur
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <div>
+    
+</div>
+
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Navigation umschalten" aria-controls="site-navigation"
+                title="Navigation umschalten" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Laden Sie diese Seite herunter"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/chapters/chapter_03/Functions_Iterations_Python.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Quelldatei herunterladen" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="In PDF drucken"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Vollbildmodus"
+        title="Vollbildmodus"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/fredzett/Skript-Business-Analytics/blob/master/chapters/chapter_03/Functions_Iterations_Python.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Starten Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Inhalt
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#funktionen-build-in">
+   Funktionen (build-in)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#iterationen">
+   Iterationen
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#for-loops">
+     For-Loops
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-comprehension">
+     List comprehension
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#optimierung-des-beispiels">
+   Optimierung des Beispiels
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-von-eigenen-funktionen">
+   Definition von eigenen Funktionen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">
+   Zusammenfassung und Ausblick
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Iterationen und Funktionen</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Inhalt </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#funktionen-build-in">
+   Funktionen (build-in)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#iterationen">
+   Iterationen
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#for-loops">
+     For-Loops
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-comprehension">
+     List comprehension
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#optimierung-des-beispiels">
+   Optimierung des Beispiels
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-von-eigenen-funktionen">
+   Definition von eigenen Funktionen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">
+   Zusammenfassung und Ausblick
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="iterationen-und-funktionen">
+<h1>Iterationen und Funktionen<a class="headerlink" href="#iterationen-und-funktionen" title="Permalink to this headline">¶</a></h1>
+<p>Wir haben im <a class="reference internal" href="Intro_Python.html"><span class="doc std std-doc">vorherigen Kapitel</span></a> festgestellt, dass der von uns teilweise verbesserte Code immer noch sehr repetitiv ist. Dafür gab es zwei Gründe</p>
+<ol class="simple">
+<li><p>Der Code ist repetitiv, d.h. Wiederholungen von sehr ähnlichen Dingen</p></li>
+<li><p>Der Code ist unflexibel, d.h. bei kleinen Veränderungen der Fragestellung bereits unbrauchbar</p></li>
+</ol>
+<p>Wir werden in diesem Kapitel zwei wichtige Coding-Konzepte vorstellen, die uns helfen, den Code weiter zu verbessern und die angesprochenen Probleme des bisherigen Codes zu verbessern.</p>
+<p>Wir beginnen mit dem Konzept der <code class="docutils literal notranslate"><span class="pre">Funktionen</span></code>, bevor wir uns dem Konzept der <code class="docutils literal notranslate"><span class="pre">Iterationen</span></code> widmen.</p>
+<div class="section" id="funktionen-build-in">
+<h2>Funktionen (build-in)<a class="headerlink" href="#funktionen-build-in" title="Permalink to this headline">¶</a></h2>
+<p>Wir können Funktionen einsetzen, um Teile des Codes wiederverwendbar zu machen bzw. um bereits geschriebenen Code von anderen wiederzuverwenden. Das Konzept ist sehr mächtig und wir werden sowohl bereits implementierte Funktionen nutzen, als auch eigene Funktionen schreiben lernen.</p>
+<p>Lassen Sie uns wieder eine Analogie aus Excel nutzen. Stellen Sie sich vor, wir haben eine Spalte mit vielen Werten und wir wollen wissen, um wieviele Werte es sich handelt, d.h. wir wollen die <code class="docutils literal notranslate"><span class="pre">Anzahl</span></code> an Werten bestimmen. Wir könnten diese Information z.B. benötigen, um einen Durchschnitt zu berechnen.</p>
+<p><img alt="Zahlen" src="../../_images/RndNumbers.png" /></p>
+<p>Natürlich könnten wir die Anzahl an Werten selber und manuell zählen (es sind 10 Werte). Diese Lösung ist aber wenig sinnvoll, da wir so einen manuellen Schritt in unser “Programm” einbauen. Besser wäre es, wenn wir die Anzahl an Werten automatisiert bestimmen. Wir könnten uns über diese eigentlich triviale Aufgabe nun Gedanken machen. Jedoch müssen wir dies nicht, da es für diese spezielle Frage bereits eine Lösung in Excel gibt. Wir können die Funktion <code class="docutils literal notranslate"><span class="pre">Anzahl()</span></code> nutzen, die Excel bzw. Microsoft bereits für den Anwender zur Verfügung gestellt hat. Die Funktion berechnet, wie viele Zellen in einem Bereich Zahlen enthalten.</p>
+<p><img alt="Werte2" src="../../_images/RndNumbers_Solution.png" /></p>
+<p>Ein Großteil der Funktionalität von Excel geht auf die breite Palette an bereits verfügbaren Funktionen zurück.</p>
+<p>Schauen wir uns nun das Äquivalent in Python an. Wir können die Anzahl an Elementen in z.B. einer Liste über die Funktion <code class="docutils literal notranslate"><span class="pre">len</span></code> ermitteln.</p>
+<p><strong>Beispiel</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">werte</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="c1"># Liste mit Werten</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">werte</span><span class="p">)</span> <span class="c1"># Gibt die Anzahl an Elementen in der Liste &quot;werte&quot; zurück</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
+</pre></div>
+</div>
+</div>
+</div>
+<p>Zum Aufrufen einer Funktion benötigen wir in Python</p>
+<ul class="simple">
+<li><p>den Namen der Funktion</p></li>
+<li><p>die benötigten Parameter für die Funktion</p></li>
+</ul>
+<p>Der Name der Funktion lautet <code class="docutils literal notranslate"><span class="pre">len</span></code>. Die Funktion wird dann aber erst ausgeführt (bzw. aufgerufen), in dem der Funktion die benötigten Parameter übergeben werden. Bei der Funktion <code class="docutils literal notranslate"><span class="pre">len</span></code> ist dies z.B. eine Liste, deren Anzahl an Elementen bestimmt werden soll.</p>
+<p>Wenn wir eine bestehende Funktion nutzen wollen, schreiben wir also immer:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">funktionsname</span><span class="p">(</span><span class="n">parameter</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Die “<code class="docutils literal notranslate"><span class="pre">...</span></code>” stehen hier für weitere Parameter, die ggf. für eine Funktion benötigt werden. Das Vorgehen ist also prinzipiell sehr ähnlich zum Vorgehen bei Excel.</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Hilfe zu Funktionen</p>
+<p>Wir können zu nahezu allen Funktionen Hilfe nachschlagen.</p>
+<p>Dies machen wir entweder, in dem wir ein “<code class="docutils literal notranslate"><span class="pre">?</span></code>” hinter die Funktion schreiben. Wenn Sie z.B. wissen wollen, was die Funktion <code class="docutils literal notranslate"><span class="pre">len</span></code> tut, dann schreiben Sie in eine Code-Zelle <code class="docutils literal notranslate"><span class="pre">len?</span></code> und Ihnen werden Erläuterungen dazu angezeigt.</p>
+<p>In einem Jupyter Notebook können Sie alternativ auch den Funktionsnamen + “<code class="docutils literal notranslate"><span class="pre">()</span></code>” und dann einmal <code class="docutils literal notranslate"><span class="pre">shift</span></code> + <code class="docutils literal notranslate"><span class="pre">tab</span></code> drücken.</p>
+<p>Darüber hinaus können Sie sich noch die Dokumentation von Funktionen anschauen, die Sie meist online finden werden.</p>
+</div>
+<p>In Python gibt es viele Funktionen, die wir nutzen können, um uns eigenen Programmieraufwand zu sparen. Die vollständige Liste aller sog. build-in Funktionen kann <a class="reference external" href="https://www.w3schools.com/python/python_ref_functions.asp">hier</a> nachgeschlagen werden. Hierbei handelt es sich jedoch nur um Funktionen, die bereits in Python enthalten sind. Darüber hinaus können wir andere Bibliotheken installieren, um das Spektrum signifikant zu erweitern; dies werden wir in den nächsten Kapiteln auch tun.</p>
+</div>
+<div class="section" id="iterationen">
+<h2>Iterationen<a class="headerlink" href="#iterationen" title="Permalink to this headline">¶</a></h2>
+<p>Das Wiederholen von identischen oder sehr ähnlichen Code-Ausschnitten ist aufwändig und fehleranfällig und sollte deshalb nicht vom Menschen, sondern vom Computer übernommen werden.</p>
+<p>Auch an dieser Stelle wollen wir uns wieder einer Analogie aus Excel bedienen. Die Stärke von Excel ist unter anderem dadurch begründet, dass wir Operationen vielfach durchführen können, ohne diese mehrfach sexplizit formuliert zu haben. Wir können stattdessen einmal formulierte Operationen “nach unten” oder “zur Seite ziehen”. Dadurch kann eine Operation automatisch für eine andere Zelle angewandt werden.</p>
+<p>Hier ein Beispiel in Excel, die eine Formel für viele Zellen anwendet.</p>
+<p><img alt="xls-for-loop" src="../../_images/xls_for_loop.gif" /></p>
+<p>Das Beispiel zeigt, dass wir dadurch viel manuellen Aufwand, aber auch viele potenzielle Fehlerquellen vermeiden.</p>
+<p>Auch viele Programmiersprachen haben deshalb Konzepte, um diese Wiederholungen zu vermeiden. Wir werden uns nun zwei Konzepten in Python widmen:</p>
+<ol class="simple">
+<li><p>For-Loops</p></li>
+<li><p>List comprehensions</p></li>
+</ol>
+<div class="section" id="for-loops">
+<h3>For-Loops<a class="headerlink" href="#for-loops" title="Permalink to this headline">¶</a></h3>
+<p>Mit einer <code class="docutils literal notranslate"><span class="pre">For-Loop</span></code> können wir (iterierbare) Datentypen durchlaufen. Schauen wir uns ein Beispiel an, um zu verdeutlichen, was damit gemeint ist.</p>
+<p><strong>Beispiel</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">liste_namen</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Julia&quot;</span><span class="p">,</span> <span class="s2">&quot;Aishe&quot;</span><span class="p">,</span> <span class="s2">&quot;Fred&quot;</span><span class="p">,</span> <span class="s2">&quot;John&quot;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">liste_namen</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hallo&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hallo Julia
+Hallo Aishe
+Hallo Fred
+Hallo John
+</pre></div>
+</div>
+</div>
+</div>
+<p>Das Äquivalent in Excel würde wiefolgt aussehen:</p>
+<p><img alt="xls-for-loop2" src="../../_images/xls_for_loop2.gif" /></p>
+<p>Im obigen Python-Beispiel definieren wir eine Variabel <code class="docutils literal notranslate"><span class="pre">liste_namen</span></code>. Diese ist vom Datentyp <code class="docutils literal notranslate"><span class="pre">list</span></code>. Listen sind in Python immer iterierbar, d.h. wir können diese mittels einer <code class="docutils literal notranslate"><span class="pre">for-loop</span></code> durchlaufen. Wir tun dies in dem wir schreiben</p>
+<p><code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">name</span> <span class="pre">in</span> <span class="pre">liste_name:</span></code></p>
+<p>Dies zeigt Python an, dass wir die Liste <code class="docutils literal notranslate"><span class="pre">liste_namen</span></code> durchlaufen wollen und für jedes Element - wir bezeichnen es hier als <code class="docutils literal notranslate"><span class="pre">name</span></code> - etwas tun möchten. Unter dieser Definition schreiben wir dann - eingerückt mit <code class="docutils literal notranslate"><span class="pre">4</span> <span class="pre">Leerzeichen</span></code> bzw. <code class="docutils literal notranslate"><span class="pre">tab</span></code> - , was wir konkret tun möchten. In unserem Falle wollen wir nur etwas ausgeben lassen. Hierfür nutzen wir eine der build-in Funktionen (<code class="docutils literal notranslate"><span class="pre">print</span></code>). Wenn wir Zwischenergebnisse innerhalb einer <code class="docutils literal notranslate"><span class="pre">for-loop</span></code> nicht in Variabeln “abspeichern”, sondern nur anzeigen lassen wollen, müssen wir immer die (build-in) Funktion <code class="docutils literal notranslate"><span class="pre">print</span></code> nutzen.</p>
+<p>Jede For-Schleife in Python hat also immer die folgende grundsätzliche Strukur:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; for element in objekt:
+        mach irgendetwas
+</pre></div>
+</div>
+<p>Hierbei muss <code class="docutils literal notranslate"><span class="pre">objekt</span></code> iterierbar sein. <code class="docutils literal notranslate"><span class="pre">element</span></code> können wir uns als eine Art Platzhalter für das jeweilige Element vorstellen. Wir können hier auch jeden anderen Namen wählen. Wir sollten uns jedoch angewöhnen sinnvolle und beschreibende Namen zu wählen.</p>
+<p>Lassen Sie uns unser neu gewonnenes Wissen kombinieren und folgende Aufgabe in Python lösen.</p>
+<p><strong>Aufgabe:</strong><br />
+Wir haben eine Liste mit Namen und wollen bestimmen, wieviel Buchstaben jeder Name hat.</p>
+<p><strong>Lösung</strong><br />
+Wir können dafür die Liste der Namen durchlaufen und für jedes Element der Liste, die Länge des Namen mit der Funktion <code class="docutils literal notranslate"><span class="pre">len</span></code> bestimmen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">namen</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Julia&quot;</span><span class="p">,</span> <span class="s2">&quot;Aishe&quot;</span><span class="p">,</span> <span class="s2">&quot;Fred&quot;</span><span class="p">,</span> <span class="s2">&quot;Schwerthelm&quot;</span><span class="p">,</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="s2">&quot;Manuela&quot;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">namen</span><span class="p">:</span>
+    <span class="n">n_buchstaben</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="c1"># Bestimme Anzahl an Element in Namen</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">n_buchstaben</span><span class="p">)</span> <span class="c1"># Gib Anzahl aus</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Julia 5
+Aishe 5
+Fred 4
+Schwerthelm 11
+John 4
+Manuela 7
+</pre></div>
+</div>
+</div>
+</div>
+<p>Alternativ könnten wir die Länge der Buchstaben auch in einer neuen Liste speichern - dies ist immer dann sinnvoll, wenn wir die Zwischenergebnisse später in unserem Code noch benötigen.</p>
+<p><strong>Beispiel</strong><br />
+Wir erstellen dafür eine leere Liste (“<code class="docutils literal notranslate"><span class="pre">[]</span></code>”), die wir dann mit jeder Iteration mit der Anzahl an Buchstaben befüllen. Dafür benutzen wir die “Funktion” <code class="docutils literal notranslate"><span class="pre">.append</span></code>, die der Datentyp <code class="docutils literal notranslate"><span class="pre">list</span></code> bereitstellt.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">namen</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Julia&quot;</span><span class="p">,</span> <span class="s2">&quot;Aishe&quot;</span><span class="p">,</span> <span class="s2">&quot;Fred&quot;</span><span class="p">,</span> <span class="s2">&quot;Schwerthelm&quot;</span><span class="p">,</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="s2">&quot;Manuela&quot;</span><span class="p">]</span>
+<span class="n">anzahl_buchstaben</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># Leere Liste</span>
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">namen</span><span class="p">:</span>
+    <span class="n">n_buchstaben</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="c1"># Bestimme Anzahl an Element in Namen</span>
+    <span class="n">anzahl_buchstaben</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n_buchstaben</span><span class="p">)</span> <span class="c1"># </span>
+
+<span class="c1"># Ausgabe der neuen Liste</span>
+<span class="n">anzahl_buchstaben</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[5, 5, 4, 11, 4, 7]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">enumerate</p>
+<p>Wir können mittels der (build-in) Funktion <code class="docutils literal notranslate"><span class="pre">enumerate</span></code> zusätzlich zum einzelnen Element der Liste auch die Position des Elements in der Liste ausgeben lassen. Wir generieren dadurch eine Art Zähler.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">zahlen</span> <span class="o">=</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">230</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">zahl</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">zahlen</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">zahl</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">0</span> <span class="mi">12</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">1</span> <span class="mi">14</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span> <span class="mi">230</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="list-comprehension">
+<h3>List comprehension<a class="headerlink" href="#list-comprehension" title="Permalink to this headline">¶</a></h3>
+<p>Eine Besonderheit in Python sind die sog. <code class="docutils literal notranslate"><span class="pre">list</span> <span class="pre">comprehensions</span></code>. Mit diesen können die Ergebnisse einer <code class="docutils literal notranslate"><span class="pre">for-loop</span></code> direkt in einer neuen Liste abgespeichert werden.<a class="footnote-reference brackets" href="#id3" id="id1">1</a></p>
+<p>Wir können das obige Beispiel mit dem Konzept der <code class="docutils literal notranslate"><span class="pre">list</span> <span class="pre">comprehension</span></code> einfacher und kompakter darstellen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">namen</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Julia&quot;</span><span class="p">,</span> <span class="s2">&quot;Aishe&quot;</span><span class="p">,</span> <span class="s2">&quot;Fred&quot;</span><span class="p">,</span> <span class="s2">&quot;Schwerthelm&quot;</span><span class="p">,</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="s2">&quot;Manuela&quot;</span><span class="p">]</span>
+<span class="n">anzahl_buchstaben</span> <span class="o">=</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">namen</span><span class="p">]</span>
+
+<span class="c1"># Ausgabe der neuen Liste</span>
+<span class="n">anzahl_buchstaben</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[5, 5, 4, 11, 4, 7]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">mach</span> <span class="n">irgendetwas</span> <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">objekt</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>In Python werden - wenn möglich - typischerweise <code class="docutils literal notranslate"><span class="pre">list</span> <span class="pre">comprehension</span></code> bevorzugt, da dies den Code insgesamt übersichtlicher und lesbarer macht.</p>
+</div>
+</div>
+<div class="section" id="optimierung-des-beispiels">
+<h2>Optimierung des Beispiels<a class="headerlink" href="#optimierung-des-beispiels" title="Permalink to this headline">¶</a></h2>
+<p>Wir haben nun das nötige Wissen, um unser Ausgangsbeispiel signifikant zu optimieren. Schauen wir uns dafür nochmal einen Ausschnitt unseres Codes an.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Annahmen im Base Case</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mf">0.04</span>
+<span class="n">cash_flows</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">5000</span><span class="p">,</span> <span class="mi">4000</span><span class="p">,</span> <span class="mi">3000</span><span class="p">]</span> 
+
+<span class="n">KW</span> <span class="o">=</span> <span class="n">cash_flows</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">cash_flows</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">i</span><span class="p">)</span><span class="o">**</span><span class="mi">1</span> <span class="o">+</span> <span class="n">cash_flows</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">i</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">cash_flows</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">i</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span>
+<span class="n">KW</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1172.9062357760577
+</pre></div>
+</div>
+</div>
+</div>
+<p>Wie können wir den Code nun optimieren? Schauen wir uns den Code genauer an, dann stellen wir fest, dass</p>
+<ol class="simple">
+<li><p>wir die Berechnung einzelnen Barwerte insgesamt 4 Mal wiederholen, d.h. wir schreiben zu jedem Zeitpunkt $\frac{CF_t}{(1+i)^t}.</p></li>
+<li><p>wir summieren die berechneten Barwerte auf, in dem wir jeweils “<code class="docutils literal notranslate"><span class="pre">+</span></code>” schreiben.</p></li>
+</ol>
+<p>Wir können den Code nun verbessern, in dem wir für die Berechnung der einzelnen Barwerte eine <code class="docutils literal notranslate"><span class="pre">for-loop</span></code> bzw. eine <code class="docutils literal notranslate"><span class="pre">list</span> <span class="pre">comprehension</span></code> nutzen. Dadurch vermeiden wir repetitiven Code. Die Addition der einzelnen Barwerte können wir dann über die Funktion <code class="docutils literal notranslate"><span class="pre">sum</span></code> durchführen. Dadurch machen wir unseren Code flexibler z.B. für den Fall, wenn ein Projekt weniger oder mehr Cashflows beinhaltet.</p>
+<p>Hier der Code in zwei einzelnen Schritten</p>
+<ol class="simple">
+<li><p>Berechnung der Barwerte</p></li>
+<li><p>Summierung der Barwerte</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Annahmen im Base Case</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mf">0.04</span>
+<span class="n">cash_flows</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">5000</span><span class="p">,</span> <span class="mi">4000</span><span class="p">,</span> <span class="mi">3000</span><span class="p">]</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Berechnung der Barwerte und speichern in neuer Liste</span>
+<span class="n">barwerte</span> <span class="o">=</span> <span class="p">[</span><span class="n">cf</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">i</span><span class="p">)</span><span class="o">**</span><span class="n">t</span> <span class="k">for</span> <span class="n">t</span><span class="p">,</span> <span class="n">cf</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">cash_flows</span><span class="p">)]</span>
+
+<span class="c1"># Berechnung der Summe der Barwerte</span>
+<span class="n">KW</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">barwerte</span><span class="p">)</span>
+<span class="n">KW</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1172.9062357760577
+</pre></div>
+</div>
+</div>
+</div>
+<p>Wir können sogar noch einen Schritt weitergehen und beide Berechnung zusammenführen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">KW</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="n">cf</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">i</span><span class="p">)</span><span class="o">**</span><span class="n">t</span> <span class="k">for</span> <span class="n">t</span><span class="p">,</span> <span class="n">cf</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">cash_flows</span><span class="p">)])</span>
+<span class="n">KW</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1172.9062357760577
+</pre></div>
+</div>
+</div>
+</div>
+<p>Die optimierte Lösung ist sehr viel kompakter und funktioniert auch für jede beliebige andere Anzahl an Cashflows, d.h. wir haben einen Lösungsansatz gefunden, der für eine beliebige Anzahl an Cash Flows und einen anzugebenden Zinssatz den Kapitalwert berechnet.</p>
+</div>
+<div class="section" id="definition-von-eigenen-funktionen">
+<h2>Definition von eigenen Funktionen<a class="headerlink" href="#definition-von-eigenen-funktionen" title="Permalink to this headline">¶</a></h2>
+<p>Wir haben uns bereits einige Funktionen angeschaut, die von Python bereitgestellt werden. Lassen Sie uns nun damit beschäftigen, wie wir eigene Funktionen schreiben. Bevor wir dies tun wollen wir jedoch kurz darauf eingehen, weshalb dies sinnvoll ist. Aus unserer Sicht gibt es zwei gute Gründe, weshalb wir eigene Funktionen schreiben sollten. Zum einen macht dies den Code lesbarer und zum anderen führt dies zu weniger repetitivem und damit kompakteren Code.</p>
+<p>[HINWEIS: WARUM REITEN WIR AUF LESBARKEIT VON CODE RUM -&gt; unser zukunftiges Ich wird Code oft nicht mehr verstehen und kann diesen deshalb nicht anpassen]</p>
+<p>Nehmen wir unser Beispiel der Bewertung eines Projektes. Stellen wir uns vor, dass wir nun für alle drei Szenarien den Kapitalwert ermitteln wollen.<a class="footnote-reference brackets" href="#id4" id="id2">2</a></p>
+<p>Der Code dafür könnte wiefolgt aussehen:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Annahmen im Base Case</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mf">0.04</span>
+<span class="n">cf_szenario</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;base&quot;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">5000</span><span class="p">,</span> <span class="mi">4000</span><span class="p">,</span> <span class="mi">3000</span><span class="p">],</span> 
+            <span class="s2">&quot;high&quot;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">6000</span><span class="p">,</span> <span class="mi">5000</span><span class="p">,</span> <span class="mi">4000</span><span class="p">],</span>
+            <span class="s2">&quot;low&quot;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">4000</span><span class="p">,</span> <span class="mi">3000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">],}</span>
+
+<span class="c1"># Kapitalwert Szenario 1</span>
+<span class="n">cash_flows</span> <span class="o">=</span> <span class="n">cf_szenario</span><span class="p">[</span><span class="s2">&quot;base&quot;</span><span class="p">]</span>
+<span class="n">KW_base</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="n">cf</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">i</span><span class="p">)</span><span class="o">**</span><span class="n">t</span> <span class="k">for</span> <span class="n">t</span><span class="p">,</span> <span class="n">cf</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">cash_flows</span><span class="p">)])</span>
+
+<span class="c1"># Kapitalwert Szenario 2</span>
+<span class="n">cash_flows</span> <span class="o">=</span> <span class="n">cf_szenario</span><span class="p">[</span><span class="s2">&quot;high&quot;</span><span class="p">]</span>
+<span class="n">KW_high</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="n">cf</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">i</span><span class="p">)</span><span class="o">**</span><span class="n">t</span> <span class="k">for</span> <span class="n">t</span><span class="p">,</span> <span class="n">cf</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">cash_flows</span><span class="p">)])</span>
+
+
+<span class="c1"># Kapitalwert Szenario 3</span>
+<span class="n">cash_flows</span> <span class="o">=</span> <span class="n">cf_szenario</span><span class="p">[</span><span class="s2">&quot;low&quot;</span><span class="p">]</span>
+<span class="n">KW_low</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="n">cf</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">i</span><span class="p">)</span><span class="o">**</span><span class="n">t</span> <span class="k">for</span> <span class="n">t</span><span class="p">,</span> <span class="n">cf</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">cash_flows</span><span class="p">)])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Wir stellen fest, dass der Code wieder sehr repetitiv ist. Wir könnten die jeweiligen Berechnungen deshalb z.B. in eine <code class="docutils literal notranslate"><span class="pre">for-loop</span></code> verlagen. Das sähe dann so aus:</p>
+<div class="cell docutils container" id="code-long">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">szenarien</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;base&quot;</span><span class="p">,</span> <span class="s2">&quot;high&quot;</span><span class="p">,</span> <span class="s2">&quot;low&quot;</span><span class="p">]</span>
+<span class="n">ergebnisse</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">szenario</span> <span class="ow">in</span> <span class="n">szenarien</span><span class="p">:</span>
+    <span class="n">cash_flows</span> <span class="o">=</span> <span class="n">cf_szenario</span><span class="p">[</span><span class="n">szenario</span><span class="p">]</span>
+    <span class="n">KW</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="n">cf</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">i</span><span class="p">)</span><span class="o">**</span><span class="n">t</span> <span class="k">for</span> <span class="n">t</span><span class="p">,</span> <span class="n">cf</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">cash_flows</span><span class="p">)])</span>
+    <span class="n">ergebnisse</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">KW</span><span class="p">)</span>
+
+<span class="n">ergebnisse</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1172.9062357760577, 3947.9972690031846, -2491.1811561219856]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Der Code sieht schon kompakter aus. Was aber, wenn wir weitere Projekte bewerten wollen? Wir müssten diesen Code mehrmals nutzen, um die jeweiligen Projekte zu bewerten. Genau für ein solches Szenario bietet sich an, die Funktionalität des Codes in eine eigene Funktion auszulagern. Wir müssten dann immer nur die Funktion aufrufen und nicht die vielen Zeilen Code wiederholen.</p>
+<p>Schauen wir uns an, wie wir Funktionen in Python schreiben. In Python ist jede Funktion wie folgt aufgebaut:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">funcname</span><span class="p">(</span><span class="n">parameter</span><span class="p">,</span> <span class="o">...</span><span class="p">):</span>
+<span class="go">        mach irgendetwas</span>
+<span class="go">        return ergebnis</span>
+</pre></div>
+</div>
+<p>Jede Funktion beginnt mit dem Wort “<code class="docutils literal notranslate"><span class="pre">def</span></code>” und einem Namen für die Funktion. Diesen können wir frei wählen. Der Name sollte beschreiben, was die Funktion tut. Darüber hinaus geben wir an, welche Informationen bzw. welche <code class="docutils literal notranslate"><span class="pre">parameter</span></code> die Funktion benötigt. Im inneren der Funktion definieren wir dann, was die Funktion tut. Das Ergebnis der Funktion wird dann via <code class="docutils literal notranslate"><span class="pre">return</span></code> ausgegeben.</p>
+<p>Sobald eine Funktion definiert ist, kann diese überall im Programm genutzt werden, indem diese über “<code class="docutils literal notranslate"><span class="pre">()</span></code>” aufgerufen wird.</p>
+<p>Schauen wir uns <strong>zwei einfache Beispiele</strong> an:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Definition der Funktion &quot;begrüßung&quot;, diese hat benötigt keinen Parameter</span>
+<span class="k">def</span> <span class="nf">begrüßung</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s2">&quot;Herzlich Willkommen!&quot;</span>
+
+<span class="n">begrüßung</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Herzlich Willkommen!&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Definition der Funktion &quot;addition&quot;; diese benötigt zwei Parameter</span>
+<span class="k">def</span> <span class="nf">addition</span><span class="p">(</span><span class="n">zahl1</span><span class="p">,</span> <span class="n">zahl2</span><span class="p">):</span>
+    <span class="n">summe</span> <span class="o">=</span> <span class="n">zahl1</span> <span class="o">+</span> <span class="n">zahl2</span>
+    <span class="k">return</span> <span class="n">summe</span>
+
+<span class="c1"># Ausführen der Funktion &quot;addition&quot;</span>
+<span class="n">addition</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">55</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>58
+</pre></div>
+</div>
+</div>
+</div>
+<p>Es ist sehr einfach, in Python eigene Funktionen zu definieren. Wir sollten deshalb auch - wenn es sinnvoll erscheint - davon gebrauch machen. Schauen wir uns an, wie wir die Kapitalwertberechnung in eine Funktion “auslagern” können.</p>
+<p>Wir müssen uns Gedanken machen zu verschiedenen Dingen:</p>
+<ol class="simple">
+<li><p>Wie soll die Funktion heißen (Funktionsname)</p></li>
+<li><p>Welche Informationen benötigt die Funktion (Funktionsparameter)</p></li>
+<li><p>Welche Berechnungen soll die Funktion im inneren Durchführen (Funktionsinhalt)</p></li>
+<li><p>Was soll die Funktion ausgeben (Funktionsoutput)</p></li>
+</ol>
+<p>Für 1.: sollten wir einen Namen wählen, der beschreibt, was die Funktion macht. Wir wählen also z.B. <code class="docutils literal notranslate"><span class="pre">berechne_kapitalwert</span></code>. An dieser Stelle der Hinweis, dass es sehr üblich ist in englischer Sprache zu coden, d.h. für Variabeln und Funktionen englische Begriffe zu wählen.</p>
+<p>Für 2.: wir benötigen Cash Flows und Zinssatz, um die Berechnungen durchzuführen.</p>
+<p>Für 3: den Code zur Berechnung des Kapitalwertes haben wir bereits geschrieben. Dies ist auch ein sehr übliches Vorgehen. Wir schreiben Code, probieren aus etc. Sobald wir merken, dass der Code funktioniert und ausgelagert werden könnte, beginnen wir diesen in Funktionen auszulagern.</p>
+<p>Für 4: die Funktion sollten den Kapitalwert als Ergebnis ausgeben.</p>
+<p>Der Code für unsere erste eigene Funktion könnnte also z.B. so aussehen:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">berechne_kapitalwert</span><span class="p">(</span><span class="n">cashflows</span><span class="p">,</span> <span class="n">zins</span><span class="p">):</span>
+    <span class="n">KW</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="n">cf</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">zins</span><span class="p">)</span><span class="o">**</span><span class="n">t</span> <span class="k">for</span> <span class="n">t</span><span class="p">,</span> <span class="n">cf</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">cashflows</span><span class="p">)])</span>
+    <span class="k">return</span> <span class="n">KW</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Wir können unsere Funktion nun testen, in dem wir für <code class="docutils literal notranslate"><span class="pre">cashflows</span></code> und <code class="docutils literal notranslate"><span class="pre">zins</span></code> Werte einsetzen und die Funktion aufrufen. Wir können dies auf verschiedene Weise machen. Hier ein paar Beispiele, die funktionieren.</p>
+<p><strong>Beispiel 1: ohne vorherige Definition der Input-Variablen</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">berechne_kapitalwert</span><span class="p">([</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span><span class="mi">50</span><span class="p">],</span> <span class="mf">0.3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-31.952662721893496
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Beispiel 2: mit vorherige Definition der Input-Variablen</strong></p>
+<p>Wichtig: die Namen der Variablen müssen nicht mit den Parameternamen übereinstimmen</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cash</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span>
+<span class="n">r</span> <span class="o">=</span> <span class="mf">0.3</span>
+<span class="n">berechne_kapitalwert</span><span class="p">(</span><span class="n">cash</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-31.952662721893496
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Beispiel 3: mit Nennung der Parameter</strong></p>
+<p>In den vorherigen Beispielen haben wir die Parameternamen nicht genannt, sondern unsere Daten nur in korrekter Reihenfolge eingegeben: 1. cashflows, 2. zins.</p>
+<p>Wir können jedoch alternativ auch die Parameternamen angeben (sog. Keyword Argument).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cash</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span>
+<span class="n">r</span> <span class="o">=</span> <span class="mf">0.3</span>
+<span class="n">berechne_kapitalwert</span><span class="p">(</span><span class="n">cashflows</span><span class="o">=</span><span class="n">cash</span><span class="p">,</span> <span class="n">zins</span><span class="o">=</span><span class="n">r</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-31.952662721893496
+</pre></div>
+</div>
+</div>
+</div>
+<p>Bei diesem Vorgehen ist die Reihenfolger der Parameter dann unerheblich.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">berechne_kapitalwert</span><span class="p">(</span><span class="n">zins</span><span class="o">=</span><span class="n">r</span><span class="p">,</span> <span class="n">cashflows</span><span class="o">=</span><span class="n">cash</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-31.952662721893496
+</pre></div>
+</div>
+</div>
+</div>
+<p>Schauen wir uns nun an, was der Vorteil der Auslagerung von Code-Teilen in Funktionen konkret ist. Wir werden dazu unsere drei Szenarien (siehe <a class="reference internal" href="#code-long"><span class="std std-ref">hier</span></a>)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">szenarien</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;base&quot;</span><span class="p">,</span> <span class="s2">&quot;high&quot;</span><span class="p">,</span> <span class="s2">&quot;low&quot;</span><span class="p">]</span>
+<span class="n">ergebnisse</span> <span class="o">=</span> <span class="p">[</span><span class="n">berechne_kapitalwert</span><span class="p">(</span><span class="n">cf_szenario</span><span class="p">[</span><span class="n">szenario</span><span class="p">],</span> <span class="n">i</span> <span class="p">)</span> <span class="k">for</span> <span class="n">szenario</span> <span class="ow">in</span> <span class="n">szenarien</span><span class="p">]</span>
+<span class="n">ergebnisse</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1172.9062357760577, 3947.9972690031846, -2491.1811561219856]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Der Code ist wesentlich kompakter, weil wir das Kernstück - die Berechnung des Kapitalwertes - ausgelagert haben in eine Funktion. Auch ist der Code viel einfacher zu lesen. Wir sehen auf den ersten Blick, dass wr für verschiedene Szenarien die Funktion <code class="docutils literal notranslate"><span class="pre">berechne_kapitalwert</span></code> aufrufen. Was diese tut ist durch den gewählten Namen der Funktion fast intuitiv klar.</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Iterieren von Dictionaries</p>
+<p>Alternativ könnten wir das <code class="docutils literal notranslate"><span class="pre">dictionary</span></code> mit den Cashflow-Szenarien auch direkt in der <code class="docutils literal notranslate"><span class="pre">list</span> <span class="pre">comprehension</span></code> ansprechen. Dies ist möglich, weil ein <code class="docutils literal notranslate"><span class="pre">dictionary</span></code> wie eine Liste auch iterierbar ist. So können wir die drei Schlüssel (<code class="docutils literal notranslate"><span class="pre">key</span></code>) via <code class="docutils literal notranslate"><span class="pre">dict.keys()</span></code> und die Werte via <code class="docutils literal notranslate"><span class="pre">dict.values()</span></code> abrufen. Ersteres würde die Schlüssel “<code class="docutils literal notranslate"><span class="pre">base</span></code>”, “<code class="docutils literal notranslate"><span class="pre">high</span></code>” und “<code class="docutils literal notranslate"><span class="pre">low</span></code>” liefern. Letzteres die entsprechenden Cashflows zu den Szenarien, d.h. “<code class="docutils literal notranslate"><span class="pre">[-10000,</span> <span class="pre">5000,</span> <span class="pre">4000,</span> <span class="pre">3000]</span></code>”, “<code class="docutils literal notranslate"><span class="pre">[-10000,</span> <span class="pre">6000,</span> <span class="pre">5000,</span> <span class="pre">4000]</span></code>” und “<code class="docutils literal notranslate"><span class="pre">[-10000,</span> <span class="pre">4000,</span> <span class="pre">3000,</span> <span class="pre">1000]</span></code>”.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ergebnisse</span> <span class="o">=</span> <span class="p">[</span><span class="n">berechne_kapitalwert</span><span class="p">(</span><span class="n">cash</span><span class="p">,</span> <span class="n">i</span> <span class="p">)</span> <span class="k">for</span> <span class="n">cash</span> <span class="ow">in</span> <span class="n">cf_szenario</span><span class="o">.</span><span class="n">values</span><span class="p">()]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Permalink to this headline">¶</a></h2>
+<p>Wir haben unser Eingangsbeispiel signifikant verbessert, in dem wir uns zwei wichtige Konzepte der Programmierung bzw. in Python angeschaut haben.</p>
+<ol class="simple">
+<li><p>Funktionen: sind eine sinnvolle Möglichkeit um wiederkehrenden Code auszulagern und wiederverwendbar zu machen. Wir können sowohl bereits existierende Funktionen nutzen, die andere für uns zur Verfügung stellen, als auch eigene Funktionen definieren.</p></li>
+<li><p>Iterationen: wir haben das Konzept der <code class="docutils literal notranslate"><span class="pre">for-loops</span></code> und der <code class="docutils literal notranslate"><span class="pre">list</span> <span class="pre">comprehension</span></code> kennengelernt. Wir sollten dieses Konzept immer dann anwenden, wenn wir Code repetitiv anwenden.</p></li>
+</ol>
+<p>Mit dem bisher vorgestellten Konzepten können Sie bereits sehr mächtige Programme schreiben. Natürlich bedarf es einem gewissen Maß an Übung, um die Syntax zu lernen, aber auch um die Anwendungsfälle zu identifizieren. Gehen Sie deshalb die Übungen dieses Kapitels sorgfältig durch.</p>
+<p>Im nächsten Kapitel werden wir uns mit weiteren wichtigen Konzepten auseinandersetzen.</p>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Hinweis: wir können innerhalb der <code class="docutils literal notranslate"><span class="pre">list</span> <span class="pre">comprehension</span></code> auch noch mehr machen. Dies werden wir in den nächsten Kapiteln noch sehen.</p>
+</dd>
+<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>an dieser Stelle der Hinweis, dass sich hierfür Excel vermutlich besser eignet, wir dieses Beispiel aus didaktischen Gründen aber fortführen werden.</p>
+</dd>
+</dl>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters/chapter_03"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Intro_Python_Excercises.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Übungen 1</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Functions_Iterations_Python_Excercises.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Übungen 2</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      Durch Felix Zeidler<br/>
+    
+        &copy; Urheberrechte © 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

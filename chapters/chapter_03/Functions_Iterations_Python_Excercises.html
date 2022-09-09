@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Installation &amp; Setup</title>
+    <title>Übungen 2</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -52,8 +52,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Einführung Jupyter Notebooks" href="Intro_Jupyter.html" />
-    <link rel="prev" title="Umsetzung in Python" href="../chapter_01/Umsetzung_Fallstudie.html" />
+    <link rel="next" title="Entscheidungsstrukturen" href="If_Statements_Python.html" />
+    <link rel="prev" title="Iterationen und Funktionen" href="Functions_Iterations_Python.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -144,19 +144,19 @@
   02 Technisches Setup
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_02/Installation.html">
    Installation &amp; Setup
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Intro_Jupyter.html">
+  <a class="reference internal" href="../chapter_02/Intro_Jupyter.html">
    Einführung Jupyter Notebooks
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Intro_Skript.html">
+  <a class="reference internal" href="../chapter_02/Intro_Skript.html">
    Nutzung dieses Skripts
   </a>
  </li>
@@ -166,9 +166,9 @@
   03 Python | Grundlagen
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../chapter_03/Intro_Python.html">
+  <a class="reference internal" href="Intro_Python.html">
    Einführung in Python
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
@@ -178,31 +178,31 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter_03/Intro_Python_Excercises.html">
+    <a class="reference internal" href="Intro_Python_Excercises.html">
      Übungen 1
     </a>
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../chapter_03/Functions_Iterations_Python.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="Functions_Iterations_Python.html">
    Iterationen und Funktionen
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../chapter_03/Functions_Iterations_Python_Excercises.html">
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Übungen 2
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../chapter_03/If_Statements_Python.html">
+  <a class="reference internal" href="If_Statements_Python.html">
    Entscheidungsstrukturen
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
@@ -212,7 +212,7 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter_03/If_Statements_Python_Excercises.html">
+    <a class="reference internal" href="If_Statements_Python_Excercises.html">
      Übungen 3
     </a>
    </li>
@@ -336,9 +336,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/chapters/chapter_02/Installation.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/chapters/chapter_03/Functions_Iterations_Python_Excercises.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Quelldatei herunterladen" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="In PDF drucken"
                 onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -356,6 +356,22 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/fredzett/Skript-Business-Analytics/blob/master/chapters/chapter_03/Functions_Iterations_Python_Excercises.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Starten Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
@@ -367,26 +383,19 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#grundlagen">
-   Grundlagen
+  <a class="reference internal nav-link" href="#aufgabe-1">
+   Aufgabe 1
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#installation-von-python-und-jupyter-notebooks">
-   Installation von Python und Jupyter Notebooks
+  <a class="reference internal nav-link" href="#aufgabe-2">
+   Aufgabe 2
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#variante-1-google-colab">
-     Variante 1: Google Colab
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#variante-2-lokale-installation">
-     Variante 2: Lokale Installation
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aufgabe-3">
+   Aufgabe 3
+  </a>
  </li>
 </ul>
 
@@ -398,7 +407,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Installation & Setup</h1>
+                <h1>Übungen 2</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -409,26 +418,19 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#grundlagen">
-   Grundlagen
+  <a class="reference internal nav-link" href="#aufgabe-1">
+   Aufgabe 1
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#installation-von-python-und-jupyter-notebooks">
-   Installation von Python und Jupyter Notebooks
+  <a class="reference internal nav-link" href="#aufgabe-2">
+   Aufgabe 2
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#variante-1-google-colab">
-     Variante 1: Google Colab
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#variante-2-lokale-installation">
-     Variante 2: Lokale Installation
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aufgabe-3">
+   Aufgabe 3
+  </a>
  </li>
 </ul>
 
@@ -439,47 +441,38 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="installation-setup">
-<h1>Installation &amp; Setup<a class="headerlink" href="#installation-setup" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="grundlagen">
-<h2>Grundlagen<a class="headerlink" href="#grundlagen" title="Permalink to this headline">¶</a></h2>
-<p>Im Rahmen dieses Kurses werden wir Python nutzen. Um Programme in Python zu schreiben, benötigen wir prinzipiell nur zwei Dinge.</p>
-<ol class="simple">
-<li><p>Ein Programm, in dem wir unseren Python-Code schreiben</p></li>
-<li><p>Ein Programm, welches den Inhalt der Textdatei als Python erkennt, diesen Code zu interpretieren</p></li>
-</ol>
-<p>Für ersters benötigen Sie theoretisch keine spezielle Software, da hier jeder einfache Texteditor ausreichend ist. Für zweiteres benötigen wir Python.</p>
-<p>In Abhängigkeit davon, wie wir Python nutzen wollen gibt es eine Vielzahl an Programmen, die uns beim Schreiben von Python helfen. Professionelle Softwareentwickler nutzen z.B. sogenannte <code class="docutils literal notranslate"><span class="pre">IDE</span></code> software (integrated development environment) wie <a class="reference external" href="https://code.visualstudio.com/">visual studio code</a> oder <a class="reference external" href="https://www.jetbrains.com/de-de/pycharm/">pycharm</a>.</p>
-<p>Wir werden eine Umgebung nutzen, die explizit für die Bedürfnisse der Datenanalyse konzipiert wurde: <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebooks</span></code> (siehe <a class="reference external" href="https://jupyter.org/">hier</a>).</p>
-<p>Jupyter Notebooks (JN) sind eine <strong>interaktive Umgebung</strong> innerhalb der Sie</p>
-<ul class="simple">
-<li><p>Programmcode schreiben und ausführen können (nicht beschränkt auf Python),</p></li>
-<li><p>Ergebnisse visualisieren können,</p></li>
-<li><p>Markdown, HTML oder Latex (für mathematische Formeln) nutzen können</p></li>
-</ul>
-<p>Es handelt sich deshalb um eine Form des <code class="docutils literal notranslate"><span class="pre">Literate</span> <span class="pre">Computing</span></code> in der komplexe Analysen durchgeführt UND erläutert werden
-können.  JN bieten sich deshalb für komplexe Datenanalyse sehr gut an und haben sich hier als “state of the art” Werkzeug durchgesetzt.<a class="footnote-reference brackets" href="#id2" id="id1">1</a></p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="ubungen-2">
+<h1>Übungen 2<a class="headerlink" href="#ubungen-2" title="Permalink to this headline">¶</a></h1>
+<p>Hinweis: die (build-in) Funktion <code class="docutils literal notranslate"><span class="pre">zip</span></code> könnte ihnen bei den folgenden Aufgaben helfen.</p>
+<div class="section" id="aufgabe-1">
+<h2>Aufgabe 1<a class="headerlink" href="#aufgabe-1" title="Permalink to this headline">¶</a></h2>
+<p>Sie wollen ihren Kunden Rechnungen schicken und dafür die Anrede zu Beginn des Schreibens automatisieren. Schreiben Sie eine Funktion, die die untenstehenden Daten als Input nutzt und für jeden Kunden eine Anrede nach folgendem Prinzip ausgibt:</p>
+<p>“Hallo Vorname Zuname”</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vornamen</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Hans&quot;</span><span class="p">,</span> <span class="s2">&quot;Manuela&quot;</span><span class="p">,</span> <span class="s2">&quot;Peter&quot;</span><span class="p">,</span> <span class="s2">&quot;Nathalie&quot;</span><span class="p">]</span>
+<span class="n">nachnamen</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Horst&quot;</span><span class="p">,</span> <span class="s2">&quot;Mühlweber&quot;</span><span class="p">,</span> <span class="s2">&quot;Packendorf&quot;</span><span class="p">,</span> <span class="s2">&quot;Nursucher&quot;</span><span class="p">]</span>
+</pre></div>
 </div>
-<div class="section" id="installation-von-python-und-jupyter-notebooks">
-<h2>Installation von Python und Jupyter Notebooks<a class="headerlink" href="#installation-von-python-und-jupyter-notebooks" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="variante-1-google-colab">
-<h3>Variante 1: Google Colab<a class="headerlink" href="#variante-1-google-colab" title="Permalink to this headline">¶</a></h3>
-<p>Es ist keine Voraussetzung, dass Sie <code class="docutils literal notranslate"><span class="pre">Python</span></code> und <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebooks</span></code> lokal auf ihrem Computer installieren. Sie können stattdessen die von Google angebotene Cloud-Variante von Jupyter Notebooks nutzen: <a class="reference external" href="https://colab.research.google.com/">google colab</a>. Das ganze ist kostenfrei verfügbar und Sie benötigen dafür lediglich einen Google-Account.</p>
 </div>
-<div class="section" id="variante-2-lokale-installation">
-<h3>Variante 2: Lokale Installation<a class="headerlink" href="#variante-2-lokale-installation" title="Permalink to this headline">¶</a></h3>
-<p>Alternativ können Sie Python auch lokal auf Ihrem Computer installieren. Hierfür gibt es verschiedene Varianten. Wir empfehlen <code class="docutils literal notranslate"><span class="pre">Anaconda</span></code> für die Installation von Python und viele der relevanten Bibliotheken zu nutzen.</p>
-<p>Gehen Sie dafür auf die <a class="reference external" href="https://www.anaconda.com/">Webseite</a> und laden sich Anaconda herunter und installieren das Programm. Das Programm ist für Windows und Mac jeweils kostenlos verfügbar.</p>
-<p><img alt="Download Anaconda" src="../../_images/Anaconda.png" /></p>
-<p>Sobald dies geschehen ist, können Sie den sogenannten <code class="docutils literal notranslate"><span class="pre">Anaconda</span> <span class="pre">Navigator</span></code> öffnen und Jupyter Notebooks oder Jupyter Lab nutzen.</p>
-<p><img alt="Anaconda Navigator" src="../../_images/Anaconda_Navigator.png" /></p>
-<hr class="footnotes docutils" />
-<dl class="footnote brackets">
-<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>Siehe hierzu auch einen Artikel aus <a class="reference external" href="https://www.nature.com/articles/d41586-018-07196-1"><strong>Nature</strong></a>.</p>
-</dd>
-</dl>
 </div>
+</div>
+<div class="section" id="aufgabe-2">
+<h2>Aufgabe 2<a class="headerlink" href="#aufgabe-2" title="Permalink to this headline">¶</a></h2>
+<p>Ihr Unternehmen hat in den letzten Wochen außergewöhnlich viele Kunden verloren. Ihr Chef wird nervös und bittet Sie - auf Basis der unten angegebenen Daten - zu berechnen, wieviel % Umsatz ihr Unternehmen dadurch verloren hat. Da die Zahlen evtl. noch einmal aktualisiert werden, sollten Sie idealerweise eine Funktion dafür schreiben.</p>
+<p>Sie haben zwei Listen mit Daten, die zueinander passen. In der ersten Liste ist mit 1 angegeben, falls ein Kunde gekündigt hat. In der zweiten Liste ist der entsprechende Umsatz der Kunden angegeben.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">kündigung</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span> <span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="c1"># 1 = hat gekündigt, 0 = nicht gekündigt</span>
+<span class="n">umsatz</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">145</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">63</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="aufgabe-3">
+<h2>Aufgabe 3<a class="headerlink" href="#aufgabe-3" title="Permalink to this headline">¶</a></h2>
+<p>In Aufgabe 1 auf Übungsblatt 1 (siehe <a class="reference internal" href="Intro_Python_Excercises.html#blatt1-aufgabe1"><span class="std std-ref">hier</span></a>) haben Sie eine Umrechnung vorgenommen. Schreiben Sie eine Funktion, die diese Umrechnung vornimmt und als Input Rohstoff A hat und die Menge von Rohstoff B ausgibt.</p>
 </div>
 </div>
 
@@ -496,7 +489,7 @@ können.  JN bieten sich deshalb für komplexe Datenanalyse sehr gut an und habe
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./chapters/chapter_02"
+            path: "./chapters/chapter_03"
         },
         predefinedOutput: true
     }
@@ -508,17 +501,17 @@ können.  JN bieten sich deshalb für komplexe Datenanalyse sehr gut an und habe
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../chapter_01/Umsetzung_Fallstudie.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="Functions_Iterations_Python.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Umsetzung in Python</p>
+            <p class="prev-next-title">Iterationen und Funktionen</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="Intro_Jupyter.html" title="next page">
+    <a class='right-next' id="next-link" href="If_Statements_Python.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Einführung Jupyter Notebooks</p>
+        <p class="prev-next-title">Entscheidungsstrukturen</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
