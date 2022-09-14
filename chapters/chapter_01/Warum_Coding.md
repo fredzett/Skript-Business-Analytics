@@ -73,5 +73,3 @@ Um Coden zu lernen, braucht es nicht viel. Jeder von uns kann dies lerne. Sehr v
 
 <iframe style="position:relative;top:0px;width:100%;height:80vh;" src="https://www.youtube.com/embed/Dv7gLpW91DM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-
-<iframe width="800" height="500" src="https://www.youtube.com/embed/Dv7gLpW91DM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
