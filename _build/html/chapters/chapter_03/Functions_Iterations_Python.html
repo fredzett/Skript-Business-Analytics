@@ -41,6 +41,7 @@
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
@@ -217,6 +218,23 @@
     </a>
    </li>
   </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  04 Python | Module
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_04/Intro_Modules.html">
+   Einführung: Module
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_04/Intro_Numpy.html">
+   NumPy: der Zahlenakrobat
+  </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -405,6 +423,11 @@
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nutzliche-funktionen">
+   Nützliche Funktionen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#optimierung-des-beispiels">
    Optimierung des Beispiels
   </a>
@@ -462,6 +485,11 @@
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nutzliche-funktionen">
+   Nützliche Funktionen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#optimierung-des-beispiels">
    Optimierung des Beispiels
   </a>
@@ -492,11 +520,11 @@
 <li><p>Der Code ist repetitiv, d.h. Wiederholungen von sehr ähnlichen Dingen</p></li>
 <li><p>Der Code ist unflexibel, d.h. bei kleinen Veränderungen der Fragestellung bereits unbrauchbar</p></li>
 </ol>
-<p>Wir werden in diesem Kapitel zwei wichtige Coding-Konzepte vorstellen, die uns helfen, den Code weiter zu verbessern und die angesprochenen Probleme des bisherigen Codes zu verbessern.</p>
-<p>Wir beginnen mit dem Konzept der <code class="docutils literal notranslate"><span class="pre">Funktionen</span></code>, bevor wir uns dem Konzept der <code class="docutils literal notranslate"><span class="pre">Iterationen</span></code> widmen.</p>
+<p>Wir werden in diesem Kapitel zwei wichtige Coding-Konstrukte vorstellen, die uns helfen, den Code weiter zu verbessern und die angesprochenen Probleme des bisherigen Codes zu verbessern.</p>
+<p>Wir beginnen mit dem Konstrukt der <code class="docutils literal notranslate"><span class="pre">Funktionen</span></code>, bevor wir uns dem Konstrukt der <code class="docutils literal notranslate"><span class="pre">Iterationen</span></code> widmen.</p>
 <div class="section" id="funktionen-build-in">
 <h2>Funktionen (build-in)<a class="headerlink" href="#funktionen-build-in" title="Permalink to this headline">¶</a></h2>
-<p>Wir können Funktionen einsetzen, um Teile des Codes wiederverwendbar zu machen bzw. um bereits geschriebenen Code von anderen wiederzuverwenden. Das Konzept ist sehr mächtig und wir werden sowohl bereits implementierte Funktionen nutzen, als auch eigene Funktionen schreiben lernen.</p>
+<p>Wir können Funktionen einsetzen, um Teile des Codes wiederverwendbar zu machen bzw. um bereits geschriebenen Code von anderen wiederzuverwenden. Das Konstrukt ist sehr mächtig und wir werden sowohl bereits implementierte Funktionen nutzen, als auch eigene Funktionen schreiben lernen.</p>
 <p>Lassen Sie uns wieder eine Analogie aus Excel nutzen. Stellen Sie sich vor, wir haben eine Spalte mit vielen Werten und wir wollen wissen, um wieviele Werte es sich handelt, d.h. wir wollen die <code class="docutils literal notranslate"><span class="pre">Anzahl</span></code> an Werten bestimmen. Wir könnten diese Information z.B. benötigen, um einen Durchschnitt zu berechnen.</p>
 <p><img alt="Zahlen" src="../../_images/RndNumbers.png" /></p>
 <p>Natürlich könnten wir die Anzahl an Werten selber und manuell zählen (es sind 10 Werte). Diese Lösung ist aber wenig sinnvoll, da wir so einen manuellen Schritt in unser “Programm” einbauen. Besser wäre es, wenn wir die Anzahl an Werten automatisiert bestimmen. Wir könnten uns über diese eigentlich triviale Aufgabe nun Gedanken machen. Jedoch müssen wir dies nicht, da es für diese spezielle Frage bereits eine Lösung in Excel gibt. Wir können die Funktion <code class="docutils literal notranslate"><span class="pre">Anzahl()</span></code> nutzen, die Excel bzw. Microsoft bereits für den Anwender zur Verfügung gestellt hat. Die Funktion berechnet, wie viele Zellen in einem Bereich Zahlen enthalten.</p>
@@ -538,13 +566,13 @@
 <p>In Python gibt es viele Funktionen, die wir nutzen können, um uns eigenen Programmieraufwand zu sparen. Die vollständige Liste aller sog. build-in Funktionen kann <a class="reference external" href="https://www.w3schools.com/python/python_ref_functions.asp">hier</a> nachgeschlagen werden. Hierbei handelt es sich jedoch nur um Funktionen, die bereits in Python enthalten sind. Darüber hinaus können wir andere Bibliotheken installieren, um das Spektrum signifikant zu erweitern; dies werden wir in den nächsten Kapiteln auch tun.</p>
 </div>
 <div class="section" id="iterationen">
-<h2>Iterationen<a class="headerlink" href="#iterationen" title="Permalink to this headline">¶</a></h2>
+<span id="kapitel-iterationen"></span><h2>Iterationen<a class="headerlink" href="#iterationen" title="Permalink to this headline">¶</a></h2>
 <p>Das Wiederholen von identischen oder sehr ähnlichen Code-Ausschnitten ist aufwändig und fehleranfällig und sollte deshalb nicht vom Menschen, sondern vom Computer übernommen werden.</p>
 <p>Auch an dieser Stelle wollen wir uns wieder einer Analogie aus Excel bedienen. Die Stärke von Excel ist unter anderem dadurch begründet, dass wir Operationen vielfach durchführen können, ohne diese mehrfach sexplizit formuliert zu haben. Wir können stattdessen einmal formulierte Operationen “nach unten” oder “zur Seite ziehen”. Dadurch kann eine Operation automatisch für eine andere Zelle angewandt werden.</p>
 <p>Hier ein Beispiel in Excel, die eine Formel für viele Zellen anwendet.</p>
 <p><img alt="xls-for-loop" src="../../_images/xls_for_loop.gif" /></p>
 <p>Das Beispiel zeigt, dass wir dadurch viel manuellen Aufwand, aber auch viele potenzielle Fehlerquellen vermeiden.</p>
-<p>Auch viele Programmiersprachen haben deshalb Konzepte, um diese Wiederholungen zu vermeiden. Wir werden uns nun zwei Konzepten in Python widmen:</p>
+<p>Auch viele Programmiersprachen haben deshalb Konstrukte, um diese Wiederholungen zu vermeiden. Wir werden uns nun zwei Konstrukten in Python widmen:</p>
 <ol class="simple">
 <li><p>For-Loops</p></li>
 <li><p>List comprehensions</p></li>
@@ -645,7 +673,7 @@ Wir erstellen dafür eine leere Liste (“<code class="docutils literal notransl
 <div class="section" id="list-comprehension">
 <h3>List comprehension<a class="headerlink" href="#list-comprehension" title="Permalink to this headline">¶</a></h3>
 <p>Eine Besonderheit in Python sind die sog. <code class="docutils literal notranslate"><span class="pre">list</span> <span class="pre">comprehensions</span></code>. Mit diesen können die Ergebnisse einer <code class="docutils literal notranslate"><span class="pre">for-loop</span></code> direkt in einer neuen Liste abgespeichert werden.<a class="footnote-reference brackets" href="#id3" id="id1">1</a></p>
-<p>Wir können das obige Beispiel mit dem Konzept der <code class="docutils literal notranslate"><span class="pre">list</span> <span class="pre">comprehension</span></code> einfacher und kompakter darstellen.</p>
+<p>Wir können das obige Beispiel mit dem Konstrukt der <code class="docutils literal notranslate"><span class="pre">list</span> <span class="pre">comprehension</span></code> einfacher und kompakter darstellen.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">namen</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Julia&quot;</span><span class="p">,</span> <span class="s2">&quot;Aishe&quot;</span><span class="p">,</span> <span class="s2">&quot;Fred&quot;</span><span class="p">,</span> <span class="s2">&quot;Schwerthelm&quot;</span><span class="p">,</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="s2">&quot;Manuela&quot;</span><span class="p">]</span>
@@ -666,6 +694,107 @@ Wir erstellen dafür eine leere Liste (“<code class="docutils literal notransl
 </pre></div>
 </div>
 <p>In Python werden - wenn möglich - typischerweise <code class="docutils literal notranslate"><span class="pre">list</span> <span class="pre">comprehension</span></code> bevorzugt, da dies den Code insgesamt übersichtlicher und lesbarer macht.</p>
+</div>
+</div>
+<div class="section" id="nutzliche-funktionen">
+<h2>Nützliche Funktionen<a class="headerlink" href="#nutzliche-funktionen" title="Permalink to this headline">¶</a></h2>
+<p>An dieser Stelle wollen wir einige ausgewählte Funktionen vorstellen, von denen wir glauben, dass sie gerade zu Anfang besonders nützlich sind. Wir werden jeweils kurz darauf eingehen, weshalb diese nützlich sind.</p>
+<p><strong><code class="docutils literal notranslate"><span class="pre">print</span></code></strong></p>
+<p>Die Funktion akzeptiert eine beliebige Anzahl an Parametern und gibt diese in Form von Text aus. Die Funktion ist sehr nützlich, da wir z.B. auch Zwischenergebnisse innerhalb einer Code-Zelle anzeigen lassen können.</p>
+<p>Beispiel:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">+</span> <span class="n">a</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;b =&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="n">c</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>b = 7
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">len</span></code></strong></p>
+<p>Die Funktion gibt die Länge einer Liste (und vieler anderer Datentypen) an. Wir benötigen diese Funktion sehr häufig, da wir die Information, wie viele Elemente ein Objekt hat sehr häufig benötigen.</p>
+<p>Beispiel:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="s2">&quot;Dies ist ein langer Satz!&quot;</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(3, 25)
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">range</span></code></strong></p>
+<p>Die Funktion gibt eine Zahlensequenz zurück, die standardmäßig bei <code class="docutils literal notranslate"><span class="pre">0</span></code> beginnt, sich um jeweils <code class="docutils literal notranslate"><span class="pre">1</span></code>erhöht und bei einer angegebenen Zahl endet.</p>
+<p>Beispiel:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">el</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+2
+3
+4
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">enumerate</span></code></strong></p>
+<p>Die Funktion fügt einem iterierbaren Objekt einen Zähler hinzu. Wir können diese Funktion immer dann nutzen, wenn wir einer For-Loop einen Zählern hinzufügen möchten.</p>
+<p>Beispiel:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">namen</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Horst&quot;</span><span class="p">,</span> <span class="s2">&quot;Igor&quot;</span><span class="p">,</span> <span class="s2">&quot;Gerd&quot;</span><span class="p">,</span> <span class="s2">&quot;Hannelore&quot;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">namen</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 Horst
+1 Igor
+2 Gerd
+3 Hannelore
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">zip</span></code></strong></p>
+<p>Mit der Funktion kann ich zwei (oder mehr) iterierbare Datentypen (siehe <a class="reference internal" href="#kapitel-iterationen"><span class="std std-ref">Sektion Iterationen</span></a>) parallel iterieren.  Dieses Konstrukt wird häufig in List-Comprehensions bzw. For-Loops genutzt.</p>
+<p>Beispiel:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">liste1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="n">liste2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">]</span>
+<span class="p">[</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">liste1</span><span class="p">,</span> <span class="n">liste2</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[4, 6, 8, 10, 12]
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="optimierung-des-beispiels">
@@ -944,13 +1073,13 @@ Wir erstellen dafür eine leere Liste (“<code class="docutils literal notransl
 </div>
 <div class="section" id="zusammenfassung-und-ausblick">
 <h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Permalink to this headline">¶</a></h2>
-<p>Wir haben unser Eingangsbeispiel signifikant verbessert, in dem wir uns zwei wichtige Konzepte der Programmierung bzw. in Python angeschaut haben.</p>
+<p>Wir haben unser Eingangsbeispiel signifikant verbessert, in dem wir uns zwei wichtige Konstrukte der Programmierung bzw. in Python angeschaut haben.</p>
 <ol class="simple">
 <li><p>Funktionen: sind eine sinnvolle Möglichkeit um wiederkehrenden Code auszulagern und wiederverwendbar zu machen. Wir können sowohl bereits existierende Funktionen nutzen, die andere für uns zur Verfügung stellen, als auch eigene Funktionen definieren.</p></li>
-<li><p>Iterationen: wir haben das Konzept der <code class="docutils literal notranslate"><span class="pre">for-loops</span></code> und der <code class="docutils literal notranslate"><span class="pre">list</span> <span class="pre">comprehension</span></code> kennengelernt. Wir sollten dieses Konzept immer dann anwenden, wenn wir Code repetitiv anwenden.</p></li>
+<li><p>Iterationen: wir haben das Konstrukt der <code class="docutils literal notranslate"><span class="pre">for-loops</span></code> und der <code class="docutils literal notranslate"><span class="pre">list</span> <span class="pre">comprehension</span></code> kennengelernt. Wir sollten dieses Konstrukt immer dann anwenden, wenn wir Code repetitiv anwenden.</p></li>
 </ol>
-<p>Mit dem bisher vorgestellten Konzepten können Sie bereits sehr mächtige Programme schreiben. Natürlich bedarf es einem gewissen Maß an Übung, um die Syntax zu lernen, aber auch um die Anwendungsfälle zu identifizieren. Gehen Sie deshalb die Übungen dieses Kapitels sorgfältig durch.</p>
-<p>Im nächsten Kapitel werden wir uns mit weiteren wichtigen Konzepten auseinandersetzen.</p>
+<p>Mit dem bisher vorgestellten Konstrukten können Sie bereits sehr mächtige Programme schreiben. Natürlich bedarf es einem gewissen Maß an Übung, um die Syntax zu lernen, aber auch um die Anwendungsfälle zu identifizieren. Gehen Sie deshalb die Übungen dieses Kapitels sorgfältig durch.</p>
+<p>Im nächsten Kapitel werden wir uns mit weiteren wichtigen Konstrukten auseinandersetzen.</p>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>

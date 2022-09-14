@@ -1,8 +1,24 @@
 # Warum Programmieren?
 
+```{epigraph}
+You cannot get educated by this self-propagating system in which people study to pass exams, and teach others to pass exams, but nobody knows anything. 
+
+You learn something by doing it yourself, by asking questions, by thinking, and by experimenting.
+
+-- Prof. Richard P. Feynman
+```
+
+`SEPARATE ANALYSIS FROM DATA!`-> coding vs. excel. 
+
 [`NO CODE LÖSUNGEN WIE POWERBI GEGENÜBERSTELLEN`]
 [`NICHT SCHWERER ALS EXCEL - VIELE DER KONZEPTE BEREITS BEKANNT`]
 [`Video super power Coding`]
+
+## Why not Excel?
+
+## Why not Business Intelligence Tools?
+
+## Hilft komplexe Probleme zu lösen (via Simulation)
 
 Warum sollten - wie in diesem Kurs angedacht - Studierende der Betriebswirtschaftslehre (BWL) programmieren lernen? Die Frage wird nicht unkontrovers (und im Übrigen auch nicht zum ersten Mal in der Geschichte der BWL) disktutiert. Auf der einen Seite sind die Befürworter, die argumentieren, dass die Fähigkeit zu Programmieren in Zukunft wichtig wird, da die Welt digitaler wird und ein technisches Verständnis unerlässlich ist. Auf der anderen Seite diejenigen, die dagegenhalten und argumentieren, dass die BWL sich mit den strategischen Implikationen der digitalen Transformation auseinandersetzen muss. 
 

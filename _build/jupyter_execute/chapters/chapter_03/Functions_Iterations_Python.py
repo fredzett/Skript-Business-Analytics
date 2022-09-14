@@ -9,14 +9,14 @@
 # 
 # 2. Der Code ist unflexibel, d.h. bei kleinen Veränderungen der Fragestellung bereits unbrauchbar
 # 
-# Wir werden in diesem Kapitel zwei wichtige Coding-Konzepte vorstellen, die uns helfen, den Code weiter zu verbessern und die angesprochenen Probleme des bisherigen Codes zu verbessern. 
+# Wir werden in diesem Kapitel zwei wichtige Coding-Konstrukte vorstellen, die uns helfen, den Code weiter zu verbessern und die angesprochenen Probleme des bisherigen Codes zu verbessern. 
 # 
-# Wir beginnen mit dem Konzept der `Funktionen`, bevor wir uns dem Konzept der `Iterationen` widmen.
+# Wir beginnen mit dem Konstrukt der `Funktionen`, bevor wir uns dem Konstrukt der `Iterationen` widmen.
 # 
 
 # ## Funktionen (build-in)
 
-# Wir können Funktionen einsetzen, um Teile des Codes wiederverwendbar zu machen bzw. um bereits geschriebenen Code von anderen wiederzuverwenden. Das Konzept ist sehr mächtig und wir werden sowohl bereits implementierte Funktionen nutzen, als auch eigene Funktionen schreiben lernen. 
+# Wir können Funktionen einsetzen, um Teile des Codes wiederverwendbar zu machen bzw. um bereits geschriebenen Code von anderen wiederzuverwenden. Das Konstrukt ist sehr mächtig und wir werden sowohl bereits implementierte Funktionen nutzen, als auch eigene Funktionen schreiben lernen. 
 # 
 # Lassen Sie uns wieder eine Analogie aus Excel nutzen. Stellen Sie sich vor, wir haben eine Spalte mit vielen Werten und wir wollen wissen, um wieviele Werte es sich handelt, d.h. wir wollen die `Anzahl` an Werten bestimmen. Wir könnten diese Information z.B. benötigen, um einen Durchschnitt zu berechnen. 
 # 
@@ -68,6 +68,7 @@ len(werte) # Gibt die Anzahl an Elementen in der Liste "werte" zurück
 
 # In Python gibt es viele Funktionen, die wir nutzen können, um uns eigenen Programmieraufwand zu sparen. Die vollständige Liste aller sog. build-in Funktionen kann [hier](https://www.w3schools.com/python/python_ref_functions.asp) nachgeschlagen werden. Hierbei handelt es sich jedoch nur um Funktionen, die bereits in Python enthalten sind. Darüber hinaus können wir andere Bibliotheken installieren, um das Spektrum signifikant zu erweitern; dies werden wir in den nächsten Kapiteln auch tun.   
 
+# (kapitel:iterationen)=
 # ## Iterationen
 
 # Das Wiederholen von identischen oder sehr ähnlichen Code-Ausschnitten ist aufwändig und fehleranfällig und sollte deshalb nicht vom Menschen, sondern vom Computer übernommen werden. 
@@ -80,7 +81,7 @@ len(werte) # Gibt die Anzahl an Elementen in der Liste "werte" zurück
 # 
 # Das Beispiel zeigt, dass wir dadurch viel manuellen Aufwand, aber auch viele potenzielle Fehlerquellen vermeiden. 
 # 
-# Auch viele Programmiersprachen haben deshalb Konzepte, um diese Wiederholungen zu vermeiden. Wir werden uns nun zwei Konzepten in Python widmen:
+# Auch viele Programmiersprachen haben deshalb Konstrukte, um diese Wiederholungen zu vermeiden. Wir werden uns nun zwei Konstrukten in Python widmen:
 # 
 # 1. For-Loops
 #    
@@ -175,7 +176,7 @@ anzahl_buchstaben
 
 # Eine Besonderheit in Python sind die sog. `list comprehensions`. Mit diesen können die Ergebnisse einer `for-loop` direkt in einer neuen Liste abgespeichert werden.[^1]
 # 
-# Wir können das obige Beispiel mit dem Konzept der `list comprehension` einfacher und kompakter darstellen. 
+# Wir können das obige Beispiel mit dem Konstrukt der `list comprehension` einfacher und kompakter darstellen. 
 # 
 # [^1]: Hinweis: wir können innerhalb der `list comprehension` auch noch mehr machen. Dies werden wir in den nächsten Kapiteln noch sehen. 
 
@@ -194,6 +195,82 @@ anzahl_buchstaben
 # ```
 
 # In Python werden - wenn möglich - typischerweise `list comprehension` bevorzugt, da dies den Code insgesamt übersichtlicher und lesbarer macht. 
+
+# ## Nützliche Funktionen
+
+# An dieser Stelle wollen wir einige ausgewählte Funktionen vorstellen, von denen wir glauben, dass sie gerade zu Anfang besonders nützlich sind. Wir werden jeweils kurz darauf eingehen, weshalb diese nützlich sind.
+
+# **`print`**
+# 
+# Die Funktion akzeptiert eine beliebige Anzahl an Parametern und gibt diese in Form von Text aus. Die Funktion ist sehr nützlich, da wir z.B. auch Zwischenergebnisse innerhalb einer Code-Zelle anzeigen lassen können. 
+# 
+# Beispiel:
+
+# In[ ]:
+
+
+a = 3
+b = 4 + a
+print("b =", b)
+c = a + b
+c
+
+
+# **`len`**
+# 
+# Die Funktion gibt die Länge einer Liste (und vieler anderer Datentypen) an. Wir benötigen diese Funktion sehr häufig, da wir die Information, wie viele Elemente ein Objekt hat sehr häufig benötigen. 
+# 
+# Beispiel:
+
+# In[ ]:
+
+
+a = [1,2,3]
+b = "Dies ist ein langer Satz!"
+len(a), len(b)
+
+
+# **`range`**
+# 
+# Die Funktion gibt eine Zahlensequenz zurück, die standardmäßig bei `0` beginnt, sich um jeweils `1`erhöht und bei einer angegebenen Zahl endet.
+# 
+# Beispiel:
+
+# In[ ]:
+
+
+x = range(5)
+for el in x:
+    print(el)
+
+
+# **`enumerate`**
+# 
+# Die Funktion fügt einem iterierbaren Objekt einen Zähler hinzu. Wir können diese Funktion immer dann nutzen, wenn wir einer For-Loop einen Zählern hinzufügen möchten. 
+# 
+# Beispiel:
+
+# In[ ]:
+
+
+namen = ["Horst", "Igor", "Gerd", "Hannelore"]
+for i, name in enumerate(namen):
+    print(i, name)
+
+
+# **`zip`**
+# 
+# Mit der Funktion kann ich zwei (oder mehr) iterierbare Datentypen (siehe [Sektion Iterationen](kapitel:iterationen)) parallel iterieren.  Dieses Konstrukt wird häufig in List-Comprehensions bzw. For-Loops genutzt. 
+# 
+# Beispiel:
+
+# In[ ]:
+
+
+liste1 = [1,2,3,4,5]
+liste2 = [3,4,5,6,7]
+[a + b for a, b in zip(liste1, liste2)]
+
 
 # ## Optimierung des Beispiels
 
@@ -446,14 +523,14 @@ ergebnisse
 
 # ## Zusammenfassung und Ausblick
 
-# Wir haben unser Eingangsbeispiel signifikant verbessert, in dem wir uns zwei wichtige Konzepte der Programmierung bzw. in Python angeschaut haben. 
+# Wir haben unser Eingangsbeispiel signifikant verbessert, in dem wir uns zwei wichtige Konstrukte der Programmierung bzw. in Python angeschaut haben. 
 # 
 # 1. Funktionen: sind eine sinnvolle Möglichkeit um wiederkehrenden Code auszulagern und wiederverwendbar zu machen. Wir können sowohl bereits existierende Funktionen nutzen, die andere für uns zur Verfügung stellen, als auch eigene Funktionen definieren. 
 # 
-# 2. Iterationen: wir haben das Konzept der `for-loops` und der `list comprehension` kennengelernt. Wir sollten dieses Konzept immer dann anwenden, wenn wir Code repetitiv anwenden. 
+# 2. Iterationen: wir haben das Konstrukt der `for-loops` und der `list comprehension` kennengelernt. Wir sollten dieses Konstrukt immer dann anwenden, wenn wir Code repetitiv anwenden. 
 # 
-# Mit dem bisher vorgestellten Konzepten können Sie bereits sehr mächtige Programme schreiben. Natürlich bedarf es einem gewissen Maß an Übung, um die Syntax zu lernen, aber auch um die Anwendungsfälle zu identifizieren. Gehen Sie deshalb die Übungen dieses Kapitels sorgfältig durch. 
+# Mit dem bisher vorgestellten Konstrukten können Sie bereits sehr mächtige Programme schreiben. Natürlich bedarf es einem gewissen Maß an Übung, um die Syntax zu lernen, aber auch um die Anwendungsfälle zu identifizieren. Gehen Sie deshalb die Übungen dieses Kapitels sorgfältig durch. 
 # 
-# Im nächsten Kapitel werden wir uns mit weiteren wichtigen Konzepten auseinandersetzen. 
+# Im nächsten Kapitel werden wir uns mit weiteren wichtigen Konstrukten auseinandersetzen. 
 
 # 
