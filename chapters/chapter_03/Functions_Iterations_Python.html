@@ -738,23 +738,36 @@ Wir erstellen dafür eine leere Liste (“<code class="docutils literal notransl
 </div>
 </div>
 </div>
-<p><strong><code class="docutils literal notranslate"><span class="pre">range</span></code></strong></p>
-<p>Die Funktion gibt eine Zahlensequenz zurück, die standardmäßig bei <code class="docutils literal notranslate"><span class="pre">0</span></code> beginnt, sich um jeweils <code class="docutils literal notranslate"><span class="pre">1</span></code>erhöht und bei einer angegebenen Zahl endet.</p>
-<p>Beispiel:</p>
+<p id="beispiel-range"><strong><code class="docutils literal notranslate"><span class="pre">range</span></code></strong></p>
+<p>Die Funktion gibt eine Zahlensequenz zurück, die standardmäßig bei <code class="docutils literal notranslate"><span class="pre">0</span></code> beginnt, sich um jeweils <code class="docutils literal notranslate"><span class="pre">1</span></code> erhöht und bei einer angegebenen Zahl endet.</p>
+<p>Nun fragen Sie sich vielleicht, weshalb Sie eine solche Funktion benötigen. Diese Frage ist natürlich abhängig vom spezifischen Kontext bzw. Problem, welches Sie programmieren. Jedoch gibt es z.B. in Excel einen Anwendungsfall, auf denen viele von Ihnen schon mal gestoßen sind: Sie wollen z.B. einen Index erstellen. In Excel wird dies z.B. oft wie dargestellt gemacht.</p>
+<p><img alt="rangeExcel" src="../../_images/nparange_xls.gif" /></p>
+<p>In Python können Sie dies mit der Funktion <code class="docutils literal notranslate"><span class="pre">range</span></code> erreichen.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">el</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">werte</span> <span class="o">=</span> <span class="p">[</span><span class="mi">22</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">234</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">123</span><span class="p">]</span>
+<span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">werte</span><span class="p">)</span>
+<span class="n">index</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="n">index</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
-1
-2
-3
-4
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(range(0, 12), [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Der Startpunkt, der Zählschritt sowie der Endpunkt können dabei jedoch auch explizit vorgegeben und so geändert werden. Im unteren Beispiel startet die Zahlensequenz bei 10, erhöht sich mit jedem Schritt um 2 und endet bei 19 (d.h. der gewählte Endpunkt ist nicht mit enthalten).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="p">[</span><span class="n">el</span> <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[10, 12, 14, 16, 18]
 </pre></div>
 </div>
 </div>
@@ -878,7 +891,7 @@ Wir erstellen dafür eine leere Liste (“<code class="docutils literal notransl
 <p>Der Code dafür könnte wiefolgt aussehen:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Annahmen im Base Case</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Annahmen </span>
 <span class="n">i</span> <span class="o">=</span> <span class="mf">0.04</span>
 <span class="n">cf_szenario</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;base&quot;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">5000</span><span class="p">,</span> <span class="mi">4000</span><span class="p">,</span> <span class="mi">3000</span><span class="p">],</span> 
             <span class="s2">&quot;high&quot;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">6000</span><span class="p">,</span> <span class="mi">5000</span><span class="p">,</span> <span class="mi">4000</span><span class="p">],</span>
