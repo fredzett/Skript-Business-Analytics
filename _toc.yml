@@ -33,6 +33,8 @@ parts:
   chapters:
   - file: chapters/chapter_04/Intro_Modules.ipynb
   - file: chapters/chapter_04/Intro_Numpy.ipynb
+   sections:
+   - file: chapters/chapter_04/Intro_Numpy_exercise.ipynb
 - caption: 99 Sandbox
   chapters:
   - file: chapters/chapter_analytics/S02a_Descriptive_Statistics.ipynb
