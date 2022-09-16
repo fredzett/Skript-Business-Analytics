@@ -64,7 +64,7 @@ Wir argumentieren also, dass Wirtschaftsstudenten eine Teilmenge einer breiten P
 
 ## Jeder kann programmieren lernen
 
-Um Coden zu lernen, braucht es nicht viel. Jeder von uns kann dies lerne. Sehr viele Studierende nutzen täglich ein Tabellenkalkulationsprogramm (meist Excel). Selten hört man hier das Argument, dass Excel zu schwer sei. Jedoch verwenden wir auch in Excel viele Konzepte, die wir in einer Programmiersprachen benötigen (Funktionen, Iterationen, Variablen). Wir behaupten, dass jeder, der Excel lernen kann auch programmieren lernen kann. Darüber hinaus nehmen wir in diesem Buch an, dass viele von Ihnen Excel bereits in einem gewissen Maße beherrschen. Wir nutzen deshalb viele Analogien aus Excel, um Programmierkonzepte zu veranschaulichen. Sollten Sie Excel nicht beherrschen, können Sie jedoch einfach darüber hinweglesen. 
+Um Coden zu lernen, braucht es nicht viel. Jeder von uns kann dies lernen. Sehr viele Studierende nutzen täglich ein Tabellenkalkulationsprogramm (meist Excel). Selten hört man hier das Argument, dass Excel zu schwer sei. Jedoch verwenden wir auch in Excel viele Konzepte, die wir in einer Programmiersprachen benötigen (Funktionen, Iterationen, Variablen). Wir glauben, dass jeder, der Excel lernen kann auch programmieren lernen kann. Darüber hinaus nehmen wir in diesem Buch an, dass viele von Ihnen Excel bereits in einem gewissen Maße beherrschen. Wir nutzen deshalb viele Analogien aus Excel, um Programmierkonzepte zu veranschaulichen. Sollten Sie Excel nicht beherrschen, können Sie jedoch einfach darüber hinweglesen. Das Skript können Sie dennoch nutzen. 
 
 
 
@@ -73,5 +73,3 @@ Um Coden zu lernen, braucht es nicht viel. Jeder von uns kann dies lerne. Sehr v
 
 <iframe style="position:relative;top:0px;width:100%;height:80vh;" src="https://www.youtube.com/embed/Dv7gLpW91DM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-
-<iframe width="800" height="500" src="https://www.youtube.com/embed/Dv7gLpW91DM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

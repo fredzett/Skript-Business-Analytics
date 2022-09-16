@@ -230,18 +230,34 @@ b = "Dies ist ein langer Satz!"
 len(a), len(b)
 
 
+# (beispiel:range)=
+# 
 # **`range`**
 # 
-# Die Funktion gibt eine Zahlensequenz zurück, die standardmäßig bei `0` beginnt, sich um jeweils `1`erhöht und bei einer angegebenen Zahl endet.
+# Die Funktion gibt eine Zahlensequenz zurück, die standardmäßig bei `0` beginnt, sich um jeweils `1` erhöht und bei einer angegebenen Zahl endet.
 # 
-# Beispiel:
+# Nun fragen Sie sich vielleicht, weshalb Sie eine solche Funktion benötigen. Diese Frage ist natürlich abhängig vom spezifischen Kontext bzw. Problem, welches Sie programmieren. Jedoch gibt es z.B. in Excel einen Anwendungsfall, auf denen viele von Ihnen schon mal gestoßen sind: Sie wollen z.B. einen Index erstellen. In Excel wird dies z.B. oft wie dargestellt gemacht.
+# 
+# ![rangeExcel](../assets/nparange_xls.gif)
+# 
+# In Python können Sie dies mit der Funktion `range` erreichen. 
 
-# In[ ]:
+# In[22]:
 
 
-x = range(5)
-for el in x:
-    print(el)
+werte = [22,31, 2, 1, 1, 23, 1, 2, 234, 31, 3, 123]
+n = len(werte)
+index = range(n)
+index, list(index)
+
+
+# Der Startpunkt, der Zählschritt sowie der Endpunkt können dabei jedoch auch explizit vorgegeben und so geändert werden. Im unteren Beispiel startet die Zahlensequenz bei 10, erhöht sich mit jedem Schritt um 2 und endet bei 19 (d.h. der gewählte Endpunkt ist nicht mit enthalten).
+
+# In[20]:
+
+
+x = range(10, 20, 2)
+[el for el in x]
 
 
 # **`enumerate`**
@@ -250,7 +266,7 @@ for el in x:
 # 
 # Beispiel:
 
-# In[ ]:
+# In[14]:
 
 
 namen = ["Horst", "Igor", "Gerd", "Hannelore"]
@@ -350,10 +366,10 @@ KW
 # Der Code dafür könnte wiefolgt aussehen:
 # 
 
-# In[76]:
+# In[12]:
 
 
-# Annahmen im Base Case
+# Annahmen 
 i = 0.04
 cf_szenario = {"base": [-10000, 5000, 4000, 3000], 
             "high": [-10000, 6000, 5000, 4000],
