@@ -363,6 +363,7 @@ KW = cash_flows[0] + cash_flows[1]/(1+i)**1 + cash_flows[2]/(1+i)**2 + cash_flow
 KW
 
 
+# (intro:dicts)=
 # ### Dictionary
 
 # Ein weiterer sehr nützlicher Datentyp in Python ist das sog. Dictionary (`dict`). Dieses können wir uns vorstellen, wie ein tatsächliches Wörterbuch. Wir können hier zu jedem Element ein passendes anderes Element abspeichern. Ein Dictionary wird mit "`{}`" erzeugt. Die sogenannten `key:value`-Paare werden dann im Dictionary gespeichert und können von unterschiedlichen Datentypen sein und werden via `[key]` abgerufen. 
