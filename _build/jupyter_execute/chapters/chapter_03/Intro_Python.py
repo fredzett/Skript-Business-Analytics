@@ -376,7 +376,7 @@ KW
 my_first_dict = {"Begrüßung": "Hallo", "liste_zahlen": [1,2,3,4], 2: 4.32}
 
 
-# Hinweis: wir können - zur besseren Lesbarkeit - das obige Beispiel auch wiefolgt schreiben. 
+# Hinweis: wir können - zur besseren Lesbarkeit - das obige Beispiel auch wie folgt schreiben. 
 
 # In[81]:
 

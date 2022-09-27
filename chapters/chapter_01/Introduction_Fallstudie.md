@@ -74,7 +74,7 @@ Das Grundproblem ist, dass wir zwar historische Daten haben, wir aber theoretisc
 ```{admonition} Hinweis
 :class: note
 
-Wenn ich zum Tag $t$ eine Aktie zum Preis $P_t$ kaufe und am Tag $T$ zum Preis $P_T$ verkaufe, dann lässt sich die Rendite wiefolgt berechnen:
+Wenn ich zum Tag $t$ eine Aktie zum Preis $P_t$ kaufe und am Tag $T$ zum Preis $P_T$ verkaufe, dann lässt sich die Rendite wie folgt berechnen:
 
 $r_T = \frac{P_T}{P_{t}} - 1$
 ```
@@ -169,7 +169,7 @@ In{numref}`index-table` sind alle 10 tatsächlich entstandenen historischen Rend
 Nun stellen wir uns vor, wir hätten eine Anlage von $1.00$ EUR für 3 Perioden getätigt. Wir fragen uns nun, was eine mögliche Wertentwicklung unserer Anlage gewesen sein könnte. Hierbei machen wir uns nun den Korb mit Kugeln zunutze. Wir nehmen eine Kugel aus dem Korb und notieren die darauf enthaltene Rendite. Danach legen wir die Kugel wieder zurück in den Korb und wiederholen den Prozess noch insgesamt zwei mal. 
 
 
-Wir haben also aus tatsächlich beobachtbaren historischen Renditen eine mögliche Wertentwicklung für unsere Anlage (zufällig) bestimmt. Diese könnte z.B. wiefolgt aussehen:
+Wir haben also aus tatsächlich beobachtbaren historischen Renditen eine mögliche Wertentwicklung für unsere Anlage (zufällig) bestimmt. Diese könnte z.B. wie folgt aussehen:
 
 $$1.00 \times(1+0.01)\times(1-0.05)\times(1-0.05) = 0.91$$
 

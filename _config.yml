@@ -3,7 +3,7 @@
 
 title: #Business Analytics
 copyright: "2022"
-author: "Felix Zeidler" # Hinweis: removes footer in main block!
+author: "F. Zeidler" # Hinweis: removes footer in main block!
 logo: datascience2.png
 
 # Force re-execution of notebooks on each build.
@@ -48,5 +48,5 @@ html:
             
         </div>
     comments:
-        hypothesis: true
+        hypothesis: True
 

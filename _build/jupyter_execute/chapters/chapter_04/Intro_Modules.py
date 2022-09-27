@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Einführung: Module
+# # Einführung
 
 # ## Warum Module?
 
@@ -15,7 +15,7 @@
 # 
 # $$\bar{x} = \frac{1}{n} \sum_{i=1}^n x_i = \frac{x_1 + x_2 + \ldots + x_n}{n} $$
 # 
-# Eine Implementierung in "pure" Python könnte z.B. wiefolgt aussehen:
+# Eine Implementierung in "pure" Python könnte z.B. wie folgt aussehen:
 
 # In[6]:
 
@@ -35,7 +35,7 @@ calc_xbar(zahlen)
 # 
 # Für die o.g. Fragestellung würden wir stattdessen z.B. ein Modul namens `statistics` importieren, in welchem die Funktion `mean` (engl. für arithmetisches Mittel) bereits implementiert ist. 
 # 
-# Wir gehen dann wiefolgt vor:
+# Wir gehen dann wie folgt vor:
 
 # In[8]:
 
@@ -110,7 +110,7 @@ import statistics
 statistics.variance(zahlen)
 
 
-# Da es oft mühsam ist, das Wort "_statistics_" vor jede genutzte Funktion zu schreiben, ist es üblich, dass man einige Module importiert und dem importierten Modul dann eine andere, kürzere Bezeichnung gibt. Dies sähe dann wiefolgt aus:
+# Da es oft mühsam ist, das Wort "_statistics_" vor jede genutzte Funktion zu schreiben, ist es üblich, dass man einige Module importiert und dem importierten Modul dann eine andere, kürzere Bezeichnung gibt. Dies sähe dann wie folgt aus:
 # 
 # ```
 # import <modul name> as <kurzbezeichnung>

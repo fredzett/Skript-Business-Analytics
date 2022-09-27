@@ -4,7 +4,7 @@ Es gibt zahlreiche und sehr unterschiedliche Programmiersprachen. Einige sind se
 
 In diesem Skript soll nicht nur theoretisch über Datenanlayse gesprochen werden, sondern auch ganz praktisch Daten analysiert werden. Hierzu werden wir die Programmiersprache Python nutzen. Wieso aber genau Python und nicht z.B. R oder Java?
 
-Bei der Wahl der Programmiersprache ist die Entscheidung nicht zufällig auf `Python` gefallen. Prinzipiell können zwar viele Programmiersprachen dieselben Probleme mehr oder weniger gut lösen. Es ist also nicht so, dass das Thema Datenanalyse oder Business Analytcis ausschließlich mit Python adressiert werden könnte. So würde sich z.B. `R` oder `Julia` würde sich z.B. `auch hervorragend geeignet`. Dennoch gibt es vier Kriterien, die eine Programmiersprache aus meiner Sicht erfüllen sollte, um besonders geeignet zu sein:
+Bei der Wahl der Programmiersprache ist die Entscheidung nicht zufällig auf `Python` gefallen. Prinzipiell können zwar viele Programmiersprachen dieselben Probleme mehr oder weniger gut lösen. Es ist also nicht so, dass das Thema Datenanalyse oder Business Analytcis ausschließlich mit Python adressiert werden könnte. So würden sich z.B. `R` oder `Julia` auch hervorragend eignen. Dennoch gibt es vier Kriterien, die eine Programmiersprache aus meiner Sicht erfüllen sollte, um besonders geeignet zu sein:
 
 1. Die Sprache sollte populär sein
 
@@ -14,6 +14,7 @@ Bei der Wahl der Programmiersprache ist die Entscheidung nicht zufällig auf `Py
 
 4. Die Sprache sollte für weitere Anwendungsfälle geeignet sein
 
+R erfüllt aus meiner Sicht nur die Kriterien 1 und 3 (auch wenn über 2 gestritten werden kann). Julia erfüllt (aktuell) nur die Kriterien 2 und 3. 
 
 ## 1. Python ist populär
 
@@ -82,11 +83,11 @@ m = mean([2.0, 3.0, 5.0, 7.0, 13.0, 21.0, 33.0, 54.0])
 print(m)
 ```
 
-Welche Sprache finden Sie intuitiver oder einfacher zu lesen? Die meisten Leser*innen werden das Beispiel in Python wegen der intuitiven Syntax einfacher finden. Auch wenn komplexe Programme in Python ähnlich komplex werden (können), wie in jeder anderen Programmiersprache, hat diese einfache(re) Syntax einen großen Vorteil: Sie werden schneller Fortschritte machen und können bereits nach kurzer Zeit praxisrelevante Skripte schreiben.
+Welche Sprache finden Sie intuitiver oder einfacher zu lesen? Die meisten Leser*innen werden das Beispiel in Python wegen der intuitiven Syntax einfacher finden. Auch wenn komplexe Programme in Python ähnlich komplex werden (können), wie in jeder anderen Programmiersprache, hat diese einfache(re) Syntax einen großen Vorteil: Sie werden zu Beginn schneller Fortschritte machen und können bereits nach kurzer Zeit praxisrelevante Skripte schreiben. 
 
 ## 3. Python ist geeignet für Datenanalyse
 
-Ein Grund für die große Popularität und insbesondere das starke Wachstum von Python ist, dass Python insbesondere auch im Bereich Datenanalyse eingesetzt wird. So hat sich Python als eine der weit verbreitetsten Sprachen im Bereich `Datenaufbereitung`, `Machinelles Lernen` und `Deep Learning` entwickelt. Durch die einfache Syntax ist Python sehr gut geeignet, um schnell Prototypen für komplexe Datenanalysethemen zu erstellen. Dies hat dazu geführt, dass in den letzten Jahren eine Vielzahl von Modulen und Packages (d.h. Bibliotheken, die die Standardsprache erweitern) entstanden sind. Diese `Add-ons`, sind teilweise von großen Unternehmen, wie Google oder Facebook, (mit)entwickelt worden und sind frei verfügbar. Die Lösung von komplexen Datenanalysethemen ist insofern durch die Vielzahl an geeigneten Hilfsmitteln sehr viel einfacher und mächtiger geworden und erfordert (teilweise) keine jahrelange Programmiererfahrung. Zusatzmodule wie `pandas`, `numpy`, `matplotlib` oder `scikit-learn` - diese werden Sie in den folgenden Kapiteln noch kennenlernen - haben Python zu einer Art Schweizer Taschenmesser der Datenanalyse - insbesondere auch für Programmieranfänger - gemacht. 
+Ein Grund für die große Popularität und insbesondere das starke Wachstum von Python ist, dass Python insbesondere auch im Bereich der Datenanalyse eingesetzt wird. So hat sich Python als eine der weit verbreitetsten Sprachen im Bereich `Datenaufbereitung`, `Machinelles Lernen` und `Deep Learning` entwickelt. Durch die einfache Syntax ist Python sehr gut geeignet, um schnell Prototypen für komplexe Datenanalysethemen zu erstellen. Dies hat dazu geführt, dass in den letzten Jahren eine Vielzahl von Modulen und Packages (d.h. Bibliotheken, die die Standardsprache erweitern) entstanden sind. Diese `Add-ons`, sind teilweise von großen Unternehmen, wie Google oder Facebook, (mit)entwickelt worden und sind frei verfügbar. Die Lösung von komplexen Datenanalysethemen ist insofern durch die Vielzahl an geeigneten Hilfsmitteln sehr viel einfacher und mächtiger geworden und erfordert (teilweise) keine jahrelange Programmiererfahrung. Zusatzmodule wie `pandas`, `numpy`, `matplotlib` oder `scikit-learn` - diese werden Sie in den folgenden Kapiteln noch kennenlernen - haben Python zu einer Art Schweizer Taschenmesser der Datenanalyse - insbesondere auch für Programmieranfänger - gemacht. 
 
 
 ## 4. Python ist Allzweckwaffe

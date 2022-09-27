@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # NumPy: der Zahlenakrobat
+# # NumPy
 
 # [Numpy](https://numpy.org/doc/stable/user/whatisnumpy.html) ist eines der wichtigsten Module in Python und ein Grund für das rasante Wachstum der Programmiersprache. Es ermöglicht schnelle Berechnungen mit Vektoren und Matrizen in kompakter Form. Für viele von Ihnen mag sich dies zunächst eher abschreckend denn überzeugend anhören - schließlich beschäftigen wir uns nicht mit linearer Algebra. 
 # 
@@ -30,7 +30,7 @@
 # 
 # Gegeben ist die Kunden-ID, der Preis des Produktes und die verkaufte Produktmenge. Wir möchten nun (i) den Umsatz je Kunde sowie (ii) den gesamten Tagesumsatz berechnen. In Excel ist dies sehr einfach möglich, in dem wir eine neue Spalte _Umsatz_ erstellen, in der wir die Spalte _Preis_ mit der Spalte _Menge_ multiplizieren (Umsatz je Kunde). Von dieser neuen Spalte können wir dann die Summe nehmen (Tagesumsatz). 
 # 
-# Unsere Tabelle sieht dann wiefolgt aus:
+# Unsere Tabelle sieht dann wie folgt aus:
 # 
 # ![transactions2](../assets/transactions2.png)
 # 
@@ -363,7 +363,7 @@ t
 sum(cashflows/(1+i)**t)
 
 
-# Wir nutzen hier außerdem die Funktion `sum`. Wir können auch hier noch optimieren, indem wir die Numpy-Version, `np.sum`, wählen. Der Code in Numpy würde dann insgesamt wiefolgt aussehen:
+# Wir nutzen hier außerdem die Funktion `sum`. Wir können auch hier noch optimieren, indem wir die Numpy-Version, `np.sum`, wählen. Der Code in Numpy würde dann insgesamt wie folgt aussehen:
 
 # In[ ]:
 
@@ -400,7 +400,7 @@ calc_kw(cashflows, i)
 
 # Wir können auf einzelne (oder mehrere) Elemente von Arrays zugreifen und Arrays beliebig "zerschneiden". 
 # 
-# Die Syntax dafür ist wiefolgt:
+# Die Syntax dafür ist wie folgt:
 # 
 # ```
 # <array>[<slice>, <slice>]
@@ -606,7 +606,7 @@ sales_data = np.array([100, 20, 307, 10, 40, 0, 120, 12,368, 0])
 sales_data == 0
 
 
-# Wenn wir wissen wollen, wieviele Tage es mit einem Absatz von "0" gab, können wir wiefolgt vorgehen:
+# Wenn wir wissen wollen, wieviele Tage es mit einem Absatz von "0" gab, können wir wie folgt vorgehen:
 
 # In[ ]:
 
@@ -633,7 +633,7 @@ sales_data[mask]
 
 # Wie bereits im Kapitel über [Entscheidungsstrukturen](../chapter_03/If_Statements_Python.ipynb) gelernt, können wir auch mehrere Bedingungen verknüpfen. 
 # 
-# Wollen wir also z.B. die Tage herausfiltern an denen ein Absatz zwischen 20 und 300 gemacht wurde, dann können wir wiefolgt vorgehen:
+# Wollen wir also z.B. die Tage herausfiltern an denen ein Absatz zwischen 20 und 300 gemacht wurde, dann können wir wie folgt vorgehen:
 
 # In[ ]:
 

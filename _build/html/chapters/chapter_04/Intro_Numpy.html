@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NumPy: der Zahlenakrobat</title>
+    <title>NumPy</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -55,8 +55,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="NumPy: der Zahlenakrobat" href="Intro_Numpy_exercise.html" />
-    <link rel="prev" title="Einführung: Module" href="Intro_Modules.html" />
+    <link rel="next" title="Übungsblatt: Numpy" href="Intro_Numpy_exercise.html" />
+    <link rel="prev" title="Einführung" href="Intro_Modules.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -230,12 +230,12 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Intro_Modules.html">
-   Einführung: Module
+   Einführung
   </a>
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
-   NumPy: der Zahlenakrobat
+   NumPy
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
@@ -245,14 +245,14 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="Intro_Numpy_exercise.html">
-     NumPy: der Zahlenakrobat
+     Übungsblatt: Numpy
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="Intro_Pandas.html">
-   Pandas: das schweizer Taschenmesser
+   Pandas
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
@@ -266,80 +266,6 @@
     </a>
    </li>
   </ul>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  99 Sandbox
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S02a_Descriptive_Statistics.html">
-   Deskriptive Statistik
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S03a_Simulation.html">
-   Simulationen mit Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S03c_Probability_Distributions.html">
-   Wahrscheinlichkeitsverteilungen
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S04a_Estimation%26HyptothesisTesting.html">
-   Testen von Hypothesen
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S05a_Regression.html">
-   Lineare Regression
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S06a_TidyData.html">
-   Tidy Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S07a_Classification.html">
-   Klassifikation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S08a_Clustering.html">
-   Clusteranalyse
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S09a_Cross_validation.html">
-   Cross Validation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S11_DecisionTrees.html">
-   Entscheidungsbäume
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S12_Ensembles.html">
-   Ensemble-Methoden
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Anhang
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../literatur.html">
-   Literatur
-  </a>
  </li>
 </ul>
 
@@ -510,7 +436,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>NumPy: der Zahlenakrobat</h1>
+                <h1>NumPy</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -598,8 +524,8 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="numpy-der-zahlenakrobat">
-<h1>NumPy: der Zahlenakrobat<a class="headerlink" href="#numpy-der-zahlenakrobat" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="numpy">
+<h1>NumPy<a class="headerlink" href="#numpy" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://numpy.org/doc/stable/user/whatisnumpy.html">Numpy</a> ist eines der wichtigsten Module in Python und ein Grund für das rasante Wachstum der Programmiersprache. Es ermöglicht schnelle Berechnungen mit Vektoren und Matrizen in kompakter Form. Für viele von Ihnen mag sich dies zunächst eher abschreckend denn überzeugend anhören - schließlich beschäftigen wir uns nicht mit linearer Algebra.</p>
 <p>Auch wenn dies auf den ersten Blick nicht ersichtlich erscheint, so gibt es doch  wesentliche Argumente dafür <code class="docutils literal notranslate"><span class="pre">numpy</span></code> zu verstehen.</p>
 <p>Zum einen gibt es tatsächlich sehr viele Anwendungsfälle in denen wir mit Vektoren und Matrizen rechnen müssen (oder wollen). Jede Tabelle mit Daten kann als Matrix angesehen werden. Wir können uns z.B. jede Spalte in Excel als Vektor vorstellen und jedes Tabellenblatt als Matrix. Für den Fall das Vektor oder Matrix mit Zahlen<a class="footnote-reference brackets" href="#id4" id="id1">1</a> befüllt sind, ist <code class="docutils literal notranslate"><span class="pre">numpy</span></code> das ideale Werkzeug.</p>
@@ -611,7 +537,7 @@
 <p>Nehmen wir an, das Unternehmen Super Sales GmbH hätte folgende Transaktionsdaten zu ihren täglichen Verkäufen:</p>
 <p><img alt="transactions1" src="../../_images/transactions1.png" /></p>
 <p>Gegeben ist die Kunden-ID, der Preis des Produktes und die verkaufte Produktmenge. Wir möchten nun (i) den Umsatz je Kunde sowie (ii) den gesamten Tagesumsatz berechnen. In Excel ist dies sehr einfach möglich, in dem wir eine neue Spalte <em>Umsatz</em> erstellen, in der wir die Spalte <em>Preis</em> mit der Spalte <em>Menge</em> multiplizieren (Umsatz je Kunde). Von dieser neuen Spalte können wir dann die Summe nehmen (Tagesumsatz).</p>
-<p>Unsere Tabelle sieht dann wiefolgt aus:</p>
+<p>Unsere Tabelle sieht dann wie folgt aus:</p>
 <p><img alt="transactions2" src="../../_images/transactions2.png" /></p>
 <div class="margin sidebar">
 <p class="sidebar-title"></p>
@@ -1068,7 +994,7 @@ Beispiel in Numpy:</p>
 </div>
 </div>
 </div>
-<p>Wir nutzen hier außerdem die Funktion <code class="docutils literal notranslate"><span class="pre">sum</span></code>. Wir können auch hier noch optimieren, indem wir die Numpy-Version, <code class="docutils literal notranslate"><span class="pre">np.sum</span></code>, wählen. Der Code in Numpy würde dann insgesamt wiefolgt aussehen:</p>
+<p>Wir nutzen hier außerdem die Funktion <code class="docutils literal notranslate"><span class="pre">sum</span></code>. Wir können auch hier noch optimieren, indem wir die Numpy-Version, <code class="docutils literal notranslate"><span class="pre">np.sum</span></code>, wählen. Der Code in Numpy würde dann insgesamt wie folgt aussehen:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Annahmen im Base Case</span>
@@ -1115,7 +1041,7 @@ Beispiel in Numpy:</p>
 <div class="section" id="indexieren-von-arrays">
 <h2>Indexieren von Arrays<a class="headerlink" href="#indexieren-von-arrays" title="Permalink to this headline">¶</a></h2>
 <p>Wir können auf einzelne (oder mehrere) Elemente von Arrays zugreifen und Arrays beliebig “zerschneiden”.</p>
-<p>Die Syntax dafür ist wiefolgt:</p>
+<p>Die Syntax dafür ist wie folgt:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">array</span><span class="o">&gt;</span><span class="p">[</span><span class="o">&lt;</span><span class="nb">slice</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="nb">slice</span><span class="o">&gt;</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -1476,7 +1402,7 @@ Beispiel in Numpy:</p>
 </div>
 </div>
 </div>
-<p>Wenn wir wissen wollen, wieviele Tage es mit einem Absatz von “0” gab, können wir wiefolgt vorgehen:</p>
+<p>Wenn wir wissen wollen, wieviele Tage es mit einem Absatz von “0” gab, können wir wie folgt vorgehen:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="n">sales_data</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="c1"># oder auch np.sum</span>
@@ -1518,7 +1444,7 @@ Beispiel in Numpy:</p>
 </div>
 </div>
 <p>Wie bereits im Kapitel über <a class="reference internal" href="../chapter_03/If_Statements_Python.html"><span class="doc std std-doc">Entscheidungsstrukturen</span></a> gelernt, können wir auch mehrere Bedingungen verknüpfen.</p>
-<p>Wollen wir also z.B. die Tage herausfiltern an denen ein Absatz zwischen 20 und 300 gemacht wurde, dann können wir wiefolgt vorgehen:</p>
+<p>Wollen wir also z.B. die Tage herausfiltern an denen ein Absatz zwischen 20 und 300 gemacht wurde, dann können wir wie folgt vorgehen:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mask</span> <span class="o">=</span> <span class="p">(</span><span class="n">sales_data</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">sales_data</span> <span class="o">&lt;</span> <span class="mi">300</span><span class="p">)</span>
@@ -2140,13 +2066,13 @@ Beispiel in Numpy:</p>
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Einführung: Module</p>
+            <p class="prev-next-title">Einführung</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="Intro_Numpy_exercise.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">NumPy: der Zahlenakrobat</p>
+        <p class="prev-next-title">Übungsblatt: Numpy</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -2157,7 +2083,7 @@ Beispiel in Numpy:</p>
     <footer class="footer">
   <p>
     
-      Durch Felix Zeidler<br/>
+      Durch F. Zeidler<br/>
     
         &copy; Urheberrechte © 2022.<br/>
   </p>

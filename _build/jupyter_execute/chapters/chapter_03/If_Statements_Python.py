@@ -25,7 +25,7 @@
 
 # In Python können wir "wenn-dann"-Konstrukte relativ einfach implementieren. 
 # 
-# Die einfachste Form des Konstruktes funktioniert in Python wiefolgt:
+# Die einfachste Form des Konstruktes funktioniert in Python wie folgt:
 # 
 # ```
 # if <bedingung>:

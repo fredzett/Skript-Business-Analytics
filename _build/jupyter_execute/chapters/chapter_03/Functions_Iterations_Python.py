@@ -102,7 +102,7 @@ for name in liste_namen:
     print("Hallo", name)
 
 
-# Das Äquivalent in Excel würde wiefolgt aussehen:
+# Das Äquivalent in Excel würde wie folgt aussehen:
 # 
 # ![xls-for-loop2](../assets/xls_for_loop2.gif)
 
@@ -363,7 +363,7 @@ KW
 # 
 # [^2]: an dieser Stelle der Hinweis, dass sich hierfür Excel vermutlich besser eignet, wir dieses Beispiel aus didaktischen Gründen aber fortführen werden. 
 # 
-# Der Code dafür könnte wiefolgt aussehen:
+# Der Code dafür könnte wie folgt aussehen:
 # 
 
 # In[12]:
