@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pandas: das schweizer Taschenmesser</title>
+    <title>Pandas</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -54,7 +54,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Übungen: Pandas" href="Intro_Pandas_exercise.html" />
-    <link rel="prev" title="NumPy: der Zahlenakrobat" href="Intro_Numpy_exercise.html" />
+    <link rel="prev" title="Übungsblatt: Numpy" href="Intro_Numpy_exercise.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -228,12 +228,12 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Intro_Modules.html">
-   Einführung: Module
+   Einführung
   </a>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="Intro_Numpy.html">
-   NumPy: der Zahlenakrobat
+   NumPy
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
@@ -243,14 +243,14 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="Intro_Numpy_exercise.html">
-     NumPy: der Zahlenakrobat
+     Übungsblatt: Numpy
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
-   Pandas: das schweizer Taschenmesser
+   Pandas
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
@@ -264,80 +264,6 @@
     </a>
    </li>
   </ul>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  99 Sandbox
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S02a_Descriptive_Statistics.html">
-   Deskriptive Statistik
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S03a_Simulation.html">
-   Simulationen mit Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S03c_Probability_Distributions.html">
-   Wahrscheinlichkeitsverteilungen
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S04a_Estimation%26HyptothesisTesting.html">
-   Testen von Hypothesen
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S05a_Regression.html">
-   Lineare Regression
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S06a_TidyData.html">
-   Tidy Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S07a_Classification.html">
-   Klassifikation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S08a_Clustering.html">
-   Clusteranalyse
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S09a_Cross_validation.html">
-   Cross Validation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S11_DecisionTrees.html">
-   Entscheidungsbäume
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S12_Ensembles.html">
-   Ensemble-Methoden
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Anhang
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../literatur.html">
-   Literatur
-  </a>
  </li>
 </ul>
 
@@ -468,6 +394,101 @@
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aufbau-eines-dataframes">
+   Aufbau eines Dataframes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#auswahl-von-daten">
+   Auswahl von Daten
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#auswahl-von-spalten">
+     Auswahl von Spalten
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#auswahl-von-zeilen">
+     Auswahl von Zeilen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bedingungen-und-logische-auswahl">
+     Bedingungen und logische Auswahl
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operationen-auf-daten">
+   Operationen auf Daten
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#erzeugen-von-neuen-spalten">
+     Erzeugen von neuen Spalten
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#anwenden-von-komplexeren-operationen">
+     Anwenden von komplexeren Operationen
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aggregationen-von-daten">
+   Aggregationen von Daten
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zusammenfugen-von-daten">
+   Zusammenfügen von Daten
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pd-concat">
+     pd.concat
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#zeilenweise-verknupfung">
+       Zeilenweise Verknüpfung
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#spaltenweise-verknupfung">
+       Spaltenweise Verknüpfung
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#pd-merge">
+       pd.merge
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gruppieren-von-daten">
+   Gruppieren von Daten
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#manuell">
+     Manuell
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#via-groupby">
+     via .groupby
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
             </nav>
@@ -478,7 +499,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Pandas: das schweizer Taschenmesser</h1>
+                <h1>Pandas</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -527,6 +548,101 @@
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aufbau-eines-dataframes">
+   Aufbau eines Dataframes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#auswahl-von-daten">
+   Auswahl von Daten
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#auswahl-von-spalten">
+     Auswahl von Spalten
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#auswahl-von-zeilen">
+     Auswahl von Zeilen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bedingungen-und-logische-auswahl">
+     Bedingungen und logische Auswahl
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operationen-auf-daten">
+   Operationen auf Daten
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#erzeugen-von-neuen-spalten">
+     Erzeugen von neuen Spalten
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#anwenden-von-komplexeren-operationen">
+     Anwenden von komplexeren Operationen
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aggregationen-von-daten">
+   Aggregationen von Daten
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zusammenfugen-von-daten">
+   Zusammenfügen von Daten
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pd-concat">
+     pd.concat
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#zeilenweise-verknupfung">
+       Zeilenweise Verknüpfung
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#spaltenweise-verknupfung">
+       Spaltenweise Verknüpfung
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#pd-merge">
+       pd.merge
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gruppieren-von-daten">
+   Gruppieren von Daten
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#manuell">
+     Manuell
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#via-groupby">
+     via .groupby
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
                         </nav>
@@ -536,12 +652,12 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="pandas-das-schweizer-taschenmesser">
-<h1>Pandas: das schweizer Taschenmesser<a class="headerlink" href="#pandas-das-schweizer-taschenmesser" title="Permalink to this headline">¶</a></h1>
-<p>Wir stellen nun das für uns wohl wichtigste Modul in Python vor: <a class="reference external" href="https://pandas.pydata.org/getting_started.html"><code class="docutils literal notranslate"><span class="pre">pandas</span></code></a>.</p>
-<p>Pandas baut “im Hintergrund” auf dem im vorherigen Kapitel vorgestellten Modul <code class="docutils literal notranslate"><span class="pre">numpy</span></code> auf, ist jedoch für einen etwas anderen Zweck erstellt worden.</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="pandas">
+<h1>Pandas<a class="headerlink" href="#pandas" title="Permalink to this headline">¶</a></h1>
+<p>Wir stellen nun das für uns wohl wichtigste Modul in Python vor: <a class="reference external" href="https://pandas.pydata.org/getting_started.html"><code class="docutils literal notranslate"><span class="pre">Pandas</span></code></a>. Pandas baut “im Hintergrund” auf dem im vorherigen Kapitel vorgestellten Modul <code class="docutils literal notranslate"><span class="pre">numpy</span></code> auf, ist jedoch für einen etwas anderen Zweck erstellt worden.</p>
 <p>Im Kontext der Datenanalyse haben wir es oft mit tabularischen Daten zu tun, d.h. wir arbeiten mit Informationen und/oder Daten, die in Tabellen gespeichert sind. Typischerweise haben diese Informationen Beschriftungen und sind von unterschiedlichen Typen. Stellen wir uns dies in Excel vor: wir haben mehrere Spalten, jede Spalte hat eine Bezeichnung, die beschreibt, um welche Information es sich handelt. Einige Spalten haben numerische Informationen (z.B. Umsätze), andere haben text-basierte Informationen (z.B. Namen oder Orte), wieder andere haben ein Datum als Spalteninhalt. Pandas ist das Modul, welches für den Umgang mit dieser Art von Daten gemacht wurde.</p>
-<p>Unseren bisherigen Beispiele basierten oft auf vereinfachenden Datensätzen, die nicht vergleichbar mit denen sind, die wir in Unternehmen typischerweise vorfinden. Diese Beispiele dienten zur Veranschaulichung der Grundlagen der (datengetriebenen) Programmierung und waren für die eigentliche Datenanalyse wie wir sie durchführen wollen nicht realistisch. Wenn wir es mit typischen Fragestellungen im unternehmerischen Kontext (aber auch in der Forschung) zu tun haben, dann besteht ein Analyseprozess oft auf verschiedenen Schritten:</p>
+<p>Unseren bisherigen Beispiele basierten oft auf vereinfachenden Datensätzen, die nicht vergleichbar mit denen sind, die wir in Unternehmen typischerweise vorfinden. Diese Beispiele dienten zur Veranschaulichung der Grundlagen der (datengetriebenen) Programmierung und sind für die eigentliche Datenanalyse wie wir sie durchführen wollen nicht realistisch. Natürlich hat dies didaktische Gründe.</p>
+<p>Wenn wir es mit typischen Fragestellungen im unternehmerischen Kontext (aber auch in der Forschung) zu tun haben, dann besteht ein Analyseprozess jedoch oft auf verschiedenen Schritten:</p>
 <ol class="simple">
 <li><p>Einlesen von Daten</p></li>
 <li><p>Daten aufbereiten und ggf. ergänzen</p></li>
@@ -551,10 +667,10 @@
 </ol>
 <p>Pandas unterstützt alle diese Schritte, in dem es hierfür sinnvolle Funktionalitäten bereitstellt. Die gesamte Bandbreite an Funktionalitäten ist so groß, dass es unmöglich ist, diese im Rahmen <em>eines</em> Kurses zu erläutern und vorzustellen. Zusätzlich ist es so, dass Pandas am Besten im Zusammenspiel mit anderen Modulen (z.B. Numpy, aber auch Modulen zur Visualisierung) eingesetzt wird. Wir werden uns in diesem Kapitel auf selektive, aber - aus unserer Perspektive - wesentliche Funktionalitäten beschränken (müssen). Insbesondere werden wir uns darüber hinaus auch auf Techniken konzentrieren, die für den Einsatz von Pandas besonders geeignet sind.</p>
 <div class="tip dropdown admonition">
-<p class="admonition-title">Ressourcen zu Pandas</p>
+<p class="admonition-title">Nützliche Ressourcen zu Pandas</p>
 <p>Es gibt im Internet viele frei verfügbare Ressourcen zu Pandas. Eine sehr gelungene Einführung ist das Kapitel aus <a class="reference external" href="https://jakevdp.github.io/PythonDataScienceHandbook/03.00-introduction-to-pandas.html">Python Data Science Handbook</a>. Außerdem ist das <a class="reference external" href="https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf">Cheat-Sheet</a> mit einer Zusammenfassung wichtiger Methoden sehr hilfreich.</p>
 </div>
-<p>In diesem Kapitel werden wir einige wichtige Grundlagen von Pandas vorstellen. Wir nutzen hierfür - wie in den vorherigen Kapiteln auch - kleine Beispieldaten. Im nächsten Kapitel werden wir dann realistischere Datensätze verwenden, um wichtige Konzepte quasi am “lebenden Objekt” zu erlernen. Wir glauben, dass Sie zunächst einige wichtige Grundlagen verstanden haben müssen und um diese zu erläutern benötigen wir keine “echten” Daten. Ab einem gewissen Punkt geht es jedoch nicht mehr darum isolierte Funktionen vorzustellen, sondern vielmehr den tatsächlichen Prozess der Datenanalyse zu durchlaufen, um dann auf reale Probleme zu stoßen und praxirelevante Lösungsansätze vorzustellen.</p>
+<p>In diesem Kapitel werden wir einige wichtige Grundlagen von Pandas vorstellen. Wir nutzen hierfür - wie in den vorherigen Kapiteln auch - kleine Beispieldaten. Im nächsten Kapitel werden wir dann realistischere Datensätze verwenden, um wichtige Konzepte quasi am “lebenden Objekt” zu erlernen. Wir glauben, dass Sie zunächst einige wichtige Grundlagen verstanden haben müssen. Um diese zu erläutern benötigen wir keine “echten” Daten. Ab einem gewissen Punkt geht es jedoch nicht mehr darum isolierte Funktionen vorzustellen, sondern vielmehr den tatsächlichen Prozess der Datenanalyse zu durchlaufen, um dann auf reale Probleme zu stoßen und praxirelevante Lösungsansätze vorzustellen.</p>
 <p>Beginnen wir mit den Grundlagen.</p>
 <div class="section" id="grundlagen">
 <h2>Grundlagen<a class="headerlink" href="#grundlagen" title="Permalink to this headline">¶</a></h2>
@@ -565,7 +681,7 @@
 </ol>
 <div class="section" id="importieren-des-moduls">
 <h3>Importieren des Moduls<a class="headerlink" href="#importieren-des-moduls" title="Permalink to this headline">¶</a></h3>
-<p>Bevor wir Pandas nutzen können, müssen wir das Modul zunächst importieren. Wir können hier prinzipiell wieder vorgehen, wie wir dies im Kapitel <a class="reference internal" href="Intro_Modules.html"><span class="doc std std-doc">Einführung: Module</span></a> aufgeführt haben. Typischerweise wird Pandas jedoch - analog zu Numpy - als ganzes Modul importiert und dann mit einer Kurzbezeichnung versehen. Es ist daher empfehlenswert, Pandas wie unten aufgeführt zu importieren.</p>
+<p>Bevor wir Pandas nutzen können, müssen wir das Modul zunächst importieren. Wir können hier prinzipiell wieder vorgehen, wie wir dies im Kapitel <a class="reference internal" href="Intro_Modules.html"><span class="doc std std-doc">Einführung: Module</span></a> ausgeführt haben. Typischerweise wird Pandas jedoch - analog zu Numpy - als ganzes Modul importiert und dann mit einer Kurzbezeichnung versehen. Es ist daher empfehlenswert, Pandas wie unten aufgeführt zu importieren.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -576,10 +692,10 @@
 </div>
 <div class="section" id="series-und-dataframes">
 <h3>Series und Dataframes<a class="headerlink" href="#series-und-dataframes" title="Permalink to this headline">¶</a></h3>
-<p>Sowie bei Numpy das Herzstück der Numpy-Array (<code class="docutils literal notranslate"><span class="pre">np.array</span></code>), ist bei Pandas das Herzstück der sogenannte Dataframe (<code class="docutils literal notranslate"><span class="pre">pd.Dataframe</span></code>). Sie können sich ein Dataframe als ein Excel-Sheet bzw. eine Excel-Tabelle vorstellen. So wie in Excel jede Tabelle aus einer Ansammlung aus Spalten besteht, ist ein Dataframe in Pandas eine Ansammlung von Series (<code class="docutils literal notranslate"><span class="pre">pd.Series</span></code>).</p>
+<p>Das Herzstück von Pandas ist der sogenannte Dataframe (<code class="docutils literal notranslate"><span class="pre">pd.Dataframe</span></code>). Sie können sich ein Dataframe als eine Art Excel-Sheet bzw. eine Excel-Tabelle vorstellen. So wie in Excel jede Tabelle aus einer Ansammlung aus Spalten besteht, ist ein Dataframe in Pandas eine Ansammlung von Series (<code class="docutils literal notranslate"><span class="pre">pd.Series</span></code>).</p>
 <p>Schauen wir uns das untenstehende Excelbeispiel an.</p>
 <p><img alt="xlsdataframe" src="../../_images/dataframe_xls.png" /></p>
-<p>Die abgebildete Tabelle wäre ein <code class="docutils literal notranslate"><span class="pre">dataframe</span></code>, jede Spalte eine <code class="docutils literal notranslate"><span class="pre">series</span></code>. Die Spalte “Preis” wäre eine Series mit <code class="docutils literal notranslate"><span class="pre">floats</span></code>, d.h. mit Dezimalzahlen. Die Spalte “Datum” wäre eine Series vom Typ <code class="docutils literal notranslate"><span class="pre">str</span></code> oder von einem Typ, der ein Datum abbilden kann (diesen Datentyp werden wir in diesem Kapitel noch kennenlernen).</p>
+<p>Die abgebildete Excel-Tabelle ist in dieser Analogie ein <code class="docutils literal notranslate"><span class="pre">dataframe</span></code>. Jeder ihrer Spalten eine <code class="docutils literal notranslate"><span class="pre">series</span></code>. Die Spalte “Preis” wäre eine Series mit <code class="docutils literal notranslate"><span class="pre">floats</span></code>, d.h. mit Dezimalzahlen. Die Spalte “Datum” wäre eine Series vom Typ <code class="docutils literal notranslate"><span class="pre">str</span></code> oder von einem Typ, der ein Datum abbilden kann (diesen Datentyp werden wir in diesem Kapitel noch kennenlernen).</p>
 <p>Schauen wir uns an, wie wir diese Daten in <code class="docutils literal notranslate"><span class="pre">pandas</span></code> abbilden.</p>
 </div>
 </div>
@@ -626,7 +742,7 @@ Name: Preis, dtype: float64
 </div>
 </div>
 </div>
-<p>Wir könnten den Datentyp auch explizit angeben. Der untenstehende Code gibt an, dass die Series vom Datentyp <code class="docutils literal notranslate"><span class="pre">str</span></code> sein soll, so dass die Elemente Texte sind. In Pandas wird dies dann als <code class="docutils literal notranslate"><span class="pre">object</span></code> bezeichnet.</p>
+<p>Wir könnten den Datentyp auch explizit angeben. Der untenstehende Code gibt z.B. an, dass die Series vom Datentyp <code class="docutils literal notranslate"><span class="pre">str</span></code> sein soll, so dass die Elemente Texte sind. In Pandas wird dies dann als <code class="docutils literal notranslate"><span class="pre">object</span></code> bezeichnet.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s3</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Preis&quot;</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">str</span><span class="p">)</span> 
@@ -649,16 +765,20 @@ Name: Preis, dtype: object
 </div>
 <div class="section" id="erstellen-von-dataframes">
 <h2>Erstellen von Dataframes<a class="headerlink" href="#erstellen-von-dataframes" title="Permalink to this headline">¶</a></h2>
-<p>Dataframes können manuell erstellt werden oder aus eingelesenen Daten erstellt werden. Wir gehen hier zunächst auf die manuelle Erstellung ein. Diese benötigen wir in der Praxis oft gar nicht, weil wir meist auf externe Daten (z.B. Excel-, CSV-, SQL- oder TXT-Dateien) zugreifen. Dennoch ist es wichtig zu verstehen, wie Dataframes manuell erstellt werden können, da dies hilft (i) den grundsätzlichen Aufbau von Dataframes zu verstehen und (ii) manchmal hilfreich ist, um kleinere Datensätze zu Testzwecken zu erzeugen.</p>
+<p>Dataframes können manuell erstellt werden oder aus externen und einzulesenden Daten erstellt werden. Wir gehen hier zunächst auf die manuelle Erstellung ein. Diese benötigen wir in der Praxis oft gar nicht, weil wir meist auf externe Daten (z.B. Excel-, CSV-, SQL- oder TXT-Dateien) zugreifen. Dennoch ist es wichtig zu verstehen, wie Dataframes manuell erstellt werden können, da dies (i) hilft, den grundsätzlichen Aufbau von Dataframes zu verstehen und (ii) oft nützlich ist, um kleinere Datensätze zu Testzwecken zu erzeugen.</p>
 <div class="section" id="manuelle-erstellung">
 <h3>Manuelle Erstellung<a class="headerlink" href="#manuelle-erstellung" title="Permalink to this headline">¶</a></h3>
-<p>Wir können Dataframes auf verschiedene Art und Weisen erstellen. Wir gehen hier auf eine Variante ein, die aus unserer Sicht am sinnvollsten ist und die meisten Anwendungsfälle abdeckt: wir erstellen Dataframes über Dictionaries (<code class="docutils literal notranslate"><span class="pre">dict</span></code>).</p>
-<p>Den Datentyp haben wir im Kapitel <strong>Einführung in Python</strong> <a class="reference internal" href="../chapter_03/Intro_Python.html#intro-dicts"><span class="std std-ref">hier</span></a> kennengelernt.</p>
+<p>Wir können Dataframes auf verschiedene Art und Weisen erstellen. Wir gehen hier auf eine Variante ein, die aus unserer Sicht oft genuttz wird und die aller meisten Anwendungsfälle abdeckt: wir erstellen Dataframes über Dictionaries (<code class="docutils literal notranslate"><span class="pre">dict</span></code>). Den Datentyp haben wir im Kapitel <strong>Einführung in Python</strong> <a class="reference internal" href="../chapter_03/Intro_Python.html#intro-dicts"><span class="std std-ref">hier</span></a> bereits kennengelernt.</p>
+<p>Wir erinnern uns, dass ein Dictionary jeweils wiefolgt aufgebaut ist:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">key</span><span class="p">:</span> <span class="n">values</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Wenn wir ein Dataframe mittels Dictionary erzeugen, dann werden die <code class="docutils literal notranslate"><span class="pre">Keys</span></code> als Spaltenbezeichnung übernommen und die <code class="docutils literal notranslate"><span class="pre">Values</span></code> dann als Daten unterhalb der Spaltenbezeichnung eingelesen.</p>
 <p>Hier der Beispielcode für ein Dataframe, welcher die Spalten (in dem Falle Series) <strong>“Preis”</strong> und <strong>“Menge”</strong> beinhaltet.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Menge&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">23</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="s2">&quot;Preis&quot;</span><span class="p">:[</span><span class="mf">10.</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">]}</span>
-<span class="n">data</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dict_data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Menge&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">23</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="s2">&quot;Preis&quot;</span><span class="p">:[</span><span class="mf">10.</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">]}</span>
+<span class="n">dict_data</span>
 </pre></div>
 </div>
 </div>
@@ -670,7 +790,7 @@ Name: Preis, dtype: object
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">dict_data</span><span class="p">)</span>
 <span class="n">df</span>
 </pre></div>
 </div>
@@ -733,76 +853,9 @@ Name: Preis, dtype: object
 </table>
 </div></div></div>
 </div>
-<p>Wir sehen, dass der sog. <code class="docutils literal notranslate"><span class="pre">key</span></code> des Dictionaries als Spaltenbezeichnung übernommen wird. Jedoch können wir die Spaltenbezeichnung auch explizit vorgeben.</p>
-<p>Dies sähe dann so aus:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">]</span>
-<span class="n">df</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>A</th>
-      <th>B</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>23</td>
-      <td>10.0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1</td>
-      <td>5.0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>12</td>
-      <td>9.0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>6</td>
-      <td>3.0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>89</td>
-      <td>5.0</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>4</td>
-      <td>10.0</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-<p>Die einzelnen Werte (sog. <code class="docutils literal notranslate"><span class="pre">items</span></code>) sind in unserem Falle Listen gewesen.
-Wir können hier jedoch auch andere Datentypen nutzen. So können wir auch Numpy-Arrays oder Series einfügen.</p>
-<p>Hier zwei Beispiele:</p>
+<p>Wir sehen, dass die <code class="docutils literal notranslate"><span class="pre">Keys</span></code> “Menge” und “Preis” als Spaltenbezeichnung übernommen wurden. Die einzelnen Werte sind im obigen Falle Listen gewesen.</p>
+<p>Wir können hier jedoch auch andere Datentypen nutzen. So können wir auch <code class="docutils literal notranslate"><span class="pre">Series</span></code> oder <code class="docutils literal notranslate"><span class="pre">Arrays</span></code> einfügen. Dies ist sehr praktisch, da wir im Rahmen unser Analysen mit verschiedenen Datentypen arbeiten werden.</p>
+<p><strong>Beispiel: Series</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Menge&quot;</span><span class="p">:</span> <span class="n">s1</span><span class="p">,</span> <span class="s2">&quot;Preis&quot;</span><span class="p">:</span> <span class="n">s2</span><span class="p">}</span>
@@ -869,6 +922,7 @@ Wir können hier jedoch auch andere Datentypen nutzen. So können wir auch Numpy
 </table>
 </div></div></div>
 </div>
+<p><strong>Beispiel: Arrays</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -940,16 +994,37 @@ Wir können hier jedoch auch andere Datentypen nutzen. So können wir auch Numpy
 </div>
 <div class="section" id="einlesen-von-daten">
 <h3>Einlesen von Daten<a class="headerlink" href="#einlesen-von-daten" title="Permalink to this headline">¶</a></h3>
-<p>Wie bereits angesprochen ist es realistisch, dass wir bereits über Daten verfügen und diese in Pandas einlesen möchten. Hierfür bietet Pandas eine Vielzahl an Methoden, die es ermöglicht nahezu jeden Datentyp einzulesen. Wir werden uns in den nächsten Kapiteln auf das Einlesen von Excel- und CSV-Dateien beschränken. Das grundsätzliche Vorgehen ist jedoch - unabhängig von der Dateiform - identisch.</p>
+<p>Wie bereits angesprochen ist es realistisch, dass wir bereits über Daten verfügen und diese in Pandas einlesen möchten. Hierfür bietet Pandas eine Vielzahl an Methoden, die es ermöglicht nahezu jeden Dateityp einzulesen. Wir werden uns in den nächsten Kapiteln auf das Einlesen von Excel- und CSV-Dateien beschränken. Das grundsätzliche Vorgehen ist jedoch - unabhängig vom Dateityp - sehr ähnlich.</p>
 <p>Pandas bietet die Methoden zum Einlesen von externen Daten via <code class="docutils literal notranslate"><span class="pre">pd.read_</span></code> an.</p>
 <p>Wir können uns über <code class="docutils literal notranslate"><span class="pre">pd.read_&lt;tab&gt;</span></code> anzeigen lassen, welche Funktionen zur Verfügung stehen und uns die gewünschte raussuchen.</p>
 <p><img alt="pdread" src="../../_images/pdread_tab.png" /></p>
-<p>Zum Einlesen der gewünschten Daten benötigen wir typischerweise den Dateipfad, d.h. den Ort, in welchem die Datei auf dem Computer oder in der Cloud hinterlegt ist.</p>
+<p>Zum Einlesen der gewünschten Daten benötigen wir typischerweise den Dateipfad, d.h. den Ort, in welchem die Datei auf dem Computer oder in der Cloud hinterlegt ist. In unserem Falle sind die Daten in einer Cloud hinterlegt, d.h. wir geben einen Link zur Cloud-Storage an.</p>
+<div class="note dropdown admonition">
+<p class="admonition-title">Einlesen lokaler Dateien</p>
+<p>Für den Fall, dass die Dateien lokal gespeichert sind, geben Sie einfach den absoluten oder relativen Pfad zur Datei ein. Haben wir bspw. folgende Struktur:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span> <span class="n">Ordner</span>
+<span class="o">----</span> <span class="n">analyse</span><span class="o">.</span><span class="n">ipynb</span>
+<span class="o">----</span> <span class="n">Ordner_Daten</span>
+<span class="o">------</span> <span class="n">daten</span><span class="o">.</span><span class="n">xlsx</span>
+</pre></div>
+</div>
+<p>Dann können Sie die Datei <code class="docutils literal notranslate"><span class="pre">daten.xlsx</span></code> in ihrem Notebook <code class="docutils literal notranslate"><span class="pre">analyse.ipynb</span></code> wie folgt einlesen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
+
+<span class="n">fpath</span> <span class="o">=</span> <span class="s2">&quot;Ordner_Daten/daten.xlsx</span>
+
+<span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">fpath</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<p>Bei dem o.g. Pfad handelt es sich um einen <code class="docutils literal notranslate"><span class="pre">relativen</span></code> Ordnerpfad, weil dieser relativ zu Datei in der sie sich befinden ist (in diesem Falle <code class="docutils literal notranslate"><span class="pre">analyse.ipynb</span></code>). Natürlich können Sie auch den gesamten Pfad angeben also z.B. <code class="docutils literal notranslate"><span class="pre">c:\user\analysen\Ordner\Ordner_Daten\daten.xlsx</span></code>.</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="s2">&quot;../assets/datasets/small/sales.xlsx&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="s2">&quot;https://www.dropbox.com/s/oub2za2hu8yp8oj/sales1.xlsx?dl=1&quot;</span>
 
-<span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+<span class="n">df</span>
 </pre></div>
 </div>
 </div>
@@ -1025,6 +1100,4617 @@ Wir können hier jedoch auch andere Datentypen nutzen. So können wir auch Numpy
 </table>
 </div></div></div>
 </div>
+<p>Die jeweiligen <code class="docutils literal notranslate"><span class="pre">pd.read_</span></code>-Methoden haben eine Vielzahl von optionalen Parametern, die man übergeben kann. Wir werden an dieser Stelle nicht auf alle eingehen. Grundsätzlich können Sie aber quasi davon ausgehen, dass es für alle typischen Optionen, die man beim Einlesen von Daten benötigt (z.B. nur bestimmte Spalten, nur bestimmte Tabellenblätter, Auswahl der Spaltenbezeichnung, Auswahl von Datentypen, Datumsformat) eine optionale Auswahlmöglichkeit innerhalb der Methode gibt. Sie können diese via <code class="docutils literal notranslate"><span class="pre">pd.read_&lt;..&gt;?</span></code> aufrufen lassen.</p>
+</div>
+</div>
+<div class="section" id="aufbau-eines-dataframes">
+<h2>Aufbau eines Dataframes<a class="headerlink" href="#aufbau-eines-dataframes" title="Permalink to this headline">¶</a></h2>
+<p>Ein Dataframe ist immer eine Tabelle, mit zwei Achsen:</p>
+<ul class="simple">
+<li><p>vertikale Achse: wird als <code class="docutils literal notranslate"><span class="pre">Index</span></code> bezeichnet</p></li>
+<li><p>horizontale Achse: werden als <code class="docutils literal notranslate"><span class="pre">Columns</span></code> (d.h. Spalten) bezeichnet</p></li>
+</ul>
+<p>Der Index eines Dataframes ist standardmäßig numerisch und beginnt bei 0. Der Index ist vergleichbar mit den Zeilenbezeichnungen in Excel.</p>
+<p><img alt="index_xls" src="../../_images/index_xlsx.gif" /></p>
+<p>Wir greifen auf Index und Spalten wiefolgt zu:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">idx</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span>
+<span class="n">idx</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>RangeIndex(start=0, stop=6, step=1)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">col_names</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span>
+<span class="n">col_names</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;Produkt Nr.&#39;, &#39;Preis&#39;, &#39;Menge&#39;, &#39;Datum&#39;], dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Über diese Logik können wir auch neue Werte für den Index oder die Spaltenbezeichnung erstellen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">,</span><span class="s2">&quot;c&quot;</span><span class="p">,</span><span class="s2">&quot;d&quot;</span><span class="p">,</span><span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;f&quot;</span><span class="p">]</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Produkt Nr.</th>
+      <th>Preis</th>
+      <th>Menge</th>
+      <th>Datum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>a</th>
+      <td>3</td>
+      <td>10</td>
+      <td>23</td>
+      <td>2021-01-01</td>
+    </tr>
+    <tr>
+      <th>b</th>
+      <td>2</td>
+      <td>5</td>
+      <td>1</td>
+      <td>2021-01-02</td>
+    </tr>
+    <tr>
+      <th>c</th>
+      <td>1</td>
+      <td>9</td>
+      <td>12</td>
+      <td>2021-01-03</td>
+    </tr>
+    <tr>
+      <th>d</th>
+      <td>4</td>
+      <td>3</td>
+      <td>6</td>
+      <td>2021-01-04</td>
+    </tr>
+    <tr>
+      <th>e</th>
+      <td>2</td>
+      <td>5</td>
+      <td>89</td>
+      <td>2021-01-05</td>
+    </tr>
+    <tr>
+      <th>f</th>
+      <td>3</td>
+      <td>10</td>
+      <td>4</td>
+      <td>2021-01-06</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;h1&quot;</span><span class="p">,</span> <span class="s2">&quot;h2&quot;</span><span class="p">,</span> <span class="s2">&quot;h3&quot;</span><span class="p">,</span> <span class="s2">&quot;h4&quot;</span><span class="p">]</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>h1</th>
+      <th>h2</th>
+      <th>h3</th>
+      <th>h4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>a</th>
+      <td>3</td>
+      <td>10</td>
+      <td>23</td>
+      <td>2021-01-01</td>
+    </tr>
+    <tr>
+      <th>b</th>
+      <td>2</td>
+      <td>5</td>
+      <td>1</td>
+      <td>2021-01-02</td>
+    </tr>
+    <tr>
+      <th>c</th>
+      <td>1</td>
+      <td>9</td>
+      <td>12</td>
+      <td>2021-01-03</td>
+    </tr>
+    <tr>
+      <th>d</th>
+      <td>4</td>
+      <td>3</td>
+      <td>6</td>
+      <td>2021-01-04</td>
+    </tr>
+    <tr>
+      <th>e</th>
+      <td>2</td>
+      <td>5</td>
+      <td>89</td>
+      <td>2021-01-05</td>
+    </tr>
+    <tr>
+      <th>f</th>
+      <td>3</td>
+      <td>10</td>
+      <td>4</td>
+      <td>2021-01-06</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Lassen Sie uns die alten Bezeichnungen für unsere weiteren Beispiele jedoch wieder herstellen:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">idx</span>
+<span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">col_names</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Produkt Nr.</th>
+      <th>Preis</th>
+      <th>Menge</th>
+      <th>Datum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>10</td>
+      <td>23</td>
+      <td>2021-01-01</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>5</td>
+      <td>1</td>
+      <td>2021-01-02</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>9</td>
+      <td>12</td>
+      <td>2021-01-03</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>3</td>
+      <td>6</td>
+      <td>2021-01-04</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2</td>
+      <td>5</td>
+      <td>89</td>
+      <td>2021-01-05</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>3</td>
+      <td>10</td>
+      <td>4</td>
+      <td>2021-01-06</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Schauen wir uns nun weitere Funktionalitäten von Pandas an.</p>
+</div>
+<div class="section" id="auswahl-von-daten">
+<h2>Auswahl von Daten<a class="headerlink" href="#auswahl-von-daten" title="Permalink to this headline">¶</a></h2>
+<p>Im Rahmen einer Datenanalyse wird es vorkommen, dass wir uns auf bestimmte Zeilen oder Spalten eines Dataframes beziehen wollen. Schauen wir uns an, wie wir dies in Python machen.</p>
+<p>Leider gibt es verschiedene Ansätze, um Daten zu selektieren. Wir werden hier ein paar gängige Ansätze vorstellen. Im Rahmen ihrer Online-Recherchen werden Sie ggf. auf weitere Ansätze stoßen. Hierbei gibt es oft kein “richtig” oder “falsch”. Schauen Sie, was für Sie ein passender Ansatz ist. Wir geben darüber hinaus an den relevanten Stellen Hinweise, wenn bestimmte Ansätze sich als besonders geeignet herausstellen.</p>
+<div class="section" id="auswahl-von-spalten">
+<h3>Auswahl von Spalten<a class="headerlink" href="#auswahl-von-spalten" title="Permalink to this headline">¶</a></h3>
+<p>Ein einfacher und gängiger Weg, bestimmte Spalten zu selektieren, ist die Auswahl via Spaltenname; dies ist ja auch der Vorteil gegenüber einer rein numerischen Bibliothek wie Numpy.</p>
+<p>Hier ein Beispiel für die Selektion einer Spalte. Das Resultat ist eine <code class="docutils literal notranslate"><span class="pre">Series</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">menge</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Menge&quot;</span><span class="p">]</span>
+<span class="n">menge</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    23
+1     1
+2    12
+3     6
+4    89
+5     4
+Name: Menge, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="warning dropdown admonition">
+<p class="admonition-title">Vorsicht: Spaltenauswahl</p>
+<p>Sie werden in verschiedenen Quellen auch die folgende Variante finden</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">menge</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Menge</span>
+</pre></div>
+</div>
+<p>Der Ansatz ist grundsätzlich korrekt, jedoch nicht empfehlenswert. Hintergrund ist, dass dieser nicht funkioniert, wenn Spaltenbezeichnungen mit einer Zahl beginnen oder Leerzeichen beinhalten. Die Spalte <code class="docutils literal notranslate"><span class="pre">Produkt</span> <span class="pre">Nr.</span></code> ist so bspw. nicht selektierbar. Sie müssen also auf die von uns präferierte Variante zurückgreifen. Insofern bietet sich die von uns dargestellte Notation besser an, da diese immer funktioniert.</p>
+</div>
+<p>Natürlich können wir aber auch mehrere Spalten gleichzeitig auswählen. Wir machen dies, in dem wir eine Liste mit Spaltennamen übergeben. Das Resultat ist dann ein <code class="docutils literal notranslate"><span class="pre">Dataframe</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">menge_preis</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s2">&quot;Menge&quot;</span><span class="p">,</span> <span class="s2">&quot;Preis&quot;</span><span class="p">]]</span>
+<span class="n">menge_preis</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Menge</th>
+      <th>Preis</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>23</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>12</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>6</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>89</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>4</td>
+      <td>10</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Wir können die gleiche Funktionalität auch mit einer speziellen Funktion <code class="docutils literal notranslate"><span class="pre">.filter</span></code> erreichen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">items</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Menge&quot;</span><span class="p">,</span> <span class="s2">&quot;Preis&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Menge</th>
+      <th>Preis</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>23</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>12</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>6</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>89</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>4</td>
+      <td>10</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Die Funktion bietet weitere Möglichkeiten. So können wir Spalten auch nach bestimmten (einfachen) Logiken filtern. Wir könnten z.B. interessiert sein an allen Spalten, die mit “P” beginnen. Dies können wir einfach erreichen mit</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">like</span><span class="o">=</span><span class="s2">&quot;P&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Produkt Nr.</th>
+      <th>Preis</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>3</td>
+      <td>10</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="auswahl-von-zeilen">
+<h3>Auswahl von Zeilen<a class="headerlink" href="#auswahl-von-zeilen" title="Permalink to this headline">¶</a></h3>
+<p>Sie können auch spezifische Zeilen auswählen. Die üblichste Variante ist dies über die Methoden <code class="docutils literal notranslate"><span class="pre">iloc</span></code> und <code class="docutils literal notranslate"><span class="pre">loc</span></code> zu machen.</p>
+<ul class="simple">
+<li><p>Auswahl auf Basis von Index- oder Spalten<strong>numerierung</strong>: <code class="docutils literal notranslate"><span class="pre">iloc</span></code></p></li>
+<li><p>Auswahl auf Basis von Index- oder Spalten<strong>bezeichnung</strong>: <code class="docutils literal notranslate"><span class="pre">loc</span></code></p></li>
+</ul>
+<p><strong>Wichtig:</strong> auch in Pandas ist das erste Elemente wie bei allen anderen Datentypen für die dies relevant war sowohl für Index, als auch für Columns immer an der Stelle <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
+<p>Gerade für Beginner ist die Auswahl via <code class="docutils literal notranslate"><span class="pre">iloc</span></code> und <code class="docutils literal notranslate"><span class="pre">loc</span></code> zunächst verwirrend. Lassen Sie uns deshalb einige typische Beispiele durchgehen.</p>
+<p>Zur Übersicht stellen wir hier noch einmal unseren Ausgangsdatensatz dar:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Produkt Nr.</th>
+      <th>Preis</th>
+      <th>Menge</th>
+      <th>Datum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>10</td>
+      <td>23</td>
+      <td>2021-01-01</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>5</td>
+      <td>1</td>
+      <td>2021-01-02</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>9</td>
+      <td>12</td>
+      <td>2021-01-03</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>3</td>
+      <td>6</td>
+      <td>2021-01-04</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2</td>
+      <td>5</td>
+      <td>89</td>
+      <td>2021-01-05</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>3</td>
+      <td>10</td>
+      <td>4</td>
+      <td>2021-01-06</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p><strong>Beispiel 1:</strong> Auswahl der Zeilen 0, 3 und 5</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Produkt Nr.</th>
+      <th>Preis</th>
+      <th>Menge</th>
+      <th>Datum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>10</td>
+      <td>23</td>
+      <td>2021-01-01</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>3</td>
+      <td>6</td>
+      <td>2021-01-04</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>3</td>
+      <td>10</td>
+      <td>4</td>
+      <td>2021-01-06</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p><strong>Beispiel 2:</strong> Auswahl der Zeilen 0 bis 3 (ausschließlich)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="c1"># erste drei Zeilen</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Produkt Nr.</th>
+      <th>Preis</th>
+      <th>Menge</th>
+      <th>Datum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>10</td>
+      <td>23</td>
+      <td>2021-01-01</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>5</td>
+      <td>1</td>
+      <td>2021-01-02</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>9</td>
+      <td>12</td>
+      <td>2021-01-03</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Sie werden feststellen, dass die grundsätzliche Logik sehr ähnlich zu der in Numpy ist. Dies ist auch kein Zufall, da Pandas auf Numpy aufsetzt und “im Hintergrund” Numpy nutzt.</p>
+<p>Schauen wir uns zwei weitere Beispiel an.</p>
+<p><strong>Beispiel 3:</strong> Auswahl der Zeilen 0 bis 3 und der Spalten 0 und 2</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Produkt Nr.</th>
+      <th>Menge</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>12</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p><strong>Beispiel 4:</strong> Auswahl der Zeilen 0 bis 3 und der Spalten 0 bis 3 (ausschließlich)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Produkt Nr.</th>
+      <th>Preis</th>
+      <th>Menge</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>10</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>5</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>9</td>
+      <td>12</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Die oberen Beispiele haben wir <code class="docutils literal notranslate"><span class="pre">iloc</span></code> genutzt: wir greifen jeweils auf die Numerierung der Spalte oder des Index zu. D.h. wir greifen auf z.B. Zeile 2 oder Spalte 0 zu.</p>
+<p>Sobald wir auf den Index oder die Spalte mit einer bestimmten Bezeichnung zugreifen wollen, dann müssen wir <code class="docutils literal notranslate"><span class="pre">loc</span></code> nutzen. Dies ist insbesondere im Falle der Spalten sehr häufig der Fall.</p>
+<p><strong>Beispiel 5:</strong> Auswahl der Zeilen 2 bis 4 und der Spalten “Preis” und “Menge”</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;Preis&quot;</span><span class="p">,</span> <span class="s2">&quot;Menge&quot;</span><span class="p">]]</span> <span class="c1"># Hier müssen wir .loc benutzen</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Preis</th>
+      <th>Menge</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2</th>
+      <td>9</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>89</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>10</td>
+      <td>4</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>In vielen Anwendungsfällen wollen wir die Spalten über die Spaltenbezeichnungen auswählen, d.h. wir müssen <code class="docutils literal notranslate"><span class="pre">loc</span></code> nutzen. In weniger häufigen, aber durch aus teilweise relevanten Anwendungsfällen ist ggf. auch der Index nicht standardmäßig nummeriert. Auch dann müssen wir <code class="docutils literal notranslate"><span class="pre">loc</span></code> nutzen.</p>
+<p>Hier ein Beispiel mit einem angepassten Index:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="s2">&quot;abcdef&quot;</span><span class="p">)</span> <span class="c1"># Abkürzung für [&quot;a&quot;, &quot;b&quot;, ..., &quot;e&quot;]</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Produkt Nr.</th>
+      <th>Preis</th>
+      <th>Menge</th>
+      <th>Datum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>a</th>
+      <td>3</td>
+      <td>10</td>
+      <td>23</td>
+      <td>2021-01-01</td>
+    </tr>
+    <tr>
+      <th>b</th>
+      <td>2</td>
+      <td>5</td>
+      <td>1</td>
+      <td>2021-01-02</td>
+    </tr>
+    <tr>
+      <th>c</th>
+      <td>1</td>
+      <td>9</td>
+      <td>12</td>
+      <td>2021-01-03</td>
+    </tr>
+    <tr>
+      <th>d</th>
+      <td>4</td>
+      <td>3</td>
+      <td>6</td>
+      <td>2021-01-04</td>
+    </tr>
+    <tr>
+      <th>e</th>
+      <td>2</td>
+      <td>5</td>
+      <td>89</td>
+      <td>2021-01-05</td>
+    </tr>
+    <tr>
+      <th>f</th>
+      <td>3</td>
+      <td>10</td>
+      <td>4</td>
+      <td>2021-01-06</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p><strong>Beispiel 6:</strong> Auswahl der Zeilen “a” und “d” und der Spalten “Datum” und “Menge”</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;Datum&quot;</span><span class="p">,</span> <span class="s2">&quot;Menge&quot;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Datum</th>
+      <th>Menge</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>a</th>
+      <td>2021-01-01</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <th>d</th>
+      <td>2021-01-04</td>
+      <td>6</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Wie bei Numpy können wir Zeilen oder Spalten auch via <code class="docutils literal notranslate"><span class="pre">boolean</span></code>s auswählen.</p>
+<p>Schauen wir uns ein paar Beispiele an:</p>
+<p><strong>Beispiel 7:</strong> Auswahl alle Zeilen, alle Spalten für die True</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spalten</span> <span class="o">=</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span> <span class="c1"># </span>
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="n">spalten</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Produkt Nr.</th>
+      <th>Datum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>a</th>
+      <td>3</td>
+      <td>2021-01-01</td>
+    </tr>
+    <tr>
+      <th>b</th>
+      <td>2</td>
+      <td>2021-01-02</td>
+    </tr>
+    <tr>
+      <th>c</th>
+      <td>1</td>
+      <td>2021-01-03</td>
+    </tr>
+    <tr>
+      <th>d</th>
+      <td>4</td>
+      <td>2021-01-04</td>
+    </tr>
+    <tr>
+      <th>e</th>
+      <td>2</td>
+      <td>2021-01-05</td>
+    </tr>
+    <tr>
+      <th>f</th>
+      <td>3</td>
+      <td>2021-01-06</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p><strong>Beispiel 8:</strong> Auswahl alle Zeilen für die True, alle Spalten für die True</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spalten</span> <span class="o">=</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>
+<span class="n">zeilen</span> <span class="o">=</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">zeilen</span><span class="p">,</span><span class="n">spalten</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Produkt Nr.</th>
+      <th>Datum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>a</th>
+      <td>3</td>
+      <td>2021-01-01</td>
+    </tr>
+    <tr>
+      <th>b</th>
+      <td>2</td>
+      <td>2021-01-02</td>
+    </tr>
+    <tr>
+      <th>e</th>
+      <td>2</td>
+      <td>2021-01-05</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>In den beiden letzten Beispielen können wir <code class="docutils literal notranslate"><span class="pre">iloc</span></code> oder <code class="docutils literal notranslate"><span class="pre">loc</span></code> verwenden. Wir empfehlen jedoch <code class="docutils literal notranslate"><span class="pre">loc</span></code> zu nutzen, da dies im weiteren Verlauf noch hilfreich sein wird. Die Wahl hängt auch meist von der Art der gewählten Spaltenauswahl ab.</p>
+<p>Im folgenden Beispiel - ein häufiges Muster der Datenselektion, wie wir im weiteren Verlauf noch feststellen werden - müssen wir wegen der Spaltenauswahl über die Spaltenbezeichnung <code class="docutils literal notranslate"><span class="pre">loc</span></code> nutzen.</p>
+<p><strong>Beispiel 9:</strong> Auswahl alle Zeilen für die True, Spalte “Menge” und “Preis”</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zeilen</span> <span class="o">=</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">zeilen</span><span class="p">,[</span><span class="s2">&quot;Menge&quot;</span><span class="p">,</span> <span class="s2">&quot;Preis&quot;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Menge</th>
+      <th>Preis</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>a</th>
+      <td>23</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>b</th>
+      <td>1</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>e</th>
+      <td>89</td>
+      <td>5</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Das letzte Beispiel ist ein sehr typisches Beispiel im Rahmen einer Datenanalyse: wir filtern einen Datensatz hinsichtlich einer bestimmten logischen Bedingung und lassen uns dann die für uns relevaten Spalten anzeigen. Schauen wir uns dieses Vorgehen etwas detaillierter an.</p>
+</div>
+<div class="section" id="bedingungen-und-logische-auswahl">
+<h3>Bedingungen und logische Auswahl<a class="headerlink" href="#bedingungen-und-logische-auswahl" title="Permalink to this headline">¶</a></h3>
+<p>In den vorliegenden Beispielen haben wir eine explizite Auswahl getroffen und diese selbst definiert. In vielen Fällen werden wir jedoch eine Auswahl auf Basis von Bedingungen der logischen Verknüpfungen vornehmen wollen. Wir haben bereits im vorherigen Kapitel in Numpy gesehen, wie wir eine solche Auswahl treffen. In Pandas erfolgt die Vorgehensweise sehr ähnlich.</p>
+<p>Stellen wir zunächst unseren Ausgangsdatensatz wieder her:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">idx</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Produkt Nr.</th>
+      <th>Preis</th>
+      <th>Menge</th>
+      <th>Datum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>10</td>
+      <td>23</td>
+      <td>2021-01-01</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>5</td>
+      <td>1</td>
+      <td>2021-01-02</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>9</td>
+      <td>12</td>
+      <td>2021-01-03</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>3</td>
+      <td>6</td>
+      <td>2021-01-04</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2</td>
+      <td>5</td>
+      <td>89</td>
+      <td>2021-01-05</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>3</td>
+      <td>10</td>
+      <td>4</td>
+      <td>2021-01-06</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Stellen wir uns vor, wir wollen nur alle Datensätze anzeigen lassen, bei denen die <code class="docutils literal notranslate"><span class="pre">Menge</span> <span class="pre">&gt;</span> <span class="pre">5</span></code> ist.</p>
+<p>Inhaltlich splittet sich diese Frage auf in zwei Teile:</p>
+<ol class="simple">
+<li><p>finde alle Zeilen, bei denen Menge &gt; 5</p></li>
+<li><p>wähle alle Zeilen aus, die unter 1 identifiziert wurden</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Schritt 1: finde relevante Zeilen basierend auf logischer Bedingung</span>
+<span class="n">idx</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Menge&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">5</span>
+<span class="n">idx</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     True
+1    False
+2     True
+3     True
+4     True
+5    False
+Name: Menge, dtype: bool
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Schritt 2: wähle Zeilen aus</span>
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">idx</span><span class="p">,:]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Produkt Nr.</th>
+      <th>Preis</th>
+      <th>Menge</th>
+      <th>Datum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>10</td>
+      <td>23</td>
+      <td>2021-01-01</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>9</td>
+      <td>12</td>
+      <td>2021-01-03</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>3</td>
+      <td>6</td>
+      <td>2021-01-04</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2</td>
+      <td>5</td>
+      <td>89</td>
+      <td>2021-01-05</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Wir können den Schritt 2 in diesem Falle auch kürzer darstellen und folgendes schreiben:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Produkt Nr.</th>
+      <th>Preis</th>
+      <th>Menge</th>
+      <th>Datum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>10</td>
+      <td>23</td>
+      <td>2021-01-01</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>9</td>
+      <td>12</td>
+      <td>2021-01-03</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>3</td>
+      <td>6</td>
+      <td>2021-01-04</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2</td>
+      <td>5</td>
+      <td>89</td>
+      <td>2021-01-05</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Zusammenfassend kann man also kompakter schreiben:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Menge&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Produkt Nr.</th>
+      <th>Preis</th>
+      <th>Menge</th>
+      <th>Datum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>10</td>
+      <td>23</td>
+      <td>2021-01-01</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>9</td>
+      <td>12</td>
+      <td>2021-01-03</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>3</td>
+      <td>6</td>
+      <td>2021-01-04</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2</td>
+      <td>5</td>
+      <td>89</td>
+      <td>2021-01-05</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Wenn wir jedoch nur auf einige bestimmte Spalten zugreifen wollen, sollten wir wieder <code class="docutils literal notranslate"><span class="pre">loc</span></code> nutzen, d.h. wir müssten dann z.B. folgendes schreiben</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Menge&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;Menge&quot;</span><span class="p">,</span> <span class="s2">&quot;Datum&quot;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Menge</th>
+      <th>Datum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>23</td>
+      <td>2021-01-01</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>12</td>
+      <td>2021-01-03</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>6</td>
+      <td>2021-01-04</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>89</td>
+      <td>2021-01-05</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Wir erkennen also, dass die logische Bedingung im vorliegenden Fall die Zeilen definiert, die wir extrahieren wollen.</p>
+<p>Wie bei Numpy können wir auch wieder verschiedene logische Bedingungen miteinander verknüpfen. Die Schreibweise ist dann sehr ähnlich zu der in Numpy.</p>
+<p>Wenn wir bspw alle Transaktion (sprich Zeilen) finden wollen, für die gilt, dass die <strong>Menge &gt; 5</strong> ist <strong>und</strong> der <strong>Preis == 5</strong>, dann schreiben wir:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cond</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Menge&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Preis&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="n">cond</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Produkt Nr.</th>
+      <th>Preis</th>
+      <th>Menge</th>
+      <th>Datum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>4</th>
+      <td>2</td>
+      <td>5</td>
+      <td>89</td>
+      <td>2021-01-05</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>oder kompakter:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Menge&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Preis&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">5</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Produkt Nr.</th>
+      <th>Preis</th>
+      <th>Menge</th>
+      <th>Datum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>4</th>
+      <td>2</td>
+      <td>5</td>
+      <td>89</td>
+      <td>2021-01-05</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Im Falle von komplexeren Bedingungen bietet Pandas auch die Möglichkeit eine dafür spezielle Methode zu nutzen: <code class="docutils literal notranslate"><span class="pre">query</span></code>. Mit dieser Funktion können wir typische Bedingungen etwas prägnanter formulieren.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Menge &gt; 5 &amp; Preis == 5&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Produkt Nr.</th>
+      <th>Preis</th>
+      <th>Menge</th>
+      <th>Datum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>4</th>
+      <td>2</td>
+      <td>5</td>
+      <td>89</td>
+      <td>2021-01-05</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="operationen-auf-daten">
+<h2>Operationen auf Daten<a class="headerlink" href="#operationen-auf-daten" title="Permalink to this headline">¶</a></h2>
+<p>Ein typisches Muster der Datenanalyse ist, dass wir Rohdaten einlesen und diese dann korrigieren, verändern, ergänzen oder erweitern. Ein sehr triviales, aber häufig auftretendes Beispiel ist, dass wir unserem Datensatz Spalten hinzufügen:</p>
+<ol class="simple">
+<li><p>wir ergänzen Spalten auf Basis von vorliegenden Daten: wir könnten z.B. eine neue Spalte <code class="docutils literal notranslate"><span class="pre">Umsatz</span></code> berechnen auf Basis der vorliegenden Daten für <code class="docutils literal notranslate"><span class="pre">Menge</span></code> und <code class="docutils literal notranslate"><span class="pre">Preis</span></code></p></li>
+<li><p>wir wenden mathematische Funktionen auf Daten an: wir erstellen eine neue Spalte mit dem kumulierten Umsatz</p></li>
+<li><p>…</p></li>
+</ol>
+<p>Schauen wir uns an, wie wir die o.g. Veränderungen in Pandas durchführen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Produkt Nr.</th>
+      <th>Preis</th>
+      <th>Menge</th>
+      <th>Datum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>10</td>
+      <td>23</td>
+      <td>2021-01-01</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>5</td>
+      <td>1</td>
+      <td>2021-01-02</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>9</td>
+      <td>12</td>
+      <td>2021-01-03</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>3</td>
+      <td>6</td>
+      <td>2021-01-04</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2</td>
+      <td>5</td>
+      <td>89</td>
+      <td>2021-01-05</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>3</td>
+      <td>10</td>
+      <td>4</td>
+      <td>2021-01-06</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="section" id="erzeugen-von-neuen-spalten">
+<h3>Erzeugen von neuen Spalten<a class="headerlink" href="#erzeugen-von-neuen-spalten" title="Permalink to this headline">¶</a></h3>
+<p>Eine neue Spalte erzeugen wir, in der wir quasi so tun, als ob diese existierte. Um z.B. eine neue Spalte <code class="docutils literal notranslate"><span class="pre">Umsatz</span></code> zu erzeugen machen wir folgendes:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Umsatz&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Menge&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Preis&quot;</span><span class="p">]</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Produkt Nr.</th>
+      <th>Preis</th>
+      <th>Menge</th>
+      <th>Datum</th>
+      <th>Umsatz</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>10</td>
+      <td>23</td>
+      <td>2021-01-01</td>
+      <td>230</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>5</td>
+      <td>1</td>
+      <td>2021-01-02</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>9</td>
+      <td>12</td>
+      <td>2021-01-03</td>
+      <td>108</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>3</td>
+      <td>6</td>
+      <td>2021-01-04</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2</td>
+      <td>5</td>
+      <td>89</td>
+      <td>2021-01-05</td>
+      <td>445</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>3</td>
+      <td>10</td>
+      <td>4</td>
+      <td>2021-01-06</td>
+      <td>40</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Eine alternative Umsetzung - die sich in einem anderen Kontext im weiteren Verlauf noch als nützlich herausstellen wird - kann mittels der Methode <code class="docutils literal notranslate"><span class="pre">assign</span></code> erfolgen. Hier ein Beispiel, der eine neue Spalte <code class="docutils literal notranslate"><span class="pre">Umsatz_v2</span></code> erstellt:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">Umsatz_v2</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Menge&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Preis&quot;</span><span class="p">])</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Produkt Nr.</th>
+      <th>Preis</th>
+      <th>Menge</th>
+      <th>Datum</th>
+      <th>Umsatz</th>
+      <th>Umsatz_v2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>10</td>
+      <td>23</td>
+      <td>2021-01-01</td>
+      <td>230</td>
+      <td>230</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>5</td>
+      <td>1</td>
+      <td>2021-01-02</td>
+      <td>5</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>9</td>
+      <td>12</td>
+      <td>2021-01-03</td>
+      <td>108</td>
+      <td>108</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>3</td>
+      <td>6</td>
+      <td>2021-01-04</td>
+      <td>18</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2</td>
+      <td>5</td>
+      <td>89</td>
+      <td>2021-01-05</td>
+      <td>445</td>
+      <td>445</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>3</td>
+      <td>10</td>
+      <td>4</td>
+      <td>2021-01-06</td>
+      <td>40</td>
+      <td>40</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Wir können mit numerischen Spaltendaten genauso wie bei Numpy ganz einfach rechnen. Pandas wendet die mathematische Operation - in unserem Fall <code class="docutils literal notranslate"><span class="pre">*</span></code> - dann elementweise auf die gesamte Spalte an. Der oben dargestellte Code ist das Äquivalent von folgendem Beispiel in Excel:</p>
+<p><img alt="" src="../../_images/add_column_xls.gif" /></p>
+</div>
+<div class="section" id="anwenden-von-komplexeren-operationen">
+<h3>Anwenden von komplexeren Operationen<a class="headerlink" href="#anwenden-von-komplexeren-operationen" title="Permalink to this headline">¶</a></h3>
+<p>Wir können so auch wesentlich komplexere Berechnungen durchführen - unsere eigenen Ideen sind quasi das Limit. Für viele typische Berechnungen stellen Pandas und/oder Numpy auch bereits Methoden zur Verfügung. Wir werden an dieser Stelle nicht im Detail darauf eingehen, sondern viele der Funktionen einführen, wenn wir diese in unseren Fallstudien benötigen.</p>
+<p>Jedoch möchten wir ein Beispiel geben. Stellen Sie sich vor, wir wollen die kumulative Summe der Menge berechnen und in einer Spalte <code class="docutils literal notranslate"><span class="pre">Menge_kum</span></code> abspeichern. Wir können dies dann mit der Funktion <code class="docutils literal notranslate"><span class="pre">cumsum</span></code> machen und müssen hierfür keine eigene Funktion schreiben.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Menge_kum&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Menge&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Produkt Nr.</th>
+      <th>Preis</th>
+      <th>Menge</th>
+      <th>Datum</th>
+      <th>Umsatz</th>
+      <th>Umsatz_v2</th>
+      <th>Menge_kum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>10</td>
+      <td>23</td>
+      <td>2021-01-01</td>
+      <td>230</td>
+      <td>230</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>5</td>
+      <td>1</td>
+      <td>2021-01-02</td>
+      <td>5</td>
+      <td>5</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>9</td>
+      <td>12</td>
+      <td>2021-01-03</td>
+      <td>108</td>
+      <td>108</td>
+      <td>36</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>3</td>
+      <td>6</td>
+      <td>2021-01-04</td>
+      <td>18</td>
+      <td>18</td>
+      <td>42</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2</td>
+      <td>5</td>
+      <td>89</td>
+      <td>2021-01-05</td>
+      <td>445</td>
+      <td>445</td>
+      <td>131</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>3</td>
+      <td>10</td>
+      <td>4</td>
+      <td>2021-01-06</td>
+      <td>40</td>
+      <td>40</td>
+      <td>135</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Die gleiche Berechnung können wir auch via Numpy durchführen. Wir würden dann die Numpy-Funktion <code class="docutils literal notranslate"><span class="pre">np.cumsum</span></code> nutzen. Dies würde dann wiefolgt aussehen:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Menge_kum_v2&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Menge&quot;</span><span class="p">])</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Produkt Nr.</th>
+      <th>Preis</th>
+      <th>Menge</th>
+      <th>Datum</th>
+      <th>Umsatz</th>
+      <th>Umsatz_v2</th>
+      <th>Menge_kum</th>
+      <th>Menge_kum_v2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>10</td>
+      <td>23</td>
+      <td>2021-01-01</td>
+      <td>230</td>
+      <td>230</td>
+      <td>23</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>5</td>
+      <td>1</td>
+      <td>2021-01-02</td>
+      <td>5</td>
+      <td>5</td>
+      <td>24</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>9</td>
+      <td>12</td>
+      <td>2021-01-03</td>
+      <td>108</td>
+      <td>108</td>
+      <td>36</td>
+      <td>36</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>3</td>
+      <td>6</td>
+      <td>2021-01-04</td>
+      <td>18</td>
+      <td>18</td>
+      <td>42</td>
+      <td>42</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2</td>
+      <td>5</td>
+      <td>89</td>
+      <td>2021-01-05</td>
+      <td>445</td>
+      <td>445</td>
+      <td>131</td>
+      <td>131</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>3</td>
+      <td>10</td>
+      <td>4</td>
+      <td>2021-01-06</td>
+      <td>40</td>
+      <td>40</td>
+      <td>135</td>
+      <td>135</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Natürlich können wir auch unsere eigene Funktion schreiben und diese dann auf unseren Dataframe anwenden.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cumsum</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">spalte</span><span class="p">):</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span> <span class="c1"># .iterrows </span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">res</span> <span class="o">+</span> <span class="n">row</span><span class="p">[</span><span class="n">spalte</span><span class="p">]</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">data</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cumsum</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s2">&quot;Menge&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[23, 24, 36, 42, 131, 135]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Menge_kum_v3&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cumsum</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s2">&quot;Menge&quot;</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Produkt Nr.</th>
+      <th>Preis</th>
+      <th>Menge</th>
+      <th>Datum</th>
+      <th>Umsatz</th>
+      <th>Umsatz_v2</th>
+      <th>Menge_kum</th>
+      <th>Menge_kum_v2</th>
+      <th>Menge_kum_v3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>10</td>
+      <td>23</td>
+      <td>2021-01-01</td>
+      <td>230</td>
+      <td>230</td>
+      <td>23</td>
+      <td>23</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>5</td>
+      <td>1</td>
+      <td>2021-01-02</td>
+      <td>5</td>
+      <td>5</td>
+      <td>24</td>
+      <td>24</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>9</td>
+      <td>12</td>
+      <td>2021-01-03</td>
+      <td>108</td>
+      <td>108</td>
+      <td>36</td>
+      <td>36</td>
+      <td>36</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>3</td>
+      <td>6</td>
+      <td>2021-01-04</td>
+      <td>18</td>
+      <td>18</td>
+      <td>42</td>
+      <td>42</td>
+      <td>42</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2</td>
+      <td>5</td>
+      <td>89</td>
+      <td>2021-01-05</td>
+      <td>445</td>
+      <td>445</td>
+      <td>131</td>
+      <td>131</td>
+      <td>131</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>3</td>
+      <td>10</td>
+      <td>4</td>
+      <td>2021-01-06</td>
+      <td>40</td>
+      <td>40</td>
+      <td>135</td>
+      <td>135</td>
+      <td>135</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Auch wenn wir an dieser Stelle nicht weiter auf alle verfügbaren Informationen eingehen können. Die Beispiele zeigen, dass wir sobald wir mathematische, statistische oder sonstige Funktionen auf unsere Daten anwenden wollen im Hinterkopf haben sollten, dass wir sowohl Pandas, als auch Numpy dafür nutzen können. Falls keine Funktion existiert, können wir diese selber schreiben. Wir können unsere Dataframes demnach nach belieben verändern und ergänzen.</p>
+<p>Natürlich können wir aber auch einzelne Werte einer ganzen Spalte zuweisen. Stellen Sie sich vor, wir haben die Information, dass die vorliegenden Menge alle durch den Verkäufer “Herr Müller” verkauft wurden. Wir wollen diese Information ergänzen. Wir erstellen dann eine Spalte <code class="docutils literal notranslate"><span class="pre">Verkäufer</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Verkäufer&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Herr Müller&quot;</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Produkt Nr.</th>
+      <th>Preis</th>
+      <th>Menge</th>
+      <th>Datum</th>
+      <th>Umsatz</th>
+      <th>Umsatz_v2</th>
+      <th>Menge_kum</th>
+      <th>Menge_kum_v2</th>
+      <th>Menge_kum_v3</th>
+      <th>Verkäufer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>10</td>
+      <td>23</td>
+      <td>2021-01-01</td>
+      <td>230</td>
+      <td>230</td>
+      <td>23</td>
+      <td>23</td>
+      <td>23</td>
+      <td>Herr Müller</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>5</td>
+      <td>1</td>
+      <td>2021-01-02</td>
+      <td>5</td>
+      <td>5</td>
+      <td>24</td>
+      <td>24</td>
+      <td>24</td>
+      <td>Herr Müller</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>9</td>
+      <td>12</td>
+      <td>2021-01-03</td>
+      <td>108</td>
+      <td>108</td>
+      <td>36</td>
+      <td>36</td>
+      <td>36</td>
+      <td>Herr Müller</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>3</td>
+      <td>6</td>
+      <td>2021-01-04</td>
+      <td>18</td>
+      <td>18</td>
+      <td>42</td>
+      <td>42</td>
+      <td>42</td>
+      <td>Herr Müller</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2</td>
+      <td>5</td>
+      <td>89</td>
+      <td>2021-01-05</td>
+      <td>445</td>
+      <td>445</td>
+      <td>131</td>
+      <td>131</td>
+      <td>131</td>
+      <td>Herr Müller</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>3</td>
+      <td>10</td>
+      <td>4</td>
+      <td>2021-01-06</td>
+      <td>40</td>
+      <td>40</td>
+      <td>135</td>
+      <td>135</td>
+      <td>135</td>
+      <td>Herr Müller</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="aggregationen-von-daten">
+<h2>Aggregationen von Daten<a class="headerlink" href="#aggregationen-von-daten" title="Permalink to this headline">¶</a></h2>
+<p>Wieder vergleichbar zu Numpy können wir Daten, die in einem Dataframe enthalten sind aggregieren und zusammenfassen. Jedoch ist es wichtig, dabei darauf zu achten, welche Datentypen im Dataframe enthalten sind. Denn es macht wenig Sinn z.B. das arithmetische Mittel von einer Datums- oder Textspalte zu berechnen.</p>
+<p>Die Funktion <code class="docutils literal notranslate"><span class="pre">.info</span></code> hilft uns, einen schnellen Überblick über die Datentypen im Dataframe zu erhalten.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 6 entries, 0 to 5
+Data columns (total 10 columns):
+ #   Column        Non-Null Count  Dtype         
+---  ------        --------------  -----         
+ 0   Produkt Nr.   6 non-null      int64         
+ 1   Preis         6 non-null      int64         
+ 2   Menge         6 non-null      int64         
+ 3   Datum         6 non-null      datetime64[ns]
+ 4   Umsatz        6 non-null      int64         
+ 5   Umsatz_v2     6 non-null      int64         
+ 6   Menge_kum     6 non-null      int64         
+ 7   Menge_kum_v2  6 non-null      int64         
+ 8   Menge_kum_v3  6 non-null      int64         
+ 9   Verkäufer     6 non-null      object        
+dtypes: datetime64[ns](1), int64(8), object(1)
+memory usage: 608.0+ bytes
+</pre></div>
+</div>
+</div>
+</div>
+<p>Das Ergebnis der Funktion ist eine Übersicht der Spalten (Column) und des jeweiligen Datentyps (Dtype). Darüber hinaus erhalten wir die Information, ob die jeweilige Spalte fehlende Informationen beinhaltet (sog. nans: not a number). Diese könnten wir dann bei Bedarf herausfiltern oder mit anderen Werten befüllen. Auf diese Technik gehen wir an dieser Stelle jedoch nicht ein.</p>
+<p>Die Funktion <code class="docutils literal notranslate"><span class="pre">.describe</span></code> liefert uns eine prägnante Übersicht an deskriptiven Statistiken. Da dies nur für numerische Spalten sinnvolle Ergebnisse liefert, werden alle anderen Spalten automatisch nicht berücksichtigt. So wird im untern Beispiel die Spalte <code class="docutils literal notranslate"><span class="pre">Datum</span></code> automatisch nicht berücksichtigt, da diese vom Datentyp <code class="docutils literal notranslate"><span class="pre">datetime</span></code> ist, d.h. ein Datumsformat hat.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Produkt Nr.</th>
+      <th>Preis</th>
+      <th>Menge</th>
+      <th>Umsatz</th>
+      <th>Umsatz_v2</th>
+      <th>Menge_kum</th>
+      <th>Menge_kum_v2</th>
+      <th>Menge_kum_v3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>6.000000</td>
+      <td>6.00000</td>
+      <td>6.000000</td>
+      <td>6.000000</td>
+      <td>6.000000</td>
+      <td>6.000000</td>
+      <td>6.000000</td>
+      <td>6.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>2.500000</td>
+      <td>7.00000</td>
+      <td>22.500000</td>
+      <td>141.000000</td>
+      <td>141.000000</td>
+      <td>65.166667</td>
+      <td>65.166667</td>
+      <td>65.166667</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>1.048809</td>
+      <td>3.03315</td>
+      <td>33.494776</td>
+      <td>170.441779</td>
+      <td>170.441779</td>
+      <td>53.048720</td>
+      <td>53.048720</td>
+      <td>53.048720</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>1.000000</td>
+      <td>3.00000</td>
+      <td>1.000000</td>
+      <td>5.000000</td>
+      <td>5.000000</td>
+      <td>23.000000</td>
+      <td>23.000000</td>
+      <td>23.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>2.000000</td>
+      <td>5.00000</td>
+      <td>4.500000</td>
+      <td>23.500000</td>
+      <td>23.500000</td>
+      <td>27.000000</td>
+      <td>27.000000</td>
+      <td>27.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>2.500000</td>
+      <td>7.00000</td>
+      <td>9.000000</td>
+      <td>74.000000</td>
+      <td>74.000000</td>
+      <td>39.000000</td>
+      <td>39.000000</td>
+      <td>39.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>3.000000</td>
+      <td>9.75000</td>
+      <td>20.250000</td>
+      <td>199.500000</td>
+      <td>199.500000</td>
+      <td>108.750000</td>
+      <td>108.750000</td>
+      <td>108.750000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>4.000000</td>
+      <td>10.00000</td>
+      <td>89.000000</td>
+      <td>445.000000</td>
+      <td>445.000000</td>
+      <td>135.000000</td>
+      <td>135.000000</td>
+      <td>135.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Eine solche Übersicht ist hilfreich, um sich einen schnellen Überblick zur Verteilung der Daten zu verschaffen. Darüber hinaus können wir auch explizite Berechnungen für spezifische Spalten oder Zeilen durchführen.</p>
+<p>Wir schauen uns dies am Beispiel des artithmetischen Mittels (engl. mean) und der Summe (engl. sum) an.</p>
+<p><strong>Aggregation je Spalte: Mean</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Preis&quot;</span><span class="p">,</span> <span class="s2">&quot;Menge&quot;</span><span class="p">,</span> <span class="s2">&quot;Umsatz&quot;</span><span class="p">]</span>
+<span class="n">df</span><span class="p">[</span><span class="n">cols</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Preis       7.0
+Menge      22.5
+Umsatz    141.0
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Aggregation je Zeile: Sum</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">cols</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    263
+1     11
+2    129
+3     27
+4    539
+5     54
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Pandas bietet über den Zusatz <code class="docutils literal notranslate"><span class="pre">axis=</span></code> an, auszuwählen, ob die Funktion spalten- oder zeilenweise ausgeführt werden soll.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">axis=0</span></code>: Funktion wird über die Spalte angewandt</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">axis=1</span></code>: Funktion wird über die Zeile angewandt</p></li>
+</ul>
+<p><strong>Hinweis:</strong> Wir können die obigen Berechnungen auch via Numpy durchführen, indem wir die jeweilige Numpy-Funktion nutzen und dieser den Dataframe oder die Series übergeben.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">cols</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Preis       7.0
+Menge      22.5
+Umsatz    141.0
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="zusammenfugen-von-daten">
+<h2>Zusammenfügen von Daten<a class="headerlink" href="#zusammenfugen-von-daten" title="Permalink to this headline">¶</a></h2>
+<p>Oft haben wir es mit verschiedenen Datenquellen zu tun, die in irgendeiner Art und Weise kombiniert werden sollen. Beispiele hierfür sind:</p>
+<ul class="simple">
+<li><p>mehrere Datein, die Informationen je Monat beinhalten</p></li>
+<li><p>mehrere Dateien, die Informationen je Produkt beinhalten</p></li>
+<li><p>mehrere Dateine, die unterschiedliche Informationen beinhalten, sich jedoch inhaltlich ergänzen</p></li>
+<li><p>…</p></li>
+</ul>
+<p>Wir können in Pandas Dataframes miteinander kombinieren. Wir schauen uns im Folgenden ein paar wichtige Ansätze an:</p>
+<div class="section" id="pd-concat">
+<h3>pd.concat<a class="headerlink" href="#pd-concat" title="Permalink to this headline">¶</a></h3>
+<p>Mit der Funktion <code class="docutils literal notranslate"><span class="pre">pd.concat</span></code> können wir zwei oder mehr Datensätze zeilen- oder spaltenweise Verknüpfen.</p>
+<p>Stellen wir uns vor, es gäbe zusätzlich zu unserem Beispieldatensatz noch einen weiteren Datensatz von gleichem Aufbau jedoch für einen unterschiedlichen Zeitraum.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ursprünglicher Datensatz</span>
+<span class="n">file1</span> <span class="o">=</span> <span class="s2">&quot;https://www.dropbox.com/s/oub2za2hu8yp8oj/sales1.xlsx?dl=1&quot;</span>
+<span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">file1</span><span class="p">)</span>
+<span class="n">df1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Produkt Nr.</th>
+      <th>Preis</th>
+      <th>Menge</th>
+      <th>Datum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>10</td>
+      <td>23</td>
+      <td>2021-01-01</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>5</td>
+      <td>1</td>
+      <td>2021-01-02</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>9</td>
+      <td>12</td>
+      <td>2021-01-03</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>3</td>
+      <td>6</td>
+      <td>2021-01-04</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2</td>
+      <td>5</td>
+      <td>89</td>
+      <td>2021-01-05</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>3</td>
+      <td>10</td>
+      <td>4</td>
+      <td>2021-01-06</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file2</span> <span class="o">=</span> <span class="s2">&quot;https://www.dropbox.com/s/n01dgdrtxavicmm/sales2.xlsx?dl=1&quot;</span>
+<span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">file2</span><span class="p">)</span>
+<span class="n">df2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Produkt Nr.</th>
+      <th>Preis</th>
+      <th>Menge</th>
+      <th>Datum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>10</td>
+      <td>3</td>
+      <td>2021-01-07</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>3</td>
+      <td>10</td>
+      <td>19</td>
+      <td>2021-01-08</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>4</td>
+      <td>3</td>
+      <td>5</td>
+      <td>2021-01-09</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2</td>
+      <td>5</td>
+      <td>76</td>
+      <td>2021-01-10</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1</td>
+      <td>9</td>
+      <td>45</td>
+      <td>2021-01-11</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>5</td>
+      <td>27</td>
+      <td>24</td>
+      <td>2021-01-12</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="section" id="zeilenweise-verknupfung">
+<h4>Zeilenweise Verknüpfung<a class="headerlink" href="#zeilenweise-verknupfung" title="Permalink to this headline">¶</a></h4>
+<p>Wir können diese Datensätze nun einfach zusammenfassen. Für diese Art der Daten macht es Sinn, die Daten zeilenweise zu aggregieren, d.h. wir fügen den zweiten Datensatz (df2) <strong>unten</strong> an den ersten Datensatz an.</p>
+<p>Wir können dies mit der Funktion <code class="docutils literal notranslate"><span class="pre">pd.concat</span></code> erreichen. Da wir mit dieser Funktion sowohl spalten- als auch zeilenweise verknüpfen können, müssen wir über den Parameter <code class="docutils literal notranslate"><span class="pre">axis=0</span></code> angeben, dass wir eine zeilenweise Verknüpfung benötigen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_combined</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">((</span><span class="n">df1</span><span class="p">,</span><span class="n">df2</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">df_combined</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Produkt Nr.</th>
+      <th>Preis</th>
+      <th>Menge</th>
+      <th>Datum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>10</td>
+      <td>23</td>
+      <td>2021-01-01</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>5</td>
+      <td>1</td>
+      <td>2021-01-02</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>9</td>
+      <td>12</td>
+      <td>2021-01-03</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>3</td>
+      <td>6</td>
+      <td>2021-01-04</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2</td>
+      <td>5</td>
+      <td>89</td>
+      <td>2021-01-05</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>3</td>
+      <td>10</td>
+      <td>4</td>
+      <td>2021-01-06</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>10</td>
+      <td>3</td>
+      <td>2021-01-07</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>3</td>
+      <td>10</td>
+      <td>19</td>
+      <td>2021-01-08</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>4</td>
+      <td>3</td>
+      <td>5</td>
+      <td>2021-01-09</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2</td>
+      <td>5</td>
+      <td>76</td>
+      <td>2021-01-10</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1</td>
+      <td>9</td>
+      <td>45</td>
+      <td>2021-01-11</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>5</td>
+      <td>27</td>
+      <td>24</td>
+      <td>2021-01-12</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Schaut man sich das Resultat an, dann stellt man fest, dass die Daten korrekt verknüpft wurden. Jedoch ist auch der jeweilige <code class="docutils literal notranslate"><span class="pre">Index</span></code> verknüpft worden. Im vorliegenden Falle führt dies zu Dopplungen im Index. Dies kann zu Problemen bei der weiteren Analyse führen und ist oft nicht sinnvoll - in unserem Falle z.B. sollten wir einen durchgehenden Index bevorzugen. Wir können dies auf zwei Wege erreichen:</p>
+<p><strong>Variante 1:</strong> via <code class="docutils literal notranslate"><span class="pre">pd.concat</span></code> in dem wir den Parameter <code class="docutils literal notranslate"><span class="pre">ignore_index=True</span></code> übergeben</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_combined</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">((</span><span class="n">df1</span><span class="p">,</span><span class="n">df2</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df_combined</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Produkt Nr.</th>
+      <th>Preis</th>
+      <th>Menge</th>
+      <th>Datum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>10</td>
+      <td>23</td>
+      <td>2021-01-01</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>5</td>
+      <td>1</td>
+      <td>2021-01-02</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>9</td>
+      <td>12</td>
+      <td>2021-01-03</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>3</td>
+      <td>6</td>
+      <td>2021-01-04</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2</td>
+      <td>5</td>
+      <td>89</td>
+      <td>2021-01-05</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>3</td>
+      <td>10</td>
+      <td>4</td>
+      <td>2021-01-06</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>3</td>
+      <td>10</td>
+      <td>3</td>
+      <td>2021-01-07</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>3</td>
+      <td>10</td>
+      <td>19</td>
+      <td>2021-01-08</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>4</td>
+      <td>3</td>
+      <td>5</td>
+      <td>2021-01-09</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>2</td>
+      <td>5</td>
+      <td>76</td>
+      <td>2021-01-10</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>1</td>
+      <td>9</td>
+      <td>45</td>
+      <td>2021-01-11</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>5</td>
+      <td>27</td>
+      <td>24</td>
+      <td>2021-01-12</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p><strong>Variante 2:</strong> via <code class="docutils literal notranslate"><span class="pre">reset_index</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_combined</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">((</span><span class="n">df1</span><span class="p">,</span> <span class="n">df2</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">df_combined</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Produkt Nr.</th>
+      <th>Preis</th>
+      <th>Menge</th>
+      <th>Datum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>10</td>
+      <td>23</td>
+      <td>2021-01-01</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>5</td>
+      <td>1</td>
+      <td>2021-01-02</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>9</td>
+      <td>12</td>
+      <td>2021-01-03</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>3</td>
+      <td>6</td>
+      <td>2021-01-04</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2</td>
+      <td>5</td>
+      <td>89</td>
+      <td>2021-01-05</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>3</td>
+      <td>10</td>
+      <td>4</td>
+      <td>2021-01-06</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>10</td>
+      <td>3</td>
+      <td>2021-01-07</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>3</td>
+      <td>10</td>
+      <td>19</td>
+      <td>2021-01-08</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>4</td>
+      <td>3</td>
+      <td>5</td>
+      <td>2021-01-09</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2</td>
+      <td>5</td>
+      <td>76</td>
+      <td>2021-01-10</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1</td>
+      <td>9</td>
+      <td>45</td>
+      <td>2021-01-11</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>5</td>
+      <td>27</td>
+      <td>24</td>
+      <td>2021-01-12</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_combined</span> <span class="o">=</span> <span class="n">df_combined</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df_combined</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Produkt Nr.</th>
+      <th>Preis</th>
+      <th>Menge</th>
+      <th>Datum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>10</td>
+      <td>23</td>
+      <td>2021-01-01</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>5</td>
+      <td>1</td>
+      <td>2021-01-02</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>9</td>
+      <td>12</td>
+      <td>2021-01-03</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>3</td>
+      <td>6</td>
+      <td>2021-01-04</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2</td>
+      <td>5</td>
+      <td>89</td>
+      <td>2021-01-05</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>3</td>
+      <td>10</td>
+      <td>4</td>
+      <td>2021-01-06</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>3</td>
+      <td>10</td>
+      <td>3</td>
+      <td>2021-01-07</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>3</td>
+      <td>10</td>
+      <td>19</td>
+      <td>2021-01-08</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>4</td>
+      <td>3</td>
+      <td>5</td>
+      <td>2021-01-09</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>2</td>
+      <td>5</td>
+      <td>76</td>
+      <td>2021-01-10</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>1</td>
+      <td>9</td>
+      <td>45</td>
+      <td>2021-01-11</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>5</td>
+      <td>27</td>
+      <td>24</td>
+      <td>2021-01-12</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Mit dem Zusatz <code class="docutils literal notranslate"><span class="pre">drop=True</span></code> geben wir an, dass wir den alten Index nicht mehr benötigen. Wird dieser Parameter mit <code class="docutils literal notranslate"><span class="pre">False</span></code> belegt (Hinweis: dies ist die Standardannahme), dann wird automatisch eine neue Spalte erzeugt, die den alten Index beinhaltet.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_combined</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>index</th>
+      <th>Produkt Nr.</th>
+      <th>Preis</th>
+      <th>Menge</th>
+      <th>Datum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>3</td>
+      <td>10</td>
+      <td>23</td>
+      <td>2021-01-01</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>2</td>
+      <td>5</td>
+      <td>1</td>
+      <td>2021-01-02</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>1</td>
+      <td>9</td>
+      <td>12</td>
+      <td>2021-01-03</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>4</td>
+      <td>3</td>
+      <td>6</td>
+      <td>2021-01-04</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>2</td>
+      <td>5</td>
+      <td>89</td>
+      <td>2021-01-05</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>5</td>
+      <td>3</td>
+      <td>10</td>
+      <td>4</td>
+      <td>2021-01-06</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>6</td>
+      <td>3</td>
+      <td>10</td>
+      <td>3</td>
+      <td>2021-01-07</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>7</td>
+      <td>3</td>
+      <td>10</td>
+      <td>19</td>
+      <td>2021-01-08</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>8</td>
+      <td>4</td>
+      <td>3</td>
+      <td>5</td>
+      <td>2021-01-09</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>9</td>
+      <td>2</td>
+      <td>5</td>
+      <td>76</td>
+      <td>2021-01-10</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>10</td>
+      <td>1</td>
+      <td>9</td>
+      <td>45</td>
+      <td>2021-01-11</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>11</td>
+      <td>5</td>
+      <td>27</td>
+      <td>24</td>
+      <td>2021-01-12</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="spaltenweise-verknupfung">
+<h4>Spaltenweise Verknüpfung<a class="headerlink" href="#spaltenweise-verknupfung" title="Permalink to this headline">¶</a></h4>
+<p>In den o.g. Beispielen haben wir zwei Datensätze zeilenweise verknüpft. Stellen wir uns nun vor, wir haben einen weiteren Datensatz mit zusätzlichen Informationen.</p>
+<p>Erstellen wir zunächst einen fiktiven zusätzlichen Datensatz, der Informationen über die jeweiligen Vertriebler sowie die fixen Kosten am jeweiligen Tag beinhaltet.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_combined</span><span class="p">)</span>
+<span class="n">sales</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s2">&quot;Herr Müller&quot;</span><span class="p">,</span> <span class="s2">&quot;Frau Meier&quot;</span><span class="p">,</span> <span class="s2">&quot;Herr Schmidt&quot;</span><span class="p">],</span> <span class="n">size</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
+<span class="n">Kf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Vertriebler&quot;</span><span class="p">:</span> <span class="n">sales</span><span class="p">,</span> <span class="s2">&quot;Kf&quot;</span><span class="p">:</span> <span class="n">Kf</span><span class="p">}</span>
+<span class="n">df_new</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">df_new</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Vertriebler</th>
+      <th>Kf</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Frau Meier</td>
+      <td>13.19</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Herr Müller</td>
+      <td>166.36</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Frau Meier</td>
+      <td>62.41</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Herr Müller</td>
+      <td>0.81</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Frau Meier</td>
+      <td>27.13</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Herr Schmidt</td>
+      <td>51.87</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Herr Müller</td>
+      <td>84.80</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Herr Schmidt</td>
+      <td>25.05</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Frau Meier</td>
+      <td>74.18</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Herr Müller</td>
+      <td>64.87</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Herr Schmidt</td>
+      <td>67.92</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Herr Müller</td>
+      <td>8.24</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Der oben dargestellte (fiktive und zufällig generierte) Datensatz beinhaltet zusätzliche Informationen je Tag. Wir wollen diese Daten nun <strong>rechts</strong> mit dem bestehenden Datensatz verknüpfen. Da wir mit dieser Funktion sowohl spalten- als auch zeilenweise verknüpfen können, müssen wir diesmal über den Parameter <code class="docutils literal notranslate"><span class="pre">axis=1</span></code> angeben, dass wir eine spaltenweise Verknüpfung benötigen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_gesamt</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">((</span><span class="n">df_combined</span><span class="p">,</span> <span class="n">df_new</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">df_gesamt</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Produkt Nr.</th>
+      <th>Preis</th>
+      <th>Menge</th>
+      <th>Datum</th>
+      <th>Vertriebler</th>
+      <th>Kf</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>10</td>
+      <td>23</td>
+      <td>2021-01-01</td>
+      <td>Frau Meier</td>
+      <td>13.19</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>5</td>
+      <td>1</td>
+      <td>2021-01-02</td>
+      <td>Herr Müller</td>
+      <td>166.36</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>9</td>
+      <td>12</td>
+      <td>2021-01-03</td>
+      <td>Frau Meier</td>
+      <td>62.41</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>3</td>
+      <td>6</td>
+      <td>2021-01-04</td>
+      <td>Herr Müller</td>
+      <td>0.81</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2</td>
+      <td>5</td>
+      <td>89</td>
+      <td>2021-01-05</td>
+      <td>Frau Meier</td>
+      <td>27.13</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>3</td>
+      <td>10</td>
+      <td>4</td>
+      <td>2021-01-06</td>
+      <td>Herr Schmidt</td>
+      <td>51.87</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>3</td>
+      <td>10</td>
+      <td>3</td>
+      <td>2021-01-07</td>
+      <td>Herr Müller</td>
+      <td>84.80</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>3</td>
+      <td>10</td>
+      <td>19</td>
+      <td>2021-01-08</td>
+      <td>Herr Schmidt</td>
+      <td>25.05</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>4</td>
+      <td>3</td>
+      <td>5</td>
+      <td>2021-01-09</td>
+      <td>Frau Meier</td>
+      <td>74.18</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>2</td>
+      <td>5</td>
+      <td>76</td>
+      <td>2021-01-10</td>
+      <td>Herr Müller</td>
+      <td>64.87</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>1</td>
+      <td>9</td>
+      <td>45</td>
+      <td>2021-01-11</td>
+      <td>Herr Schmidt</td>
+      <td>67.92</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>5</td>
+      <td>27</td>
+      <td>24</td>
+      <td>2021-01-12</td>
+      <td>Herr Müller</td>
+      <td>8.24</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="pd-merge">
+<h4>pd.merge<a class="headerlink" href="#pd-merge" title="Permalink to this headline">¶</a></h4>
+<p>In unseren bisherigen Beispielen haben wir zwei oder mehrere Datensätze ohne Logik miteinander verknüpft. Oft ist eine Verknüpfung von Datensätzen jedoch komplexer. Stellen Sie z.B. vor, dass jeder Vertriebler für ein bestimmtes Produkt zuständig ist.</p>
+<ul class="simple">
+<li><p>Herr Müller: Proukte 1, 3 und 5</p></li>
+<li><p>Frau Meier: Produkt 2</p></li>
+<li><p>Herr Schmidt: Produkt 4</p></li>
+</ul>
+<p>Diese Information haben wir in Form eines Dataframes vorliegen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Produkt Nr.&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> 
+        <span class="s2">&quot;Vertriebler&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Herr Müller&quot;</span><span class="p">,</span> <span class="s2">&quot;Frau Meier&quot;</span><span class="p">,</span> <span class="s2">&quot;Herr Müller&quot;</span><span class="p">,</span> <span class="s2">&quot;Herr Schmidt&quot;</span><span class="p">,</span> <span class="s2">&quot;Herr Müller&quot;</span><span class="p">]}</span>
+<span class="n">df_sales</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">df_sales</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Produkt Nr.</th>
+      <th>Vertriebler</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>Herr Müller</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Frau Meier</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Herr Müller</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Herr Schmidt</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Herr Müller</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Eine Verknüpfung mit dem untenstehenden Datensatz ist nun komplexer, da wir hier weder zeilen- noch spaltenweise verknüpfen können.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_combined</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Produkt Nr.</th>
+      <th>Preis</th>
+      <th>Menge</th>
+      <th>Datum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>10</td>
+      <td>23</td>
+      <td>2021-01-01</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>5</td>
+      <td>1</td>
+      <td>2021-01-02</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>9</td>
+      <td>12</td>
+      <td>2021-01-03</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>3</td>
+      <td>6</td>
+      <td>2021-01-04</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2</td>
+      <td>5</td>
+      <td>89</td>
+      <td>2021-01-05</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>3</td>
+      <td>10</td>
+      <td>4</td>
+      <td>2021-01-06</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>3</td>
+      <td>10</td>
+      <td>3</td>
+      <td>2021-01-07</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>3</td>
+      <td>10</td>
+      <td>19</td>
+      <td>2021-01-08</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>4</td>
+      <td>3</td>
+      <td>5</td>
+      <td>2021-01-09</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>2</td>
+      <td>5</td>
+      <td>76</td>
+      <td>2021-01-10</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>1</td>
+      <td>9</td>
+      <td>45</td>
+      <td>2021-01-11</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>5</td>
+      <td>27</td>
+      <td>24</td>
+      <td>2021-01-12</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Vielmehr benötigen wir eine Verknüpfungslogik in der eine Spalte “Vertriebler” hinzugefügt wird, jedoch die Werte in Abhängigkeit der jeweiligen “Produkt Nr.” des ursprünglichen Datensatzes gewählt werden.</p>
+<p>Beispiel: immer wenn im Datensatz <code class="docutils literal notranslate"><span class="pre">df_combined</span></code> bei Spalte <code class="docutils literal notranslate"><span class="pre">Produkt</span> <span class="pre">Nr.</span></code> eine 3 steht, solle in der neuen Spalte <code class="docutils literal notranslate"><span class="pre">Vertriebler</span></code> der Wert <code class="docutils literal notranslate"><span class="pre">Herr</span> <span class="pre">Meier</span></code> stehen.</p>
+<p>Eine solche Verknüpfung können wir über <code class="docutils literal notranslate"><span class="pre">pd.merge</span></code> erzielen. Die Umsetzung sieht wie folgt aus:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_merged</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">left</span><span class="o">=</span><span class="n">df_combined</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="n">df_sales</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;Produkt Nr.&quot;</span><span class="p">)</span>
+<span class="n">df_merged</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Produkt Nr.</th>
+      <th>Preis</th>
+      <th>Menge</th>
+      <th>Datum</th>
+      <th>Vertriebler</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>10</td>
+      <td>23</td>
+      <td>2021-01-01</td>
+      <td>Herr Müller</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>3</td>
+      <td>10</td>
+      <td>4</td>
+      <td>2021-01-06</td>
+      <td>Herr Müller</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>10</td>
+      <td>3</td>
+      <td>2021-01-07</td>
+      <td>Herr Müller</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>10</td>
+      <td>19</td>
+      <td>2021-01-08</td>
+      <td>Herr Müller</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2</td>
+      <td>5</td>
+      <td>1</td>
+      <td>2021-01-02</td>
+      <td>Frau Meier</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>2</td>
+      <td>5</td>
+      <td>89</td>
+      <td>2021-01-05</td>
+      <td>Frau Meier</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>2</td>
+      <td>5</td>
+      <td>76</td>
+      <td>2021-01-10</td>
+      <td>Frau Meier</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>1</td>
+      <td>9</td>
+      <td>12</td>
+      <td>2021-01-03</td>
+      <td>Herr Müller</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>1</td>
+      <td>9</td>
+      <td>45</td>
+      <td>2021-01-11</td>
+      <td>Herr Müller</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>4</td>
+      <td>3</td>
+      <td>6</td>
+      <td>2021-01-04</td>
+      <td>Herr Schmidt</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>4</td>
+      <td>3</td>
+      <td>5</td>
+      <td>2021-01-09</td>
+      <td>Herr Schmidt</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>5</td>
+      <td>27</td>
+      <td>24</td>
+      <td>2021-01-12</td>
+      <td>Herr Müller</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Wir haben der Funktion <code class="docutils literal notranslate"><span class="pre">pd.merge</span></code> die Information übergeben auf Basis welcher Spalte verknüpft werden soll. In unserem Falle ist die gemeinsame Spalte <code class="docutils literal notranslate"><span class="pre">Produkt</span> <span class="pre">Nr.</span></code>.</p>
+<p>Das Ergebnis ist korrekt, jedoch nun anders sortiert. Dies können wir über <code class="docutils literal notranslate"><span class="pre">.sort_values</span></code> korrigieren (wenn wir wollen). In diesem Fall bietet es sich dann auch an, den Index neu zu definieren, um diesen wieder fortlaufend zu haben:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_merged</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">&quot;Datum&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Produkt Nr.</th>
+      <th>Preis</th>
+      <th>Menge</th>
+      <th>Datum</th>
+      <th>Vertriebler</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>10</td>
+      <td>23</td>
+      <td>2021-01-01</td>
+      <td>Herr Müller</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>5</td>
+      <td>1</td>
+      <td>2021-01-02</td>
+      <td>Frau Meier</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>9</td>
+      <td>12</td>
+      <td>2021-01-03</td>
+      <td>Herr Müller</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>3</td>
+      <td>6</td>
+      <td>2021-01-04</td>
+      <td>Herr Schmidt</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2</td>
+      <td>5</td>
+      <td>89</td>
+      <td>2021-01-05</td>
+      <td>Frau Meier</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>3</td>
+      <td>10</td>
+      <td>4</td>
+      <td>2021-01-06</td>
+      <td>Herr Müller</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>3</td>
+      <td>10</td>
+      <td>3</td>
+      <td>2021-01-07</td>
+      <td>Herr Müller</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>3</td>
+      <td>10</td>
+      <td>19</td>
+      <td>2021-01-08</td>
+      <td>Herr Müller</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>4</td>
+      <td>3</td>
+      <td>5</td>
+      <td>2021-01-09</td>
+      <td>Herr Schmidt</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>2</td>
+      <td>5</td>
+      <td>76</td>
+      <td>2021-01-10</td>
+      <td>Frau Meier</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>1</td>
+      <td>9</td>
+      <td>45</td>
+      <td>2021-01-11</td>
+      <td>Herr Müller</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>5</td>
+      <td>27</td>
+      <td>24</td>
+      <td>2021-01-12</td>
+      <td>Herr Müller</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Infos Verknüpfungen</p>
+<p>Es gibt viele weitere Varianten der Verknüpfung, auf die wir an dieser Stelle nicht eingehen wollen. Typischerweise ergeben sich im Laufe einer Analyse bestimmte Fragestellungen zu geeigneten Verknüpfungen. Sie sollten sich dann die Funktionen <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.concat.html"><code class="docutils literal notranslate"><span class="pre">pd.concat</span></code></a> und <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.merge.html"><code class="docutils literal notranslate"><span class="pre">pd.merge</span></code></a> genauer anschauen.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="gruppieren-von-daten">
+<h2>Gruppieren von Daten<a class="headerlink" href="#gruppieren-von-daten" title="Permalink to this headline">¶</a></h2>
+<p>Wir werden im folgenden Kapitel Daten analysieren und dafür eine Reihe von Funktionen kennenlernen. Eine der wichtigsten Methoden zur strukturierten Analyse von Daten stellen wir an dieser Stelle bereits vor: <code class="docutils literal notranslate"><span class="pre">.groupby</span></code>.</p>
+<p>Wir haben bereits einfache Aggregationen kennengelernt und z.B. das arithmetische Mittel über Spalten berechnet. Oft möchten wir z.B. eine solche Aggregation jedoch nicht für den gesamten Datensatz berechnen, sondern in Abhängigkeit von bestimmten anderen Spalten. In unserem oben dargestellten Datensatz ist z.B. eine Interessante Frage, welcher Vertriebler den höchsten gesamten oder durchschnittlichen täglichen Umsatz gemacht hat. Wir wollen also z.B. summieren oder mitteln in Abhängigkeit von jeweiligen Vertriebler.</p>
+<p>Die Schritte einer solchen Analyse sind dann im Detail wie folgt:</p>
+<ol class="simple">
+<li><p>Trenne Datensatz nach Bedingung (in unserem Falle nach Vertriebler)</p></li>
+<li><p>Aggriegiere jeden einzelnen Datensatz</p></li>
+<li><p>Füge aggregierte Datensätze wieder zusammen</p></li>
+</ol>
+<p>Lassen Sie uns zunächst den Datensatz aufbereiten und die Schritte dann mit den uns bekannten Mitteln einzeln durchlaufen:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Füge Datensatz Umsatz hinzu</span>
+<span class="n">df_gesamt</span><span class="p">[</span><span class="s2">&quot;Umsatz&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_gesamt</span><span class="p">[</span><span class="s2">&quot;Preis&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="n">df_gesamt</span><span class="p">[</span><span class="s2">&quot;Menge&quot;</span><span class="p">]</span>
+<span class="n">df_gesamt</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Produkt Nr.</th>
+      <th>Preis</th>
+      <th>Menge</th>
+      <th>Datum</th>
+      <th>Vertriebler</th>
+      <th>Kf</th>
+      <th>Umsatz</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>10</td>
+      <td>23</td>
+      <td>2021-01-01</td>
+      <td>Frau Meier</td>
+      <td>13.19</td>
+      <td>230</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>5</td>
+      <td>1</td>
+      <td>2021-01-02</td>
+      <td>Herr Müller</td>
+      <td>166.36</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>9</td>
+      <td>12</td>
+      <td>2021-01-03</td>
+      <td>Frau Meier</td>
+      <td>62.41</td>
+      <td>108</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>3</td>
+      <td>6</td>
+      <td>2021-01-04</td>
+      <td>Herr Müller</td>
+      <td>0.81</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2</td>
+      <td>5</td>
+      <td>89</td>
+      <td>2021-01-05</td>
+      <td>Frau Meier</td>
+      <td>27.13</td>
+      <td>445</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>3</td>
+      <td>10</td>
+      <td>4</td>
+      <td>2021-01-06</td>
+      <td>Herr Schmidt</td>
+      <td>51.87</td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>3</td>
+      <td>10</td>
+      <td>3</td>
+      <td>2021-01-07</td>
+      <td>Herr Müller</td>
+      <td>84.80</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>3</td>
+      <td>10</td>
+      <td>19</td>
+      <td>2021-01-08</td>
+      <td>Herr Schmidt</td>
+      <td>25.05</td>
+      <td>190</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>4</td>
+      <td>3</td>
+      <td>5</td>
+      <td>2021-01-09</td>
+      <td>Frau Meier</td>
+      <td>74.18</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>2</td>
+      <td>5</td>
+      <td>76</td>
+      <td>2021-01-10</td>
+      <td>Herr Müller</td>
+      <td>64.87</td>
+      <td>380</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>1</td>
+      <td>9</td>
+      <td>45</td>
+      <td>2021-01-11</td>
+      <td>Herr Schmidt</td>
+      <td>67.92</td>
+      <td>405</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>5</td>
+      <td>27</td>
+      <td>24</td>
+      <td>2021-01-12</td>
+      <td>Herr Müller</td>
+      <td>8.24</td>
+      <td>648</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="section" id="manuell">
+<h3>Manuell<a class="headerlink" href="#manuell" title="Permalink to this headline">¶</a></h3>
+<p><strong>Schritt 1:</strong> Trennung nach Vertriebler</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df1</span> <span class="o">=</span> <span class="n">df_gesamt</span><span class="p">[</span><span class="n">df_gesamt</span><span class="p">[</span><span class="s2">&quot;Vertriebler&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Herr Müller&quot;</span><span class="p">]</span>
+<span class="n">df2</span> <span class="o">=</span> <span class="n">df_gesamt</span><span class="p">[</span><span class="n">df_gesamt</span><span class="p">[</span><span class="s2">&quot;Vertriebler&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Herr Schmidt&quot;</span><span class="p">]</span>
+<span class="n">df3</span> <span class="o">=</span> <span class="n">df_gesamt</span><span class="p">[</span><span class="n">df_gesamt</span><span class="p">[</span><span class="s2">&quot;Vertriebler&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Frau Meier&quot;</span><span class="p">]</span>
+
+<span class="c1"># Beispiel: df3</span>
+<span class="n">df3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Produkt Nr.</th>
+      <th>Preis</th>
+      <th>Menge</th>
+      <th>Datum</th>
+      <th>Vertriebler</th>
+      <th>Kf</th>
+      <th>Umsatz</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>10</td>
+      <td>23</td>
+      <td>2021-01-01</td>
+      <td>Frau Meier</td>
+      <td>13.19</td>
+      <td>230</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>9</td>
+      <td>12</td>
+      <td>2021-01-03</td>
+      <td>Frau Meier</td>
+      <td>62.41</td>
+      <td>108</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2</td>
+      <td>5</td>
+      <td>89</td>
+      <td>2021-01-05</td>
+      <td>Frau Meier</td>
+      <td>27.13</td>
+      <td>445</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>4</td>
+      <td>3</td>
+      <td>5</td>
+      <td>2021-01-09</td>
+      <td>Frau Meier</td>
+      <td>74.18</td>
+      <td>15</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p><strong>Schritt 2:</strong> berechne Gesamtumsatz</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">müller</span> <span class="o">=</span> <span class="n">df1</span><span class="p">[</span><span class="s2">&quot;Umsatz&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">schmidt</span> <span class="o">=</span> <span class="n">df2</span><span class="p">[</span><span class="s2">&quot;Umsatz&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">meier</span> <span class="o">=</span> <span class="n">df3</span><span class="p">[</span><span class="s2">&quot;Umsatz&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">müller</span><span class="p">,</span> <span class="n">schmidt</span><span class="p">,</span> <span class="n">meier</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1081, 635, 798)
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Schritt 3:</strong> Zusammenfügen der Daten</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Vertriebler&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Herr Müller&quot;</span><span class="p">,</span> <span class="s2">&quot;Herr Schmidt&quot;</span><span class="p">,</span> <span class="s2">&quot;Frau Meier&quot;</span><span class="p">],</span> <span class="s2">&quot;Umsatz_gesamt&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">müller</span><span class="p">,</span> <span class="n">schmidt</span><span class="p">,</span> <span class="n">meier</span><span class="p">]}</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Vertriebler</th>
+      <th>Umsatz_gesamt</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Herr Müller</td>
+      <td>1081</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Herr Schmidt</td>
+      <td>635</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Frau Meier</td>
+      <td>798</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="via-groupby">
+<h3>via .groupby<a class="headerlink" href="#via-groupby" title="Permalink to this headline">¶</a></h3>
+<p>Der gesamte obige Code kann durch eine einfache Zeile ersetzt werden</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_gesamt</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Vertriebler&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s2">&quot;Umsatz&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Umsatz</th>
+    </tr>
+    <tr>
+      <th>Vertriebler</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Frau Meier</th>
+      <td>798</td>
+    </tr>
+    <tr>
+      <th>Herr Müller</th>
+      <td>1081</td>
+    </tr>
+    <tr>
+      <th>Herr Schmidt</th>
+      <td>635</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Das oben vorgestellt Vorgehen ist wesentlich einfacher und folgt immer der gleichen Logik. Via <code class="docutils literal notranslate"><span class="pre">.groupby</span></code> wird angegeben, nach welcher Spalte oder nach welchen Spalten der Datensatz aufgeteilt werden soll. Das Resultat ist ein neuer Datentyp <code class="docutils literal notranslate"><span class="pre">DataFrameGroupBy</span></code>. Auf diesen Datentyp können dann neue Funktionen angewendet werden, die dann automatisch für jede einzelne Gruppe berechnet werden. Mit diesem Muster können viele scheinbar komplexe Berechnungen sehr schnell und übersichtlich durchgeführt werden.</p>
+<p>Hier ein weiteres Beispiel: wir berechnen den durchschnittlichen Umsatz je Produkt</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_gesamt</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Produkt Nr.&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s2">&quot;Umsatz&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Umsatz</th>
+    </tr>
+    <tr>
+      <th>Produkt Nr.</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>256.500000</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>276.666667</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>122.500000</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>16.500000</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>648.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
@@ -1066,7 +5752,7 @@ Wir können hier jedoch auch andere Datentypen nutzen. So können wir auch Numpy
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">NumPy: der Zahlenakrobat</p>
+            <p class="prev-next-title">Übungsblatt: Numpy</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="Intro_Pandas_exercise.html" title="next page">
@@ -1083,7 +5769,7 @@ Wir können hier jedoch auch andere Datentypen nutzen. So können wir auch Numpy
     <footer class="footer">
   <p>
     
-      Durch Felix Zeidler<br/>
+      Durch F. Zeidler<br/>
     
         &copy; Urheberrechte © 2022.<br/>
   </p>

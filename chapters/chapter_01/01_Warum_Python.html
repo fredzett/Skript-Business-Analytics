@@ -228,12 +228,12 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../chapter_04/Intro_Modules.html">
-   Einführung: Module
+   Einführung
   </a>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../chapter_04/Intro_Numpy.html">
-   NumPy: der Zahlenakrobat
+   NumPy
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
@@ -243,14 +243,14 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter_04/Intro_Numpy_exercise.html">
-     NumPy: der Zahlenakrobat
+     Übungsblatt: Numpy
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../chapter_04/Intro_Pandas.html">
-   Pandas: das schweizer Taschenmesser
+   Pandas
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
@@ -264,80 +264,6 @@
     </a>
    </li>
   </ul>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  99 Sandbox
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S02a_Descriptive_Statistics.html">
-   Deskriptive Statistik
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S03a_Simulation.html">
-   Simulationen mit Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S03c_Probability_Distributions.html">
-   Wahrscheinlichkeitsverteilungen
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S04a_Estimation%26HyptothesisTesting.html">
-   Testen von Hypothesen
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S05a_Regression.html">
-   Lineare Regression
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S06a_TidyData.html">
-   Tidy Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S07a_Classification.html">
-   Klassifikation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S08a_Clustering.html">
-   Clusteranalyse
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S09a_Cross_validation.html">
-   Cross Validation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S11_DecisionTrees.html">
-   Entscheidungsbäume
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S12_Ensembles.html">
-   Ensemble-Methoden
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Anhang
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../literatur.html">
-   Literatur
-  </a>
  </li>
 </ul>
 
@@ -486,13 +412,14 @@
 <h1>Warum Python?<a class="headerlink" href="#warum-python" title="Permalink to this headline">¶</a></h1>
 <p>Es gibt zahlreiche und sehr unterschiedliche Programmiersprachen. Einige sind sehr bekannt (z.B. <a class="reference external" href="https://de.wikipedia.org/wiki/Java-Technologie#Programmiersprache_Java">Java</a>, <a class="reference external" href="https://de.wikipedia.org/wiki/C_(Programmiersprache)">C</a>, oder <a class="reference external" href="https://de.wikipedia.org/wiki/Python_(Programmiersprache)">Python</a>), andere sind eher Nischensprachen (z.B. <a class="reference external" href="https://de.wikipedia.org/wiki/R_(Programmiersprache)">R</a>, <a class="reference external" href="https://de.wikipedia.org/wiki/Julia_(Programmiersprache)">Julia</a> oder <a class="reference external" href="https://de.wikipedia.org/wiki/Scheme">Scheme</a>), die entweder nur für spezielle Anwendungszwecke entwickelt wurden oder sich aus anderen Gründen für die breite Masse nicht durchgesetzt haben. Neue Programmiersprachen kommen in unregelmäßigen Abständen hinzu. So hat Google z.B. erst kürzlich die Entwicklung einer <a class="reference external" href="https://thenewstack.io/google-launches-carbon-an-experimental-replacement-for-c/">neuen Sprache</a> angekündigt.</p>
 <p>In diesem Skript soll nicht nur theoretisch über Datenanlayse gesprochen werden, sondern auch ganz praktisch Daten analysiert werden. Hierzu werden wir die Programmiersprache Python nutzen. Wieso aber genau Python und nicht z.B. R oder Java?</p>
-<p>Bei der Wahl der Programmiersprache ist die Entscheidung nicht zufällig auf <code class="docutils literal notranslate"><span class="pre">Python</span></code> gefallen. Prinzipiell können zwar viele Programmiersprachen dieselben Probleme mehr oder weniger gut lösen. Es ist also nicht so, dass das Thema Datenanalyse oder Business Analytcis ausschließlich mit Python adressiert werden könnte. So würde sich z.B. <code class="docutils literal notranslate"><span class="pre">R</span></code> oder <code class="docutils literal notranslate"><span class="pre">Julia</span></code> würde sich z.B. <code class="docutils literal notranslate"><span class="pre">auch</span> <span class="pre">hervorragend</span> <span class="pre">geeignet</span></code>. Dennoch gibt es vier Kriterien, die eine Programmiersprache aus meiner Sicht erfüllen sollte, um besonders geeignet zu sein:</p>
+<p>Bei der Wahl der Programmiersprache ist die Entscheidung nicht zufällig auf <code class="docutils literal notranslate"><span class="pre">Python</span></code> gefallen. Prinzipiell können zwar viele Programmiersprachen dieselben Probleme mehr oder weniger gut lösen. Es ist also nicht so, dass das Thema Datenanalyse oder Business Analytcis ausschließlich mit Python adressiert werden könnte. So würden sich z.B. <code class="docutils literal notranslate"><span class="pre">R</span></code> oder <code class="docutils literal notranslate"><span class="pre">Julia</span></code> auch hervorragend eignen. Dennoch gibt es vier Kriterien, die eine Programmiersprache aus meiner Sicht erfüllen sollte, um besonders geeignet zu sein:</p>
 <ol class="simple">
 <li><p>Die Sprache sollte populär sein</p></li>
 <li><p>Die Sprache sollte “einfach” zu erlernen sein</p></li>
 <li><p>Die Sprache sollte für Datenanalyse geeignet sein</p></li>
 <li><p>Die Sprache sollte für weitere Anwendungsfälle geeignet sein</p></li>
 </ol>
+<p>R erfüllt aus meiner Sicht nur die Kriterien 1 und 3 (auch wenn über 2 gestritten werden kann). Julia erfüllt (aktuell) nur die Kriterien 2 und 3.</p>
 <div class="section" id="python-ist-popular">
 <h2>1. Python ist populär<a class="headerlink" href="#python-ist-popular" title="Permalink to this headline">¶</a></h2>
 <p>Ein Entscheidungskriterium ist die Popularität. Python hat seit seiner Erfindung in den 90er Jahren enorm an Beliebtheit gewonnen und wird aktuell von sehr vielen Softwareentwicklern und Datenanalysten genutzt und ist im Ranking der beliebtesten Programmiersprachen<a class="footnote-reference brackets" href="#id3" id="id1">1</a> mittlerweile auf Platz 1, d.h. auch vor Java oder C.</p>
@@ -551,11 +478,11 @@ m = mean([2.0, 3.0, 5.0, 7.0, 13.0, 21.0, 33.0, 54.0])
 print(m)
 </pre></div>
 </div>
-<p>Welche Sprache finden Sie intuitiver oder einfacher zu lesen? Die meisten Leser*innen werden das Beispiel in Python wegen der intuitiven Syntax einfacher finden. Auch wenn komplexe Programme in Python ähnlich komplex werden (können), wie in jeder anderen Programmiersprache, hat diese einfache(re) Syntax einen großen Vorteil: Sie werden schneller Fortschritte machen und können bereits nach kurzer Zeit praxisrelevante Skripte schreiben.</p>
+<p>Welche Sprache finden Sie intuitiver oder einfacher zu lesen? Die meisten Leser*innen werden das Beispiel in Python wegen der intuitiven Syntax einfacher finden. Auch wenn komplexe Programme in Python ähnlich komplex werden (können), wie in jeder anderen Programmiersprache, hat diese einfache(re) Syntax einen großen Vorteil: Sie werden zu Beginn schneller Fortschritte machen und können bereits nach kurzer Zeit praxisrelevante Skripte schreiben.</p>
 </div>
 <div class="section" id="python-ist-geeignet-fur-datenanalyse">
 <h2>3. Python ist geeignet für Datenanalyse<a class="headerlink" href="#python-ist-geeignet-fur-datenanalyse" title="Permalink to this headline">¶</a></h2>
-<p>Ein Grund für die große Popularität und insbesondere das starke Wachstum von Python ist, dass Python insbesondere auch im Bereich Datenanalyse eingesetzt wird. So hat sich Python als eine der weit verbreitetsten Sprachen im Bereich <code class="docutils literal notranslate"><span class="pre">Datenaufbereitung</span></code>, <code class="docutils literal notranslate"><span class="pre">Machinelles</span> <span class="pre">Lernen</span></code> und <code class="docutils literal notranslate"><span class="pre">Deep</span> <span class="pre">Learning</span></code> entwickelt. Durch die einfache Syntax ist Python sehr gut geeignet, um schnell Prototypen für komplexe Datenanalysethemen zu erstellen. Dies hat dazu geführt, dass in den letzten Jahren eine Vielzahl von Modulen und Packages (d.h. Bibliotheken, die die Standardsprache erweitern) entstanden sind. Diese <code class="docutils literal notranslate"><span class="pre">Add-ons</span></code>, sind teilweise von großen Unternehmen, wie Google oder Facebook, (mit)entwickelt worden und sind frei verfügbar. Die Lösung von komplexen Datenanalysethemen ist insofern durch die Vielzahl an geeigneten Hilfsmitteln sehr viel einfacher und mächtiger geworden und erfordert (teilweise) keine jahrelange Programmiererfahrung. Zusatzmodule wie <code class="docutils literal notranslate"><span class="pre">pandas</span></code>, <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> oder <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code> - diese werden Sie in den folgenden Kapiteln noch kennenlernen - haben Python zu einer Art Schweizer Taschenmesser der Datenanalyse - insbesondere auch für Programmieranfänger - gemacht.</p>
+<p>Ein Grund für die große Popularität und insbesondere das starke Wachstum von Python ist, dass Python insbesondere auch im Bereich der Datenanalyse eingesetzt wird. So hat sich Python als eine der weit verbreitetsten Sprachen im Bereich <code class="docutils literal notranslate"><span class="pre">Datenaufbereitung</span></code>, <code class="docutils literal notranslate"><span class="pre">Machinelles</span> <span class="pre">Lernen</span></code> und <code class="docutils literal notranslate"><span class="pre">Deep</span> <span class="pre">Learning</span></code> entwickelt. Durch die einfache Syntax ist Python sehr gut geeignet, um schnell Prototypen für komplexe Datenanalysethemen zu erstellen. Dies hat dazu geführt, dass in den letzten Jahren eine Vielzahl von Modulen und Packages (d.h. Bibliotheken, die die Standardsprache erweitern) entstanden sind. Diese <code class="docutils literal notranslate"><span class="pre">Add-ons</span></code>, sind teilweise von großen Unternehmen, wie Google oder Facebook, (mit)entwickelt worden und sind frei verfügbar. Die Lösung von komplexen Datenanalysethemen ist insofern durch die Vielzahl an geeigneten Hilfsmitteln sehr viel einfacher und mächtiger geworden und erfordert (teilweise) keine jahrelange Programmiererfahrung. Zusatzmodule wie <code class="docutils literal notranslate"><span class="pre">pandas</span></code>, <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> oder <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code> - diese werden Sie in den folgenden Kapiteln noch kennenlernen - haben Python zu einer Art Schweizer Taschenmesser der Datenanalyse - insbesondere auch für Programmieranfänger - gemacht.</p>
 </div>
 <div class="section" id="python-ist-allzweckwaffe">
 <h2>4. Python ist Allzweckwaffe<a class="headerlink" href="#python-ist-allzweckwaffe" title="Permalink to this headline">¶</a></h2>
@@ -618,7 +545,7 @@ print(m)
     <footer class="footer">
   <p>
     
-      Durch Felix Zeidler<br/>
+      Durch F. Zeidler<br/>
     
         &copy; Urheberrechte © 2022.<br/>
   </p>

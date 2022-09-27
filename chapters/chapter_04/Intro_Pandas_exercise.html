@@ -44,6 +44,8 @@
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -53,8 +55,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Deskriptive Statistik" href="../chapter_analytics/S02a_Descriptive_Statistics.html" />
-    <link rel="prev" title="Pandas: das schweizer Taschenmesser" href="Intro_Pandas.html" />
+    <link rel="prev" title="Pandas" href="Intro_Pandas.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -228,12 +229,12 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Intro_Modules.html">
-   Einführung: Module
+   Einführung
   </a>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="Intro_Numpy.html">
-   NumPy: der Zahlenakrobat
+   NumPy
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
@@ -243,14 +244,14 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="Intro_Numpy_exercise.html">
-     NumPy: der Zahlenakrobat
+     Übungsblatt: Numpy
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="Intro_Pandas.html">
-   Pandas: das schweizer Taschenmesser
+   Pandas
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
@@ -264,80 +265,6 @@
     </a>
    </li>
   </ul>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  99 Sandbox
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S02a_Descriptive_Statistics.html">
-   Deskriptive Statistik
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S03a_Simulation.html">
-   Simulationen mit Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S03c_Probability_Distributions.html">
-   Wahrscheinlichkeitsverteilungen
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S04a_Estimation%26HyptothesisTesting.html">
-   Testen von Hypothesen
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S05a_Regression.html">
-   Lineare Regression
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S06a_TidyData.html">
-   Tidy Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S07a_Classification.html">
-   Klassifikation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S08a_Clustering.html">
-   Clusteranalyse
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S09a_Cross_validation.html">
-   Cross Validation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S11_DecisionTrees.html">
-   Entscheidungsbäume
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter_analytics/S12_Ensembles.html">
-   Ensemble-Methoden
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Anhang
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../literatur.html">
-   Literatur
-  </a>
  </li>
 </ul>
 
@@ -424,6 +351,39 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Inhalt
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aufgabe-1-einlesen-einer-exceldatei">
+   Aufgabe 1: Einlesen einer Exceldatei
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aufgabe-2-einlesen-via-clipboard">
+   Aufgabe 2: Einlesen via Clipboard
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aufgabe-3">
+   Aufgabe 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aufgabe-4">
+   Aufgabe 4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aufgabe-5">
+   Aufgabe 5
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -436,6 +396,39 @@
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Inhalt </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aufgabe-1-einlesen-einer-exceldatei">
+   Aufgabe 1: Einlesen einer Exceldatei
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aufgabe-2-einlesen-via-clipboard">
+   Aufgabe 2: Einlesen via Clipboard
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aufgabe-3">
+   Aufgabe 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aufgabe-4">
+   Aufgabe 4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aufgabe-5">
+   Aufgabe 5
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -444,6 +437,57 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="ubungen-pandas">
 <h1>Übungen: Pandas<a class="headerlink" href="#ubungen-pandas" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="aufgabe-1-einlesen-einer-exceldatei">
+<h2>Aufgabe 1: Einlesen einer Exceldatei<a class="headerlink" href="#aufgabe-1-einlesen-einer-exceldatei" title="Permalink to this headline">¶</a></h2>
+<p>Lesen Sie eine beliebige Exceldatei via <code class="docutils literal notranslate"><span class="pre">pd.read_excel</span></code> ein.</p>
+<p>Wenn Sie Google Colab nutzen, laden Sie dafür zunächst eine Datei in die Umgebung</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Upload Google Colab</p>
+<p><img alt="" src="../../_images/read_xls_colab.gif" /></p>
+</div>
+</div>
+<div class="section" id="aufgabe-2-einlesen-via-clipboard">
+<h2>Aufgabe 2: Einlesen via Clipboard<a class="headerlink" href="#aufgabe-2-einlesen-via-clipboard" title="Permalink to this headline">¶</a></h2>
+<p>Manchmal haben wir Daten, die wir schnell für eine kurze, einmalige Analyse in Pandas überführen würden. Z.B. eine Exceltabelle, für die wir schnell etwas ausrechnen möchten. Wir können in diesem Fall auch einfach via <code class="docutils literal notranslate"><span class="pre">pd.read_clipboard</span></code> die Daten in Pandas überführen.</p>
+<p>Recherchieren Sie, was die Funktion macht und erstellen ein Dataframe auf Basis dieser Logik.</p>
+<p>Lesen Sie die beiden Sales-Datensätze ein (File-Links finden Sie im <a class="reference internal" href="Intro_Pandas.html"><span class="doc std std-doc">vorherigen Notebook</span></a>) und beantworten Sie folgende Fragen</p>
+</div>
+<div class="section" id="aufgabe-3">
+<h2>Aufgabe 3<a class="headerlink" href="#aufgabe-3" title="Permalink to this headline">¶</a></h2>
+<p>Nutzen Sie die bestehenden Datensätze:</p>
+<ul class="simple">
+<li><p>wie groß ist die maximale Verkaufsmenge je Produkt und je Tag</p></li>
+<li><p>wieviel Transaktionen gab es je Produkt pro Tag</p></li>
+</ul>
+</div>
+<div class="section" id="aufgabe-4">
+<h2>Aufgabe 4<a class="headerlink" href="#aufgabe-4" title="Permalink to this headline">¶</a></h2>
+<p>Sie haben folgende ergänzende Information: die variablen Stückkosten je Produkt betragen:</p>
+<ul class="simple">
+<li><p>Produkt 1: 6 EUR</p></li>
+<li><p>Produkt 2: 2 EUR</p></li>
+<li><p>Produkt 3: 9 EUR</p></li>
+<li><p>Produkt 4: 4 EUR</p></li>
+<li><p>Produkt 5: 13 EUR</p></li>
+</ul>
+<p>Berechnen Sie die gesamten Deckungsbeiträge je Produkt.</p>
+</div>
+<div class="section" id="aufgabe-5">
+<h2>Aufgabe 5<a class="headerlink" href="#aufgabe-5" title="Permalink to this headline">¶</a></h2>
+<p>Laden Sie die folgenden Aktienkursdaten der Firma <strong>Uniper</strong> in ein Dataframe und führen Sie folgende Berechnungen durch:</p>
+<ol class="simple">
+<li><p>Ergänzen Sie den Datensatz um die tägliche Aktienkursrendite (Hinweis: <span class="math notranslate nohighlight">\(\frac{P_t}{P_{t-1}} - 1\)</span>)</p></li>
+<li><p>Berechnen Sie die kumulierte Rendite seit Beginn des Jahres und fügen diese als zusätzliche Spalte hinzu</p></li>
+<li><p>Ergänzen Sie eine Spalte “Wochentag” (Tipp: wandeln Sie die Spalte mit dem Datum sinnvoll um; <code class="docutils literal notranslate"><span class="pre">pd.to_datetime</span></code> kann hier ggf. helfen)</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">link_uniper</span> <span class="o">=</span> <span class="s2">&quot;https://query1.finance.yahoo.com/v7/finance/download/UN01.DE?period1=1640995200&amp;period2=1664236800&amp;interval=1d&amp;events=history&amp;includeAdjustedClose=true&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -475,15 +519,8 @@
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Pandas: das schweizer Taschenmesser</p>
+            <p class="prev-next-title">Pandas</p>
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="../chapter_analytics/S02a_Descriptive_Statistics.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Deskriptive Statistik</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             
@@ -492,7 +529,7 @@
     <footer class="footer">
   <p>
     
-      Durch Felix Zeidler<br/>
+      Durch F. Zeidler<br/>
     
         &copy; Urheberrechte © 2022.<br/>
   </p>

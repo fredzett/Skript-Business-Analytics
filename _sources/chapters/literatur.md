@@ -1,7 +1,0 @@
-# Literatur
-
-```{bibliography}
-:style: alpha
-```
-
-
