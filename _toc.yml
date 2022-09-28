@@ -38,4 +38,8 @@ parts:
   - file: chapters/chapter_04/Intro_Pandas.ipynb
     sections:
     - file: chapters/chapter_04/Intro_Pandas_exercise.ipynb
+- caption: Appendix
+  chapters:
+  - file: chapters/literatur.md
+
 
