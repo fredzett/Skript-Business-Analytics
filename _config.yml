@@ -1,7 +1,7 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: #Business Analytics
+title: Computational Business Analytics
 copyright: "2022"
 author: "F. Zeidler" # Hinweis: removes footer in main block!
 logo: datascience2.png
