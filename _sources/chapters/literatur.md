@@ -1,0 +1,7 @@
+# Literatur
+
+```{bibliography}
+:style: alpha
+```
+
+
